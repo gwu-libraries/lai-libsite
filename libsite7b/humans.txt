@@ -1,14 +1,14 @@
 /* SHOP */
 
-	Scholarly Technology Group
+	Scholarly Technology Group & Communications
 	George Washington University Libraries
 	https://library.gwu.edu/scholarly-technology-group
 
 /* PROJECT TEAM */
 
-	Christian Aldridge, Ian Hardy, Leslie Laurie, Xiaobei Xyu
+	Christian Aldridge, Robin Delaloye, Ian Hardy, Max Starkenburg
 
-/* LAUNCH PROJECT TEAM 2012 */
+/* LAUNCH PROJECT TEAM 2012 (Libsite7 theme) */
 
 	Christian Aldridge, Daniel Chudnov, Michael Cummings, Rosalyn Metz 
 	
@@ -27,4 +27,5 @@
 
 
 /* SITE */
-	Drupal 7 (PHP/HTML/JS/CSS/Linux/MySQL/Apache)
+
+	Drupal 7 (PHP/HTML/JS/jQuery/CSS/Linux/MySQL/Apache)

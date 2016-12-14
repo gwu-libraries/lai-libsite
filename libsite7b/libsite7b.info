@@ -1,6 +1,6 @@
-name = GW Libraries (Libsite7)
-description = GW Libraries theme (Christian Aldridge with UWP portions from Chris Cooper's original UWP theme fall 2011; html5 boilerplate http://html5boilerplate.com/ ; Eric Meyer reset.css)
-version = 7.x-1.5
+name = GW Libraries (libsite7b)
+description = GW Libraries theme 2016-17 (based on Libsite7) (Christian Aldridge with assets/css from Chris Cooper's original UWP theme fall 2011; HTML5 boilerplate http://html5boilerplate.com/ ; Eric Meyer reset.css)
+version = 7.x-1.0
 core = 7.x
 engine = phptemplate
 
@@ -8,8 +8,6 @@ regions[header] = Header
 regions[navbar] = Navigation
 regions[sidebar] = Sidebar
 regions[rsidebar] = Sidebar Right
-regions[expanded_left] = Expanded Left
-regions[expanded_right] = Expanded Right
 regions[emergency_banner] = Emergency Notice
 regions[topheader_right] = Header Right
 regions[content_top] = Top Content
