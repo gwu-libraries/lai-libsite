@@ -1,0 +1,144 @@
+@charset "utf-8";
+/*
+  Sitename: http://library.gwu.edu/
+  Author: maxs
+
+  vision.css
+  Style for the 2017 Vision magazine featured articles
+*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~ Vision  ~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+#vision {
+  position: relative;
+}
+
+#vision-remainder h3 {
+  white-space: nowrap;
+}
+
+#vision-features {
+  width: 602px;
+  position: relative;
+  float: right;
+  min-height: 950px;
+  margin-left: 2em;
+}
+@media screen and (max-width: 600px) {
+  #vision-features {
+    position: static;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 400px) {
+  #vision-features {
+    width: auto;
+  }
+}
+
+#vision-features ul {
+  position: absolute;
+  max-width: 300px;
+}
+#vision-column-1 {
+  right: 50%;
+}
+#vision-column-2 {
+  left: calc(50% + 2px);
+}
+@media screen and (max-width: 400px) {
+  #vision-features ul {
+    position: static;
+    max-width: 400px;
+  }
+}
+
+#vision-features ul, #vision-features li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#vision-features li {
+  margin: 0 2px 2px 0;
+  position: relative;
+  width: 100%;
+}
+
+.vision-feature-image {
+  position: relative;
+  z-index: 2;
+}
+
+.vision-feature-title {
+  font-size: 1.4em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,.7);
+  position: absolute;
+  padding: 25px;
+  z-index: 3;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+  .vision-feature-title {
+    font-size: 1.2em;
+  }
+}
+@media screen and (max-width: 400px) {
+  .vision-feature-title {
+    font-size: 1.4em;
+  }
+}
+
+.vision-feature-intro {
+  display: none;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,.6);
+  opacity: .97;
+  position: absolute;
+  width: 270px;
+  bottom: 0;
+  right: 100%;
+  z-index: 4;
+  padding: 1em 1.5em;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 880px) {
+  .vision-feature-intro {
+    width: 300px;
+    bottom: auto;
+    top: 100%;
+    left: 0;
+    right: auto;
+  }
+}
+
+.vision-feature-intro::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  display: block;
+  background-color: #fff;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+  position: absolute;
+  bottom: 30px;
+  z-index: -1;
+  left: 100%;
+}
+@media screen and (max-width: 880px) {
+  .vision-feature-intro::before {
+    bottom: auto;
+    top: 0;
+    left: 30px;
+    transform-origin: 100% 0;
+  }
+}
+
+.vision-feature-intro::after {
+  content: "Read article ...";
+  text-decoration: underline;
+}

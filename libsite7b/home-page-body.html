@@ -1,0 +1,119 @@
+<div style="display:none;">Welcome to GW Libraries at the George Washington University, including the Gelman Library on the Foggy Bottom Campus, Eckles Library at Mount Vernon Campus, and the Virginia Science and Technology Campus Library. Part of GW Libraries &amp; Academic Innovation.</div>
+<div class="mobile-hide-960">
+    
+    <div><p style="font-size:2em; margin:.3em 0 .4em; visibility:hidden;">search</p></div>
+    
+    <!-- begin tabbed search block -->
+
+    <div class='search-header-front'>
+        
+        <!-- search tabs --> 
+
+        <a id="displaysearchallFront" href="javascript:togglesearchFront('searchallboxFront');"><div id="searchallFront" class="searchbuttonFront tab-active-front" onclick="changeClassFront('searchallFront')">All</div></a>  
+
+        <a id="displaysearchplusFront" href="javascript:togglesearchFront('searchplusboxFront');"><div id="searchplusFront" class="searchbuttonFront" onclick="changeClassFront('searchplusFront')">ArticlesPlus</div></a>
+        <a id="displaysearchcatFront" href="javascript:togglesearchFront('searchcatboxFront');"><div id="searchcatFront" class="searchbuttonFront" onclick="changeClassFront('searchcatFront')">Catalog</div></a>
+        <a id="displaysearchjournalsFront" href="javascript:togglesearchFront('searchjournalsboxFront');"><div id="searchjournalsFront" class="searchbuttonFront" onclick="changeClassFront('searchjournalsFront')">Journals</div></a>   
+        <a id="displaysearchrefFront" href="javascript:togglesearchFront('searchrefboxFront');"><div id="searchrefFront" class="searchbuttonFront" onclick="changeClassFront('searchrefFront')">Reference</div></a>     
+
+        <a id="displaysearchsiteFront" href="javascript:togglesearchFront('searchsiteboxFront');"><div id="searchsiteFront" class="searchbuttonlastFront" onclick="changeClassFront('searchsiteFront')">Website</div></a>
+        
+        <!--searchboxes -->
+        <div id="searchplusboxFront" class="searchboxFront">
+            <form action="http://gw.summon.serialssolutions.com/search?" method="get" target="_blank" onSubmit="ga('send', 'event','tabbed-search','http://gw.summon.serialssolutions.com/search','ArticlesPlus (Home)');">
+                <input type="hidden" value="ContentType,Newspaper Article,t" name="s.fvf[]" />
+                <input placeholder="search ArticlesPlus for articles and more" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="" id="searchfieldplusFront" name="s.q" title="enter keywords to search for articles and books">&nbsp;<input type="submit" value="Search" /><br />
+                    <a href="howdoi/aboutarticlesplus" id="plustext">About ArticlesPlus</a>
+            </form>
+        </div>
+        
+        <div id="searchcatboxFront" class="searchboxFront">
+            <form name="catalog_search" onsubmit="javascript:validate(document.forms[2],true);ga('send', 'event','tabbed-search','http://findit.library.gwu.edu/catalog/','Catalog (Home)');return false;">
+                <input placeholder="search the catalog for books and media" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" size="50" title="enter keywords" id="searchfieldcatFront" name="TXT1">
+                    <select name='IDX1' title='catalog search type'>
+                        <option value='titlecombined:'>title</option>
+                        <option value='journaltitle:'>journal title</option>
+                        <option value='keyword:' selected>keyword</option>
+                        <option value='author:'>author</option>
+                        <option value='subjectterms:'>subject</option>
+                        <option value='lccallnum:'>call number</option>
+                    </select>
+                <input type="submit" value="Search" /><br /><a id="cattext" href="http://findit.library.gwu.edu/advanced/">advanced search</a><span style="font-size:13px; padding:6px 1.2em 0 0; float:right;"><a href="http://catalog.wrlc.org">Classic Catalog</a></span>
+            </form>
+        </div>
+        
+        <div id="searchjournalsboxFront" class="searchboxFront">
+            <form action="http://findit.library.gwu.edu/" name="SS_EJPSearchForm" target="_blank" onSubmit="ga('send', 'event','tabbed-search','http://findit.library.gwu.edu/','Journals (Home)');">
+                <input value="1.0" name="V" type="hidden" />
+                <input value="100" name="N" type="hidden" />
+                <input type="hidden" name="L" value="UZ4UG4LZ9G" />
+                <input placeholder="enter journal title to check for online access" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" size="50" title="enter journal title" name="C" id="searchfieldjournalsFront" />
+                <select name="S" title='journal search type'>
+                    <option value="A_T_B">title begins with</option>
+                    <option value="A_T_M">title (exact)</option>
+                    <option value="T_W_A" selected="selected">title keywords</option>
+                    <option value="I_M">ISSN</option>
+                </select>
+                <input type="submit" value="Search" /><br />
+                <span id="journaltext">Enter the title of a journal to check for online access.</span>
+            </form>
+        </div>
+        
+        <div id="searchrefboxFront" class="searchboxFront">
+            <form name="refsearch2" onSubmit="javascript:rusearch();ga('send', 'event','tabbed-search','http://proxygw.wrlc.org/login?url=http://refuniv.odyssi.com/cgi-bin/member/search/r?dbs+ruprime:@and+','Reference (Home)');return false;">
+                <input placeholder="search for online reference works" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" size="50" id="searchfieldrefFront" name="ruSearchInput2" title="enter keywords">&nbsp;<input type="submit" value="Search" /><br /><span id="reftext">Search for online reference works, such as encyclopedias and bibliographies.</span>
+            </form>
+        </div>
+
+        <div id="searchallboxFront" class="searchboxFront" style="display:block;">
+            <form class="search-form" method="get" id="" action="search-all" onSubmit="ga('send', 'event','tabbed-search','/search-all','Search All (Home)');">
+                <input placeholder="search everything" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" title="enter keywords to search all catalogs and website" type="text" name="query" class="search_box" size="50" value="" id="searchfieldallFront" onPaste="countChar(this)" onkeyup="countChar(this)" onmouseup="countChar(this)" maxlength=100 />&nbsp;<input type="submit" value="Search" /><span id="alltext">Search all of our catalogs and the pages of the website</span><br />
+                 
+            </form>
+        </div>
+        
+        <div id="searchsiteboxFront" class="searchboxFront">
+            <form class="search-form" action="/search/node" method="get" id="search-form" accept-charset="UTF-8" onSubmit="ga('send', 'event','tabbed-search','/search/node','Site Search (Home)');">
+                <input placeholder="search the pages of this site" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" title="enter keywords to search the pages of this website" type="text" name="keys" class="search_box" size="70" value="" id="searchfieldsiteFront" />
+                <input type="submit" value="Search" />
+            </form>
+        </div>
+        <!--end searchboxes-->
+    </div>
+</div>
+<!-- end tabbed search block -->
+
+<!-- alert message for exceeding max characters in tabbed search query field -->
+<div id="max100" style="display:none; width:100%; margin: 118px 0 .5em; color:#222;">
+    <i class="icon-arrow-right"></i> Limited to 100 characters (we'll use your first hundred)
+    <!--<input id="text-remaining" class="" placeholder="100 Chars Remaining" readonly />-->
+</div>
+
+<!-- less than 960 search (handheld view is in libnav.php ~line 37)-->
+<div id="search-front-960" class="mobile-show-960">
+    <div>
+        <!--<form action="http://gw.summon.serialssolutions.com/search?" method="get" target="_blank" onSubmit="ga('send', 'event','single-search','http://gw.summon.serialssolutions.com/search','ArticlesPlus (Home 960)');">
+            <input type="text" id="mobile-search" name="s.q" value="" placeholder=" search ArticlesPlus for books & articles" />
+            <input type="submit" value="go" />
+        </form>-->
+        <form action="/search-all" method="get" onSubmit="ga('send', 'event','single-search','/search-all','Single Search (Home 960)');">
+            <input type="text" id="mobile-search" name="query" value="" style="padding-left:.5em;" placeholder="search everything (catalogs and website)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength-100 onSubmit="ga('send', 'event','single-search','/search-all','Single Search (960)');" />
+            <input type="submit" value="go" />
+        </form>
+    </div>
+    
+    <div style="margin:.5em 0 0 4%; text-align:left;">
+        <a href="http://gw.summon.serialssolutions.com">ArticlesPlus</a> &bull; <a href="http://findit.library.gwu.edu/catalog/" target="_blank">Catalog</a> &bull; <a href="http://findit.library.gwu.edu/?L=UZ4UG4LZ9G&amp;" target="_blank">Journals</a> &bull; <a href="http://refuniv.odyssi.com/cgi-bin/phtml?newsearch.htm" target="_blank">Reference</a> &bull; <a href="/search">Site</a>
+    </div>
+</div>
+
+<!-- resource links -->
+<div style="width:100%;">
+    <div>
+        <div id="searchResourceLinksFront">
+            <div id="searchResourceLinksFrontInner"><a href="http://libguides.gwu.edu/" target="_blank" onClick="ga('send', 'event', 'resource links', 'http://gwu.v1.libguides.com/', 'Resource Link: Research Guides');">Research Guides</a> &#8226; <a href="http://libguides.gwu.edu/databases" target="_blank" onClick="ga('send', 'event', 'resource links', 'http://libguides.gwu.edu/databases', 'Resource Link: Subject Databases');">Subject Databases</a> &#8226; <a href="http://catalog.wrlc.org/cgi-bin/Pwebrecon.cgi?DB=local&amp;PAGE=rbSearch" target="_blank" onClick="ga('send', 'event', 'resource links', 'http://catalog.wrlc.org/cgi-bin/Pwebrecon.cgi?DB=local&amp;PAGE=rbSearch','Resource Link: Reserves');">Reserves</a> &#8226; <a href="http://libguides.gwu.edu/c.php?g=258781" target="_blank" onClick="ga('send', 'event', 'resource links', 'http://libguides.gwu.edu/content.php?pid=23115', 'Resource Link: RefWorks');">Citation Tools</a>
+            </div>
+        </div>
+    </div>
+
+<div style="clear:none;"></div>

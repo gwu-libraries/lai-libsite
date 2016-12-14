@@ -1,0 +1,37 @@
+LIBSITE FILE STRUCTURE
+======================
+updated 8-31-2012
+
+Theme files are located in /var/www/sites/all/themes/Libsite7
+
+----------------
+Important Files:
+
+css/style.css: main styles for site
+css/style-ie.css: exceptions for IE8 and below
+
+js/script.js: main js file, but also look in templates/jsbottom.html file
+
+templates/html.tpl.php: html framework template for Drupal
+templates/page.tpl.php: main page template for Drupal (below are the key includes within that page)
+
+templates/libheader.php: this contains the libsite header and tabbed search tool
+templates/libnav.php: primary navigation
+templates/gwfooter.php: library and gw footer
+
+
+-----------------------
+Important Drupal Files:
+
+modules: /var/www/sites/all/modules
+
+settings: /var/www/sites/default/settings.php
+
+Content files (images, pdfs for content pages): /var/www/sites/default/files
+
+
+-----------------------
+Important Apache Files:
+
+/etc/apache2/sites-available/default 
+/etc/apache2/sites-enabled for the list of urls redirecting to library.gwu.edu

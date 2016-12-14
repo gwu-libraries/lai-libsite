@@ -1,0 +1,38 @@
+name = GW Libraries (Libsite7)
+description = GW Libraries theme (Christian Aldridge with UWP portions from Chris Cooper's original UWP theme fall 2011; html5 boilerplate http://html5boilerplate.com/ ; Eric Meyer reset.css)
+version = 7.x-1.5
+core = 7.x
+engine = phptemplate
+
+regions[header] = Header
+regions[navbar] = Navigation
+regions[sidebar] = Sidebar
+regions[rsidebar] = Sidebar Right
+regions[expanded_left] = Expanded Left
+regions[expanded_right] = Expanded Right
+regions[emergency_banner] = Emergency Notice
+regions[topheader_right] = Header Right
+regions[content_top] = Top Content
+regions[content_above_title] = Top Content Above Title
+regions[content] = Main Content
+regions[content_bottom] = Bottom Content
+regions[page_banner] = Page Banner
+regions[content_front_bottom] = Home Page Bottom
+regions[content_front_bottom_right] = Home Page Bottom Right
+regions[footer] = Footer
+
+features[] = logo
+features[] = name
+features[] = favicon
+
+stylesheets[all][0] = css/reset.css
+stylesheets[all][1] = css/style.css
+stylesheets[all][2] = css/custom-drupal.css
+stylesheets[all][3] = css/node.css
+stylesheets[all][4] = css/front.css
+stylesheets[all][5] = css/topheader.css
+stylesheets[all][6] = css/bootstrap-pillaged.css
+
+scripts[] = js/script.js
+
+screenshot = screenshot.png

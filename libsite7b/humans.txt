@@ -1,0 +1,30 @@
+/* SHOP */
+
+	Scholarly Technology Group
+	George Washington University Libraries
+	https://library.gwu.edu/scholarly-technology-group
+
+/* PROJECT TEAM */
+
+	Christian Aldridge, Ian Hardy, Leslie Laurie, Xiaobei Xyu
+
+/* LAUNCH PROJECT TEAM 2012 */
+
+	Christian Aldridge, Daniel Chudnov, Michael Cummings, Rosalyn Metz 
+	
+
+/* RESOURCES */
+		
+	Design Assets from GW Unified Web Presence (Chris Cooper)
+	Washington Regional Library Consortium http://wrlc.org
+	reset.css Eric Meyer http://meyerweb.com/eric/tools/css/reset/
+	HTML5 Boilerplate http://html5boilerplate.com
+        modernizr http://modernizr.com/
+	Twitter Bootstrap: http://getbootstrap.com/
+	Glyphicons: http://glyphicons.com/ 
+	Font Awesome: http://fortawesome.github.io/Font-Awesome
+	Accessible MegaMenu: https://adobe-accessibility.github.io/Accessible-Mega-Menu/
+
+
+/* SITE */
+	Drupal 7 (PHP/HTML/JS/CSS/Linux/MySQL/Apache)

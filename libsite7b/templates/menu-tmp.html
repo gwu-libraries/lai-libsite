@@ -1,0 +1,191 @@
+<!doctype html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>Simple Accessible Mega Menu Example</title>
+    <style>
+
+    /* mega menu list */
+    .nav-menu {
+      display: block;
+      position: relative;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      z-index: 15;
+    }
+
+    /* a top level navigation item in the mega menu */
+    .nav-item {
+      list-style: none;
+      display: inline-block;
+      padding: 0;
+      margin: 0;
+      background-color: #ede2cd; /* gw custom */
+    }
+
+	/* GW CUSTOM */
+	.nav-menu li {font-size:.9em; font-weight:bold;}
+	.nav-menu li a {color:#555; text-transform:uppercase; text-decoration:none;}
+    .sub-menu-group li a {color:#555; font-weight:normal; text-transform:none;} 
+	.sub-menu-group li:hover a {color:#fff;} 
+	.sub-menu-group .leaf-section-title {font-size:1.1em; font-weight:bold;}
+	.sub-menu-group .leaf-section-title:hover {background-color:#f6f3eb;}
+
+    /* first descendant link within a top level navigation item */
+    .nav-item > a {
+        position: relative;
+        display: inline-block;
+        padding: 0.5em 1em;
+        margin: 0 0 -1px 0;
+        border: 1px solid transparent;
+    }
+
+    /* focus/open states of first descendant link within a top level 
+       navigation item */
+    .nav-item > a:focus,
+    .nav-item > a.open {
+        /*border: 1px solid #dedede;*/
+    }
+
+    /* open state of first descendant link within a top level 
+       navigation item */
+    .nav-item > a.open {
+      background-color: #4282B1; /* #fff; */
+      border-bottom: 2px solid #4282B1; /* none; */
+      color: #fff;
+      z-index: 1;
+    }
+
+    /* sub-navigation panel */
+    .sub-nav {
+      position: absolute;
+      display: none;
+      top: 2.6em;
+      margin-top: 2px; /* -1px; */
+      padding: 2em 0; /* 0.5em 1em; */
+      border: 1px solid #4282B1; /* #dedede; */
+      background-color: #f6f3eb /* #fff */;
+      border-top: 7px solid #4282B1; /* gw custom */
+    }
+
+    /* sub-navigation panel open state */
+    .sub-nav.open {
+        display: block;
+    }
+
+    /* list of items within sub-navigation panel */
+    .sub-nav ul {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0; /* 0 1em 0 0;*/
+        padding: 0;
+    }
+
+    /* list item within sub-navigation panel */
+    .sub-nav li {
+        display: block;
+        list-style-type: none;
+        margin: 0;
+        padding: .3em 2em; /* 0; */;
+    }
+	.sub-nav li:hover {background-color:#ab9d8a;} /* gw custom below */
+    </style>
+
+<style type="text/css" media="all">
+@import url("//test.library.gwu.edu/sites/all/themes/Libsite7/css/reset.css?nn9mje");
+@import url("//test.library.gwu.edu/sites/all/themes/Libsite7/css/style.css?nn9mje");
+@import url("//test.library.gwu.edu/sites/all/themes/Libsite7/css/custom-drupal.css?nn9mje");
+@import url("//test.library.gwu.edu/sites/all/themes/Libsite7/css/node.css?nn9mje");
+@import url("//test.library.gwu.edu/sites/all/themes/Libsite7/css/front.css?nn9mje");
+@import url("//test.library.gwu.edu/sites/all/themes/Libsite7/css/tophat_es.css?nn9mje");
+@import url("//test.library.gwu.edu/sites/all/themes/Libsite7/css/bootstrap-pillaged.css?nn9mje");
+</style>
+
+    </head>
+    <body>
+
+    <nav id="secondary-navX"><!-- this is gw libraries' primary nav -->					
+	<ul class="nav-menu">
+          <li class="firstx expandedx nav-item">
+            <a href="/research" onMouseOver="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/research-hover', {'nonInteraction': 1});">Research</a><!--<div class="touch-show-nav">Research</div>-->
+            <div class="sub-nav">
+	      <ul class='menux sub-menu-group'>
+		<li class='touch-show-nav touch-nav-main-link'><a href='/research'>RESEARCH MAIN PAGE</a></li>
+		<li class='first leaf leaf-section-title'>Find</li>
+		<li class='leaf'><a href='http://findit.library.gwu.edu/catalog/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/books-media');">Books & Media</a></li>
+		<li class='leaf'><a href='http://findit.library.gwu.edu/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/journals');">Journals</a><span class='leaf-extended'> | <a href='/howdoi/findarticlecitation' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/journals-tut');">Tutorial</a></span></li>
+		<li class='leaf'><a href='http://libguides.gwu.edu/databases' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db');">Subject Databases</a><span class='leaf-extended'> | <a href='/howdoi/findarticlesbytopic' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db-tut');">Tutorial</a></span></li>
+		<li class='leaf'><a href='http://gw.summon.serialssolutions.com/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus');">ArticlesPlus</a><span class='leaf-extended'> | <a href='/howdoi/aboutarticlesplus' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus-tut');">Tutorial</a></span></li>
+		<li class='leaf'><a href='http://catalog.wrlc.org' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/classic-cat');">Classic Catalog</a></li>
+		<li class='first leaf leaf-section-title'>Research Guides</li>
+		<li class='leaf'><a href='http://libguides.gwu.edu/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/subject');">Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/subject/art');">Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/subject/psych');">Psychology</a> | <a href='http://libguides.gwu.edu/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/subject/more');">More...</a></span></li>
+		<li class='leaf'><a href='http://libguides.gwu.edu/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/topic');">Topics: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12069' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/topic/industry');">Industry</a> | <a href='http://libguides.gwu.edu/content.php?pid=112501' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/topic/grants');">Grants</a> | <a href='http://libguides.gwu.edu/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/topic/more');">More...</a></span></li>	
+		<li class='leaf'><a href='http://libguides.gwu.edu/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/tools');">Tools: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=23115' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/tools/refworks');">RefWorks</a> | <a href='http://libguides.gwu.edu/content.php?pid=8881' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/tools/citations');">Citation Styles</a> | <a href='http://libguides.gwu.edu/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/tools/more');">More...</a></span></li>
+		<li class='leaf'><a href='/howdoi' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/guides/howdoi');">How Do I? (Tutorials)</a></li>						
+		<li class='leaf leaf-section-title'>Get Help</li>
+		<li class='leaf'><a href='/help/reference/ask-a-librarian' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/ask');">Ask A Librarian</a></li>
+		<li class='leaf'><a href='https://gwu.mywconline.net/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/wconline');">Research Consultation</a></li>
+                <li class='leaf'><a href='/reference/directory' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research-staff');">Research Staff</a></li>
+		<li class='leaf'><a href='/howdoi' onClick="ga('send','event','primary-nav','/primary-nav/gelman/research/help/howdoi');">How Do I? (Tutorials)</a></li>					
+	      </ul>
+            </div>
+	  </li>
+											
+	  <li class="expandedx nav-item">
+            <a href="/collections" onMouseOver="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/collections-hover', {'nonInteraction': 1});">Collections</a><!--<div class="touch-show-nav">Collections</div>-->
+            <div class="sub-nav">
+	      <ul class='menux sub-menu-group'>
+	        <li class='touch-show-navx touch-nav-main-linkx'><a href='/collections'>COLLECTIONS MAIN PAGE</a></li>
+		<li class='firstx leafx'><a href='/scrc' onClick="ga('send','event','primary-nav','/primary-nav/gelman/scrc');">Special Collections Research Center</a></li>
+		<li class='leafx'><a href='/collections/GRC' onClick="ga('send','event','primary-nav','/primary-nav/gelman/collections/grc');">Global Resources Center</a></li>
+		<li class='leafx'><a style='text-transform:none;' href='/art-design' onClick="ga('send','event','primary-nav','/primary-nav/gelman/art-design');">Art & Design Collection from the Corcoran</a></li>
+		<li class='leafx'><a href='http://teamstersarchives.gwu.edu/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/collections/teamstersarchives');">Teamsters Labor History Research Center</a></li>
+		<li class='leafx'><a href='/scrc/university-archives' onClick="ga('send','event','primary-nav','/primary-nav/gelman/scrc/university-archives');">University Archives</a></li>
+		<li class='leafx'><a href='/collections/kiev' onClick="ga('send','event','primary-nav','/primary-nav/gelman/collections/kiev');">Kiev Judaica Collection</a></li>
+		<li class='leafx'><a href='/collections/media-resources-center' onClick="ga('send','event','primary-nav','/primary-nav/gelman/collections/media');" >Media</a></li>
+		<li class='leafx'><a href='/collections/collection-development-librarians' onClick="ga('send','event','primary-nav','/primary-nav/gelman/collections/collection-development-librarians');" >Collection Development Librarians</a></li>
+		<li class='lastx leafx'><a href='/collections' onClick="ga('send','event','primary-nav','/primary-nav/gelman/collections/more');">(more...)</a></li>
+	      </ul>
+            </div>
+	  </li>								
+	<ul>
+    </nav>
+
+    <!-- include jquery -->
+    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+
+    <!-- include the jquery-accessibleMegaMenu plugin script -->
+    <script src="jquery-accessibleMegaMenu.js"></script>
+
+    <!-- initialize a selector as an accessibleMegaMenu -->
+    <script>
+        $("nav:first").accessibleMegaMenu({
+            /* prefix for generated unique id attributes, which are required 
+               to indicate aria-owns, aria-controls and aria-labelledby */
+            uuidPrefix: "accessible-megamenu",
+
+            /* css class used to define the megamenu styling */
+            menuClass: "nav-menu",
+
+            /* css class for a top-level navigation item in the megamenu */
+            topNavItemClass: "nav-item",
+
+            /* css class for a megamenu panel */
+            panelClass: "sub-nav",
+
+            /* css class for a group of items within a megamenu panel */
+            panelGroupClass: "sub-nav-group",
+
+            /* css class for the hover state */
+            hoverClass: "hover",
+
+            /* css class for the focus state */
+            focusClass: "focus",
+
+            /* css class for the open state */
+            openClass: "open"
+        });
+    </script>
+    </body>
+    </html>

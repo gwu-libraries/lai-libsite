@@ -1,0 +1,362 @@
+#container #header {
+	width: 100%;
+	background-color: #fff;
+	background-image: url(../images/bgHeader2.gif);
+	background-repeat: repeat-x;
+}
+
+#container #header #topHat2 {
+    width: 100%;
+	max-width: 960px; /* 940 */
+	margin: 0 auto;	
+	height: 47px; /*54px; 77px;*/
+	position: relative;
+}
+
+
+#container #header #topHat2 #logo2 {
+	float: left;
+	margin-right: 0; /* 40 */
+}
+
+#container #header #topHat2 #logo2 a {
+	display: block;
+	text-indent: -9999em;
+	width: 367px;
+	height: 44px; /*77px;*/
+	background-image: url(../images/spriteTopHat-3.gif);
+    background-position: 0 -14px;
+	background-repeat: no-repeat;
+}
+
+#container #header #topHat2 #mainMenu {
+	float: left;
+	margin-top: 0; /*13px;*/
+	height: 47 /* 54px; 80px;*/
+}
+
+#container #header #topHat2 #mainMenu ul {
+	list-style: none;
+}
+
+#container #header #topHat2 #mainMenu ul.parent {
+	height: 47px;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li {
+	float: left;	
+	font-family: Helvetica; Arial; sans-serif;
+	text-transform: uppercase;
+	color: #6e9fbf;
+	font-weight: bold;
+	font-size: 11px;
+	line-height: 47px;
+	height: 100%;		
+	width: 90px;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child {
+	color: #fff;
+	width: 100%; /*100%;*/
+	position: absolute;
+	left: -20px; /*0*/
+	display: none;
+    margin-top: 38px; /*25px;*/
+	height: 25px;
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child.secondaryMenuTwo {
+
+/*	left: 140px;*/
+	left: -20px; /*0;*/
+	width: 100%px; /*900px;*/
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li {
+	font-size: 16px;
+	line-height: 25px;
+	text-transform: capitalize;
+	font-weight: bold;
+	float: right;
+	/*width: auto;*/
+	width: 140px; /*156px;*/
+	background-image: url(../images/gold-px.gif);
+	background-position: bottom left;
+	background-size: 145px 1px;
+	background-repeat: no-repeat;
+	
+/*	1px solid #c8b28b;*/
+}
+
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child.secondaryMenuTwo li {
+    width: 220px; /*225px;*/
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li.close {
+	position: absolute;
+	top: 3px;
+	right: 0px;
+	width: 16px;
+	padding: 0;
+	margin: 0;
+	background-image: none;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li.close a {
+	background-image: url(../images/icon-close.gif);
+/*	background-position: -134px -78px;*/
+	display: block;
+	height: 16px;
+	width: 14px;
+	text-indent: -9999em;
+	padding: 0 0 0 16px;
+	margin: 1px 0 0 0;
+}
+
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li.students {
+	width: 312px;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li.parted6 {
+	margin-top: -10.5em;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li.parted6,
+#container #header #topHat2 #mainMenu ul.parent li ul.child li.parted7,
+#container #header #topHat2 #mainMenu ul.parent li ul.child li.parted8,
+#container #header #topHat2 #mainMenu ul.parent li ul.child li.parted9,
+#container #header #topHat2 #mainMenu ul.parent li ul.child li.parted10 {
+	margin-left: 15em;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li a {
+	padding: 0 0 0 6px; /*0px 11px;*/
+/*	color: #f1f9fe;*/
+	color: #2971A7;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li:hover a {
+	/*color: #fff;
+	text-decoration: underline;*/
+}
+
+/* GRANDCHILD CONTROL */
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li:hover ul.grandChild li a {
+	text-decoration: none;
+/*	background-image: url(../images/bgGrandChildMenuDotHover.gif);
+	background-position: 11px top;
+	background-repeat: no-repeat;*/
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li ul.grandChild li:hover {
+/*	color: #fff;*/
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li ul.grandChild li a:hover {
+/*	color: #fff;
+	background-image: url(../images/bgGrandChildMenuDotOn.gif);
+	background-position: 11px top;
+	background-repeat: no-repeat;
+	background-color: #0e7a9d;*/
+    text-decoration: underline;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li:hover ul.grandChild {
+/*	background-color: #d8e6f0;*/
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li ul.grandChild {
+	background-color: transparent;
+/*	color: #fff;*/
+	width: 100%;
+	list-style: none;
+/*	list-style-position: outside;*/
+	height: 133px;
+    margin: 0; /* granchild block top-bottom control */
+    padding: 0; /* granchild block top-bottom control */
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li ul.grandChild:hover {
+/*	background-color: #d8e6f0;*/
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li ul.grandChild li {
+	font-size: 11px;
+	text-transform: capitalize;
+	float: none;	
+	display:block;
+/*	color: #073f5e;*/
+	color: #2971A7;
+	border-top: 1px solid transparent;
+	line-height: 10px;
+	height: auto;
+	border-bottom: none;
+	background:none;
+    margin-left: 6px; /* controls granchild block left-right */
+    padding: 0; /* controls granchild block left-right */
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul.child li ul.grandChild li a {
+/*	color: #073f5e;*/
+	color: #2971A7;
+/*	padding: 4px 0 4px 18px;*/
+    padding: 4px 0 4px 0px;
+	line-height: .8em;
+	font-weight: normal;
+/*	background-image: url(../images/bgGrandChildMenuDotOff.gif);
+	background-position: 26px top;	
+	background-repeat: no-repeat;*/
+}
+
+/* END GRANDCHILD */
+
+#container #header #topHat2 #search {
+	float: right;
+	margin-top: 13px; /*26px;*/
+}
+
+#container #header #topHat2 #search fieldset,
+#container #header #topHat2 #search form {
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 242px;
+}
+
+#container #header #topHat2 #search div.inputHolder {
+	float: left;
+/*	background-color: #085584;*/
+    background-color: #2971a7;
+	height: 14px;
+	padding: 3px 0 3px 10px;
+/*	border: 1px solid #226793;*/
+	border: 1px solid #5991ba;
+	width: 200px !important;
+}
+
+#container #header #topHat2 #search div.inputHolder label {
+	display: none;
+}
+
+#container #header #topHat2 #search div.inputHolder input {
+	border: none;
+/*	background-color: #085584;*/
+    background-color: #2971a7;
+	
+/*	color: #6da2c8;*/
+	color: #aecadd;
+	font-size: 10px;
+	font-weight: bold;
+	width: 110px;
+	float: left;
+	
+}
+
+#container #header #topHat2 #search div.inputHolder .selectHolder input {
+	width: 80px;
+	background-color: #AECADD;
+/*	color: #07405f;*/
+/*	color: #aecadd;*/
+    color: #000;
+    font-weight: normal;
+	height: 13px;
+}
+
+#container #header #topHat2 #search div.inputHolder .selectHolder {
+	float: left;
+}
+
+#container #header #topHat2 #search button {
+/*	background-color: #085584;*/
+    background-color: #2971a7;
+	border: none;
+	text-indent: -9999em;
+	height: 22px;
+	width: 22px;
+/*	background-image: url(../images/spriteTopHat-3.gif);*/
+	background-image: url(../images/search-go-main.png);
+/*	background-position: -133px -95px;*/
+/*  background-position: -110px -65px;*/
+	margin-left: 0.5em;
+	cursor: pointer;
+	float: right;
+}
+
+
+
+#container #header #topHat2 #mainMenu ul.parent {
+	margin: 0;
+	padding: 0;
+}
+
+
+
+#container #header #topHat2 #mainMenu ul.parent li a {
+	display: block;
+/*	color: #a2d6ff;*/
+	color: #c4ecf6;
+	text-decoration: none;
+	background-image: url(../images/arrowRight.gif);
+	background-position: right;
+	background-repeat: no-repeat;
+	padding: 0 2.0em 0 1.0em;
+	height: 100%;
+	border-right: 1px solid transparent;
+	border-left: 1px solid transparent;	
+	text-align: left;
+	cursor: pointer;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li.first a {
+	background-image: none;
+	padding: 0 1.0em;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li.first a:hover {
+	background-image: none;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li a:visited {
+/*	color: #a2d6ff;*/
+	color: #c4ecf6;
+	text-decoration: none;
+}
+
+#container #header #topHat2 #mainMenu ul.parent li a:hover {
+	color: #fff;
+	text-decoration: none;
+	background-image: url(../images/arrowDown.gif);
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul li a {
+	background-image: none;
+    margin-left: 0; /*override reset.css*/
+    /*margin-top: 0;
+    padding-top: 0;*/
+}
+
+#container #header #topHat2 #mainMenu ul.parent li ul li a:hover {
+	background-image: none;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width:960px) {
+    #header {
+        height: 47px !important; /* to overide js element styling on expanded gw menus */
+    }
+    #container #header #topHat2 #logo2 {
+        float: left;
+        margin-left: .5em;
+    }
+    #container #header #topHat2 #mainMenu ul.parent {
+        position: absolute;
+        right: 0;
+    }
+}

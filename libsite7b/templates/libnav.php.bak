@@ -1,0 +1,315 @@
+	<div class="limiter">
+		<div id="local-header">		
+			<div id="campuslibs-mobile">
+			
+				<div id="social-links-mobile" class="mobile-show">
+					<div>
+					<?php if ($campus == "none" || $campus == "gelman"): ?>
+						<a title="visit Gelman Library on Twitter" href="https://twitter.com/gelmanlibrary">
+							<i class="fa fa-twitter"></i><span class="sr-only">follow Gelman on Twitter</span>
+						</a>
+						<a title="visit Gelman Library on Facebook" href="https://www.facebook.com/gelmanlibrary">
+							<i class="fa fa-facebook-square"></i><span class="sr-only">visit Gelman on Facebook</span>
+						</a>
+					<?php elseif ($campus == "eckles"): ?>
+						<a title="visit Eckles Library on Facebook" href="https://www.facebook.com/EcklesLibrary">
+							<!--<img src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/icons/icon-fb.png" alt="Facebook" title="Facebook">-->
+<i class="fa fa-facebook-square"></i><span class="sr-only">visit Eckles on Facebook</span>
+						</a>					
+					<?php elseif ($campus == "virginia"): ?>
+						<a title="visit the VSTC Library on Facebook" href="https://www.facebook.com/vstclibrary">
+							<!--<img src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/icons/icon-fb.png" alt="Facebook" title="Facebook">-->
+<i class="fa fa-facebook-square"></i><span class="sr-only">visit the VSTC Library on Facebook</span>
+						</a>
+					<?php endif; ?>						
+					</div>
+				</div>			
+			
+				<a href="<?php print $front_page; ?>">Gelman<? if ($campus == 'gelman') print ' Home';?></a> &#8226; <a href="<?php print $front_page; ?>eckles">Eckles<? if ($campus == 'eckles') print ' Home';?></a> &#8226; <a href="<?php print $front_page; ?>virginia">Virginia<? if ($campus == 'virginia') print ' Home';?></a>
+				
+					<div id="askalib-720">
+							<a href="<?php print $front_page; ?>help/reference/ask-us" onClick="ga('send', 'event', 'button', 'ask us', 'header-720');"><img src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/ask-us-4.png" alt="ask a librarian" /><span class="sr-only">Ask a Librarian</span></a>
+					</div>
+					<div id="aladin-720">
+							<a href="https://mylibrary.wrlc.org/" onClick="ga('send', 'event', 'button', 'my library', 'header-720');" target="_blank"><img src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/my-account-3.png" alt="My Library Account" /><span class="sr-only">My Library Account</span></a>
+					</div>
+				
+			</div>
+			
+			<div id="search-menu-mobile"><!-- main search located in libheader.php -->
+				<!-- summon single search -->
+				<!--<form action="http://gw.summon.serialssolutions.com/search?" method="get" target="_blank" onSubmit="ga('send','event','single-search','http://gw.summon.serialssolutions.com/search','ArticlesPlus (Home handheld)');">
+					<label for='mobile-search'>enter your search terms</label>
+					<input type="text" id="mobile-search" name="s.q" value="" placeholder=" search ArticlesPlus for books & articles" />
+					<input type="hidden" value="ContentType,Newspaper Article,t" name="s.fvf[]" />					
+					<input type="submit" value="go" />
+				</form>-->
+				<!-- SEARCH ALL single search -->
+				<form action="/search-all" method="get" target="_blank" onSubmit="ga('send','event','single-search','/search-all','Single Search (handheld)');">
+					<label for='mobile-search'>enter your search terms</label>
+					<input type="text" id="mobile-search" name="query" value="" style="padding-left:.5em;" placeholder="search everything (catalogs and website)" maxlength=100 />					
+					<input type="submit" value="go" />
+				</form>
+				<div style="margin-top:.4em;"><a href="http://gw.summon.serialssolutions.com">ArticlesPlus</a> &bull; <a href="http://findit.library.gwu.edu/catalog/" target="_blank">Catalog</a> &bull; <a href="http://findit.library.gwu.edu/?L=UZ4UG4LZ9G&" target="_blank">Journals</a> &bull; <a href="http://refuniv.odyssi.com/cgi-bin/phtml?newsearch.htm" target="_blank">Reference</a> &bull; <a href="/search">Site</a>
+				</div>
+			</div>		
+		
+			<nav id="secondary-nav"><!-- this is gw libraries' primary nav -->
+					
+				<ul class="menu">
+					<!-- buttons -->								
+					<div id="askalib">
+							<a href="<?php print $front_page; ?>help/reference/ask-a-librarian" onClick="ga('send', 'event', 'button', 'ask us', 'header-desktop');"><img src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/ask-us-4.png" alt="link to Ask Us help page" /><span class="sr-only">Ask a Librarian</span></a>
+					</div>
+					<div id="aladin">
+							<a href="https://mylibrary.wrlc.org/" onClick="ga('send', 'event', 'button', 'my library', 'header');" target="_blank"><img src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/my-account-3.png" alt="link to My Library account" /><span class="sr-only">My Library Account</span></a>
+					</div>
+					
+				<?php
+				switch ($campus) {
+					case "none";
+    				case "gelman":
+                    echo "
+
+                    <li class=\"first expanded\"><div class=\"touch-hide-nav\"><a href=\"" . $front_page . "research\" onMouseOver=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/research-hover', {'nonInteraction': 1});\">Research</a></div><!--<div class=\"touch-show-nav\">Research</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "research'>RESEARCH MAIN PAGE</a></li>
+						<li class='first leaf leaf-section'>Find</li>
+						<li class='leaf'><a href='http://findit.library.gwu.edu/catalog/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/books-media');\">Books & Media</a></li>
+						<li class='leaf'><a href='http://findit.library.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/journals');\">Journals</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlecitation' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/journals-tut');\">Tutorial</a></span></li>
+						<li class='leaf'><a href='http://libguides.gwu.edu/databases' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db');\">Subject Databases</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlesbytopic' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db-tut');\">Tutorial</a></span></li>
+						<li class='leaf'><a href='http://gw.summon.serialssolutions.com/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus');\">ArticlesPlus</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/aboutarticlesplus' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus-tut');\">Tutorial</a></span></li>
+						<li class='leaf'><a href='http://catalog.wrlc.org' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/classic-cat');\">Classic Catalog</a></li>
+
+						<li class='first leaf leaf-section'>Research Guides</li>
+						<li class='leaf'><a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject');\">Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject/art');\">Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject/psych');\">Psychology</a> | <a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject/more');\">More...</a></span></li>
+						<li class='leaf'><a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic');\">Topics: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12069' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic/industry');\">Industry</a> | <a href='http://libguides.gwu.edu/content.php?pid=112501' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic/grants');\">Grants</a> | <a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic/more');\">More...</a></span></li>	
+						<li class='leaf'><a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/tools');\">Tools: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=23115' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/tools/refworks');\">RefWorks</a> | <a href='http://libguides.gwu.edu/content.php?pid=8881' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/tools/citations');\">Citation Styles</a> | <a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/tools/more');\">More...</a></span></li>
+						<li class='leaf'><a href='" . $front_page . "howdoi' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/guides/howdoi');\">How Do I? (Tutorials)</a></li>						
+						
+						<li class='leaf leaf-section'>Get Help</li>
+						<li class='leaf'><a href='" . $front_page . "help/reference/ask-a-librarian' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/ask');\">Ask A Librarian</a></li>
+						<li class='leaf'><a href='https://gwu.mywconline.net/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/wconline');\">Research Consultation</a></li>
+                                                <li class='leaf'><a href='" . $front_page . "reference/directory' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research-staff');\">Research Staff</a></li>
+						<li class='leaf'><a href='" . $front_page . "howdoi' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/help/howdoi');\">How Do I? (Tutorials)</a></li>					
+				   </ul>
+				   </li>
+											
+					<li class=\"expanded\"><div class=\"touch-hide-nav\"><a href=\"" . $front_page . "collections\" onMouseOver=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/collections-hover', {'nonInteraction': 1});\">Collections</a></div><!--<div class=\"touch-show-nav\">Collections</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "collections'>COLLECTIONS MAIN PAGE</a></li>
+						<li class='first leaf'><a href='" . $front_page . "scrc' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/scrc');\">Special Collections Research Center</a></li>
+						<li class='leaf'><a href='" . $front_page . "collections/GRC' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/grc');\">Global Resources Center</a></li>
+						<li class='leaf'><a style='text-transform:none;' href='" . $front_page . "art-design' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/art-design');\">Art & Design Collection from the Corcoran</a></li>
+						<li class='leaf'><a href='http://teamstersarchives.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/teamstersarchives');\">Teamsters Labor History Research Center</a></li>
+						<li class='leaf'><a href='" . $front_page . "scrc/university-archives' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/scrc/university-archives');\">University Archives</a></li>
+						<li class='leaf'><a href='" . $front_page . "collections/kiev' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/kiev');\">Kiev Judaica Collection</a></li>
+						<li class='leaf'><a href='" . $front_page . "collections/media-resources-center' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/media');\" >Media</a></li>
+						<li class='leaf'><a href='" . $front_page . "collections/collection-development-librarians' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/collection-development-librarians');\" >Collection Development Librarians</a></li>
+						<li class='last leaf'><a href='" . $front_page . "collections' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/more');\">(more...)</a></li>
+					</ul>
+					</li>								
+	
+					<li class=\"expanded\"><div class=\"touch-hide-nav\"><a href=\"" . $front_page . "services\" onMouseOver=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services-hover', {'nonInteraction': 1});\"><span class=\"mobile-hide\">Library </span>Services</a></div><!--<div class=\"touch-show-nav\">Library Services</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "services'>SERVICES MAIN PAGE</a></li>
+						<li class='first leaf'><a href='" . $front_page . "services/computers-wireless' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/computers-wireless');\">Computers & Wireless</a></li>
+						<li class='leaf'><a href='http://rooms.library.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/study-rooms');\">Study Room Reservations</a></li>
+						<!--<li class='leaf'><a href='" . $front_page . "' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/account-help');\">Account Help</a></li>-->
+						<li class='leaf'><a href='" . $front_page . "services/borrowing-renewing' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/borrow-renew');\">Borrow & Renew</a></li>
+						<li class='leaf'><a href='" . $front_page . "services/reserves' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/course-reserves');\">Course Reserves</a></li>
+						<li class='leaf'><a href='" . $front_page . "services/borrowing-renewing/consortium-loan' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/consortium-loan');\">Consortium Loan</a></li>
+						<li class='leaf'><a href='" . $front_page . "services/interlibrary-loan' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/interlibrary-loan');\">Interlibrary Loan</a></li>
+						<li class='leaf'><a href='" . $front_page . "services/library-instruction' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/instruction');\">Library Instruction</a></li>
+                                                <li class='leaf'><a href='" . $front_page . "scholarly-technology-group' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/stg');\">Scholarly Technology</a></li>
+						<li class='leaf'><a href='" . $front_page . "contact' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/contact-us');\">Contact Us</a></li>
+						<li class='last leaf'><a href='" . $front_page . "services' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/more');\">(more...)</a></li>
+					</ul>					
+					</li>
+					
+					<li class=\"leaf\"><div class=\"touch-hide-nav\"><a href=\"" . $front_page . "news-events\" onMouseOver=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/news-events-hover', {'nonInteraction': 1});\">News & Events</a></div><!--<div class=\"touch-show-nav\">News & Events</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "news-events'>NEWS & EVENTS MAIN PAGE</a></li>
+						<li class='first leaf'><a href='" . $front_page . "news-events' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/news');\">News</a></li>
+						<li class='leaf'><a href='" . $front_page . "spotlights' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/spotlight');\">GW Libraries Spotlight</a></li>
+						<li class='leaf'><a href='" . $front_page . "news-events/blogs-and-social-media' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/blogs-social');\">Blogs and Social Media</a></li>
+						<!--<li class='leaf'><a href='" . $front_page . "changes' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/new-website');\">Changes To Our Website</a></li>-->
+						<li class='leaf'><a href='" . $front_page . "news-events/update' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/newsletter');\">Library Update</a></li>
+						<li class='leaf'><a href='" . $front_page . "news-events/vision' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/vision');\">Vision Magazine</a></li>
+					</ul>
+					</li>
+					
+					<li class=\"expanded\"><div class=\"touch-hide-nav\"><a href=\"" . $front_page . "about\" onMouseOver=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/about-hover', {'nonInteraction': 1});\">About</a></div><!--<div class=\"touch-show-nav\">About</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "about'>ABOUT MAIN PAGE</a></li>
+						<li class='first leaf'><a href='" . $front_page . "hours' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/hours');\">Hours</a></li>
+						<li class='leaf'><a href='" . $front_page . "about/facilities/maps' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/maps-directions');\">Maps & Directions</a></li>
+						<li class='leaf'><a href='" . $front_page . "about/organization/jobs' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/jobs');\">Working at GW Libraries</a></li>
+						<li class='leaf'><a href='" . $front_page . "about/staff-directory' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/directory');\">Staff Directory</a></li>
+						<li class='leaf'><a href='" . $front_page . "about/library-departments' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/departments');\">Library Departments</a></li>
+						<li class='leaf'><a href='" . $front_page . "about/facilities/entrance-policies/entrance-policy' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/entrance-policies');\">Entrance Policies</a></li>
+						<li class='leaf'><a href='" . $front_page . "about/facilities/study-room-reservations' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/study-rooms');\">Study Room Reservations</a></li>
+						<li class='leaf'><a href='" . $front_page . "about/giving' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/donor-info');\">Donor Information</a></li>
+						<li class='leaf'><a href='" . $front_page . "contact' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/contact-us');\">Contact Us</a></li>
+						<li class='last leaf'><a href='" . $front_page . "about' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/more');\">(more...)</a></li>
+					</ul>
+					</li>
+					
+					<li class='mobile-show'><a href='" . $front_page . "hours' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/handheld/hours');\">Hours</a></li>
+					";
+					break;
+					
+					case "eckles":
+					print "
+					
+					<li class='first expanded'><div class='touch-hide-nav'><a href='" . $front_page . "eckles/reference' onMouseOver=\"ga('send', 'event', 'primary-nav', '/primary-nav/eckles/research-hover', {'nonInteraction': 1});\">Research</a></div><!--<div class='touch-show-nav'>Research</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "eckles/reference'>RESEARCH MAIN PAGE</a></li>
+						<li class='first leaf leaf-section'>Eckles</li>
+						<li class='first leaf'><a href='" . $front_page . "eckles/reference'>Research Help at Eckles</a></li>
+						<li class='first leaf'><a href='" . $front_page . "eckles/the-eckles-prize-for-freshman-research-excellence'>Eckles Prize</a></li>
+
+						<li class='first leaf leaf-section'>Find</li>
+						<li class='leaf'><a href='http://findit.library.gwu.edu/catalog/'>Books & Media</a><span class='leaf-extended'></li>
+						<li class='leaf'><a href='http://findit.library.gwu.edu/'>Journals</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlecitation'>Tutorial</a></span></li>
+						<li class='leaf'><a href='http://libguides.gwu.edu/databases'>Subject Databases</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlesbytopic'>Tutorial</a></span></li>
+						<li class='leaf'><a href='http://gw.summon.serialssolutions.com/'>ArticlesPlus</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/aboutarticlesplus'>Tutorial</a></span></li>
+						<li class='leaf'><a href='http://catalog.wrlc.org'>Classic Catalog</a><span class='leaf-extended'></li>
+
+						<li class='first leaf leaf-section'>Research Guides</li>
+						<li class='leaf'><a href='http://libguides.gwu.edu/'>Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823'>Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054'>Psychology</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>
+						<li class='leaf'><a href='http://libguides.gwu.edu/'>Topics: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12069'>Industry</a> | <a href='http://libguides.gwu.edu/content.php?pid=112501'>Grants</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>	
+						<li class='leaf'><a href='http://libguides.gwu.edu/'>Tools: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=23115'>RefWorks</a> | <a href='http://libguides.gwu.edu/content.php?pid=8881'>Citation Styles</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>							
+						<li class='leaf'><a href='" . $front_page . "howdoi'>How Do I? (Tutorials)</a></li>
+
+						<li class='leaf leaf-section'>Get Help</li>
+						<li class='leaf'><a href='" . $front_page . "help/reference/ask-a-librarian'>Ask A Librarian</a></li>
+						<li class='leaf'><a href='" . $front_page . "research/raa'>Research Consultation</a></li>
+						<li class='leaf'><a href='" . $front_page . "howdoi'>How Do I? (Tutorials)</a></li>		
+					</ul>
+					</li>
+					
+					<li class='expanded'><div class='touch-hide-nav'><a href='" . $front_page . "eckles/services' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/eckles/services-hover',{'nonInteraction': 1});\"><span class='mobile-hide'>Library </span>Services</a></div><!--<div class='touch-show-nav'>Library Services</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "eckles/services'>SERVICES MAIN PAGE</a></li>
+						<li class='leaf'><a href='" . $front_page . "eckles/services/#borrow'>Borrow & Renew</a></li>
+						<li class='leaf'><a href='" . $front_page . "eckles/services#reserves'>Course Reserves</a></li>
+						<li class='leaf'><a href='" . $front_page . "eckles/services#print'>Photocopying & Printing</a></li>
+						<li class='leaf'><a href='" . $front_page . "eckles/services#instruction'>Instruction Sessions</a></li>
+						<li class='leaf'><a href='" . $front_page . "eckles/services#collections'>Collections</a></li>
+						<li class='leaf'><a href='" . $front_page . "eckles/services#computing'>Computing in Eckles</a></li>
+					</ul>
+					</li>
+					
+					<li class='expanded'><div class='touch-hide-nav'><a href='" . $front_page . "eckles/about' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/eckles/about-hover',{'nonInteraction': 1});\">About</a></div><!--<div class='touch-show-nav'>About</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "eckles/about'>ABOUT MAIN PAGE</a></li>
+					   <li class='first leaf'><a href='" . $front_page . "eckles/hours'>Hours</a></li>
+						<li class='leaf'><a href='" . $front_page . "eckles/general-information' title=''>Visiting Eckles</a></li>
+						<!--<li class='leaf'><a href='" . $front_page . "about/entrance-policies'>Entrance Policies</a></li>-->
+						<li class='leaf'><a href='" . $front_page . "eckles/contact'>Contact Us</a></li>
+						<li class='leaf'><a href='" . $front_page . "eckles/about'>About Eckles</a></li>
+					</ul>
+					</li>
+					
+					<li class='expanded'><div class='touch-hide-nav'><a href='" . $front_page . "eckles/academic-services-at-eckles' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/eckles/acad-services-hover',{'nonInteraction': 1});\">Academic Services</a></div><!--<div class='touch-show-nav'>Academic Services</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "eckles/academic-services-at-eckles'>ACADEMIC SERVICES MAIN PAGE</a></li>
+						<li class='first leaf'><a href='" . $front_page . "eckles/academic-services-at-eckles#a1'>Economics, Mathematics &amp; Science Tutoring</a></li>
+						<li class='leaf'><a href='" . $front_page . "eckles/academic-services-at-eckles#a2'>The Language Cafe</a></li>
+						<li class='leaf'><a href='" . $front_page . "eckles/academic-services-at-eckles#a3'>The Writing Center</a></li>
+					</ul>
+					</li>
+					
+					<li class='expanded'><div class='touch-hide-nav'><a href='" . $front_page . "eckles/eckles-flix' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/eckles/flix-hover',{'nonInteraction': 1});\">Eckles Flix</a></div><!--<div class='touch-show-nav'>Eckles Flix</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "eckles/eckles-flix'>ECKLES FLIX MAIN PAGE</a></li>
+						<li class='first leaf'><a href='" . $front_page . "eckles/eckles-flix' title=''>Eckles Flix</a></li>
+					</ul>
+					</li>
+					
+					<li class='mobile-show'><a href='" . $front_page . "eckles/hours'>Hours</a></li>
+					";
+					break;
+					
+					case "virginia":
+					print "
+
+					<li class='first expanded'><div class='touch-hide-nav'><a href='" . $front_page . "virginia/research' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/virginia/research-hover',{'nonInteraction': 1});\">Research</a></div><!--<div class='touch-show-nav'>Research</div>-->
+					<ul class='menu'>			
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "virginia/research'>RESEARCH MAIN PAGE</a></li>						
+						<li class='first leaf leaf-section'>Find</li>
+						<li class='leaf'><a href='http://findit.library.gwu.edu/catalog/'>Books & Media</a><span class='leaf-extended'></li>
+						<li class='leaf'><a href='http://findit.library.gwu.edu/'>Journals</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlecitation'>Tutorial</a></span></li>
+						<li class='leaf'><a href='http://libguides.gwu.edu/databases'>Subject Databases</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlesbytopic'>Tutorial</a></span></li>
+						<li class='leaf'><a href='http://gw.summon.serialssolutions.com/'>ArticlesPlus</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/aboutarticlesplus'>Tutorial</a></span></li>
+						<li class='leaf'><a href='http://catalog.wrlc.org'>Classic Catalog</a><span class='leaf-extended'></li>
+
+						<li class='first leaf leaf-section'>Research Guides</li>
+						<li class='leaf'><a href='http://libguides.gwu.edu/'>Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823'>Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054'>Psychology</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>
+						<li class='leaf'><a href='http://libguides.gwu.edu/'>Topics: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12069'>Industry</a> | <a href='http://libguides.gwu.edu/content.php?pid=112501'>Grants</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>	
+						<li class='leaf'><a href='http://libguides.gwu.edu/'>Tools: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=23115'>RefWorks</a> | <a href='http://libguides.gwu.edu/content.php?pid=8881'>Citation Styles</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>							
+						<li class='leaf'><a href='" . $front_page . "howdoi'>How Do I? (Tutorials)</a></li>			
+		
+						<li class='leaf leaf-section'>Get Help</li>
+						<li class='leaf'><a href='" . $front_page . "virginia/reference'>Reference and Research Help</a></li>
+						<li class='leaf'><a href='" . $front_page . "howdoi'>How Do I? (Tutorials)</a></li>				
+					</ul>
+					</li>
+					
+					<li class='expanded'><div class='touch-hide-nav'><a href='" . $front_page . "virginia/collections' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/virginia/collections-hover',{'nonInteraction': 1});\">Collections</a></div><!--<div class='touch-show-nav'>Collections</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "virginia/collections'>COLLECTIONS MAIN PAGE</a></li>
+						<li class='first leaf'><a href='" . $front_page . "virginia/grants' title=''>Grants & Foundations</a></li>
+						<li class='leaf'><a href='http://reports.library.gwu.edu/virginiacampus/newbookshelf/'>New Books</a></li>
+						<li class='leaf'><a href='http://reports.library.gwu.edu/virginiacampus/virginiacollection/'>The Virginia Collection</a></li>		
+					</ul>
+					</li>
+					
+					<li class='expanded'><div class='touch-hide-nav'><a href='" . $front_page . "virginia/services' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/virginia/services-hover',{'nonInteraction': 1});\"><span class='mobile-hide'>Library </span>Services</a></div><!--<div class='touch-show-nav'>Library Services</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "virginia/services'>SERVICES MAIN PAGE</a></li>
+						<li class='first leaf'><a href='" . $front_page . "services/borrowing-renewing'>Borrow & Renew</a></li>
+						<li class='leaf'><a href='" . $front_page . "services/reserves'>Course Reserves</a></li>
+						<li class='leaf'><a href='" . $front_page . "services/borrowing-renewing/consortium-loan'>Consortium Loan</a></li>
+						<li class='leaf'><a href='" . $front_page . "services/interlibrary-loan'>Interlibrary Loan</a></li>
+						<li class='leaf'><a href='" . $front_page . "services/proctoring'>Proctoring</a></li>
+						<li class='leaf'><a href='" . $front_page . "virginia/contact-us'>Contact Us</a></li>
+						<li class='leaf'><a href='" . $front_page . "etds/'>Electronic Theses & Dissertations</a></li>
+						<li class='leaf'><a href='" . $front_page . "virginia/reference'>Reference & Research Help</a></li>
+						<li class='leaf'><a href='" . $front_page . "virginia/computers'>Computers in the Library</a></li>
+					</ul>					
+					</li>
+					
+					<li class='leaf'><div class='touch-hide-nav'><a href='" . $front_page . "news-events' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/virginia/news-events-hover',{'nonInteraction': 1});\">News & Events</a></div><!--<div class='touch-show-nav'>News & Events</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "news-events'>NEWS & EVENTS MAIN PAGE</a></li>
+						<li class='first leaf'><a href='" . $front_page . "news-events'>News</a></li>
+						<li class='leaf'><a href='" . $front_page . "spotlights'>GW Libraries Spotlight</a></li>
+						<li class='leaf'><a href='" . $front_page . "news-events/blogs-and-social-media'>Blogs and Social Media</a></li>
+                                                <li class='leaf'><a href='" . $front_page . "news-events/update' onClick=\"ga('send','event','primary-nav','/primary-nav/virginia/news-events/newsletter');\">Library Update</a></li>
+                                                <li class='leaf'><a href='" . $front_page . "news-events/vision' onClick=\"ga('send','event','primary-nav','/primary-nav/virginia/news-events/vision');\">Vision Magazine</a></li>
+					</ul>
+					</li>
+					
+					<li class='expanded'><div class='touch-hide-nav'><a href='" . $front_page . "virginia/about' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/virginia/about-hover',{'nonInteraction': 1});\">About</a></div><!--<div class='touch-show-nav'>About</div>-->
+					<ul class='menu'>
+						<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "virginia/about'>ABOUT MAIN PAGE</a></li>
+						<li class='first leaf'><a href='" . $front_page . "virginia/hours'>Hours</a></li>
+						<li class='leaf'><a href='" . $front_page . "virginia/map'>Map & Directions</a></li>
+						<li class='leaf'><a href='" . $front_page . "virginia/access'>Access</a></li>
+						<li class='leaf'><a href='" . $front_page . "virginia/staff'>Staff</a></li>
+						<li class='leaf'><a href='" . $front_page . "virginia/jobs'>Positions Available</a></li>
+						<li class='leaf'><a href='" . $front_page . "virginia/contact-us'>Contact Us</a></li>
+					</ul>
+					</li>
+
+					<li class='mobile-show'><a href='" . $front_page . "virginia/hours'>Hours</a></li>
+					";
+					break;				
+				}
+				?>
+				</ul>		
+			</nav>
+		</div>
+	</div>

@@ -1,0 +1,150 @@
+/*
+  Sitename: library.gwu.edu
+  Author: http://library.gwu.edu/humans.txt
+
+  stylesheet for IE 8 and below (included via html.tpl.php with conditional ie comment)
+
+  style-ie.css
+  IE styles.
+*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~ Override Styles ~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+main {display:block; /* for IE compatibility with semantic elements */}
+
+p, li {
+  font-family: Arial, sans-serif;
+}
+	
+h2, h3, h4 {
+  font-family: Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: normal;
+  line-height: normal;
+  outline: 0;
+}
+   
+.center-content {
+  width: 960px;
+  max-width: 960px;
+  min-width: 960px;
+}
+
+#container #header #topHat2 {
+  width: 960px;
+}
+
+#primary-navigation ul.menu li ul li a {
+  font-family: Arial, sans-serif;
+}
+
+#primary-navigation ul.menu li {
+  font-family: Arial, sans-serif;  
+}
+
+#primary-navigation ul.menu li ul li ul li a {
+  font-family: Arial, sans-serif;
+}
+
+#container > header div.limiter h1 {
+  font-family: Arial, sans-serif;	
+}
+
+.front-page-header-variant {
+  font-family: Arial, sans-serif;	
+}
+
+#block-views-news_box-block_3 {
+  clear:none; 
+  margin-top:-410px !important;
+  *margin-top: 0 /* IE7 and below */
+}
+
+.page-node-1 #frontPageBanner {
+  position: absolute;
+  top: 450px;
+  width: 460px;
+}
+
+.open-access-button {margin-bottom:1em !important}
+#block-library_hours-library_hours_gelman_today {height:145px;}
+
+#frontBottomBoxes {
+  clear:none; 
+	margin-top:-310px;
+	*margin-top: 0 /* IE7 and below */
+}
+
+#newsBottomBoxes {
+	clear:none; 
+	margin-top:-410px;
+	*margin-top: 0 /* IE7 and below */
+}
+		
+#searchResourceLinksFront {	
+	*margin: 3px 0 1em; /* IE7 and below */
+}
+
+#content-container {
+	min-width: 960px;
+	min-height: 100% !important;
+	height: 100% !important;
+	zoom:1;
+	display:block;
+	/*overflow:auto;*/
+}
+
+img {
+  /* width: 100%; */ 
+  /* height: auto !important; */
+  /* object-fit: contain !important; */
+}
+
+.primary-content-060 {
+  min-height: 100%;
+  height: 100% !important;
+  zoom:1;
+  display: block;
+  /*overflow: auto;*/
+  }
+
+.primary-content-063 {
+  min-height: 100%;
+  height: 100% !important;
+  zoom:1;
+  display: block;
+  /*overflow: auto;*/
+  }
+
+.primary-content-360 {
+  min-height: 100%;
+  height: 100% !important;
+  zoom:1;
+  display: block;
+  /*overflow: auto;*/
+  }
+
+.primary-content-363 {
+  min-height: 100%;
+  height: 100% !important;
+  zoom:1;
+  display: block;
+  /*overflow: auto;*/
+  }
+
+.twitter-feed {height:400px;}
+
+/* scrc pages */
+
+.page-node-958 #scrcBottomBoxes {
+  position: absolute;
+  top: 600px;
+  width: 730px
+}
+
+#block-library_hours-library_hours_scrc_today {margin-bottom: -18px;} /* scrc today's hours block prod */
+#block-block-77 {margin-bottom: 0;} /* featured video block prod */
+#block-block-41 {margin-top: 0;} /* chat widget prod */
+#block-block-76 {margin-top: 0;} /* social links block prod */

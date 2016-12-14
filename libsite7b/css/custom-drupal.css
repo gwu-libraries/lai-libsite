@@ -1,0 +1,27 @@
+@charset "utf-8";
+/*
+  Sitename: http://library.gwu.edu
+  Author: Aldridge 
+  drupal.css
+  Styles that typically impact the drupal administration appearance
+*/
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+/* ~ Drupal Specific ~ */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~ */
+.tabs ul.primary li a {
+}
+.tabs ul.primary li a:hover {
+}
+.tabs ul.primary {
+}
+.tabs a:link, .tabs a:visited {
+}
+div.status, div.messages {
+}
+#admin-menu li {
+  font-size: 100%;
+}
+#admin-menu img {
+  margin-bottom: 0px;
+}

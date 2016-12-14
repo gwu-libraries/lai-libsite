@@ -1,0 +1,20 @@
+<!-- code to drop into a page content area or block, provides Google Custom Search box and results modal for 
+Finding Aids/EAD. 
+GW custom styling is at the bottom of the style section as well as a few commented changes -->
+<div id="cse" style="width: 100%;">Loading our Finding Aids search box!</div>
+<script src='//www.google.com/jsapi' type='text/javascript'></script><script type='text/javascript'>
+google.load('search', '1', {language: 'en', style: google.loader.themes.V2_DEFAULT});
+google.setOnLoadCallback(function() {
+  var customSearchOptions = {};
+  var orderByOptions = {};
+  orderByOptions['keys'] = [{label: 'Relevance', key: ''} , {label: 'Date', key: 'date'}];
+  customSearchOptions['enableOrderBy'] = true;
+  customSearchOptions['orderByOptions'] = orderByOptions;
+  customSearchOptions['overlayResults'] = true;
+  var customSearchControl =   new google.search.CustomSearchControl('001049009728307945206:bazy5uhpzwi', customSearchOptions);
+  customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+  var options = new google.search.DrawOptions();
+  options.setAutoComplete(true);
+  customSearchControl.draw('cse', options);
+}, true);
+</script>

@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Use relative paths for head resources
+**/
+
+function Libsite7_process_html(&$vars)
+{
+    foreach (array('head', 'styles', 'scripts') as $replace) {
+        if (!isset($vars[$replace])) {
+            continue;
+        }
+
+        $vars[$replace] = preg_replace('/(src|href|@import )(url\(|=)(")http(s?):/', '$1$2$3', $vars[$replace]);
+    }
+}
+
+function Libsite7_form_contact_personal_form_alter(&$form, &$form_state) {
+    $contactVar = "Send an email to this member of GW Libraries";
+    drupal_set_title($contactVar);
+}

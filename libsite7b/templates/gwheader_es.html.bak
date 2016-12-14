@@ -1,0 +1,188 @@
+<?php if ($_SERVER['SERVER_NAME'] <> 'library.gwu.edu'): ?>
+    <!--<div class="staging-header-container">
+        <div class="staging-header-message">
+            <span style="color:#FC2847">WARNING:</span> this is the staging server for GW Libraries and is intended for internal use only. Content, functionality and design may not match the GW Libraries site (<a href="http://library.gwu.edu">library.gwu.edu</a>)
+        </div>
+    </div>-->
+<?php endif; ?>
+<div id="header">
+	<div id="topHat2">
+        <div id="logo2">
+            <a id="top" href="http://www.gwu.edu/">The George Washington University | Washington DC</a>
+        </div>
+        <div id="mainMenu">
+            <ul class="parent">
+                <li class="first"><a href="http://www.gwu.edu/">GW Home</a></li>
+                <li class="mobile-hide-960">
+                    <a class="parent secondaryMenuOne" href="#">GW Links</a>
+                                       
+                    <!-- College Global Nav Portlet start -->
+                                      
+                    <ul class="child">                       
+                        <li>
+                            <a href="http://www.gwu.edu/give">News &amp; Events</a>
+                                <ul class="grandChild">
+                                <li><a href="http://www.gwu.edu/gwtoday-overview">GW Today</a></li>
+                                <li><a href="http://mediarelations.gwu.edu">Media Room</a></li>
+                                <li><a href="http://www.gwu.edu/events">Events</a></li>
+                                <li><a href="http://www.gwu.edu/follow-gw">Follow GW</a></li>
+                                </ul>
+                                </li>                              
+                                <li>
+                                <a href="">University Life</a>
+                                <ul class="grandChild">
+                                <li><a href="http://www.gwu.edu/academic-life">Academic Life</a> </li>
+                                <li><a href="http://www.gwu.edu/arts-culture">Arts &amp; Culture</a></li>
+                        <li><a href="http://www.gwu.edu/athletics-recreation">Athletics &amp; Recreation</a></li>
+                        <li><a href="http://www.gwu.edu/housing-dining">Housing &amp; Dining</a></li>
+                        <li><a href="http://www.gwu.edu/safety-security">Safety &amp; Security</a></li>
+                        <li><a href="http://www.gwu.edu/service-engagement">Service &amp; Engagement</a></li>
+                        <li><a href="http://www.gwu.edu/transportation">Transportation</a></li>
+                        <li><a href="http://www.gwu.edu/university-services">University Services</a></li>
+                        <li><a href="http://www.gwu.edu/parents-overview">Parents</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <a href="">Research</a>
+                    <ul class="grandChild">
+                        <li><a href="http://www.gwu.edu/discoveriesinnovations">Discoveries &amp; Innovations</a></li>
+                            <li><a href="http://www.gwu.edu/office-research">Office of Research</a></li>
+                            <li><a href="http://www.gwu.edu/centers-institutes">Centers &amp; Institutes</a></li>
+                            <li><a href="http://www.gwu.edu/facilities-technology">Facilities &amp; Technology</a></li>
+                            <li><a href="http://www.gwu.edu/research-training">Research Training</a></li>
+                            <li><a href="http://www.gwu.edu/faculty-expertise">Faculty Expertise</a></li>
+                            </ul>
+                            </li>
+                                                  
+                            <li>
+                            <a href="">Academics</a>
+                            <ul class="grandChild">
+                            <li><a href="http://www.gwu.edu/colleges-schools">Colleges &amp; Schools</a></li>
+                            <li><a href="http://www.gwu.edu/undergraduate-academics">Undergraduate</a></li>
+                            <li><a href="http://www.gwu.edu/graduate-professional-academics">Graduate &amp; Professional</a></li>
+                            <li><a href="http://www.gwu.edu/international-overview">GW International</a></li>
+                            <li><a href="http://www.gwu.edu/online-learning">Online Learning</a></li>
+                            <li><a href="http://www.gwu.edu/off-campus-programs">Off-Campus Programs</a></li>
+                            <li><a href="http://www.gwu.edu/libraries">Libraries</a></li>
+                            </ul>
+                            </li>                        
+                            
+                            <li>
+                            <a href="">Admissions</a>
+                            <ul class="grandChild">
+                            <li><a href="http://www.gwu.edu/apply/undergraduate-admissions">Undergraduate Admissions</a></li>
+                            <li><a href="http://www.gwu.edu/apply/graduate-professional-admissions">Graduate &amp; Professional</a></li>
+                            <li><a href="http://www.gwu.edu/apply/non-degree">Non-Degree</a></li>
+                            <li><a href="http://www.gwu.edu/apply/pre-college">Pre-College</a></li>
+                            <li><a href="http://www.gwu.edu/apply/cost-financial-planning">Costs &amp; Financial Planning</a></li>
+                            </ul>
+                            </li>                      
+                            
+                            <li>
+                            <a href="">About GW</a>
+                            <ul class="grandChild">
+                            <li><a href="http://www.gwu.edu/gw-overview">GW Overview</a></li>
+                            <li><a href="http://www.gwu.edu/leadership">Leadership</a></li>
+                            <li><a href="http://www.gwu.edu/visiting-campus">Visiting Campus</a></li>
+                            <li><a href="http://www.gwu.edu/community">Community</a></li>
+                            <li><a href="http://www.gwu.edu/government">Government</a></li>
+                            <li><a href="http://www.gwu.edu/corporations-partners">Corporations &amp; Partners</a></li>
+                            </ul>
+                            </li>
+                                                        
+                            <li class="close"><a title="close">Close</a></li>
+                            </ul>
+                            </li>
+                            
+                            <!-- College Global Nav Portlet end -->
+                                                      
+                            <li class="mobile-hide-960">
+                            <a class="parent secondaryMenuTwo" href="#">Info For</a>
+                            <ul class="child secondaryMenuTwo">
+                            <li>
+                            <a href="#">Parents</a>
+                            <ul class="grandChild">
+                            <li class="first"><a href="http://gwired.gwu.edu/parents/">Parent Services</a></li>
+                            <li><a href="http://colonialcentral.gwu.edu/billing/">Online Tuition Payment</a></li>
+                            <li><a href="https://services.jsatech.com/textpage.php?pageid=456&amp;cid=46&amp;">Colonial Cash</a></li>
+                            <li><a href="http://www.gwu.edu/give/givingopportunities/colonialinsiders/parentscampaign">Parents Campaign</a></li>
+                            </ul>	
+                            </li>	
+                            
+                            <li>
+                            <a href="#">Faculty &amp; Staff</a>
+                            <ul class="grandChild">
+                            <li class="first"><a href="http://my.gwu.edu/">MyGW Portal</a></li>
+                            <li><a href="http://www.gwu.edu/~academic/Faculty_Personnel/main.htm">Faculty Handbook</a></li>
+                            <li><a href="http://colonialcommunity.gwu.edu/">Colonial Community</a></li>
+                            <li><a href="http://www.gwu.edu/hr/">Human Resources</a></li>
+                            </ul>	
+                            </li>
+                            
+                            <li>
+                            <a href="#">Alumni</a>
+                            <ul class="grandChild">
+                            <li class="first"><a href="http://alumni.gwu.edu/connect/index.html">Connect &amp; Share</a></li>
+                        <li><a href="http://alumni.gwu.edu/benefits/index.html">Benefits &amp; Services</a></li>
+                        
+                        <li><a href="http://alumni.gwu.edu/programs/index.html">Programs &amp; Events</a></li>
+                        <li><a href="http://alumni.gwu.edu/support/index.html">Volunteer &amp; Give</a></li>
+                        <li><a href="http://alumni.gwu.edu/benefits/transcripts.html">Transcript Services</a></li>
+                    </ul>	
+                </li>               
+                
+                <li>
+                    <a href="#">Students</a>
+                    <ul class="grandChild">
+                        <li class="first"><a href="https://my.gwu.edu/mod/email/?role=student">GWMail</a></li>
+                        <li><a href="http://blackboard.gwu.edu/webapps/portal/frameset.jsp">Blackboard</a></li>
+                        <li><a href="https://banweb.gwu.edu">GWeb (Records &amp; Registration)</a></li>
+                        <li><a href="http://gwired.gwu.edu/">GWired (Student Services)</a></li>
+                        <li><a href="http://my.gwu.edu/">MyGW Portal</a></li>
+                        
+                        <li><a href="http://colonialcentral.gwu.edu/">Colonial Central (Financial Services)</a></li>
+                        <li><a href="http://gwired.gwu.edu/gwdining/index.html">GWorld Card and Colonial Cash</a></li>
+                        <li><a href="http://www.gwu.edu/~bulletin/">GW Bulletin (Course Descriptions)</a></li>
+                        <li><a href="http://www.gwu.edu/learn/libraries">University Libraries</a></li>
+                        <li><a href="http://www.bkstr.com/Home/10001-10370-1?demoKey=d">GW Bookstore</a></li>
+                    </ul>
+                </li>
+                        
+                <li class="close"><a title="close">Close</a></li>
+            </ul>
+            
+            </li>
+            </ul>
+        </div>
+              
+        <!-- Site Specific Search Holder Start-->
+        
+        <div id="search" class="mobile-hide-960">       
+            <form method="GET" action="http://search.gwu.edu/search">
+                <fieldset>
+                    <div class="inputHolder">	
+                        <label for="searchInput">Search String:</label>
+                        <input type="text" value="SEARCH GW" id="searchInput" name="q">	
+                            <div class="selectHolder">
+                                <!--<label for="myselectbox">Select Site to Search:</label>-->
+                                <!--<select tabindex="2" name="site" id="myselectbox">
+                                    <option value="foo">foo</option>
+                                    
+                                    <option value="gw_main_VCM" >GW</option>
+                                </select>-->
+                                <input value="gw_main_VCM" name="client" type="hidden">
+                                <input value="phase2fe" name="proxystylesheet" type="hidden">
+                                        
+                            </div>
+                    </div>
+                    <button class="pointer" type="submit">go</button>
+                </fieldset>
+            </form>
+        </div>
+        
+        <!-- Site Specific Search Holder End-->
+        
+	</div><!--:END #topHat -->
+	
+</div> <!--:END #header -->
