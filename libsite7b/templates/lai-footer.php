@@ -57,7 +57,7 @@
                     <div class="field field-name-field-gwtoday-social-links field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">
-                          <p><a href="https://twitter.com/GWOnlineEd" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/Twitter.png" style="width: 33px; height: 26px;"></a></p>
+                          <p><a href="https://twitter.com/GWOnlineEd" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/twitter-logo.png" style="width: 33px; height: 26px;"></a></p>
                           <p><a href="https://twitter.com/GWOnlineEd" target="_blank">Follow us on Twitter</a></p>
                           <p><a href="https://twitter.com/GWOnlineEd" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
                           <p><a href="#">Like us on Facebook</a></p>
