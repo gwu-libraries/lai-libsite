@@ -6,20 +6,30 @@
 
 	  // expand this to include the contact info variables for each library
 
-	  if ($campus == "utlc") {
-	    $page_group = 'University Teaching & Learning Center';
+	  if ($campus == "gelman" || $campus == "none" || $campus == "utlc") {
+            $streetAdd = "2130 H Street NW";
+            $cityAdd = "Washington, DC 20052";
+            $phoneAdd = "202.994.6558";
+            $phoneAddLink = "12029946558";
+            $emailAdd = "<a href='mailto:gelman@gwu.edu'>gelman@gwu.edu</a>";
 	  }
-	  else {
-	    $page_group = 'GW Libraries';
+	  elseif ($campus == "eckles") {
+            $streetAdd = "Eckles Library<br>2100 Foxhall Road, NW";
+            $cityAdd = "Washington, DC 20007";
+            $phoneAdd = "202.242.6620";
+            $phoneAddLink = "12022426620";
+            $emailAdd = "<a href='mailto:eckles@gwu.edu'>eckles@gwu.edu</a>";
 	  }
+          elseif ($campus == "virginia") {
+            $streetAdd = "VSTC Library<br>44983 Knoll Square #179";
+            $cityAdd = "Ashburn, VA 20147";
+            $phoneAdd = "703.726.8230";
+            $phoneAddLink = "17037268230";
+            $emailAdd = "<a href='mailto:virginia@gwu.edu'>virginia@gwu.edu</a>";
+          }
 	?>
 
-	<!--<div class="footer-lib-logo">
-		<h2><?php print $page_group ?></h2>
-	</div>-->
-
-
- <!-- MAXS: The Library/LAI footer -->
+  <!-- MAXS: The Library/LAI footer -->
     <div class="panel-pane pane-views-panes pane-local-footer-gwtoday-footer-panel-pane">
       <div class="view view-local-footer view-id-local_footer view-display-id-gwtoday_footer_panel_pane view-dom-id-35ea9cc01c7b4ca0fc9260235ad89820">
         <div class="view-content">
@@ -41,13 +51,13 @@
                       <div class="field-items">
                         <div class="field-item even">
                           <div>
-                            <span style="line-height: 1.5em;">2130 H St NW<br></span>
+                            <span style="line-height: 1.5em;"><?php echo $streetAdd; ?><br></span>
                           </div>
-                          <div>
-                            Washington, DC 20052<br>
+                          <div><?php echo $cityAdd; ?><br>
                             <br>
-                            <p><span style="line-height: 1.5em;">202-994-6558</span></p>
-                            <p><span style="line-height: 1.5em;"><a href="mailto:gelman@gwu.edu">gelman@gwu.edu</a></span></p>
+                            <p class="mobile-show"><span class="phone" style="line-height: 1.5em;"><a href='<?php echo $phoneAddLink; ?>' class='tel'><?php echo $phoneAdd; ?></a></span></p>
+                            <p class="mobile-hide" style="display: inline-block;"><span class="phone" style="line-height: 1.5em;"><?php echo $phoneAdd; ?></span></p>
+                            <p><span style="line-height: 1.5em;"><?php echo $emailAdd; ?></span></p>
                           </div>
                         </div>
                       </div>
