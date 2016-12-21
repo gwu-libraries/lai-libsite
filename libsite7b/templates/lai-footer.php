@@ -91,13 +91,13 @@
                     <div class="field field-name-field-gwtoday-quick-links field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">
-                          <a href="#">Hours</a><br>
-                          <a href="#">Contact Us</a><br>
-                          <a href="#">Maps &amp; Directions</a><br>
-                          <a href="#">Accessibility</a><br>
-                          <a href="#">Giving to GW Libraries</a><br>
-                          <a href="#">Staff Information</a><br>
-                          <a href="#">Staff Login</a><br>
+                          <a href="/hours">Hours</a><br>
+                          <a href="/contact">Contact Us</a><br>
+                          <a href="http://www.gwu.edu/explore/visitingcampus/">Maps &amp; Directions</a><br>
+                          <a href="http://library.gwu.edu/accessibility">Accessibility</a><br>
+                          <a href="http://go.gwu.edu/gwlibraries">Give to GW Libraries</a><br>
+                          <a href="/staff-info">Staff Information</a><br>
+                          <a href="/user">Staff Login</a><br>
                         </div>
                       </div>
                     </div>
