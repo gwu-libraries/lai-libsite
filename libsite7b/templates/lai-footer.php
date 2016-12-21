@@ -31,7 +31,7 @@
                     <div class="field field-name-field-gwtoday-logo field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">
-                          <p><img alt="GW | Online" src="../library_files/gw_iddol_libraries_2c-90.png"></p>
+                          <p><img alt="logo: GW Libraries and Academic Innovation" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_iddol_libraries_2c-90.png"></p>
                         </div>
                       </div>
                     </div>
@@ -57,9 +57,9 @@
                     <div class="field field-name-field-gwtoday-social-links field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">
-                          <p><a href="https://twitter.com/GWOnlineEd" target="_blank"><img alt="" src="../library_files/Twitter.png" style="width: 33px; height: 26px;"></a></p>
+                          <p><a href="https://twitter.com/GWOnlineEd" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/Twitter.png" style="width: 33px; height: 26px;"></a></p>
                           <p><a href="https://twitter.com/GWOnlineEd" target="_blank">Follow us on Twitter</a></p>
-                          <p><a href="https://twitter.com/GWOnlineEd" target="_blank"><img alt="" src="../library_files/facebook-logo.png" style="width: 33px;"></a></p>
+                          <p><a href="https://twitter.com/GWOnlineEd" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
                           <p><a href="#">Like us on Facebook</a></p>
                         </div>
                       </div>
@@ -93,7 +93,7 @@
 <footer class="region region-footer" id="footer">
   <div id="footer-wrapper">
     <div class="footer-logof">
-      <a href="http://www.gwu.edu/" rel="home" target="_blank"><img alt="GW logo" height="42" src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/logos/gw_txh_2cs_rev.png" typeof="foaf:Image" width="300"></a>
+      <a href="http://www.gwu.edu/" rel="home" alt="logo: the George Washington University" target="_blank"><img alt="GW logo" height="42" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_txh_2cs_rev.png" typeof="foaf:Image" width="300"></a>
     </div>
     <div class="row-one">
       <ul>
