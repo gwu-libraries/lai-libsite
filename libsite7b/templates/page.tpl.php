@@ -205,7 +205,7 @@
 <div class="clear"></div>
 	
 <!-- GW Footer -->
-<?php include 'gwfooter.php'; include 'jsbottom.html';?>
+<?php include 'lai-footer.php'; include 'jsbottom.html';?>
 <?php
 // print '<pre>';
 // print_r($variables);

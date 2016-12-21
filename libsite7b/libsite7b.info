@@ -30,6 +30,7 @@ stylesheets[all][3] = css/node.css
 stylesheets[all][4] = css/front.css
 stylesheets[all][5] = css/topheader.css
 stylesheets[all][6] = css/bootstrap-pillaged.css
+stylesheets[all][7] = css/footer.css
 
 scripts[] = js/script.js
 
