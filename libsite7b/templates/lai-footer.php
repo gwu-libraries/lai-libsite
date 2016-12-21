@@ -67,10 +67,22 @@
                     <div class="field field-name-field-gwtoday-social-links field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">
-                          <p><a href="https://twitter.com/GWOnlineEd" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/twitter-logo.png" style="width: 33px; height: 26px;"></a></p>
-                          <p><a href="https://twitter.com/GWOnlineEd" target="_blank">Follow us on Twitter</a></p>
-                          <p><a href="https://twitter.com/GWOnlineEd" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
-                          <p><a href="#">Like us on Facebook</a></p>
+                        <?php if ($campus == "gelman" || $campus == "none" || $campus == "UTLC"): ?>
+                          <p><a href="https://twitter.com/gelmanlibrary" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/twitter-logo.png" style="width: 33px; height: 26px;"></a></p>
+                          <p><a href="https://twitter.com/gelmanlibrary" target="_blank">Follow us on Twitter</a></p>
+                          <p><a href="https://www.facebook.com/gelmanlibrary" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
+                          <p><a href="https://www.facebook.com/gelmanlibrary">Like us on Facebook</a></p>
+                        <?php elseif ($campus == "eckles"): ?>
+                          <p><a href="https://twitter.com/eckleslibrary" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/twitter-logo.png" style="width: 33px; height: 26px;"></a></p>
+                          <p><a href="https://twitter.com/eckleslibrary" target="_blank">Follow us on Twitter</a></p>
+                          <p><a href="https://www.facebook.com/eckleslibrary" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
+                          <p><a href="https://www.facebook.com/eckleslibrary">Like us on Facebook</a></p>
+
+                        <?php elseif ($campus == "virginia"): ?>
+                          <p><a href="https://www.facebook.com/vstclibrary" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
+                          <p><a href="https://www.facebook.com/vstclibrary">Like us on Facebook</a></p>
+
+                        <?php endif; ?>
                         </div>
                       </div>
                     </div>
