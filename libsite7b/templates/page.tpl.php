@@ -1,6 +1,6 @@
 <?php
   // Define the themename for drupal_get_path calls
-  $themename = 'Libsite7';
+  $themename = 'libsite7b';
 ?>
 
 <div id="container" class="three-six-three logo-slogan">
