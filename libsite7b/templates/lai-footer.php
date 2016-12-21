@@ -93,7 +93,7 @@
 <footer class="region region-footer" id="footer">
   <div id="footer-wrapper">
     <div class="footer-logof">
-      <a href="http://www.gwu.edu/" rel="home" target="_blank"><img alt="GW logo" height="42" src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/gw_txh_2cs_rev.png" typeof="foaf:Image" width="300"></a>
+      <a href="http://www.gwu.edu/" rel="home" target="_blank"><img alt="GW logo" height="42" src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/logos/gw_txh_2cs_rev.png" typeof="foaf:Image" width="300"></a>
     </div>
     <div class="row-one">
       <ul>
