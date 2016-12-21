@@ -1,3 +1,7 @@
+<?php
+  // Define the themename for drupal_get_path calls
+  $themename = 'libsite7b';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head profile="<?php print $grddl_profile; ?>">

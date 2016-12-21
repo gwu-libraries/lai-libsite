@@ -1,0 +1,171 @@
+.page-node-1 .center-content {
+  max-width: 1080px;
+}
+.page-node-1 .primary-content-363 {
+  max-width: 1080px;
+  width: auto;
+ }
+
+
+
+/* Featured Services icons on homepage */
+
+
+#featured-services .promo-items-item {
+  width: 20%;
+  float: left;
+  padding: 0 .5em;
+  box-sizing: border-box;
+}
+#featured-services {
+  float: left;
+  width: 66%;
+  margin: 2em 0;
+}
+@media screen and (max-width: 840px) {
+  #featured-services {
+    float: none;
+    width: 100%;
+  }
+}
+#featured-services h4 {
+  font-weight: bold;
+  font-size: 1.4em;
+  line-height: normal;
+  margin: .5em 0;
+}
+@media screen and (max-width: 640px) {
+  #featured-services {
+    margin-top: .5em;
+    text-align: center;
+  }
+  #featured-services .promo-items-item, #featured-services h4 {
+    width: auto;
+    float: none;
+    display: inline;
+    font-size: 1.15em;
+    padding: 0 .5em 0 0;
+    white-space: nowrap;
+    line-height: 40px;
+    font-weight: normal;
+  }
+  #featured-services .promo-image, #featured-services .promo-image img {
+    width: 40px;
+    display: inline;
+  }
+  #featured-services .promo-body {
+    display: none;
+  }
+}
+
+
+
+/* New style for Library Events on homepage */
+
+#library-events {
+  float: right;
+  width: 33%;
+  box-sizing: border-box;
+  padding-left: 1em;
+  margin-top: 2em;
+}
+@media screen and (max-width: 840px) {
+  #library-events {
+    float: none;
+    width: 100%;
+    clear: both;
+  }
+}
+header.major h2.pane-title {
+  font-family: "AvenirLTStd-HeavyOblique", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  padding-top: 0em;
+  padding-bottom: 0em;
+  font-size: 28px;
+  border-bottom-width: 0.03571em;
+  border-bottom-style: solid;
+  border-bottom-color: #c8b18b;
+}
+.editors-pick-item {
+  border-bottom: 0.03571em solid #c8b18b;
+}
+#library-events .img-wrapper {
+  width: 100px;
+  float: left;
+  margin: 0 1em .5em 0;
+}
+#library-events-more {
+  text-align: right;
+  margin-top: .5em;
+}
+
+
+
+
+#donate-feedback {
+  margin-top: 2em;
+}
+#donate-feedback .promo-image {
+  float: left;
+  margin: 0 1em .5em 0;
+  width: 70px;
+}
+
+
+
+/* All GW Libraries section of homepage */
+
+.promotional-three-col .promo-items-item {
+  width: 33.33%;
+  float: left;
+  padding-right: 1em;
+  box-sizing: border-box;
+}
+.promotional-three-col .promo-items-item:last-child {
+  padding-right: 0;
+}
+#branches {
+  clear: left;
+  float: left;
+  width: 66%;
+  margin: 2em 0;
+}
+@media screen and (max-width: 840px) {
+  #branches {
+    float: none;
+    width: 100%;
+  }
+}
+#branches-icon {
+  width: 70px;
+  float: left;
+}
+#branches-content {
+  width: calc(100% - 70px);
+  box-sizing: border-box;
+  padding-left: 1em;
+  margin-left: 70px;
+}
+#branches h4 {
+  font-weight: bold;
+  font-size: 1.4em;
+  line-height: normal;
+  margin: .5em 0;
+}
+@media screen and (max-width: 640px) {
+  #branches h4 {
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+}
+#branches-other {
+  clear: left;
+}
+#branches-other p {
+  padding-top: 1em;
+}
+.external-link::after {
+  content: url(external-link-02.png);
+  padding-left: .25em;
+}
