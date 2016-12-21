@@ -127,8 +127,8 @@ footer#footer {
   display: table;
 }
 #footer-wrapper .footer-logof {
-  text-align: left !important;
-  width: 330px;
+  /*text-align: left !important;
+  width: 330px;*/
   float: left;
 }
 @media screen and (max-width: 840px) {
