@@ -2,9 +2,9 @@
   max-width: 1080px;
 }
 .page-node-1 .primary-content-360 {
-  width: 66%;
+  width: 100%;
   max-width: 1080px;
-  width: auto;
+  /*width: auto;*/
 }
 
 
@@ -74,6 +74,13 @@
     clear: both;
   }
 }
+@media screen and (max-width: 640px) {
+  .page-node-1 .region-rsidebar {
+    display: initial;
+    visibility: visible;
+    clear: both;
+  }
+}
 header.major h2.pane-title {
   font-family: "AvenirLTStd-HeavyOblique", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -136,14 +143,14 @@ header.major h2.pane-title {
   }
 }
 #branches-icon {
-  width: 70px;
+  width: 40px;
   float: left;
 }
 #branches-content {
-  width: calc(100% - 70px);
+  width: calc(100% - 35px);
   box-sizing: border-box;
   padding-left: 1em;
-  margin-left: 70px;
+  margin-left: 35px;
 }
 #branches h4 {
   font-weight: bold;
