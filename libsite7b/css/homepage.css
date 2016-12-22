@@ -1,15 +1,14 @@
 .page-node-1 .center-content {
   max-width: 1080px;
 }
-.page-node-1 .primary-content-363 {
+.page-node-1 .primary-content-360 {
+  width: 66%;
   max-width: 1080px;
   width: auto;
- }
-
+}
 
 
 /* Featured Services icons on homepage */
-
 
 #featured-services .promo-items-item {
   width: 20%;
@@ -62,15 +61,14 @@
 
 /* New style for Library Events on homepage */
 
-#library-events {
+.page-node-1 .region-rsidebar {
   float: right;
   width: 33%;
   box-sizing: border-box;
   padding-left: 1em;
-  margin-top: 2em;
 }
 @media screen and (max-width: 840px) {
-  #library-events {
+  .page-node-1 .region-rsidebar {
     float: none;
     width: 100%;
     clear: both;
