@@ -6,7 +6,9 @@
   max-width: 1080px;
   /*width: auto;*/
 }
-
+.page-node-1 #frontPageBanner {
+  display: none;
+}
 
 /* Featured Services icons on homepage */
 
@@ -58,7 +60,6 @@
 }
 
 
-
 /* New style for Library Events on homepage */
 
 .page-node-1 .region-rsidebar {
@@ -87,7 +88,7 @@ header.major h2.pane-title {
   font-style: italic;
   padding-top: 0em;
   padding-bottom: 0em;
-  font-size: 28px;
+  font-size: 22px;
   border-bottom-width: 0.03571em;
   border-bottom-style: solid;
   border-bottom-color: #c8b18b;
@@ -114,7 +115,7 @@ header.major h2.pane-title {
 #donate-feedback .promo-image {
   float: left;
   margin: 0 1em .5em 0;
-  width: 70px;
+  width: 40px;
 }
 
 
