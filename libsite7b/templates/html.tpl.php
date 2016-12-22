@@ -1,5 +1,6 @@
 <?php
-  $themename = 'Libsite7'; // Define themename for drupal_get_path calls 
+  // Define the themename for drupal_get_path calls
+  $themename = 'libsite7b';
 ?>
 <!DOCTYPE html>
 <html lang="en">

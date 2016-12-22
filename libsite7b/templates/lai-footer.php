@@ -1,0 +1,155 @@
+<!--<footer id="footer">--> 
+	
+<!--<section class="pane clear" id="local-footer">-->
+
+	<?php 
+
+	  // expand this to include the contact info variables for each library
+
+	  if ($campus == "gelman" || $campus == "none" || $campus == "utlc") {
+            $streetAdd = "2130 H Street NW";
+            $cityAdd = "Washington, DC 20052";
+            $phoneAdd = "202.994.6558";
+            $phoneAddLink = "12029946558";
+            $emailAdd = "<a href='mailto:gelman@gwu.edu'>gelman@gwu.edu</a>";
+	  }
+	  elseif ($campus == "eckles") {
+            $streetAdd = "Eckles Library<br>2100 Foxhall Road, NW";
+            $cityAdd = "Washington, DC 20007";
+            $phoneAdd = "202.242.6620";
+            $phoneAddLink = "12022426620";
+            $emailAdd = "<a href='mailto:eckles@gwu.edu'>eckles@gwu.edu</a>";
+	  }
+          elseif ($campus == "virginia") {
+            $streetAdd = "VSTC Library<br>44983 Knoll Square #179";
+            $cityAdd = "Ashburn, VA 20147";
+            $phoneAdd = "703.726.8230";
+            $phoneAddLink = "17037268230";
+            $emailAdd = "<a href='mailto:virginia@gwu.edu'>virginia@gwu.edu</a>";
+          }
+	?>
+
+  <!-- MAXS: The Library/LAI footer -->
+    <div class="panel-pane pane-views-panes pane-local-footer-gwtoday-footer-panel-pane">
+      <div class="view view-local-footer view-id-local_footer view-display-id-gwtoday_footer_panel_pane view-dom-id-35ea9cc01c7b4ca0fc9260235ad89820">
+        <div class="view-content">
+          <div class="views-row views-row-1 views-row-odd views-row-first views-row-last">
+            <div id="gwtoday-local-footer">
+              <div id="gwtoday-footer">
+                <div class="promotional-four-col">
+                  <div class="footer-logo" id="promo-item-1">
+                    <div class="field field-name-field-gwtoday-logo field-type-text-long field-label-hidden">
+                      <div class="field-items">
+                        <div class="field-item even">
+                          <p><img alt="logo: GW Libraries and Academic Innovation" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_iddol_libraries_2c-90.png"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-address" id="promo-item-2">
+                    <div class="field field-name-field-gwtoday-address field-type-text-long field-label-hidden">
+                      <div class="field-items">
+                        <div class="field-item even">
+                          <div>
+                            <span style="line-height: 1.5em;"><?php echo $streetAdd; ?><br></span>
+                          </div>
+                          <div><?php echo $cityAdd; ?><br>
+                            <br>
+                            <p class="mobile-show"><span class="phone" style="line-height: 1.5em;"><a href='<?php echo $phoneAddLink; ?>' class='tel'><?php echo $phoneAdd; ?></a></span></p>
+                            <p class="mobile-hide" style="display: inline-block;"><span class="phone" style="line-height: 1.5em;"><?php echo $phoneAdd; ?></span></p>
+                            <p><span style="line-height: 1.5em;"><?php echo $emailAdd; ?></span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-social-links" id="promo-item-3">
+                    <div class="field field-name-field-gwtoday-social-links field-type-text-long field-label-hidden">
+                      <div class="field-items">
+                        <div class="field-item even">
+                        <?php if ($campus == "gelman" || $campus == "none" || $campus == "UTLC"): ?>
+                          <p><a href="https://twitter.com/gelmanlibrary" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/twitter-logo.png" style="width: 33px; height: 26px;"></a></p>
+                          <p><a href="https://twitter.com/gelmanlibrary" target="_blank">Follow us on Twitter</a></p>
+                          <p><a href="https://www.facebook.com/gelmanlibrary" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
+                          <p><a href="https://www.facebook.com/gelmanlibrary">Like us on Facebook</a></p>
+                        <?php elseif ($campus == "eckles"): ?>
+                          <p><a href="https://twitter.com/eckleslibrary" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/twitter-logo.png" style="width: 33px; height: 26px;"></a></p>
+                          <p><a href="https://twitter.com/eckleslibrary" target="_blank">Follow us on Twitter</a></p>
+                          <p><a href="https://www.facebook.com/eckleslibrary" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
+                          <p><a href="https://www.facebook.com/eckleslibrary">Like us on Facebook</a></p>
+
+                        <?php elseif ($campus == "virginia"): ?>
+                          <p><a href="https://www.facebook.com/vstclibrary" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
+                          <p><a href="https://www.facebook.com/vstclibrary">Like us on Facebook</a></p>
+
+                        <?php endif; ?>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="footer-quick-links" id="promo-item-4">
+                    <div class="field field-name-field-gwtoday-quick-links field-type-text-long field-label-hidden">
+                      <div class="field-items">
+                        <div class="field-item even">
+                          <a href="/hours">Hours</a><br>
+                          <a href="/contact">Contact Us</a><br>
+                          <a href="http://www.gwu.edu/explore/visitingcampus/">Maps &amp; Directions</a><br>
+                          <a href="http://library.gwu.edu/accessibility">Accessibility</a><br>
+                          <a href="http://go.gwu.edu/gwlibraries">Give to GW Libraries</a><br>
+                          <a href="/staff-info">Staff Information</a><br>
+                          <a href="/user">Staff Login</a><br>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<!-- MAXS: The blue GW-wide footer -->
+<footer class="region region-footer" id="footer">
+  <div id="footer-wrapper">
+    <div class="footer-logof">
+      <a href="http://www.gwu.edu/" rel="home" alt="logo: the George Washington University" target="_blank"><img alt="GW logo" height="42" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_txh_2cs_rev.png" typeof="foaf:Image" width="300"></a>
+    </div>
+    <div class="row-one">
+      <ul>
+        <li>
+          <a href="http://www.campusadvisories.gwu.edu/" target="_blank">Campus Advisories</a>
+        </li>
+        <li>
+          <a href="http://my.gwu.edu/files/policies/EqualEmploymentOpportunityStatement.pdf" target="_blank">Non-Discrimination Policy</a>
+        </li>
+        <li>
+          <a href="http://www.gwu.edu/privacy-policy" target="_blank">Privacy Policy</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row-two">
+      <ul>
+        <li>
+          <a href="http://www.gwu.edu/contact-gw" target="_blank">Contact GW</a>
+        </li>
+        <li>
+          <a href="http://www.gwu.edu/terms-use" target="_blank">Terms of Use</a>
+        </li>
+        <li>
+          <a href="http://www.gwu.edu/copyright" target="_blank">Copyright</a>
+        </li>
+        <li>
+          <a href="http://www.gwu.edu/az-index" target="_blank">A-Z Index</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+	<!-- responsive opt-out links -->
+	<div>
+	  <?php echo $_SESSION['respOptString'] ?>
+	</div>
