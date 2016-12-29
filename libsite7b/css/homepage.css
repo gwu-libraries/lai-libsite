@@ -82,7 +82,8 @@
     clear: both;
   }
 }
-header.major h2.pane-title {
+
+#block-views-libraries_events-block_1 h2, #branches h2 {
   font-family: "AvenirLTStd-HeavyOblique", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: italic;
@@ -93,7 +94,8 @@ header.major h2.pane-title {
   border-bottom-style: solid;
   border-bottom-color: #c8b18b;
 }
-.editors-pick-item {
+#block-views-libraries_events-block_1 .views-row {
+  padding-bottom: 1em;
   border-bottom: 0.03571em solid #c8b18b;
 }
 #library-events .img-wrapper {
@@ -121,6 +123,8 @@ header.major h2.pane-title {
 
 
 /* All GW Libraries section of homepage */
+
+header.major p { display: none; }  /*hide mystery empty p*/
 
 .promotional-three-col .promo-items-item {
   width: 33.33%;
