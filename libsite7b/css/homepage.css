@@ -92,7 +92,7 @@
     margin: 1em 0 .5em;
 }
 
-#block-views-libraries_events-block_1 .display-date-range { display: inline; }
+#block-views-libraries_events-block_1 .date-display-range { display: inline; }
 
 #block-views-libraries_events-block_1 h2, #branches h2 {
   font-family: "AvenirLTStd-HeavyOblique", Helvetica, Arial, sans-serif;
@@ -123,7 +123,7 @@
 
 
 #donate-feedback {
-  margin-top: 2em;
+  margin-top: -3em;
 }
 #donate-feedback .promo-image {
   float: left;
