@@ -2,11 +2,13 @@
   max-width: 1080px;
 }
 .page-node-1 .primary-content-360 {
-  width: 66%;
+  width: 100%;
   max-width: 1080px;
-  width: auto;
+  /*width: auto;*/
 }
-
+.page-node-1 #frontPageBanner {
+  display: none;
+}
 
 /* Featured Services icons on homepage */
 
@@ -19,7 +21,7 @@
 #featured-services {
   float: left;
   width: 66%;
-  margin: 2em 0;
+  margin: .4em 0;
 }
 @media screen and (max-width: 840px) {
   #featured-services {
@@ -58,7 +60,6 @@
 }
 
 
-
 /* New style for Library Events on homepage */
 
 .page-node-1 .region-rsidebar {
@@ -74,26 +75,46 @@
     clear: both;
   }
 }
-header.major h2.pane-title {
+@media screen and (max-width: 640px) {
+  .page-node-1 .region-rsidebar {
+    display: initial;
+    visibility: visible;
+    clear: both;
+  }
+}
+
+#block-views-libraries_events-block_1 .events-list-text {
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+    color: #111;
+    font-weight: normal;
+    line-height: 16px;
+    margin: 1em 0 .5em;
+}
+
+#block-views-libraries_events-block_1 .date-display-range { display: inline; }
+
+#block-views-libraries_events-block_1 h2, #branches h2 {
   font-family: "AvenirLTStd-HeavyOblique", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-style: italic;
   padding-top: 0em;
   padding-bottom: 0em;
-  font-size: 28px;
+  font-size: 22px;
   border-bottom-width: 0.03571em;
   border-bottom-style: solid;
   border-bottom-color: #c8b18b;
 }
-.editors-pick-item {
+#block-views-libraries_events-block_1 .views-row {
+  padding-bottom: 1em;
   border-bottom: 0.03571em solid #c8b18b;
 }
-#library-events .img-wrapper {
+#block-views-libraries_events-block_1 .img-wrapper {
   width: 100px;
   float: left;
   margin: 0 1em .5em 0;
 }
-#library-events-more {
+.view-libraries-events .view-footer {
   text-align: right;
   margin-top: .5em;
 }
@@ -102,17 +123,19 @@ header.major h2.pane-title {
 
 
 #donate-feedback {
-  margin-top: 2em;
+  margin-top: -3em;
 }
 #donate-feedback .promo-image {
   float: left;
   margin: 0 1em .5em 0;
-  width: 70px;
+  width: 40px;
 }
 
 
 
 /* All GW Libraries section of homepage */
+
+header.major p { display: none; }  /*hide mystery empty p*/
 
 .promotional-three-col .promo-items-item {
   width: 33.33%;
@@ -136,14 +159,14 @@ header.major h2.pane-title {
   }
 }
 #branches-icon {
-  width: 70px;
+  width: 40px;
   float: left;
 }
 #branches-content {
-  width: calc(100% - 70px);
+  width: calc(100% - 35px);
   box-sizing: border-box;
   padding-left: 1em;
-  margin-left: 70px;
+  margin-left: 35px;
 }
 #branches h4 {
   font-weight: bold;
@@ -162,8 +185,4 @@ header.major h2.pane-title {
 }
 #branches-other p {
   padding-top: 1em;
-}
-.external-link::after {
-  content: url(external-link-02.png);
-  padding-left: .25em;
 }

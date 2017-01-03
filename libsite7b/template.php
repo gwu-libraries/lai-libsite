@@ -3,7 +3,7 @@
 /**
 * Use relative paths for head resources.
 **/
-function Libsite7_process_html(&$vars)
+function libsite7b_process_html(&$vars)
 {
     foreach (array('head', 'styles', 'scripts') as $replace) {
         if (!isset($vars[$replace])) {
@@ -17,7 +17,7 @@ function Libsite7_process_html(&$vars)
 /**
 * Change heading/title for personal contact form.
 **/
-function Libsite7_form_contact_personal_form_alter(&$form, &$form_state) {
+function libsite7b_form_contact_personal_form_alter(&$form, &$form_state) {
     $contactVar = "Send an email to this member of GW Libraries";
     drupal_set_title($contactVar);
 }
@@ -25,7 +25,7 @@ function Libsite7_form_contact_personal_form_alter(&$form, &$form_state) {
 /**
 * Implements hook_preprocess_search_results(). From Brock Boland / Lullabot http://lb.cm/Wyp.
 */
-function Libsite7_preprocess_search_results(&$vars) {
+function libsite7b_preprocess_search_results(&$vars) {
   // search.module shows 10 items per page (this isn't customizable)
   $itemsPerPage = 10;
 
