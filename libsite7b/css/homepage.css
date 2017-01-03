@@ -186,7 +186,3 @@ header.major p { display: none; }  /*hide mystery empty p*/
 #branches-other p {
   padding-top: 1em;
 }
-.external-link::after {
-  content: url(../images/icons/external-link-02.png);
-  padding-left: .25em;
-}
