@@ -32,16 +32,16 @@
 			
 	                                <a href="<?php print $front_page; ?>"><?php if ($campus == 'gelman') print '<i class="fa fa-bookmark-o"></i> ';?>Gelman</a><span class='seperator-bull'>&bull;</span><a href="<?php print $front_page; ?>eckles"><?php if ($campus == 'eckles') print '<i class="fa fa-bookmark-o"></i> ';?>Eckles</a><span class='seperator-bull'>&bull;</span><a href="<?php print $front_page; ?>virginia"><?php if ($campus == 'virginia') print '<i class="fa fa-bookmark-o"></i> ';?>Virginia</a>
 	
-					<div id="askalib-720">
+					<div id="askalib-720" style="display:none;">
 							<a href="<?php print $front_page; ?>help/reference/ask-us" onClick="ga('send', 'event', 'button', 'ask us', 'header-720');"><img width=100 height=27 src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/ask-us-4.png" alt="link to Ask Us help page" /><span class="sr-only">Ask A Librarian</span></a>
 					</div>
-                                        <div id="askalib-720-show">
+                                        <div id="askalib-720-show" style="display:none;">
                                           <a href="<?php print $front_page; ?>help/reference/ask-us" onClick="ga('send', 'event', 'button', 'ask us', 'header-720');"><i class="fa fa-question-circle"></i></a>
                                         </div>
-					<div id="aladin-720">
+					<div id="aladin-720" style="display:none;">
 							<a href="https://mylibrary.wrlc.org/" onClick="ga('send', 'event', 'button', 'my library', 'header-720');" target="_blank"><img width=100 height=27 src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/my-account-3.png" alt="link to My Library account" /><span class="sr-only">My Library Account</span></a>
 					</div>
-                                        <div id="aladin-720-show">
+                                        <div id="aladin-720-show" style="display:none;">
                                           <a href="https://mylibrary.wrlc.org/" onClick="ga('send', 'event', 'button', 'my library', 'header-720');"><i class="fa fa-bookmark"></i></a>
                                         </div>
 	
@@ -384,10 +384,10 @@
                                 if ($campus == 'utlc') {$specialClass = 'hide';} else {$specialClass = '';}
 				?>
                     <!-- help buttons for wider views -->
-                    <li id="askalib" class="<?php print $specialClass; ?>">
+                    <li id="askalib" class="<?php print $specialClass; ?>" style="display:none;">
                       <a href="<?php print $front_page; ?>help/reference/ask-us" onClick="ga('send', 'event', 'button', 'ask us', 'header-desktop');"><img width=100 height=27 src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/ask-us-4.png" alt="link to Ask Us help page" /></a>
                     </li>
-                    <li id="aladin" class="<?php print $specialClass; ?>">
+                    <li id="aladin" class="<?php print $specialClass; ?>" style="display:none;">
                       <a href="https://mylibrary.wrlc.org/" onClick="ga('send', 'event', 'button', 'my library', 'header');" target="_blank"><img width=100 height=27 src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/my-account-3.png" alt="link to My Library account" /></a>
                     </li>
 				</ul>		
