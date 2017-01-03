@@ -187,6 +187,6 @@ header.major p { display: none; }  /*hide mystery empty p*/
   padding-top: 1em;
 }
 .external-link::after {
-  content: url(external-link-02.png);
+  content: url(../images/icons/external-link-02.png);
   padding-left: .25em;
 }
