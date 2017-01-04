@@ -108,7 +108,7 @@
 
 		<p id="lai-division">
 
-		A division of <a href="#">Libraries and Academic Innovation</a>
+		A division of <a href="https://lai.gwu.edu">Libraries and Academic Innovation</a>
 
 		</p>
 
