@@ -1046,3 +1046,63 @@
   }
 
   </style>
+
+  <style type="text/css">
+
+  #topheader-container {
+
+    background-image: none;
+
+  background-color: transparent;
+
+  height: 120px;
+
+  margin-bottom: 0;
+
+  }
+
+  @media screen and (max-width: 960px) {
+
+    #topheader-container {
+
+    margin-bottom: 0;
+
+  }
+
+  }
+
+  #topheader-content {
+
+  position: relative;
+
+  max-width: 1080px;
+
+  }
+
+  #gwlogo-topheader, #gwlogo-topheader img {
+
+    width: 250px;
+
+  }
+
+  #lai-division {
+
+    position: absolute;
+
+  top: 90px;
+
+  left: 125px;
+
+  }
+
+  @media screen and (max-width: 960px) {
+
+    #lai-division {
+
+      left: 130px;
+
+  }
+
+  }
+
+</style>
