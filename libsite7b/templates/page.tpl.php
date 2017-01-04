@@ -11,7 +11,7 @@
 </div>
 
 <!-- Lib Header -->  
-<?php include 'libheader.php'; ?>
+<?php include 'lai-header.php'; ?>
 
 <?php if ($page['emergency_banner']): ?>
 	<div id="bannerContainer">
@@ -22,7 +22,7 @@
 <?php endif; ?>
 
 <!-- Lib Nav -->
-<?php include 'libnav.php'; ?>
+<?php // include 'libnav.php'; ?>
 	
 <?php // navigation ?>
   <?php // print render($page['navbar']); ?>
