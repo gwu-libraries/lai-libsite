@@ -1,3 +1,5 @@
+<?php include "../css/header-from-embedded.css"; ?>
+
 <div id="container" class="three-six-three logo-slogan">
 
 	<div id="skip">
@@ -92,16 +94,6 @@
 
   <div id="topheader-content">
 
-
-
-<!--
-
-	    <div id="gwlogo-topheader"><a href="http://library.gwu.edu/" aria-label="GW Libraries home page"><img src="home_files/gw_iddol_libraries_wht_rev.png" alt="logo: The George Washington University Libraries" width="199" height="90"><span class="sr-only">GW Libraries home page</span></a>
-
-	    </div>
-
-		-->
-
 		<div id="gwlogo-topheader"><a href="http://library.gwu.edu/" aria-label="GW Libraries home page"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_iddol_libraries_1cs_pos.png" alt="logo: The George Washington University Libraries" width="199" height="90"><span class="sr-only">GW Libraries home page</span></a>
 
 	    </div>
@@ -114,419 +106,7 @@
 
 		
 
-		<style type="text/css">
-
-		<!-- MAXS: Just inverting #fff and #005581 here -->
-
-		/* Header hours block (week view) from gelmanWeek(). */
-
-
-
-#header-hours {
-
-  float: right;
-
-  font-family: helvetica, arial;
-
-  font-size: .7em;
-
-}
-
-#header-hours .handheld { display: none; }
-
-#header-hours .header-hours-error { margin-top: 1em; color: #fff; }
-
-#header-hours table {
-
-  border-spacing: 0;
-
-  float: right;
-
-}
-
-#header-hours table td {
-
-  padding: .3em .4em;
-
-  margin: 0;
-
-  border-left: 4px solid #fff;
-
-  max-width: 52px;
-
-  white-space: initial;
-
-}
-
-#header-hours table tr:first-child {
-
-  background-color: #fff;
-
-  color: #005581;
-
-}
-
-#header-hours table tr:first-child td {
-
-  padding-left: 0;
-
-  font-size: 1.1em;
-
-}
-
-#header-hours table tr:nth-child(2) {
-
-  background-color: #005581;
-
-  color: #fff;
-
-}
-
-#header-hours table tr:nth-child(3) {
-
-  color: #005581;
-
-}
-
-#header-hours table tr:nth-child(4) td {
-
-  color: #005581 !important;
-
-  text-align: right;
-
-  padding-right: 0;
-
-  padding-top: .4em;
-
-  font-size: 1.1em;
-
-  padding-bottom: 0;
-
-}
-
-#header-hours table tr:nth-child(4) td a {
-
-  color: #005581;
-
-  text-decoration: none;
-
-}
-
-#header-hours table tr:nth-child(4) td a:hover {
-
-  text-decoration: underline;
-
-}
-
-#header-hours table tr:nth-child(2) td:first-child, #header-hours table tr:nth-child(3) td:first-child {
-
-  background-color: #005581;
-
-  color: #fff;
-
-  padding-left: .6em;
-
-  font-weight: bold;
-
-}
-
-#header-hours table tr:first-child td:first-child {
-
-}
-
-#header-hours table tr:nth-child(3) td:first-child {
-
-}
-
-#header-hours .container {
-
-  padding:7px 0;
-
-}
-
-
-
-/* Styling for Gelman hours box (today's hours) block. */
-
-
-
-#block-library_hours-library_hours_all { margin-top: -3em; }
-
-.hoursText { margin-bottom: 0.6em; }
-
-.hoursToday { font-weight: bold; }
-
-.hoursDay { font-weight: bold; }
-
-.gelman-hours { 
-
-  margin-top: 1em;
-
-  margin-bottom: .2em; 
-
-}
-
-.gelman-hours-day {
-
-    display: inline-block;
-
-    margin-bottom: .3em;
-
-    margin-top: .2em;
-
-}
-
-.gelman-hours-day-suffix { display: none; }
-
-.gelman-hours-time { font-size: 1.2em; }
-
-.library-hours-last { margin-top: 1em; }
-
-
-
-/* Styling for main Hours page block. */
-
-
-
-.equalHMRWrap {
-
-  /*justify-content: space-between;*/
-
-  flex-wrap: wrap;
-
-}
-
-.eqWrap {
-
-  display: flex;
-
-}
-
-.eq {
-
-  padding: 10px;
-
-  border: 1px solid #ccc;
-
-  border-left: 0;
-
-}
-
-.headHMR .eq {
-
-  padding-bottom: 0;  
-
-  border: none;
-
-}
-
-.headTitleHMR.eq { padding-left: 0; }
-
-.eq:first-child {
-
-  background: #fff;
-
-  border-left: 1px solid #ccc;
-
-  color: #005581;
-
-  border: 1px solid #fff;
-
-}
-
-.headHMR .eq:first-child {
-
-  color: #333;
-
-  background: #005581;
-
-  border: none;
-
-}
-
-.eq:nth-of-type(odd) {
-
-  /*background: yellow;*/
-
-}
-
-.eq:nth-of-type(even) {
-
-  /*background: lightblue;*/
-
-}
-
-.paddingBlock {
-
-  padding: 0;
-
-}
-
-.paddingBlock h3 { 
-
-  font-weight: bold; 
-
-  margin: 0; 
-
-}
-
-.equalHMR {
-
-  width: 12%;
-
-  margin-bottom: 2%;
-
-}
-
-.headHMR .headTitleHMR {
-
-  min-width: 30%;
-
-  margin-bottom: 0;
-
-} 
-
-.headHMR .headTextHMR {
-
-  min-width: 56%;
-
-  margin-bottom: 0;
-
-}
-
-
-
-.hours-joiner { font-size: 90%; }
-
-
-
-/* MEDIA QUERIES */
-
-
-
-@media screen and (max-width:965px) {
-
-  #topheader-container #header-hours {
-
-    margin-right: .5em;
-
-    display: inline-block;
-
-    overflow: hidden;
-
-    max-width: 62%;
-
-    white-space: nowrap;
-
-  }
-
-}
-
-
-
-@media screen and (max-width:950px) {
-
-  .equalHMR { width: 11%; }
-
-}
-
-
-
-@media screen and (max-width:850px) {
-
-  .headHMR .headTitleHMR {
-
-    width: 90%;
-
-  }
-
-  .headHMR .headTextHMR {
-
-    padding-left: 0;
-
-    padding-top: 1px;
-
-  }
-
-}
-
-
-
-@media screen and (max-width:750px) {
-
-  .equalHMR { width: 10%; }
-
-}
-
-
-
-@media screen and (max-width:720px) {
-
-  #topheader-container #header-hours { height: 50px; }
-
-  #header-hours table { margin-bottom: 0; }
-
-  #header-hours table tr:first-child { display: none; }
-
-  #header-hours .container { padding: 7px 0 0 !important; }
-
-  #header-hours table { display: none; }
-
-  #header-hours .handheld { display: inline-block }
-
-  #header-hours .handheld {
-
-    display: inline-block;
-
-    margin-right: 4px;
-
-  }
-
-  #header-hours .handheld > * {
-
-    color: #005581;
-
-    display: block;
-
-  }
-
-  #header-hours .handheld-hours { font-size: 1.4em; margin-top: 4px; }
-
-  #header-hours .handheld-hours-links { font-size: 1.2em; margin-top: 6px; text-align: right; }
-
-  #header-hours .handheld-hours-links a { color: #fff; text-decoration: none; font-style: italic; }
-
-  #header-hours .handheld-hours-links a:hover { text-decoration: underline; }
-
-}
-
-
-
-@media screen and (max-width:640px) {
-
-  .equalHMR { width: 21%; }
-
-  .eq { padding: 6px; }
-
-  .eq:nth-child(5) { border-left: 1px solid #ccc; }
-
-  .paddingBlock h3 { margin-top: 0.5em; }
-
-}
-
-
-
-@media screen and (max-width:360px) {
-
-  #topheader-container #header-hours { max-width: 50%; }
-
-}
-
-
-
-
-
-		</style>
+		
 
 		
 
@@ -722,87 +302,12 @@
 
 		<div id="local-header">		
 
-		<!--
-
-			<div id="campuslibs-mobile">
-
-			
-
-				<div id="social-links-mobile" class="mobile-show">
-
-					<div>
-
-											<a title="follow Gelman Library on Twitter" href="https://twitter.com/gelmanlibrary">
-
-                                                  <i class="fa fa-twitter"></i><span class="sr-only">follow Gelman Library on Twitter</span>
-
-						</a>
-
-						<a title="follow Gelman Library on Facebook" href="https://www.facebook.com/gelmanlibrary">
-
-						  <i class="fa fa-facebook-square"></i><span class="sr-only">follow Gelman Library in Facebook</span>
-
-						</a>
-
-											
-
-					</div>
-
-				</div>			
-
-			
-
-	                                <a href="http://library.gwu.edu/">Gelman</a><span class="seperator-bull">•</span><a href="http://library.gwu.edu/eckles">Eckles</a><span class="seperator-bull">•</span><a href="http://library.gwu.edu/virginia">Virginia</a>
-
-	
-
-					<div id="askalib-720">
-
-							<a href="http://library.gwu.edu/help/reference/ask-us" onclick="ga('send', 'event', 'button', 'ask us', 'header-720');"><img src="home_files/ask-us-4.png" alt="link to Ask Us help page" width="100" height="27"><span class="sr-only">Ask A Librarian</span></a>
-
-					</div>
-
-                                        <div id="askalib-720-show">
-
-                                          <a href="http://library.gwu.edu/help/reference/ask-us" onclick="ga('send', 'event', 'button', 'ask us', 'header-720');"><i class="fa fa-question-circle"></i></a>
-
-                                        </div>
-
-					<div id="aladin-720">
-
-							<a href="https://mylibrary.wrlc.org/" onclick="ga('send', 'event', 'button', 'my library', 'header-720');" target="_blank"><img src="home_files/my-account-3.png" alt="link to My Library account" width="100" height="27"><span class="sr-only">My Library Account</span></a>
-
-					</div>
-
-                                        <div id="aladin-720-show">
-
-                                          <a href="https://mylibrary.wrlc.org/" onclick="ga('send', 'event', 'button', 'my library', 'header-720');"><i class="fa fa-bookmark"></i></a>
-
-                                        </div>
-
-	
-
-			</div>
-
-			-->
+		
 
 			
 
 			<div id="search-menu-mobile" style="display: none;"><!-- main search located in libheader.php -->
 
-				<!-- summon single search -->
-
-				<!--<form action="http://gw.summon.serialssolutions.com/search?" method="get" target="_blank" onSubmit="ga('send','event','single-search','http://gw.summon.serialssolutions.com/search','ArticlesPlus (Home handheld)');">
-
-					<label for='mobile-search'>enter your search terms</label>
-
-					<input type="text" id="mobile-search" name="s.q" value="" placeholder=" search ArticlesPlus for books & articles" />
-
-					<input type="hidden" value="ContentType,Newspaper Article,t" name="s.fvf[]" />					
-
-					<input type="submit" value="go" />
-
-				</form>-->
 
 				<!-- SEARCH ALL single search -->
 
@@ -826,224 +331,12 @@
 
 			
 
-			<style type="text/css">
-
-			  #secondary-nav {
-
-			    width: 100%;
-
-				background-color: #004065;
-
-				height: auto;
-
-				margin: 0;
-
-			  }
-
-			  #secondary-nav > ul {
-
-			    max-width: 1080px;
-
-				margin: auto;
-
-				text-align: right;
-
-			  }
-
-			  @media screen and (max-width: 960px) {
-
-			    #secondary-nav >  ul {
-
-				  width: auto;
-
-			    }
-
-			  }
-
-			  @media screen and (max-width: 840px) {
-
-			    #secondary-nav ul.menu {
-
-				  background-color: #004065;
-
-				  border-top-width: 0;
-
-				}
-
-			  }
-
-			  .nav-item {
-
-			    text-align: left;
-
-				background-color: transparent;
-
-				min-height: 3rem;
-
-				line-height: 3em;
-
-				position: relative;
-
-				display: inline-block;
-
-			  }
-
-			  #nav-hours {
-
-			    display: none;
-
-			  }
-
-			  .nav-item > a.open, .nav-item > a:focus {
-
-			    background-color: #0096d6;
-
-				border-bottom-color: #0096d6;
-
-				border-bottom-width: 0;
-
-			  }
-
-			  .nav-menu li a {
-
-			    padding: 0 .75rem;
-
-			    color: #fff;
-
-				text-transform: none;
-
-				font-size: 1em;
-
-				font-weight: normal;
-
-				min-height: 3rem;
-
-				line-height: 3em;
-
-			  }
-
-			  .nav-menu > li:not(:first-child):before {
-
-			    content: "|";
-
-				color: #688A9C;
-
-				text-align: center;
-
-				display: inline-block;
-
-			  }
-
-			  @media screen and (max-width: 640px) {
-
-			    .nav-menu > li:not(:first-child):before {
-
-				  content: "";
-
-				  display: none;
-
-				}
-
-				#secondary-nav ul.menu li {
-
-				  width: calc(33% - .5em);
-
-				  background-color: #0096d6;
-
-				  display: inline-block;
-
-				  float: left;
-
-				  min-height: 0;
-
-				  line-height: normal;
-
-				  margin: 0 .5em .5em 0 !important;
-
-				}
-
-				#secondary-nav ul.menu li a {
-
-				  min-height: 0;
-
-				  line-height: normal;
-
-				  padding: .5em;
-
-				}
-
-			  }
-
-			  .sub-nav {
-
-			    background-color: #0096d6;
-
-				border-width: 0;
-
-				box-shadow: #333 2px 2px 10px;
-
-				margin-top: 0;
-
-				top: 100%;
-
-				right: 0;
-
-				white-space: nowrap;
-
-			  }
-
-			  .nav-item:first-child .sub-nav {
-
-			    right: auto;
-
-				left: 0;
-
-			  }
-
-			  .sub-nav * {
-
-				color: #fff;
-
-			  }
-
-			  .sub-nav a {
-
-			    text-decoration: none;
-
-				line-height: normal !important;
-
-				height: normal !important;
-
-			  }
-
-			  .sub-nav li:hover{
-
-			    background-color: #004065;
-
-			  }
-
-			  .sub-menu-group .leaf-section-title:hover {
-
-			    background-color: #0096d6;
-
-			  }
-
-			  #secondary-nav ul li.expanded {
-
-			    border-width: 0;
-
-				margin: 0;
-
-				height: auto;
-
-			  }
-
-			</style>
+			
 
 
 <?php 
 echo "<h1>the nav is below this</h1>";
-include libnav.php; 
+include "libnav.php"; 
 echo "<h1>above this</h1>";
 ?>
 			
@@ -1063,425 +356,7 @@ echo "<h1>above this</h1>";
 
 
 
-  <style type="text/css">
-
-  .center-content {
-
-    max-width: 1080px;
-
-  }
-
-  .page-node-1 .primary-content-363 {
-
-    max-width: 1080px;
-
-	width: auto;
-
-  }
-
-  #hero {
-
-    position: relative;
-
-  }
-
-  #home-search {
-
-    position: absolute;
-
-	top: 0;
-
-	left: 0;
-
-	text-align: center;
-
-	width: 600px;
-
-	left: 240px;
-
-	top: 40px;
-
-  }
-
-  @media screen and (max-width: 1080px) {
-
-    #home-search {
-
-	  width: 100%;
-
-	  left: 0;
-
-	  top: 30px;
-
-	}
-
-	#home-search form {
-
-	  width: 640px;
-
-	  margin: auto;
-
-	}
-
-  }
-
-  @media screen and (max-width: 840px) {
-
-    #home-search {
-
-	  top: 20px;
-
-	}
-
-  }
-
-  @media screen and (max-width: 720px) {
-
-    #home-search {
-
-	  padding-top: 1em;
-
-	  top: 30px;
-
-	}
-
-	#home-search form {
-
-	  width: 450px;
-
-	}
-
-  }
-
-  @media screen and (max-width: 640px) {
-
-    #home-search {
-
-	  position: static;
-
-	}
-
-    #home-search form {
-
-	  width: 90%;
-
-	}
-
-	#hero {
-
-	  min-height: 100px;
-
-	  width: auto !important; /* ? */
-
-	}
-
-	#hero-image {
-
-	  display: none;
-
-	}
-
-  }
-
-  #home-search, #home-search form input[type=submit], #home-search-explanation, #home-search h3, #home-search a, #internal-search a {
-
-	color: #fff;
-
-  }
-
-  #home-search form select, #home-search form input {
-
-    color: #333;
-
-	padding: 1.2em .75em;
-
-	font-size: 1em;
-
-	-moz-appearance: menulist;
-
-  }
-
-  #search-form {
-
-    display: flex;
-
-	align-items: center;
-
-  }
-
-  #search-form input[type=text] {
-
-	flex: 2;
-
-	max-width: 100%;
-
-  }
-
-  #hero h3, #home-search-explanation {
-
-    text-shadow: 0 0 5px rgba(0,0,0,1);
-
-  }
-
-  #hero h3 {
-
-    font-size: 1.7em;
-
-	font-weight: bold;
-
-	margin-bottom: 1.5em;
-
-  }
-
-  @media screen and (max-width: 840px) {
-
-	#hero h3 {
-
-	  margin-bottom: 1em;
-
-	}
-
-  }
-
-  @media screen and (max-width: 720px) {
-
-    #hero h3 {
-
-	  display: none;
-
-	}
-
-  }
-
-  #home-search-explanation {
-
-    margin-top: 1.5em;
-
-  }
-
-  @media screen and (max-width: 640px) {
-
-	#home-search-explanation {
-
-	  text-shadow: none;
-
-	  color: #333;
-
-	  margin: 0;
-
-	  padding: 0.5em;
-
-	}
-
-  }
-
-  #home-search-explanation a {
-
-    text-decoration: underline;
-
-  }
-
-  #hero-image {
-
-    width: 100%;
-
-  }
-
-  #internal-search #search-form {
-
-	height: 3rem;
-
-  }
-
-  #internal-search #search-form input[type=text] {
-
-	max-width: 100%; /* to override existing style */
-
-  }
-
-  #internal-search #search-form {
-
-    width: 500px;
-
-  }
-
-  @media screen and (max-width: 1080px) {
-
-    #internal-search #search-form {
-
-	  width: 550px;
-
-    }
-
-  }
-
-  @media screen and (max-width: 640px) {
-
-    #internal-search #search-form {
-
-	  width: 100%;
-
-	}
-
-  }
-
-  #catalog-options, #journals-options {
-
-    display: none;
-
-  }
-
-  .search-dropdown, .search-dropdown li {
-
-    margin: 0;
-
-	padding: 0;
-
-	display: inline-block;
-
-	background-color: #0096d6;
-
-	color: #fff;
-
-	text-align: left;
-
-  }
-
-  .search-dropdown {
-
-    position: relative;
-
-	cursor: pointer;
-
-  }
-
-  .search-dropdown ul {
-
-    position: absolute;
-
-	display: none;
-
-	top: 100%;
-
-	left: 0;
-
-	margin: 0;
-
-	padding: 0;
-
-  }
-
-  .search-dropdown li {
-
-    padding: .75em 1em;
-
-	margin: 0 !important;
-
-  }
-
-  .search-dropdown a:hover {
-
-    text-decoration: none;
-
-  }
-
-  .search-label {
-
-    font-weight: bold;
-
-  }
-
-  .search-description {
-
-    width: 350px;
-
-    font-size: .85em;
-
-    color: rgba(255,255,255,.9);
-
-	margin-top: .5em;
-
-  }
-
-  .search-dropdown li:not(:first-child) {
-
-    border-top: 1px dotted #007FB7;
-
-  }
-
-  .search-dropdown  ul li:hover {
-
-    background-color: #007FB7;
-
-  }
-
-  .search-dropdown-inner {
-
-	display: block;
-
-	padding: 1.25em 1em;
-
-  }
-
-  .current-search-text {
-
-    padding-right: 1.5em; 
-
-  }
-
-  #internal-search .current-search-text {
-
-    width: 0;
-
-	overflow: hidden;
-
-	display: block;
-
-	height: 1.4em;
-
-  }
-
-  @media screen and (max-width: 1080px) {
-
-    #internal-search .current-search-text {
-
-	  width: auto;
-
-	  overflow: visible;
-
-	  height: auto;
-
-	  line-height: normal;
-
-	}
-
-  }
-
-  .current-search-text::after {
-
-    /* CSS triangle */
-
-    content: "";
-
-	width: 0;
-
-	height: 0;
-
-	border-style: solid;
-
-	border-width: 10.4px 6px 0 6px;
-
-	border-color: #fff transparent transparent transparent;
-
-	position: absolute;
-
-	right: 1em;
-
-	bottom: calc(50% - 6px);
-
-  }
-
-  </style>
+  
 
   
 
@@ -1623,87 +498,86 @@ echo "<h1>above this</h1>";
 
 
 
-  <script type="text/javascript">
+<script type="text/javascript">
 
-    jQuery(".search-dropdown").on("click", ".search-dropdown-ul li", function() {
+  jQuery(".search-dropdown").on("click", ".search-dropdown-ul li", function() {
 
-	  jQuery(".current-search-text").text(jQuery(this).find(".search-label").text());
+  jQuery(".current-search-text").text(jQuery(this).find(".search-label").text());
 
-	  jQuery("#search-form input[type=text]").attr("placeholder",jQuery(this).data("placeholder"));
+  jQuery("#search-form input[type=text]").attr("placeholder",jQuery(this).data("placeholder"));
 
-	  jQuery("#home-search-explanation").html(jQuery(this).find(".search-description").html());
+  jQuery("#home-search-explanation").html(jQuery(this).find(".search-description").html());
 
-	  jQuery("#catalog-options").hide();
+  jQuery("#catalog-options").hide();
 
-	  jQuery("#journals-options").hide();
+  jQuery("#journals-options").hide();
 
-	  if (this.id == "search-catalog") {
+  if (this.id == "search-catalog") {
 
-	    jQuery("#catalog-options").show();
+    jQuery("#catalog-options").show();
 
-	  }
+  }
 
-	  if (this.id == "search-journals") {
+  if (this.id == "search-journals") {
 
-	    jQuery("#journals-options").show();
+    jQuery("#journals-options").show();
 
-	  }
+  }
 
-	});
+});
 
-	jQuery(".search-dropdown").on("click", "a", function(e) {
+jQuery(".search-dropdown").on("click", "a", function(e) {
 
-	  e.preventDefault();
+  e.preventDefault();
 
-	});
+});
 
-	jQuery(".search-dropdown").on("keydown", function(e) {
+jQuery(".search-dropdown").on("keydown", function(e) {
 
-	  var ul = jQuery(this).find("ul");
+  var ul = jQuery(this).find("ul");
 
-	  if (ul.is(":hidden")) {
+  if (ul.is(":hidden")) {
 
-	    ul.show();
+    ul.show();
 
-	  }
+  }
 
-	});
+});
 
-	jQuery(".search-dropdown").on("click", function(e) {
+jQuery(".search-dropdown").on("click", function(e) {
 
-	  var ul = jQuery(this).find("ul");
+  var ul = jQuery(this).find("ul");
 
-	  if (ul.is(":hidden")) {
+  if (ul.is(":hidden")) {
 
-	    ul.show();
+    ul.show();
 
-		e.stopPropagation(); // to prevent the html.onclick below from being triggered
+	e.stopPropagation(); // to prevent the html.onclick below from being triggered
 
-	  } else {
+  } else {
 
-	    closeSearchDropdown();
+    closeSearchDropdown();
 
-	  }
+  }
 
-	  jQuery("#home-search-explanation").hide();
+  jQuery("#home-search-explanation").hide();
 
-	});
+});
 
-	jQuery("html").on("click", function() {
+jQuery("html").on("click", function() {
 
-	  closeSearchDropdown();
+  closeSearchDropdown();
 
-	});
+});
 
-	function closeSearchDropdown() {
+function closeSearchDropdown() {
 
-	  jQuery(".search-dropdown ul").hide();
+  jQuery(".search-dropdown ul").hide();
 
-	  jQuery("#home-search-explanation").show();
+  jQuery("#home-search-explanation").show();
 
-	  jQuery("#search-form input[type=text]").focus();
+  jQuery("#search-form input[type=text]").focus();
 
-	}
+}
 
-  </script>
-
+</script>

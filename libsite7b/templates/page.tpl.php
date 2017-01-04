@@ -21,8 +21,8 @@
 	</div>
 <?php endif; ?>
 
-<!-- Lib Nav -->
-<?php include 'libnav.php'; ?>
+<!-- Lib Nav (included in lai-header now) -->
+<?php // include 'libnav.php'; ?>
 	
 <?php // navigation ?>
   <?php // print render($page['navbar']); ?>
