@@ -102,7 +102,7 @@
 
 		-->
 
-		<div id="gwlogo-topheader"><a href="http://library.gwu.edu/" aria-label="GW Libraries home page"><img src="home_files/gw_iddol_libraries_1cs_pos.png" alt="logo: The George Washington University Libraries" width="199" height="90"><span class="sr-only">GW Libraries home page</span></a>
+		<div id="gwlogo-topheader"><a href="http://library.gwu.edu/" aria-label="GW Libraries home page"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_iddol_libraries_1cs_pos.png" alt="logo: The George Washington University Libraries" width="199" height="90"><span class="sr-only">GW Libraries home page</span></a>
 
 	    </div>
 
