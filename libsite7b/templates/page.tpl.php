@@ -22,14 +22,14 @@
 <?php endif; ?>
 
 <!-- Lib Nav -->
-<?php // include 'libnav.php'; ?>
+<?php include 'libnav.php'; ?>
 	
 <?php // navigation ?>
   <?php // print render($page['navbar']); ?>
 
 <script>document.createElement('main'); //for IE compatibility with semantic elements</script>
 
-<main id="maincontent" class="main-container center-content">
+<!-- this is in the new header file at the moment <main id="maincontent" class="main-container center-content">-->
 
         <?php if(!drupal_is_front_page() && ($_SERVER["REQUEST_URI"] != '/news-events')): ?>
 	<!-- floating navigation "top" button -->
