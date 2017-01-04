@@ -582,19 +582,19 @@
 
       <tr>
 
-        <td>24 hours</td>
+        <td>7:00AM - 6:00PM</td>
 
-        <td>24 hours</td>
+        <td>7:00AM - 6:00PM</td>
 
-        <td>24 hours</td>
+        <td>7:00AM - 6:00PM</td>
 
-        <td>24 hours</td>
+        <td>7:00AM - 6:00PM</td>
 
-        <td>24 hours</td>
+        <td>(closed)</td>
 
-        <td>24 hours</td>
+        <td>(closed)</td>
 
-        <td>24 hours</td>
+        <td>7:00AM - 6:00PM</td>
 
       </tr>
 
