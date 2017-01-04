@@ -96,13 +96,13 @@
 
 <!--
 
-	    <div id="gwlogo-topheader"><a href="http://library.gwu.edu/" aria-label="GW Libraries home page"><img src="home_files/gw_iddol_libraries_wht_rev.png" alt="logo: The George Washington University Libraries" width="199" height="90"><span class="sr-only">GW Libraries home page</span></a>
+	    <div id="gwlogo-topheader"><a href="<?php print $front_page; ?>" aria-label="GW Libraries home page"><img src="home_files/gw_iddol_libraries_wht_rev.png" alt="logo: The George Washington University Libraries" width="199" height="90"><span class="sr-only">GW Libraries home page</span></a>
 
 	    </div>
 
 		-->
 
-		<div id="gwlogo-topheader"><a href="http://library.gwu.edu/" aria-label="GW Libraries home page"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_iddol_libraries_1cs_pos.png" alt="logo: The George Washington University Libraries" width="199" height="90"><span class="sr-only">GW Libraries home page</span></a>
+		<div id="gwlogo-topheader"><a href="<?php print $front_page; ?>" aria-label="GW Libraries home page"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_iddol_libraries_1cs_pos.png" alt="logo: The George Washington University Libraries" width="199" height="90"><span class="sr-only">GW Libraries home page</span></a>
 
 	    </div>
 
@@ -602,7 +602,7 @@
 
         <td colspan="7">
 
-        <a href="http://library.gwu.edu/hours/visitors">Visitor Hours</a> • <a href="http://library.gwu.edu/hours">Complete Hours Information</a> • <a href="http://library.gwu.edu/hours/closures">Holidays and Closures</a>
+        <a href="<?php print $front_page; ?>hours/visitors">Visitor Hours</a> • <a href="<?php print $front_page; ?>hours">Complete Hours Information</a> • <a href="<?php print $front_page; ?>hours/closures">Holidays and Closures</a>
 
         </td>
 
@@ -614,7 +614,7 @@
 
       <div class="handheld-hours"><i class="fa fa-clock-o" aria-hidden="true"></i> GELMAN: 24 hours</div>
 
-      <div class="handheld-hours-links"><a href="http://library.gwu.edu/hours">Complete Hours Information</a></div>
+      <div class="handheld-hours-links"><a href="<?php print $front_page; ?>hours">Complete Hours Information</a></div>
 
     </div>
 
@@ -720,7 +720,7 @@
 
 <div class="sr-only">
 
-                <a href="http://library.gwu.edu/about" itemprop="copyrightNotice">
+                <a href="<?php print $front_page; ?>about" itemprop="copyrightNotice">
 
                     © <span itemprop="copyrightYear">2016</span><span itemprop="copyrightHolder" itemscope="" itemtype="http://schema.org/Library" itemid="http://library.gwu.edu"><span itemprop="name"> GW Libraries &amp; Academic Innovation</span></span>
 
@@ -758,9 +758,9 @@
 
 					    <div class="front-page-header-variant">
 
-						<a href="http://library.gwu.edu/">Estelle<span class="three-libs-smalltype"> and </span>Melvin Gelman Library</a>&nbsp;•
+						<a href="<?php print $front_page; ?>">Estelle<span class="three-libs-smalltype"> and </span>Melvin Gelman Library</a>&nbsp;•
 
-						<a href="http://library.gwu.edu/eckles/">Eckles Library<span class="three-libs-smalltype"> at the </span>Mount Vernon Campus</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://library.gwu.edu/virginia/">Virginia Science<span class="three-libs-smalltype"> and </span>Technology Campus Library</a>
+						<a href="<?php print $front_page; ?>eckles/">Eckles Library<span class="three-libs-smalltype"> at the </span>Mount Vernon Campus</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="<?php print $front_page; ?>virginia/">Virginia Science<span class="three-libs-smalltype"> and </span>Technology Campus Library</a>
 
 						</div>			
 
@@ -782,7 +782,7 @@
 
 		<div id="three-libs-container" class="">
 
-                        <div id="three-libs"><span id="lib-left"> <a href="http://library.gwu.edu/">Estelle<span class="three-libs-smalltype"> and </span>Melvin Gelman Library</a></span><span id="lib-center"><a href="http://library.gwu.edu/eckles/">Eckles Library<span class="three-libs-smalltype"> at the </span>Mount Vernon Campus</a></span><span id="lib-right"><a href="http://library.gwu.edu/virginia/">Virginia Science<span class="three-libs-smalltype"> and </span>Technology Campus Library</a></span></div>
+                        <div id="three-libs"><span id="lib-left"> <a href="<?php print $front_page; ?>">Estelle<span class="three-libs-smalltype"> and </span>Melvin Gelman Library</a></span><span id="lib-center"><a href="<?php print $front_page; ?>eckles/">Eckles Library<span class="three-libs-smalltype"> at the </span>Mount Vernon Campus</a></span><span id="lib-right"><a href="<?php print $front_page; ?>virginia/">Virginia Science<span class="three-libs-smalltype"> and </span>Technology Campus Library</a></span></div>
 
                         </div>
 
@@ -826,19 +826,19 @@
 
 			
 
-	                                <a href="http://library.gwu.edu/">Gelman</a><span class="seperator-bull">•</span><a href="http://library.gwu.edu/eckles">Eckles</a><span class="seperator-bull">•</span><a href="http://library.gwu.edu/virginia">Virginia</a>
+	                                <a href="<?php print $front_page; ?>">Gelman</a><span class="seperator-bull">•</span><a href="<?php print $front_page; ?>eckles">Eckles</a><span class="seperator-bull">•</span><a href="<?php print $front_page; ?>virginia">Virginia</a>
 
 	
 
 					<div id="askalib-720">
 
-							<a href="http://library.gwu.edu/help/reference/ask-us" onclick="ga('send', 'event', 'button', 'ask us', 'header-720');"><img src="home_files/ask-us-4.png" alt="link to Ask Us help page" width="100" height="27"><span class="sr-only">Ask A Librarian</span></a>
+							<a href="<?php print $front_page; ?>help/reference/ask-us" onclick="ga('send', 'event', 'button', 'ask us', 'header-720');"><img src="home_files/ask-us-4.png" alt="link to Ask Us help page" width="100" height="27"><span class="sr-only">Ask A Librarian</span></a>
 
 					</div>
 
                                         <div id="askalib-720-show">
 
-                                          <a href="http://library.gwu.edu/help/reference/ask-us" onclick="ga('send', 'event', 'button', 'ask us', 'header-720');"><i class="fa fa-question-circle"></i></a>
+                                          <a href="<?php print $front_page; ?>help/reference/ask-us" onclick="ga('send', 'event', 'button', 'ask us', 'header-720');"><i class="fa fa-question-circle"></i></a>
 
                                         </div>
 
@@ -890,7 +890,7 @@
 
 				</form>
 
-				<div style="margin-top:.4em;"><a href="http://gw.summon.serialssolutions.com/">ArticlesPlus</a> • <a href="http://findit.library.gwu.edu/catalog/" target="_blank">Catalog</a> • <a href="http://findit.library.gwu.edu/?L=UZ4UG4LZ9G&amp;" target="_blank">Journals</a> • <a href="http://refuniv.odyssi.com/cgi-bin/phtml?newsearch.htm" target="_blank">Reference</a> • <a href="http://library.gwu.edu/search">Site</a>
+				<div style="margin-top:.4em;"><a href="http://gw.summon.serialssolutions.com/">ArticlesPlus</a> • <a href="http://findit.library.gwu.edu/catalog/" target="_blank">Catalog</a> • <a href="http://findit.library.gwu.edu/?L=UZ4UG4LZ9G&amp;" target="_blank">Journals</a> • <a href="http://refuniv.odyssi.com/cgi-bin/phtml?newsearch.htm" target="_blank">Reference</a> • <a href="<?php print $front_page; ?>search">Site</a>
 
 				</div>
 
@@ -1129,23 +1129,23 @@
 
 	        <li class="first-prim expanded nav-item" id="nav-research">
 
-	          <a href="http://library.gwu.edu/research" onmouseover="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/research-hover', {'nonInteraction': 1});" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/main');" id="accessible-megamenu-1481550812558-1" aria-haspopup="true" aria-controls="accessible-megamenu-1481550812558-2" aria-expanded="false">Research</a>
+	          <a href="<?php print $front_page; ?>research" onmouseover="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/research-hover', {'nonInteraction': 1});" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/main');" id="accessible-megamenu-1481550812558-1" aria-haspopup="true" aria-controls="accessible-megamenu-1481550812558-2" aria-expanded="false">Research</a>
 
 	          <div class="sub-nav research-nav" id="accessible-megamenu-1481550812558-2" role="group" aria-expanded="false" aria-hidden="true" aria-labelledby="accessible-megamenu-1481550812558-1">
 
 	          <ul class="sub-menu-group">
 
-							<li class="touch-show-nav touch-nav-main-link"><a href="http://library.gwu.edu/research">RESEARCH</a></li>
+							<li class="touch-show-nav touch-nav-main-link"><a href="<?php print $front_page; ?>research">RESEARCH</a></li>
 
 							<li class="first leaf leaf-section-title">Find</li>
 
 							<li class="leaf"><a href="http://findit.library.gwu.edu/catalog/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/books-media');">Books &amp; Media</a></li>
 
-							<li class="leaf"><a href="http://findit.library.gwu.edu/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/journals');">Journals</a><span class="leaf-extended"> | <a href="http://library.gwu.edu/howdoi/findarticlecitation" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/journals-tut');">Tutorial</a></span></li>
+							<li class="leaf"><a href="http://findit.library.gwu.edu/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/journals');">Journals</a><span class="leaf-extended"> | <a href="<?php print $front_page; ?>howdoi/findarticlecitation" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/journals-tut');">Tutorial</a></span></li>
 
-							<li class="leaf"><a href="http://libguides.gwu.edu/databases" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db');">Subject Databases</a><span class="leaf-extended"> | <a href="http://library.gwu.edu/howdoi/findarticlesbytopic" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db-tut');">Tutorial</a></span></li>
+							<li class="leaf"><a href="http://libguides.gwu.edu/databases" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db');">Subject Databases</a><span class="leaf-extended"> | <a href="<?php print $front_page; ?>howdoi/findarticlesbytopic" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db-tut');">Tutorial</a></span></li>
 
-							<li class="leaf"><a href="http://gw.summon.serialssolutions.com/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus');">ArticlesPlus</a><span class="leaf-extended"> | <a href="http://library.gwu.edu/howdoi/aboutarticlesplus" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus-tut');">Tutorial</a></span></li>
+							<li class="leaf"><a href="http://gw.summon.serialssolutions.com/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus');">ArticlesPlus</a><span class="leaf-extended"> | <a href="<?php print $front_page; ?>howdoi/aboutarticlesplus" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus-tut');">Tutorial</a></span></li>
 
 							<li class="leaf"><a href="http://catalog.wrlc.org/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/classic-cat');">Classic Catalog</a></li>
 
@@ -1163,19 +1163,19 @@
 
 							<li class="leaf"><a href="http://libguides.gwu.edu/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/tools');">Tools: </a><span class="leaf-extended"><a href="http://libguides.gwu.edu/content.php?pid=23115" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/tools/refworks');">RefWorks</a> | <a href="http://libguides.gwu.edu/content.php?pid=8881" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/tools/citations');">Citation Styles</a> | <a href="http://libguides.gwu.edu/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/tools/more');">More...</a></span></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/howdoi" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/guides/howdoi');">How Do I? (Tutorials)</a></li>						
+							<li class="leaf"><a href="<?php print $front_page; ?>howdoi" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/guides/howdoi');">How Do I? (Tutorials)</a></li>						
 
 							
 
 							<li class="leaf leaf-section-title">Get Help</li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/help/reference/ask-us" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/ask');">Ask A Librarian</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>help/reference/ask-us" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/ask');">Ask A Librarian</a></li>
 
 							<li class="leaf"><a href="https://gwu.mywconline.net/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/wconline');">Research Consultation</a></li>
 
-	            <li class="leaf"><a href="http://library.gwu.edu/reference/directory" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research-staff');">Research Staff</a></li>
+	            <li class="leaf"><a href="<?php print $front_page; ?>reference/directory" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research-staff');">Research Staff</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/howdoi" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/help/howdoi');">How Do I? (Tutorials)</a></li>					
+							<li class="leaf"><a href="<?php print $front_page; ?>howdoi" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/help/howdoi');">How Do I? (Tutorials)</a></li>					
 
                                                         <li class="leaf"><a href="https://undergraduate.research.gwu.edu/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/help/cufr');">Center for Undergraduate Fellowships &amp; Research</a></li>                              
 
@@ -1189,33 +1189,33 @@
 
 					<li class="expanded nav-item" id="nav-collections">
 
-					  <a href="http://library.gwu.edu/collections" onmouseover="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/collections-hover', {'nonInteraction': 1});" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/main');" id="accessible-megamenu-1481550812561-3" aria-haspopup="true" aria-controls="accessible-megamenu-1481550812561-4" aria-expanded="false">Collections</a>
+					  <a href="<?php print $front_page; ?>collections" onmouseover="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/collections-hover', {'nonInteraction': 1});" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/main');" id="accessible-megamenu-1481550812561-3" aria-haspopup="true" aria-controls="accessible-megamenu-1481550812561-4" aria-expanded="false">Collections</a>
 
 					  <div class="sub-nav" id="accessible-megamenu-1481550812561-4" role="group" aria-expanded="false" aria-hidden="true" aria-labelledby="accessible-megamenu-1481550812561-3">
 
 						<ul class="sub-menu-group">
 
-							<li class="touch-show-nav touch-nav-main-link"><a href="http://library.gwu.edu/collections">COLLECTIONS</a></li>
+							<li class="touch-show-nav touch-nav-main-link"><a href="<?php print $front_page; ?>collections">COLLECTIONS</a></li>
 
-							<li class="first leaf"><a href="http://library.gwu.edu/scrc" onclick="ga('send','event','primary-nav','/primary-nav/gelman/scrc');">Special Collections Research Center</a></li>
+							<li class="first leaf"><a href="<?php print $front_page; ?>scrc" onclick="ga('send','event','primary-nav','/primary-nav/gelman/scrc');">Special Collections Research Center</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/grc" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/grc');">Global Resources Center</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>grc" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/grc');">Global Resources Center</a></li>
 
-							<li class="leaf"><a style="text-transform:none;" href="http://library.gwu.edu/art-design" onclick="ga('send','event','primary-nav','/primary-nav/gelman/art-design');">Art &amp; Design Collection from the Corcoran</a></li>
+							<li class="leaf"><a style="text-transform:none;" href="<?php print $front_page; ?>art-design" onclick="ga('send','event','primary-nav','/primary-nav/gelman/art-design');">Art &amp; Design Collection from the Corcoran</a></li>
 
 							<li class="leaf"><a href="http://teamstersarchives.gwu.edu/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/teamstersarchives');">Teamsters Labor History Research Center</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/scrc/university-archives" onclick="ga('send','event','primary-nav','/primary-nav/gelman/scrc/university-archives');">University Archives</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>scrc/university-archives" onclick="ga('send','event','primary-nav','/primary-nav/gelman/scrc/university-archives');">University Archives</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/collections/kiev" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/kiev');">Kiev Judaica Collection</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>collections/kiev" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/kiev');">Kiev Judaica Collection</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/churchillcenter" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/churchill');">National Churchill Library &amp; Center</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>churchillcenter" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/churchill');">National Churchill Library &amp; Center</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/collections/media-resources-center" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/media');">Media</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>collections/media-resources-center" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/media');">Media</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/collections/collection-development-librarians" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/collection-development-librarians');">Collection Development Librarians</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>collections/collection-development-librarians" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/collection-development-librarians');">Collection Development Librarians</a></li>
 
-							<li class="last leaf"><a href="http://library.gwu.edu/collections" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/more');">(more...)</a></li>
+							<li class="last leaf"><a href="<?php print $front_page; ?>collections" onclick="ga('send','event','primary-nav','/primary-nav/gelman/collections/more');">(more...)</a></li>
 
 						</ul>
 
@@ -1227,39 +1227,39 @@
 
 					<li class="expanded nav-item" id="nav-services">
 
-					  <a href="http://library.gwu.edu/services" onmouseover="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services-hover', {'nonInteraction': 1});" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/main');" id="accessible-megamenu-1481550812564-5" aria-haspopup="true" aria-controls="accessible-megamenu-1481550812565-6" aria-expanded="false" class="">Library Services</a>
+					  <a href="<?php print $front_page; ?>services" onmouseover="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services-hover', {'nonInteraction': 1});" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/main');" id="accessible-megamenu-1481550812564-5" aria-haspopup="true" aria-controls="accessible-megamenu-1481550812565-6" aria-expanded="false" class="">Library Services</a>
 
 					  <div class="sub-nav" id="accessible-megamenu-1481550812565-6" role="group" aria-expanded="false" aria-hidden="true" aria-labelledby="accessible-megamenu-1481550812564-5">
 
 						<ul class="sub-menu-group">
 
-							<li class="touch-show-nav touch-nav-main-link"><a href="http://library.gwu.edu/services">LIBRARY SERVICES</a></li>
+							<li class="touch-show-nav touch-nav-main-link"><a href="<?php print $front_page; ?>services">LIBRARY SERVICES</a></li>
 
 							<li class="first leaf"><a href="https://writingcenter.gwu.edu/" onclick="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/writing-center');">Writing Center</a>
 
-							</li><li class="leaf"><a href="http://library.gwu.edu/services/computers-wireless" onclick="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/computers-wireless');">Computers &amp; Wireless</a></li>
+							</li><li class="leaf"><a href="<?php print $front_page; ?>services/computers-wireless" onclick="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/computers-wireless');">Computers &amp; Wireless</a></li>
 
 							<li class="leaf"><a href="http://rooms.library.gwu.edu/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/study-rooms');">Study Room Reservations</a></li>
 
 							<!--<li class='leaf'><a href='/' onClick="ga('send','event','primary-nav','/primary-nav/gelman/services/account-help');">Account Help</a></li>-->
 
-							<li class="leaf"><a href="http://library.gwu.edu/services/borrowing-renewing" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/borrow-renew');">Borrow &amp; Renew</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>services/borrowing-renewing" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/borrow-renew');">Borrow &amp; Renew</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/services/reserves" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/course-reserves');">Course Reserves</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>services/reserves" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/course-reserves');">Course Reserves</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/services/consortium-loan" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/consortium-loan');">Consortium Loan</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>services/consortium-loan" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/consortium-loan');">Consortium Loan</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/etd" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/etd');">Electronic Dissertations</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>etd" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/etd');">Electronic Dissertations</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/research/data-services" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/data-services');">Data Services</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>research/data-services" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/data-services');">Data Services</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/services/interlibrary-loan" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/interlibrary-loan');">Interlibrary Loan</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>services/interlibrary-loan" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/interlibrary-loan');">Interlibrary Loan</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/services/library-instruction" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/instruction');">Library Instruction</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>services/library-instruction" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/instruction');">Library Instruction</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/contact" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/contact-us');">Contact Us</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>contact" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/contact-us');">Contact Us</a></li>
 
-							<li class="last leaf"><a href="http://library.gwu.edu/services" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/more');">(more...)</a></li>
+							<li class="last leaf"><a href="<?php print $front_page; ?>services" onclick="ga('send','event','primary-nav','/primary-nav/gelman/services/more');">(more...)</a></li>
 
 						</ul>
 
@@ -1271,21 +1271,21 @@
 
 					<li class="expanded nav-item" id="nav-news">
 
-					  <a href="http://library.gwu.edu/news-events" onmouseover="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/news-events-hover', {'nonInteraction': 1});" onclick="ga('send','event','primary-nav','/primary-nav/gelman/news-events/main');" id="accessible-megamenu-1481550812566-7" aria-haspopup="true" aria-controls="accessible-megamenu-1481550812566-8" aria-expanded="false">News &amp; Events</a>
+					  <a href="<?php print $front_page; ?>news-events" onmouseover="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/news-events-hover', {'nonInteraction': 1});" onclick="ga('send','event','primary-nav','/primary-nav/gelman/news-events/main');" id="accessible-megamenu-1481550812566-7" aria-haspopup="true" aria-controls="accessible-megamenu-1481550812566-8" aria-expanded="false">News &amp; Events</a>
 
 					  <div class="sub-nav" id="accessible-megamenu-1481550812566-8" role="group" aria-expanded="false" aria-hidden="true" aria-labelledby="accessible-megamenu-1481550812566-7">
 
 						<ul class="sub-menu-group">
 
-							<li class="touch-show-nav touch-nav-main-link"><a href="http://library.gwu.edu/news-events">NEWS &amp; EVENTS</a></li>
+							<li class="touch-show-nav touch-nav-main-link"><a href="<?php print $front_page; ?>news-events">NEWS &amp; EVENTS</a></li>
 
-							<li class="first leaf"><a href="http://library.gwu.edu/news-events" onclick="ga('send','event','primary-nav','/primary-nav/gelman/news-events/news');">News</a></li>
+							<li class="first leaf"><a href="<?php print $front_page; ?>news-events" onclick="ga('send','event','primary-nav','/primary-nav/gelman/news-events/news');">News</a></li>
 
-                                                        <li class="leaf"><a href="http://library.gwu.edu/news-events/upcoming-events" onclick="ga('send','event','primary-nav','/primary-nav/gelman/news-events/events');">Upcoming Events</a></li>
+                                                        <li class="leaf"><a href="<?php print $front_page; ?>news-events/upcoming-events" onclick="ga('send','event','primary-nav','/primary-nav/gelman/news-events/events');">Upcoming Events</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/news-events/blogs-and-social-media" onclick="ga('send','event','primary-nav','/primary-nav/gelman/news-events/blogs-social');">Blogs and Social Media</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>news-events/blogs-and-social-media" onclick="ga('send','event','primary-nav','/primary-nav/gelman/news-events/blogs-social');">Blogs and Social Media</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/news-events/vision" onclick="ga('send','event','primary-nav','/primary-nav/gelman/news-events/vision');">Vision Magazine</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>news-events/vision" onclick="ga('send','event','primary-nav','/primary-nav/gelman/news-events/vision');">Vision Magazine</a></li>
 
                                                         <li class="leaf"><a href="http://acadtech.gwu.edu/press-room" onclick="ga('send','event','primary-nav','/primary-nav/gelman/news-events/acadtech-pressroom');">Academic Technologies Press Room</a></li>
 
@@ -1299,33 +1299,33 @@
 
 					<li class="expanded nav-item" id="nav-about">
 
-					  <a href="http://library.gwu.edu/about" onmouseover="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/about-hover', {'nonInteraction': 1});" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/main');" id="accessible-megamenu-1481550812568-9" aria-haspopup="true" aria-controls="accessible-megamenu-1481550812568-10" aria-expanded="false">About</a>
+					  <a href="<?php print $front_page; ?>about" onmouseover="ga('send', 'event', 'primary-nav', '/primary-nav/gelman/about-hover', {'nonInteraction': 1});" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/main');" id="accessible-megamenu-1481550812568-9" aria-haspopup="true" aria-controls="accessible-megamenu-1481550812568-10" aria-expanded="false">About</a>
 
 					  <div class="sub-nav" id="accessible-megamenu-1481550812568-10" role="group" aria-expanded="false" aria-hidden="true" aria-labelledby="accessible-megamenu-1481550812568-9">
 
 						<ul class="sub-menu-group">
 
-						  <li class="touch-show-nav touch-nav-main-link"><a href="http://library.gwu.edu/about">ABOUT GW LIBRARIES</a></li>
+						  <li class="touch-show-nav touch-nav-main-link"><a href="<?php print $front_page; ?>about">ABOUT GW LIBRARIES</a></li>
 
-							<li class="first leaf"><a href="http://library.gwu.edu/hours" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/hours');">Hours</a></li>
+							<li class="first leaf"><a href="<?php print $front_page; ?>hours" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/hours');">Hours</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/about/facilities/maps" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/maps-directions');">Maps &amp; Directions</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>about/facilities/maps" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/maps-directions');">Maps &amp; Directions</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/about/organization/jobs" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/jobs');">Working at GW Libraries</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>about/organization/jobs" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/jobs');">Working at GW Libraries</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/about/staff-directory" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/directory');">Staff Directory</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>about/staff-directory" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/directory');">Staff Directory</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/about/library-departments" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/departments');">Library Departments</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>about/library-departments" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/departments');">Library Departments</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/about/entrance-policies" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/entrance-policies');">Entrance Policies</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>about/entrance-policies" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/entrance-policies');">Entrance Policies</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/strategic-plan" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/strategic-plan');">Vision &amp; Strategic Plan</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>strategic-plan" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/strategic-plan');">Vision &amp; Strategic Plan</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/about/giving" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/donor-info');">Donor Information</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>about/giving" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/donor-info');">Donor Information</a></li>
 
-							<li class="leaf"><a href="http://library.gwu.edu/contact" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/contact-us');">Contact Us</a></li>
+							<li class="leaf"><a href="<?php print $front_page; ?>contact" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/contact-us');">Contact Us</a></li>
 
-							<li class="last leaf"><a href="http://library.gwu.edu/about" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/more');">(more...)</a></li>
+							<li class="last leaf"><a href="<?php print $front_page; ?>about" onclick="ga('send','event','primary-nav','/primary-nav/gelman/about/more');">(more...)</a></li>
 
 						</ul>
 
@@ -1337,7 +1337,7 @@
 
 					<li class="expanded nav-item mobile-show" id="nav-hours">
 
-					  <a href="http://library.gwu.edu/hours" onclick="ga('send','event','primary-nav','/primary-nav/gelman/handheld/hours');">Hours</a>
+					  <a href="<?php print $front_page; ?>hours" onclick="ga('send','event','primary-nav','/primary-nav/gelman/handheld/hours');">Hours</a>
 
 					  <div class="sub-nav" id="accessible-megamenu-1481550812568-12" role="group" aria-expanded="false" aria-hidden="true"><!-- empty div for accessibleMegaMenu -->
 
@@ -1351,7 +1351,7 @@
 
                     <li id="askalib" class="nav-item">
 
-                      <a href="http://library.gwu.edu/help/reference/ask-us" onclick="ga('send', 'event', 'button', 'ask us', 'header-desktop');" id="accessible-megamenu-1481550812572-13"><img src="home_files/ask-us-4.png" alt="link to Ask Us help page" width="100" height="27"></a>
+                      <a href="<?php print $front_page; ?>help/reference/ask-us" onclick="ga('send', 'event', 'button', 'ask us', 'header-desktop');" id="accessible-megamenu-1481550812572-13"><img src="home_files/ask-us-4.png" alt="link to Ask Us help page" width="100" height="27"></a>
 
                     </li>
 
