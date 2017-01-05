@@ -43,116 +43,12 @@
 		A division of <a href="https://lai.gwu.edu">Libraries and Academic Innovation</a>
 		</p>
 
-	
 
-                           <div id="header-hours">
-                          
-                                  <div class="region region-topheader-right">
-                          
-                              <div id="block-library_hours-library_hours_gelman_week" class="block block-library-hours">
-                          
-                            <div class="inner clearfix gutter">
-                          
-                              <div class="inner-wrapper">
-                          
-                                <div class="inner-inner">
-                          
-                                                  <div class="content clearfix">
-                          
-                                  
-                          
-                            <div class="container" itemscope="" itemtype="http://schema.org/Library">
-                          
-                              <table>
-                          
-                                <tbody><tr>
-                          
-                                  <td colspan="7">
-                          
-                                  <time itemprop="openingHours" datetime="Mo,Su"></time>
-                          
-                                  <i class="fa fa-clock-o" aria-hidden="true"></i> Gelman Hours for GWorld Holders
-                          
-                                  </td>
-                          
-                                </tr>
-                          
-                                <tr>
-                          
-                                  <td>TODAY <span class="sr-only">Monday</span></td>
-                          
-                                  <td>Tomorrow <span class="sr-only">Tuesday</span></td>
-                          
-                                  <td>Wednesday</td>
-                          
-                                  <td>Thursday</td>
-                          
-                                  <td>Friday</td>
-                          
-                                  <td>Saturday</td>
-                          
-                                  <td>Sunday</td>
-                          
-                                </tr>
-                          
-                                <tr>
-                          
-                                  <td>24 hours</td>
-                          
-                                  <td>24 hours</td>
-                          
-                                  <td>24 hours</td>
-                          
-                                  <td>24 hours</td>
-                          
-                                  <td>24 hours</td>
-                          
-                                  <td>24 hours</td>
-                          
-                                  <td>24 hours</td>
-                          
-                                </tr>
-                          
-                                <tr>
-                          
-                                  <td colspan="7">
-                          
-                                  <a href="http://library.gwu.edu/hours/visitors">Visitor Hours</a> • <a href="http://library.gwu.edu/hours">Complete Hours Information</a> • <a href="http://library.gwu.edu/hours/closures">Holidays and Closures</a>
-                          
-                                  </td>
-                          
-                                </tr><tr>
-                          
-                              </tr></tbody></table>
-                          
-                              <div class="handheld">
-                          
-                                <div class="handheld-hours"><i class="fa fa-clock-o" aria-hidden="true"></i> GELMAN: 24 hours</div>
-                          
-                                <div class="handheld-hours-links"><a href="http://library.gwu.edu/hours">Complete Hours Information</a></div>
-                          
-                              </div>
-                          
-                            </div>      </div>
-                          
-                                </div><!-- /inner-inner -->
-                          
-                              </div><!-- /inner-wrapper -->
-                          
-                            </div><!-- /block-inner -->
-                          
-                          </div><!-- /block -->  </div>
-                          
-                          
-                          
-                              </div>
-                          
-                              
-                          
-                            </div>
-                          
-                          </div>
-
+    <?php if ($campus == 'gelman' OR $campus == 'none'): ?>
+      <div id='header-hours'>
+        <?php print render($page['topheader_right']); ?>
+      </div>
+    <?php endif; ?>	
 
 
 <!-- begin library unit section header -->
