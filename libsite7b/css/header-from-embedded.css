@@ -1,13 +1,5 @@
 <style type="text/css">
 
-/*** temp hack for usability testing: */
-
-img, object, embed {
-    max-width: 98% !important;
-}
-
-/*** end temp hack */
-
 		<!-- MAXS: Just inverting #fff and #005581 here -->
 
 		/* Header hours block (week view) from gelmanWeek(). */

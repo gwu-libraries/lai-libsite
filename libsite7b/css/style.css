@@ -2310,7 +2310,7 @@ th.views-field-field-office-number {display:none;}
 }
 
 .staging-header-container {width: 100%; background-color:#ccc;}
-.staging-header-message {margin: 0 auto 0; max-width: 960px; padding:1em; font-size: .9em;}
+.staging-header-message {margin: 0 auto 0; max-width: 1080px; padding:1em; font-size: .9em;}
 
 #bannerContainer {margin:.5em auto; padding:.5em 0; width:960px; min-height:2.3em; background-color:#FFFF00; color:#000;}
 .bannerIcon {display:inline-block; float:left; margin:0 8px 2px 0;}
