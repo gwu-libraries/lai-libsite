@@ -1189,7 +1189,7 @@ td { vertical-align: top; }
 
 .mobile-hide {
 	visibility: visible;
-	display: inline;
+	display: inline !important;
 }
 
 .mobile-hide-960 {
@@ -1199,7 +1199,7 @@ td { vertical-align: top; }
 
 .mobile-show {
 	visibility: hidden;
-	display: none;
+	display: none !important;
 }
 
 .mobile-hide-720 {
@@ -3477,11 +3477,11 @@ input.gsc-search-button-v2 {padding:6px !important;}
 	
   	.mobile-hide {
 		visibility: hidden;
-		display: none;
+		display: none !important;
   	}
   	.mobile-show {
 		visibility: visible;
-		display: inline-block;
+		display: inline-block !important;
   	}
 
   	/* embedded doc and pdf viewer for gdoc_field module */
