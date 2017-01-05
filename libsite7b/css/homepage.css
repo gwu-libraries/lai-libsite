@@ -1,4 +1,4 @@
-.page-node-1 .center-content {
+.center-content {
   max-width: 1080px;
 }
 .page-node-1 .primary-content-360 {
@@ -106,6 +106,7 @@
   border-bottom-color: #c8b18b;
 }
 #block-views-libraries_events-block_1 .views-row {
+  min-height: 100px;
   padding-bottom: 1em;
   border-bottom: 0.03571em solid #c8b18b;
 }

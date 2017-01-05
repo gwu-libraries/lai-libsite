@@ -11,25 +11,17 @@
 </div>
 
 <!-- Lib Header -->  
-<?php include 'libheader.php'; ?>
+<?php include 'lai-header.php'; ?>
 
-<?php if ($page['emergency_banner']): ?>
-	<div id="bannerContainer">
-		<div id="bannerMessage">
-		  <?php print render($page['emergency_banner']); ?>
-		</div>
-	</div>
-<?php endif; ?>
-
-<!-- Lib Nav -->
-<?php include 'libnav.php'; ?>
+<!-- Lib Nav (included in lai-header now) -->
+<?php // include 'libnav.php'; ?>
 	
 <?php // navigation ?>
   <?php // print render($page['navbar']); ?>
 
 <script>document.createElement('main'); //for IE compatibility with semantic elements</script>
 
-<main id="maincontent" class="main-container center-content">
+<!-- this is in the new header file at the moment <main id="maincontent" class="main-container center-content">-->
 
         <?php if(!drupal_is_front_page() && ($_SERVER["REQUEST_URI"] != '/news-events')): ?>
 	<!-- floating navigation "top" button -->

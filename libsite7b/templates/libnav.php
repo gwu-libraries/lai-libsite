@@ -1,71 +1,4 @@
-	<div class="limiter">
-		<div id="local-header">		
-			<div id="campuslibs-mobile">
-			
-				<div id="social-links-mobile" class="mobile-show">
-					<div>
-					<?php if ($campus == "none" || $campus == "gelman"): ?>
-						<a title="follow Gelman Library on Twitter" href="https://twitter.com/gelmanlibrary">
-                                                  <i class="fa fa-twitter"></i><span class="sr-only">follow Gelman Library on Twitter</span>
-						</a>
-						<a title="follow Gelman Library on Facebook" href="https://www.facebook.com/gelmanlibrary">
-						  <i class="fa fa-facebook-square"></i><span class="sr-only">follow Gelman Library in Facebook</span>
-						</a>
-					<?php elseif ($campus == "eckles"): ?>
-						<a title="follow Eckles Library on Twitter" href="https://twitter.com/eckleslibrary">
-              <i class="fa fa-twitter"></i><span class="sr-only">follow Eckles Library on Twitter</span>
-						</a>
-						<a title="follow Eckles Library on Facebook" href="https://www.facebook.com/EcklesLibrary">
-              <i class="fa fa-facebook-square"></i><span class="sr-only">follow Eckles Library on Facebook</span>
-						</a>					
-					<?php elseif ($campus == "virginia"): ?>
-						<a title="follow VSTC Library on Facebook" href="https://www.facebook.com/vstclibrary">
-              <i class="fa fa-facebook-square"></i><span class="sr-only">follow VSTC Library on Facebook</span>
-						</a>
-                                        <?php elseif ($campus == "utlc"): ?>
-                                                <a title="follow the UTLC channel on youtube" href="https://www.youtube.com/user/GWUTLC">
-              <i class="fa fa-youtube-square"></i><span class="sr-only">follow the UTLC channel on youtube</span>
-                                                </a>
-					<?php endif; ?>						
-					</div>
-				</div>			
-			
-	                                <a href="<?php print $front_page; ?>"><?php if ($campus == 'gelman') print '<i class="fa fa-bookmark-o"></i> ';?>Gelman</a><span class='seperator-bull'>&bull;</span><a href="<?php print $front_page; ?>eckles"><?php if ($campus == 'eckles') print '<i class="fa fa-bookmark-o"></i> ';?>Eckles</a><span class='seperator-bull'>&bull;</span><a href="<?php print $front_page; ?>virginia"><?php if ($campus == 'virginia') print '<i class="fa fa-bookmark-o"></i> ';?>Virginia</a>
-	
-					<div id="askalib-720" style="display:none;">
-							<a href="<?php print $front_page; ?>help/reference/ask-us" onClick="ga('send', 'event', 'button', 'ask us', 'header-720');"><img width=100 height=27 src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/ask-us-4.png" alt="link to Ask Us help page" /><span class="sr-only">Ask A Librarian</span></a>
-					</div>
-                                        <div id="askalib-720-show" style="display:none;">
-                                          <a href="<?php print $front_page; ?>help/reference/ask-us" onClick="ga('send', 'event', 'button', 'ask us', 'header-720');"><i class="fa fa-question-circle"></i></a>
-                                        </div>
-					<div id="aladin-720" style="display:none;">
-							<a href="https://mylibrary.wrlc.org/" onClick="ga('send', 'event', 'button', 'my library', 'header-720');" target="_blank"><img width=100 height=27 src="<?php print $front_page; ?><?php print drupal_get_path('theme', $themename); ?>/images/my-account-3.png" alt="link to My Library account" /><span class="sr-only">My Library Account</span></a>
-					</div>
-                                        <div id="aladin-720-show" style="display:none;">
-                                          <a href="https://mylibrary.wrlc.org/" onClick="ga('send', 'event', 'button', 'my library', 'header-720');"><i class="fa fa-bookmark"></i></a>
-                                        </div>
-	
-			</div>
-			
-			<div id="search-menu-mobile"><!-- main search located in libheader.php -->
-				<!-- summon single search -->
-				<!--<form action="http://gw.summon.serialssolutions.com/search?" method="get" target="_blank" onSubmit="ga('send','event','single-search','http://gw.summon.serialssolutions.com/search','ArticlesPlus (Home handheld)');">
-					<label for='mobile-search'>enter your search terms</label>
-					<input type="text" id="mobile-search" name="s.q" value="" placeholder=" search ArticlesPlus for books & articles" />
-					<input type="hidden" value="ContentType,Newspaper Article,t" name="s.fvf[]" />					
-					<input type="submit" value="go" />
-				</form>-->
-				<!-- SEARCH ALL single search -->
-				<form action="/search-all" method="get" onSubmit="ga('send','event','single-search','/search-all','Single Search (handheld)');">
-					<label for='mobile-search'>enter your search terms</label>
-					<input type="text" id="mobile-search" name="query" value="" style="padding-left:.5em;" placeholder="search everything (catalogs and website)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength=100 />					
-					<input type="submit" value="go" />
-				</form>
-				<div style="margin-top:.4em;"><a href="http://gw.summon.serialssolutions.com">ArticlesPlus</a> &bull; <a href="http://findit.library.gwu.edu/catalog/" target="_blank">Catalog</a> &bull; <a href="http://findit.library.gwu.edu/?L=UZ4UG4LZ9G&" target="_blank">Journals</a> &bull; <a href="http://refuniv.odyssi.com/cgi-bin/phtml?newsearch.htm" target="_blank">Reference</a> &bull; <a href="/search">Site</a>
-				</div>
-			</div>		
-
-			<nav id="secondary-nav"><!-- this is gw libraries 'primary nav' -->
+    <nav id="secondary-nav"><!-- this is gw libraries 'primary nav' -->
 				<!-- handheld ios button behavior is controlled in jsbottom -->						
 				<ul class="menu nav-menu"><!-- determine campus -->
 				<?php
@@ -392,5 +325,3 @@
                     </li>
 				</ul>		
 			</nav>
-		</div>
-	</div>

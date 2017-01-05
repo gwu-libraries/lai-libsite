@@ -32,6 +32,8 @@ stylesheets[all][5] = css/topheader.css
 stylesheets[all][6] = css/bootstrap-pillaged.css
 stylesheets[all][7] = css/footer.css
 stylesheets[all][8] = css/homepage.css
+stylesheets[all][9] = css/header.css
+stylesheets[all][10] = css/header-from-embedded.css
 
 scripts[] = js/script.js
 
