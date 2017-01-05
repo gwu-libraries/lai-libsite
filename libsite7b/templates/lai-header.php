@@ -288,7 +288,113 @@ include 'libnav.php';
 
   </div>
 
-        
+    
+
+<?php if(!drupal_is_front_page()): ?>
+
+<style>
+
+/* temp hack, copied from header.css */
+
+#internal-featured-services .promo-items-item, #internal-featured-services h4 {
+  display: inline-block;
+  font-size: 1em;
+  white-space: nowrap;
+  line-height: 30px;
+  font-weight: normal;
+  position: relative;
+  margin: 0;
+}
+@media screen and (max-width: 640px) {
+  #internal-featured-services h4 {
+    display: none;
+  }
+}
+#internal-featured-services .promo-image, #internal-featured-services .promo-image img {
+  width: 30px;
+  display: inline-block;
+}
+#internal-featured-services {
+  margin: .5em auto 1em;
+  text-align: right;
+  max-width: 1080px;
+}
+#internal-featured-services .promo-body {
+  display: none;
+}
+#internal-featured-services .promo-label {
+  padding: .25em 1em;
+  margin: 0 -.5em;
+  border: 1px solid transparent;
+  z-index: 3 !important;
+  position: relative;
+  display: inline-block;
+}
+#internal-featured-services .promo-items-item:hover .promo-label {
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+#internal-featured-services .promo-items-item.has-promo-body .promo-label {
+  border-bottom-width: 0;
+}
+#internal-featured-services .promo-items-item:hover .promo-body {
+  z-index: 2 !important;
+  display: block;
+  position: absolute;
+  top: 100%;
+  margin-top: -2px;
+  right: -.5em;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  text-align: left;
+  padding: .5em 1em;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+</style>
+
+						<div class="promotional-six-col" id="internal-featured-services">
+				<div class="promo-items-item" id="promo-item-1">
+				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-help-02.png"></a></div>
+								<h4 class="promo-title"><a href="#">Ask Us</a></h4>
+								<span class="promo-body"><p>Need help with something?  Get in touch.</p>
+</span>
+							</div>
+				<div class="promo-items-item" id="promo-item-2">
+				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-reservation-02.png"></a></div>
+								<h4 class="promo-title"><a href="#">Study room reservations</a></h4>
+								<span class="promo-body"><p>Reserve a group study room.</p>
+</span>
+							</div>
+				<div class="promo-items-item" id="promo-item-3">
+				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-account-02.png"></a></div>
+									<h4 class="promo-title"><a href="#">My Account</a></h4>
+								<span class="promo-body"><p>Check due dates, access saved articles, etc.</p>
+</span>
+							</div>
+				<div class="promo-items-item" id="promo-item-4">
+				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-databases-04.png"></a></div>
+									<h4 class="promo-title"><a href="#">Databases</a></h4>
+								<span class="promo-body"><p>Find by topic or by A-Z listing.</p>
+</span>
+							</div>
+				<div class="promo-items-item" id="promo-item-5">
+				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-workshops-04.png"></a></div>
+									<h4 class="promo-title"><a href="#">Workshops</a></h4>
+								<span class="promo-body"><p>Come learn about new topics.</p>
+</span>
+							</div>
+				<div class="promo-items-item" id="promo-item-6">
+				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-other-libraries-04.png"></a></div>
+									<h4 class="promo-title"><a href="#">All GW Libraries</a></h4>
+								<span class="promo-body"><p>Other branches of GW Libraries</p>
+</span>
+							</div>
+						</div>
+
+<?php endif; ?>
+
 
 
 

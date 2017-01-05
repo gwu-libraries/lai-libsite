@@ -19,6 +19,7 @@
 #topheader-content {
   position: relative;
   max-width: 1080px;
+  height: 120px;
 }
 #gwlogo-topheader, #gwlogo-topheader img {
   width: 250px;
@@ -43,8 +44,6 @@
     display: none;
 
 }
-
-
 
 /* Dropdown menus */
 
@@ -179,8 +178,6 @@
   height: auto;
 }
 
-
-
 /* Hero image */
 
 #hero {
@@ -234,10 +231,6 @@
     position: static;
   }
 }
-
-
-
-
 
 /* Search box on home and internal pages */
 
@@ -440,10 +433,6 @@
   right: 1em;
   bottom: calc(50% - 6px);
 }
-
-
-
-
 
 /* Row of featured service icons */
 
