@@ -3,9 +3,6 @@
 <!--<section class="pane clear" id="local-footer">-->
 
 	<?php 
-
-	  // expand this to include the contact info variables for each library
-
 	  if ($campus == "gelman" || $campus == "none" || $campus == "utlc") {
             $streetAdd = "2130 H Street NW";
             $cityAdd = "Washington, DC 20052";
@@ -41,7 +38,7 @@
                     <div class="field field-name-field-gwtoday-logo field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">
-                          <p><img alt="logo: GW Libraries and Academic Innovation" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_iddol_libraries_2c-90.png"></p>
+                          <p><a href="https://lai.gwu.edu"><img alt="logo: GW Libraries and Academic Innovation" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_iddol_libraries_2c-90.png"></a></p>
                         </div>
                       </div>
                     </div>
@@ -57,7 +54,7 @@
                             <br>
                             <p class="mobile-show"><span class="phone" style="line-height: 1.5em;"><a href='<?php echo $phoneAddLink; ?>' class='tel'><?php echo $phoneAdd; ?></a></span></p>
                             <p class="mobile-hide" style="display: inline-block;"><span class="phone" style="line-height: 1.5em;"><?php echo $phoneAdd; ?></span></p>
-                            <p><span style="line-height: 1.5em;"><?php echo $emailAdd; ?></span></p>
+                            <p><span style="line-height: 2.5em;"><?php echo $emailAdd; ?></span></p>
                           </div>
                         </div>
                       </div>
@@ -93,6 +90,7 @@
                         <div class="field-item even">
                           <a href="/hours">Hours</a><br>
                           <a href="/contact">Contact Us</a><br>
+                          <a href="/about/feedback">Send Feedback</a><br>
                           <a href="https://www.gwu.edu/foggy-bottom-campus">Maps &amp; Directions</a><br>
                           <a href="http://library.gwu.edu/accessibility">Accessibility</a><br>
                           <a href="http://go.gwu.edu/gwlibraries">Give to GW Libraries</a><br>

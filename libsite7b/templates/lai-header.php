@@ -244,7 +244,7 @@ include 'libnav.php';
 
   	</div>
 
-  </div>
+  <!--</div> dupe closing hero div? -->
 <?php endif; ?>
     
 
@@ -309,47 +309,71 @@ include 'libnav.php';
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
 }
 
-
 </style>
 
 						<div class="promotional-six-col" id="internal-featured-services">
 				<div class="promo-items-item" id="promo-item-1">
-				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-help-02.png"></a></div>
-								<h4 class="promo-title"><a href="#">Ask Us</a></h4>
+                                <div class="promo-label">
+				<div class="promo-image"><a href="/help/reference/ask-us"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-help-02.png"></a></div>
+								<h4 class="promo-title"><a href="/help/reference/ask-us">Ask Us</a></h4>
 								<span class="promo-body"><p>Need help with something?  Get in touch.</p>
 </span>
 							</div>
+                                </div>
 				<div class="promo-items-item" id="promo-item-2">
-				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-reservation-02.png"></a></div>
-								<h4 class="promo-title"><a href="#">Study room reservations</a></h4>
+                                <div class="promo-label">
+				<div class="promo-image"><a href="/about/facilities/study-room-reservations"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-reservation-02.png"></a></div>
+								<h4 class="promo-title"><a href="/about/facilities/study-room-reservations">Study room reservations</a></h4>
 								<span class="promo-body"><p>Reserve a group study room.</p>
 </span>
 							</div>
+                                </div>
 				<div class="promo-items-item" id="promo-item-3">
-				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-account-02.png"></a></div>
-									<h4 class="promo-title"><a href="#">My Account</a></h4>
+                                <div class="promo-label">
+				<div class="promo-image"><a href="https://mylibrary.wrlc.org/"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-account-02.png"></a></div>
+									<h4 class="promo-title"><a href="https://mylibrary.wrlc.org/">My Account</a></h4>
 								<span class="promo-body"><p>Check due dates, access saved articles, etc.</p>
 </span>
 							</div>
+                                </div>
 				<div class="promo-items-item" id="promo-item-4">
-				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-databases-04.png"></a></div>
-									<h4 class="promo-title"><a href="#">Databases</a></h4>
+                                <div class="promo-label">
+				<div class="promo-image"><a href="http://libguides.gwu.edu/databases"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-databases-04.png"></a></div>
+									<h4 class="promo-title"><a href="http://libguides.gwu.edu/databases">Databases</a></h4>
 								<span class="promo-body"><p>Find by topic or by A-Z listing.</p>
 </span>
 							</div>
+                                </div>
 				<div class="promo-items-item" id="promo-item-5">
-				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-workshops-04.png"></a></div>
-									<h4 class="promo-title"><a href="#">Workshops</a></h4>
+                                <div class="promo-label">
+				  <div class="promo-image"><a href="/news-events/upcoming-events?field_event_format_value=1"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-workshops-04.png"></a></div>
+									<h4 class="promo-title"><a href="/news-events/upcoming-events?field_event_format_value=1">Workshops</a></h4>
 								<span class="promo-body"><p>Come learn about new topics.</p>
 </span>
-							</div>
+				  </div>
+                                </div>
 				<div class="promo-items-item" id="promo-item-6">
+                                <div class="promo-label">
 				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-other-libraries-04.png"></a></div>
 									<h4 class="promo-title"><a href="#">All GW Libraries</a></h4>
-								<span class="promo-body"><p>Other branches of GW Libraries</p>
+
+<span class="promo-body">
+	<ul>
+	<li><a href="#">Estelle and Melvin Gelman Library</a></li>
+	<li><a href="#">Eckles Library at the Mount Vernon Campus</a></li>
+	<li><a href="#">Virginia Science and Technology Campus Library</a></li>
+	</ul>
+	<hr/>
+	<ul>
+	<li><a href="#" class="external-link">Himmelfarb Health Sciences Library</a></li>
+	<li><a href="#" class="external-link">Jacob Burns Law Library</a></li>
+	</li>
+	</ul>
 </span>
+
 							</div>
 						</div>
+                                            </div>
 
 <?php endif; ?>
 
