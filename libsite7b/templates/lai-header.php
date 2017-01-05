@@ -316,7 +316,6 @@ include 'libnav.php';
                                 <div class="promo-label">
 				<div class="promo-image"><a href="/help/reference/ask-us"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-help-02.png"></a></div>
 								<h4 class="promo-title"><a href="/help/reference/ask-us">Ask Us</a></h4>
-								<span class="promo-body"><p>Need help with something?  Get in touch.</p>
 </span>
 							</div>
                                 </div>
@@ -324,7 +323,6 @@ include 'libnav.php';
                                 <div class="promo-label">
 				<div class="promo-image"><a href="/about/facilities/study-room-reservations"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-reservation-02.png"></a></div>
 								<h4 class="promo-title"><a href="/about/facilities/study-room-reservations">Study room reservations</a></h4>
-								<span class="promo-body"><p>Reserve a group study room.</p>
 </span>
 							</div>
                                 </div>
@@ -332,7 +330,6 @@ include 'libnav.php';
                                 <div class="promo-label">
 				<div class="promo-image"><a href="https://mylibrary.wrlc.org/"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-account-02.png"></a></div>
 									<h4 class="promo-title"><a href="https://mylibrary.wrlc.org/">My Account</a></h4>
-								<span class="promo-body"><p>Check due dates, access saved articles, etc.</p>
 </span>
 							</div>
                                 </div>
@@ -340,7 +337,6 @@ include 'libnav.php';
                                 <div class="promo-label">
 				<div class="promo-image"><a href="http://libguides.gwu.edu/databases"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-databases-04.png"></a></div>
 									<h4 class="promo-title"><a href="http://libguides.gwu.edu/databases">Databases</a></h4>
-								<span class="promo-body"><p>Find by topic or by A-Z listing.</p>
 </span>
 							</div>
                                 </div>
@@ -348,7 +344,6 @@ include 'libnav.php';
                                 <div class="promo-label">
 				  <div class="promo-image"><a href="/news-events/upcoming-events?field_event_format_value=1"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-workshops-04.png"></a></div>
 									<h4 class="promo-title"><a href="/news-events/upcoming-events?field_event_format_value=1">Workshops</a></h4>
-								<span class="promo-body"><p>Come learn about new topics.</p>
 </span>
 				  </div>
                                 </div>
