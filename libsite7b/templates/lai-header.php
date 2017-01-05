@@ -1,3 +1,10 @@
+<style>
+img, object, embed {
+    max-width: 98% !important;
+}
+
+</style>
+
 <div id="container" class="three-six-three logo-slogan">
 
 	<div id="skip">
