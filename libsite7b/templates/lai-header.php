@@ -131,21 +131,27 @@
 
 		</div>		
 
-<?php 
+	</div>
+
+</div>
+
+<?php if ($page['emergency_banner']): ?>
+	<div id="bannerContainer">
+		<div id="bannerMessage">
+		  <?php print render($page['emergency_banner']); ?>
+		</div>
+	</div>
+<?php endif; ?>
+
+</div>
+
+<?php
 //echo "<h1>the nav is below this</h1>";
 //include "lai-libnav.php"; 
 include 'libnav.php';
 //echo "<h1>above this</h1>";
 ?>
-		
-
-	</div>
-
-</div>
-
-	
-
-  
+	  
 
 <script>document.createElement('main'); //for IE compatibility with semantic elements</script>
 

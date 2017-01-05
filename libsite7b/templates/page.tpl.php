@@ -13,14 +13,6 @@
 <!-- Lib Header -->  
 <?php include 'lai-header.php'; ?>
 
-<?php if ($page['emergency_banner']): ?>
-	<div id="bannerContainer">
-		<div id="bannerMessage">
-		  <?php print render($page['emergency_banner']); ?>
-		</div>
-	</div>
-<?php endif; ?>
-
 <!-- Lib Nav (included in lai-header now) -->
 <?php // include 'libnav.php'; ?>
 	

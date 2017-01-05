@@ -464,10 +464,10 @@ a.lib-rollover-link:focus {color:#2971a7; outline:thin dotted;}
 
 #secondary-nav {
   clear: both;
-	background-color: #ede2cd;
-  margin: 2px auto 22px;
+  background-color: #004065;
+  /*margin: 2px auto 22px;
   height: 35px;
-  width: 960px;
+  width: 960px;*/
 }
 
 /* touch device exceptions */
@@ -2312,7 +2312,7 @@ th.views-field-field-office-number {display:none;}
 .staging-header-container {width: 100%; background-color:#ccc;}
 .staging-header-message {margin: 0 auto 0; max-width: 1080px; padding:1em; font-size: .9em;}
 
-#bannerContainer {margin:.5em auto; padding:.5em 0; width:960px; min-height:2.3em; background-color:#FFFF00; color:#000;}
+#bannerContainer {margin:1em auto .5em; padding:.5em 0; max-width:1080px; min-height:2.3em; background-color:#FFFF00; color:#000;}
 .bannerIcon {display:inline-block; float:left; margin:0 8px 2px 0;}
 #bannerMessage {padding: .2em .8em;}
 #bannerMessage p {margin-bottom:0;}
