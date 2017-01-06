@@ -12,11 +12,12 @@
 
 /* Featured Services icons on homepage */
 
+/* these first 2 media queries are for the services block: 129 is the block no. on CA dev, 127 is no. on test.lib */
 @media screen and (min-width:841px) {
-  #block-block-129 { display: none; }
+  #block-block-129, #block-block-127 { display: none; }
 }
 @media screen and (max-width:840px) {
-  #block-block-129 { 
+  #block-block-129, #block-block-127 { 
     display: inline-block; 
     width: 98%;
   }
