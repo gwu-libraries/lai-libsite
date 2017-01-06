@@ -1694,11 +1694,11 @@ section#global-footer ul li a {
 	text-align: right;
 }
 
-#backToTopContainer {position:fixed; top:60%;} 
+#backToTopContainer { position: fixed; top: 45%;} 
 
 .back-to-top {
 	position:relative; 
-	left:1050px; 
+	left:1200px; 
 	background-color: rgba(0,0,0,0); 
 	height: 40px; 
 	width: 40px; 
@@ -3468,8 +3468,9 @@ input.gsc-search-button-v2 {padding:6px !important;}
 	#local-footer-mobile a:hover {color: #2971a7; text-decoration: none;}
   
    	section.pane { 
-		padding-top: .8em;
+		padding-top: .3em;
 		margin-bottom: 0;
+                background-image: none;
 	}	
 	
 	h2.title.block-title {display:none;}

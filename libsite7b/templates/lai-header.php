@@ -263,7 +263,7 @@ include 'libnav.php';
   position: relative;
   margin: 0;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
   #internal-featured-services h4 {
     display: none;
   }

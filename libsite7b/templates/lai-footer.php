@@ -91,7 +91,7 @@
                           <a href="/hours">Hours</a><br>
                           <a href="/contact">Contact Us</a><br>
                           <a href="/about/feedback">Send Feedback</a><br>
-                          <a href="https://www.gwu.edu/foggy-bottom-campus">Maps &amp; Directions</a><br>
+                          <a href="/about/facilities/maps">Maps &amp; Directions</a><br>
                           <a href="http://library.gwu.edu/accessibility">Accessibility</a><br>
                           <a href="http://go.gwu.edu/gwlibraries">Give to GW Libraries</a><br>
                           <a href="/staff-info">Staff Information</a><br>

@@ -300,7 +300,7 @@
 
   @media screen and (max-width: 795px) {
     #branch-name {
-      bottom: 132px;
+      /* bottom: 132px; */
     }
   }
 
