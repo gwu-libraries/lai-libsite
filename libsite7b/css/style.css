@@ -3380,7 +3380,7 @@ input.gsc-search-button-v2 {padding:6px !important;}
 	#expand-sidebar-spot {
 		display: block;
 		height: 2em;
-		margin: .3em .5em .8em;
+		margin: .3em 0 .8em;
 		background-color: #005581; /* #4282B1; */
 		text-align: left;
 		color: #fff;
