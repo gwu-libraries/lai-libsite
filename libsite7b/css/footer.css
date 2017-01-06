@@ -18,6 +18,10 @@
 #gwtoday-footer .footer-logo, #gwtoday-footer .footer-address, #gwtoday-footer .footer-social-links {
   border-right: 1px dotted #0096d6;
 }
+@media screen and (max-width:840px) {
+  #promo-item-2.footer-address { border-right: 0; }
+}
+
 .promotional-four-col::after {
   content: "";
   clear: left;
@@ -48,7 +52,7 @@
   -ms-box-sizing: border-box;
   box-sizing: border-box;
   word-wrap: break-word;
-  padding: 0em 0.64em 0em 0.36em;
+  padding: 0em 0.64em 0em 0.56em;
   margin-bottom: 0;
 }
 @media screen and (max-width: 840px) {
@@ -56,6 +60,7 @@
     width: 50%;
     margin-left: 50%;
     margin-right: -100%;
+    padding-left: 1em;
   }
 }
 .promotional-four-col #promo-item-3 {

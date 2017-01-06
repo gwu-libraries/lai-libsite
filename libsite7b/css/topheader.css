@@ -39,13 +39,16 @@
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width:1110px) {
+    #topheader-container #gwlogo-topheader {
+        margin-left: .5em;
+    } 
+}
+
 @media screen and (max-width:965px) {
     #header {
         height: 47px !important; /* to overide js element styling on expanded gw menus */
     }
-    #topheader-container #gwlogo-topheader {
-        margin-left: .5em;
-    } 
     #container #header #topHat2 #mainMenu ul.parent {
         position: absolute;
         right: 0;

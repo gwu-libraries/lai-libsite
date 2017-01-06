@@ -263,7 +263,7 @@ include 'libnav.php';
   position: relative;
   margin: 0;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 800px) {
   #internal-featured-services h4 {
     display: none;
   }
@@ -354,14 +354,14 @@ include 'libnav.php';
 
 <span class="promo-body">
 	<ul>
-	<li><a href="#">Estelle and Melvin Gelman Library</a></li>
-	<li><a href="#">Eckles Library at the Mount Vernon Campus</a></li>
-	<li><a href="#">Virginia Science and Technology Campus Library</a></li>
+	<li><a href="/">Estelle and Melvin Gelman Library</a></li>
+	<li><a href="/eckles">Eckles Library at the Mount Vernon Campus</a></li>
+	<li><a href="/virginia">Virginia Science and Technology Campus Library</a></li>
 	</ul>
 	<hr/>
 	<ul>
-	<li><a href="#" class="external-link">Himmelfarb Health Sciences Library</a></li>
-	<li><a href="#" class="external-link">Jacob Burns Law Library</a></li>
+	<li><a href="https://himmelfarb.gwu.edu/" class="external-link">Himmelfarb Health Sciences Library <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
+	<li><a href="https://www.law.gwu.edu/library" class="external-link">Jacob Burns Law Library <i class="fa fa-external-link" aria-hidden="true"></i></a></li>
 	</li>
 	</ul>
 </span>

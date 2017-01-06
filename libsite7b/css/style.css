@@ -1694,11 +1694,11 @@ section#global-footer ul li a {
 	text-align: right;
 }
 
-#backToTopContainer {position:fixed; top:60%;} 
+#backToTopContainer { position: fixed; top: 45%;} 
 
 .back-to-top {
 	position:relative; 
-	left:1050px; 
+	left:1200px; 
 	background-color: rgba(0,0,0,0); 
 	height: 40px; 
 	width: 40px; 
@@ -2864,6 +2864,13 @@ input.gsc-search-button-v2 {padding:6px !important;}
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width:1110px) {
+  .all-purpose-detail {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+}
+
 @media screen and (max-width:960px) {
 	
 	#bannerContainer {margin: .1em auto .8em; width:100%; border-radius:0;}
@@ -2972,8 +2979,7 @@ input.gsc-search-button-v2 {padding:6px !important;}
 
 	#secondary-nav {
 		clear: both;
-		margin: 2px auto 30px; /*0 auto 36px;*/
-		height: 35px; /* 36px; */ /*44px;*/
+		margin: 2px auto 0; /*0 auto 36px;*/
 		width: 100%;
 	}
 
@@ -3381,7 +3387,7 @@ input.gsc-search-button-v2 {padding:6px !important;}
 	#expand-sidebar-spot {
 		display: block;
 		height: 2em;
-		margin: .3em .5em .8em;
+		margin: .3em 0 .8em;
 		background-color: #005581; /* #4282B1; */
 		text-align: left;
 		color: #fff;
@@ -3469,8 +3475,9 @@ input.gsc-search-button-v2 {padding:6px !important;}
 	#local-footer-mobile a:hover {color: #2971a7; text-decoration: none;}
   
    	section.pane { 
-		padding-top: .8em;
+		padding-top: .3em;
 		margin-bottom: 0;
+                background-image: none;
 	}	
 	
 	h2.title.block-title {display:none;}

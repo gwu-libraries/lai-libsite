@@ -532,7 +532,7 @@
 
         #secondary-nav ul.menu li {
 
-          width: calc(33% - .5em);
+          /*width: calc(33% - .5em);*/
 
           background-color: #0096d6;
 
@@ -544,7 +544,7 @@
 
           line-height: normal;
 
-          margin: 0 .5em .5em 0 !important;
+          /*margin: 0 .5em .5em 0 !important;*/
 
         }
 
@@ -1080,7 +1080,7 @@
 
   #gwlogo-topheader, #gwlogo-topheader img {
 
-    width: 250px;
+    /*width: 250px;*/
 
   }
 

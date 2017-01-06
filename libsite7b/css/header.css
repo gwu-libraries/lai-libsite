@@ -21,6 +21,9 @@
   max-width: 1080px;
   height: 120px;
 }
+@media screen and (max-width:640px) {
+  #topheader-content { height: 64px; }
+}
 #gwlogo-topheader, #gwlogo-topheader img {
   width: 250px;
 }
@@ -49,9 +52,9 @@
 
 #secondary-nav, #local-header {
   width: 100%;
-  background-color: #004065;
+  /*background-color: #004065;
   min-height: calc(3rem + 2px);
-  line-height: calc(3em + 2px);
+  line-height: calc(3em + 2px);*/
   margin: 0;
   position: relative;
 }
@@ -68,6 +71,7 @@
 @media screen and (max-width: 960px) {
   #secondary-nav {
     width: 100%;
+    padding: 0;
   }
 }
 #secondary-nav>ul {
@@ -132,13 +136,13 @@
     display: none;
   }
   #secondary-nav ul.menu li {
-    width: calc(33% - .5em);
+    width: calc(33.3% - .5em);
     background-color: #0096d6;
     display: inline-block;
     float: left;
     min-height: 0;
     line-height: normal;
-    margin: 0 .5em .5em 0 !important;
+    margin: .25em !important;
   }
   #secondary-nav ul.menu li a {
     min-height: 0;

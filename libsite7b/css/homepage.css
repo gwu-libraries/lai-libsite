@@ -2,7 +2,7 @@
   max-width: 1080px;
 }
 .page-node-1 .primary-content-360 {
-  width: 100%;
+  width: 66%;
   max-width: 1080px;
   /*width: auto;*/
 }
@@ -12,6 +12,19 @@
 
 /* Featured Services icons on homepage */
 
+@media screen and (min-width:841px) {
+  #block-block-129 { display: none; }
+}
+@media screen and (max-width:840px) {
+  #block-block-129 { 
+    display: inline-block; 
+    width: 98%;
+  }
+  .primary-content-360 .promotional-five-col { display: none; }
+  .page-node-1 .primary-content-360 { width: 100%; }
+}
+
+
 #featured-services .promo-items-item {
   width: 20%;
   float: left;
@@ -20,7 +33,7 @@
 }
 #featured-services {
   float: left;
-  width: 66%;
+  width: 100%;
   margin: .4em 0;
 }
 @media screen and (max-width: 840px) {
@@ -150,7 +163,7 @@ header.major p { display: none; }  /*hide mystery empty p*/
 #branches {
   clear: left;
   float: left;
-  width: 66%;
+  width: 100%;
   margin: 2em 0;
 }
 @media screen and (max-width: 840px) {
