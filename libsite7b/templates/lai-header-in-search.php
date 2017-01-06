@@ -262,7 +262,7 @@
 
      position: absolute;
 
-	 bottom: 0;
+	 bottom: 46px;
 
 	 color: #fff;
 
@@ -290,12 +290,18 @@
 
     #branch-name {
 
-      bottom: 3rem;
+      bottom: 94px;
 
 	  font-size: 1em;
 
 	}
 
+  }
+
+  @media screen and (max-width: 795px) {
+    #branch-name {
+      bottom: 132px;
+    }
   }
 
   @media screen and (max-width: 640px) {
