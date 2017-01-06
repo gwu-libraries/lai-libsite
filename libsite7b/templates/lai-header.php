@@ -51,89 +51,15 @@
     <?php endif; ?>	
 
 
-<!-- begin library unit section header -->
-
-<div id="libheader-front" style="display: none;">
-
-  <div class="sr-only">
-    <a href="http://library.gwu.edu/about" itemprop="copyrightNotice">
-        © <span itemprop="copyrightYear">2016</span><span itemprop="copyrightHolder" itemscope="" itemtype="http://schema.org/Library" itemid="http://library.gwu.edu"><span itemprop="name"> GW Libraries &amp; Academic Innovation</span></span>
-    </a>
-  </div>
-
-	<section id="banner">
-
-		<div id="innerBannerDiv">				
-
-			<div class="banner-container">	
-
-                                             
-
-                                              <!-- formerly: libraries logo -->
-
-                                            						  
-
-				                                                  <!-- formerly: rollovers for each library name -->
-
-																
-
-				<!-- begin tabbed search block -->
-
-			    						<!--end searchboxes-->
-
-				<!-- end tabbed search block -->
-
-				<!-- alternate single search box code for handheld is located in libnav.php -->
-
-
-
-			    <div class="front-page-header-variant">
-
-				<a href="http://library.gwu.edu/">Estelle<span class="three-libs-smalltype"> and </span>Melvin Gelman Library</a>&nbsp;•
-
-				<a href="http://library.gwu.edu/eckles/">Eckles Library<span class="three-libs-smalltype"> at the </span>Mount Vernon Campus</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://library.gwu.edu/virginia/">Virginia Science<span class="three-libs-smalltype"> and </span>Technology Campus Library</a>
-
-				</div>			
-
-			</div><!-- closes <div class="banner-container">-->
-
-		</div><!-- closes <div id="innerBannerDiv"> -->
-
-	</section>
-
-</div><!-- closes library specific div set in opening php-->
-
-<!-- Lib Nav -->
-
 <div class="limiter">
 
 	<div id="local-header">		
 
-
-		<div id="search-menu-mobile" style="display: none;"><!-- main search located in libheader.php -->
-
-
-			<!-- SEARCH ALL single search -->
-
-			<form action="/search-all" method="get" onsubmit="ga('send','event','single-search','/search-all','Single Search (handheld)');">
-
-				<label for="mobile-search">enter your search terms</label>
-
-				<input id="mobile-search" name="query" style="padding-left:.5em;" placeholder="search everything (catalogs and website)" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" maxlength="100" type="text">					
-
-				<input value="go" type="submit">
-
-			</form>
-
-			<div style="margin-top:.4em;"><a href="http://gw.summon.serialssolutions.com/">ArticlesPlus</a> • <a href="http://findit.library.gwu.edu/catalog/" target="_blank">Catalog</a> • <a href="http://findit.library.gwu.edu/?L=UZ4UG4LZ9G&amp;" target="_blank">Journals</a> • <a href="http://refuniv.odyssi.com/cgi-bin/phtml?newsearch.htm" target="_blank">Reference</a> • <a href="http://library.gwu.edu/search">Site</a>
-
-			</div>
-
-		</div>		
-
 	</div>
 
 </div>
+
+<!-- Emergency Notice Banner -->
 
 <?php if ($page['emergency_banner']): ?>
 	<div id="bannerContainer">
@@ -145,26 +71,58 @@
 
 </div>
 
+
+<!-- Primary Navigation -->
+
 <?php
-//echo "<h1>the nav is below this</h1>";
-//include "lai-libnav.php"; 
 include 'libnav.php';
-//echo "<h1>above this</h1>";
 ?>
 	  
 
 <script>document.createElement('main'); //for IE compatibility with semantic elements</script>
 
-
 <main id="maincontent" class="main-container center-content">
 
   <div id="hero">
 
+  <?php if(($campus == 'gelman' || $campus == 'none') && drupal_is_front_page()): ?>
+
     <div id="hero-image">
-
       <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/editorial-bg-23.jpg" />
+    </div>
 
-	  </div>
+  <?php elseif(($campus == 'gelman' || $campus == 'none') && !drupal_is_front_page()): ?>
+
+    <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/gelman-10.jpg"/>
+
+  <?php elseif($campus == 'eckles'): ?>
+
+    <div id="hero-image">
+      <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/eckles-04.jpg"/>
+      <div id="branch-name">
+        Eckles Library at the Mount Vernon Campus
+      </div>
+    </div>
+
+  <?php elseif($campus == 'virginia'): ?>
+
+    <div id="hero-image">
+      <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/virginia-04.jpg"/>
+      <div id="branch-name">
+        Virginia Science and Technology Campus Library
+      </div>
+    </div>
+
+  <?php endif; ?>
+
+<!-- Internal Page Searchbox -->
+<?php
+  if(!drupal_is_front_page()) {
+    include 'lai-header-in-search.php';
+  }
+?>
+<!-- Homepage Searchbox -->
+<?php if(drupal_is_front_page()): ?>
 
   	<div id="home-search">
 
@@ -286,10 +244,135 @@ include 'libnav.php';
 
   	</div>
 
-  </div>
+  <!--</div> dupe closing hero div? -->
+<?php endif; ?>
+    
 
-        
+<?php if(!drupal_is_front_page()): ?>
 
+<style>
+
+/* temp hack, copied from header.css */
+
+#internal-featured-services .promo-items-item, #internal-featured-services h4 {
+  display: inline-block;
+  font-size: 1em;
+  white-space: nowrap;
+  line-height: 30px;
+  font-weight: normal;
+  position: relative;
+  margin: 0;
+}
+@media screen and (max-width: 640px) {
+  #internal-featured-services h4 {
+    display: none;
+  }
+}
+#internal-featured-services .promo-image, #internal-featured-services .promo-image img {
+  width: 30px;
+  display: inline-block;
+}
+#internal-featured-services {
+  margin: .5em auto 1em;
+  text-align: right;
+  max-width: 1080px;
+}
+#internal-featured-services .promo-body {
+  display: none;
+}
+#internal-featured-services .promo-label {
+  padding: .25em 1em;
+  margin: 0 -.5em;
+  border: 1px solid transparent;
+  z-index: 3 !important;
+  position: relative;
+  display: inline-block;
+}
+#internal-featured-services .promo-items-item:hover .promo-label {
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+#internal-featured-services .promo-items-item.has-promo-body .promo-label {
+  border-bottom-width: 0;
+}
+#internal-featured-services .promo-items-item:hover .promo-body {
+  z-index: 2 !important;
+  display: block;
+  position: absolute;
+  top: 100%;
+  margin-top: -2px;
+  right: -.5em;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  text-align: left;
+  padding: .5em 1em;
+  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+</style>
+
+						<div class="promotional-six-col" id="internal-featured-services">
+				<div class="promo-items-item" id="promo-item-1">
+                                <div class="promo-label">
+				<div class="promo-image"><a href="/help/reference/ask-us"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-help-02.png"></a></div>
+								<h4 class="promo-title"><a href="/help/reference/ask-us">Ask Us</a></h4>
+</span>
+							</div>
+                                </div>
+				<div class="promo-items-item" id="promo-item-2">
+                                <div class="promo-label">
+				<div class="promo-image"><a href="/about/facilities/study-room-reservations"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-reservation-02.png"></a></div>
+								<h4 class="promo-title"><a href="/about/facilities/study-room-reservations">Study room reservations</a></h4>
+</span>
+							</div>
+                                </div>
+				<div class="promo-items-item" id="promo-item-3">
+                                <div class="promo-label">
+				<div class="promo-image"><a href="https://mylibrary.wrlc.org/"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-account-02.png"></a></div>
+									<h4 class="promo-title"><a href="https://mylibrary.wrlc.org/">My Account</a></h4>
+</span>
+							</div>
+                                </div>
+				<div class="promo-items-item" id="promo-item-4">
+                                <div class="promo-label">
+				<div class="promo-image"><a href="http://libguides.gwu.edu/databases"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-databases-04.png"></a></div>
+									<h4 class="promo-title"><a href="http://libguides.gwu.edu/databases">Databases</a></h4>
+</span>
+							</div>
+                                </div>
+				<div class="promo-items-item" id="promo-item-5">
+                                <div class="promo-label">
+				  <div class="promo-image"><a href="/news-events/upcoming-events?field_event_format_value=1"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-workshops-04.png"></a></div>
+									<h4 class="promo-title"><a href="/news-events/upcoming-events?field_event_format_value=1">Workshops</a></h4>
+</span>
+				  </div>
+                                </div>
+				<div class="promo-items-item" id="promo-item-6">
+                                <div class="promo-label">
+				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-other-libraries-04.png"></a></div>
+									<h4 class="promo-title"><a href="#">All GW Libraries</a></h4>
+
+<span class="promo-body">
+	<ul>
+	<li><a href="#">Estelle and Melvin Gelman Library</a></li>
+	<li><a href="#">Eckles Library at the Mount Vernon Campus</a></li>
+	<li><a href="#">Virginia Science and Technology Campus Library</a></li>
+	</ul>
+	<hr/>
+	<ul>
+	<li><a href="#" class="external-link">Himmelfarb Health Sciences Library</a></li>
+	<li><a href="#" class="external-link">Jacob Burns Law Library</a></li>
+	</li>
+	</ul>
+</span>
+
+							</div>
+						</div>
+                                            </div>
+
+<?php endif; ?>
+
+</div> <!-- closing hero div -->
 
 
 <script type="text/javascript">
