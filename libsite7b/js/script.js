@@ -25,7 +25,7 @@
             searchURL = finditSearchBase + "subjjectterms:" + searchStringClean;
         } else if (subSelector == "call number") {
             searchURL = finditSearchBase + "lccallnum:" + searchStringClean;
-        } else (subSelector == "journal title") {
+        } else if (subSelector == "journal title") { 
             searchURL = finditSearchBase + "titlecombined:" + searchStringClean + "&facet=ContentType%3AJournal+%2F+eJournal&facet=ContentType%3ANewspaper&page=1";
         } 
     } else if (searchTool == "articles" ){
@@ -33,11 +33,11 @@
     } else if (searchTool == "journals"){
         if (subSelector == "title keywords") {
             searchURL = journalTitleSearchBase + searchStringClean + "&S=T_W_A";
-        } else if subSelector == "title begins with") {
+        } else if (subSelector == "title begins with") {
             searchURL = journalTitleSearchBase + searchStringClean + "&S=A_T_B";
-        } else if subSelector == "title (exact)") {
+        } else if (subSelector == "title (exact)") {
             searchURL = journalTitleSearchBase + searchStringClean + "&S=A_T_M";
-        } else subSelector == "ISSN") {
+        } else if (subSelector == "ISSN") {
             searchURL = journalTitleSearchBase + searchStringClean + "&S=I_M";
         }
     } else if (searchTool == "website") {
