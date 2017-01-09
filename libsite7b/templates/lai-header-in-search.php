@@ -397,20 +397,23 @@
 	  if (ul.is(":hidden")) {
 	    ul.show();
 		e.stopPropagation();
-	  } 
-	  else {
-	    closeSearchDropdown();
+
+
+	  } else {
+
+	    jQuery("#search-dropdown ul").hide();
+
+	    jQuery("#search-form input[type=text]").focus();
+
 	  }
-	  jQuery("#home-search-explanation").hide();
+
 	});
 
 	jQuery("html").on("click", function() {
-	  closeSearchDropdown();
+
+	  jQuery("#search-dropdown ul").hide();
+
 	});
 
-	function closeSearchDropdown() {
-	  jQuery("#search-dropdown ul").hide();
-	  jQuery("#home-search-explanation").show();
-	}
 
   </script>
