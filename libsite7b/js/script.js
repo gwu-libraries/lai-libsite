@@ -1,4 +1,4 @@
-// gwSearch Function   
+// gwSearch Function can be called from anywhere on the site
   function gwSearch(searchTool, searchString, windowTarget, subSelector){
 
     var bentoSearchBase = "/search-all?query=";
@@ -12,9 +12,9 @@
     var searchStringClean = encodeURIComponent(searchString);
     var searchURL = "";
 
-    if (searchTool == "bento") {
+    if (searchTool == "Search All") {
         searchURL = bentoSearchBase + searchStringClean;
-    } else if (searchTool == "catalog") {
+    } else if (searchTool == "Books &amp; More") {
         if (subSelector == "keyword"){
             searchURL = finditSearchBase + searchStringClean;
         } else if (subSelector == "title") {
@@ -22,15 +22,15 @@
         } else if (subSelector == "author") {
             searchURL = finditSearchBase + "author:%22" + searchStringClean + "%22";
         } else if (subSelector == "subject") {
-            searchURL = finditSearchBase + "subjjectterms:" + searchStringClean;
+            searchURL = finditSearchBase + "subjectterms:" + searchStringClean;
         } else if (subSelector == "call number") {
             searchURL = finditSearchBase + "lccallnum:" + searchStringClean;
         } else if (subSelector == "journal title") { 
             searchURL = finditSearchBase + "titlecombined:" + searchStringClean + "&facet=ContentType%3AJournal+%2F+eJournal&facet=ContentType%3ANewspaper&page=1";
         } 
-    } else if (searchTool == "articles" ){
+    } else if (searchTool == "ArticlesPlus" ){
         searchURL = articlesPlusSearchBase + searchStringClean + articlesPlusSearchTail;
-    } else if (searchTool == "journals"){
+    } else if (searchTool == "Browse Journals"){
         if (subSelector == "title keywords") {
             searchURL = journalTitleSearchBase + searchStringClean + "&S=T_W_A";
         } else if (subSelector == "title begins with") {
@@ -40,13 +40,47 @@
         } else if (subSelector == "ISSN") {
             searchURL = journalTitleSearchBase + searchStringClean + "&S=I_M";
         }
-    } else if (searchTool == "website") {
+    } else if (searchTool == "Library Website") {
         searchURL = websiteSearchBase + searchStringClean;
     } else {
         console.log("search-failed");
     }
     window.open(searchURL, windowTarget);
   };
+ 
+ // execute searches when the search form is submitted
+  
+  jQuery(document).ready(function(event) {
+    jQuery("#search-form").on("submit", function(event) {
+      event.preventDefault();
+
+      // collect text box input
+      var currentSearchText = jQuery("#search-form [type=text]").val();
+
+      // collect selected search type conditional is for different element for home and interior pages
+      if (jQuery("#current-search-text-a").length) {
+        var currentSearchTool = jQuery("#current-search-text-a").text();
+      } else {
+        var currentSearchTool = jQuery(".current-search-text").html();
+      }
+
+      // if the search type has a sub selector, collect that
+      if (currentSearchTool == "Books &amp; More") {
+        currentSubSelector = jQuery("#catalog-options option:selected").text();
+        console.log(currentSubSelector);
+      } else if (currentSearchTool == "Browse Journals") {
+        currentSubSelector = jQuery("#journals-options option:selected").text();
+      }
+
+      // run the search conditional for extra argument in the event of a subselector
+      if (currentSearchTool == "Books &amp; More" || currentSearchTool == "Browse Journals") {
+        gwSearch(currentSearchTool, currentSearchText, "_self", currentSubSelector);
+      }
+      else {
+        gwSearch(currentSearchTool, currentSearchText, "_self");
+      }
+    });
+  });
 
 /*!
  * Modernizr v2.5.3
