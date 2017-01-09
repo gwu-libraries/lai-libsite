@@ -205,6 +205,8 @@ include 'libnav.php';
   margin: .5em auto 1em;
   text-align: right;
   max-width: 1080px;
+  position: inherit;
+  z-index: -1;
 }
 #internal-featured-services .promo-body {
   display: none;

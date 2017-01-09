@@ -44,11 +44,12 @@
 
   @media screen and (max-width: 1080px) {
     #internal-search {
-		  bottom: auto;
-		  top: 0;
-		  position: relative;
-		  background-color: #004065;
-  	}
+      bottom: auto;
+      top: 0;
+      position: static;
+      background-color: #004065;
+      z-index: 10;
+    }
   }
 
   #internal-search form select, #internal-search form input {
@@ -95,6 +96,7 @@
 		margin: 0;
 		padding: 0;
 		left: 0;
+    z-index: 100;
   }
 
   #internal-search-dropdown:hover ul {
