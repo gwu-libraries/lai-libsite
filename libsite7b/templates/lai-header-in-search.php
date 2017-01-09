@@ -78,7 +78,7 @@
 
 	  top: 0;
 
-	  position: static;
+	  position: relative;
 
 	  background-color: #004065;
 
