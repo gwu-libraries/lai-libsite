@@ -25,7 +25,7 @@
             searchURL = finditSearchBase + "subjectterms:" + searchStringClean;
         } else if (subSelector == "call number") {
             searchURL = finditSearchBase + "lccallnum:" + searchStringClean;
-        } else if (subSelector == "journal title") {
+        } else if (subSelector == "journal title") { 
             searchURL = finditSearchBase + "titlecombined:" + searchStringClean + "&facet=ContentType%3AJournal+%2F+eJournal&facet=ContentType%3ANewspaper&page=1";
         } 
     } else if (searchTool == "ArticlesPlus" ){
@@ -37,7 +37,7 @@
             searchURL = journalTitleSearchBase + searchStringClean + "&S=A_T_B";
         } else if (subSelector == "title (exact)") {
             searchURL = journalTitleSearchBase + searchStringClean + "&S=A_T_M";
-        } else if (subSelector == "ISSN") { 
+        } else if (subSelector == "ISSN") {
             searchURL = journalTitleSearchBase + searchStringClean + "&S=I_M";
         }
     } else if (searchTool == "Library Website") {
@@ -81,34 +81,6 @@
       }
     });
   });
-
-// show/hide element */
-
-  function show(ele) {
-    var srcElement = document.getElementById(ele);
-      if(srcElement != null) {
-	      if(srcElement.style.display == 'block') {
-     		  srcElement.style.display = 'none';
-   	    }
-        else {
-          srcElement.style.display = 'block';
-        }
-        return false;
-      }
-	}
-	
-  function showsidebar(ele) {
-    var srcElement = document.getElementById(ele);
-      if(srcElement != null) {
-	      if(srcElement.style.display == 'inline') {
-     		  srcElement.style.display = 'none';
-   	    }
-        else {
-          srcElement.style.display = 'inline';
-        }
-        return false;
-      }
-	}
 
 /*!
  * Modernizr v2.5.3
