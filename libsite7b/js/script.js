@@ -14,7 +14,7 @@
 
     if (searchTool == "Search All") {
         searchURL = bentoSearchBase + searchStringClean;
-    } else if (searchTool == "Books &amp; More") {
+    } else if (searchTool == "Books & More") {
         if (subSelector == "keyword"){
             searchURL = finditSearchBase + searchStringClean;
         } else if (subSelector == "title") {
@@ -25,7 +25,7 @@
             searchURL = finditSearchBase + "subjectterms:" + searchStringClean;
         } else if (subSelector == "call number") {
             searchURL = finditSearchBase + "lccallnum:" + searchStringClean;
-        } else if (subSelector == "journal title") { 
+        } else if (subSelector == "journal title") {
             searchURL = finditSearchBase + "titlecombined:" + searchStringClean + "&facet=ContentType%3AJournal+%2F+eJournal&facet=ContentType%3ANewspaper&page=1";
         } 
     } else if (searchTool == "ArticlesPlus" ){
@@ -37,13 +37,13 @@
             searchURL = journalTitleSearchBase + searchStringClean + "&S=A_T_B";
         } else if (subSelector == "title (exact)") {
             searchURL = journalTitleSearchBase + searchStringClean + "&S=A_T_M";
-        } else if (subSelector == "ISSN") {
+        } else if (subSelector == "ISSN") { 
             searchURL = journalTitleSearchBase + searchStringClean + "&S=I_M";
         }
     } else if (searchTool == "Library Website") {
         searchURL = websiteSearchBase + searchStringClean;
     } else {
-        console.log("search-failed");
+        console.log("search-failed, probably passed an unrecognized searchTool to gwSearch");
     }
     window.open(searchURL, windowTarget);
   };
@@ -61,19 +61,18 @@
       if (jQuery("#current-search-text-a").length) {
         var currentSearchTool = jQuery("#current-search-text-a").text();
       } else {
-        var currentSearchTool = jQuery(".current-search-text").html();
+        var currentSearchTool = jQuery(".current-search-text").text();
       }
 
       // if the search type has a sub selector, collect that
-      if (currentSearchTool == "Books &amp; More") {
+      if (currentSearchTool == "Books & More") {
         currentSubSelector = jQuery("#catalog-options option:selected").text();
-        console.log(currentSubSelector);
       } else if (currentSearchTool == "Browse Journals") {
         currentSubSelector = jQuery("#journals-options option:selected").text();
       }
 
       // run the search conditional for extra argument in the event of a subselector
-      if (currentSearchTool == "Books &amp; More" || currentSearchTool == "Browse Journals") {
+      if (currentSearchTool == "Books & More" || currentSearchTool == "Browse Journals") {
         gwSearch(currentSearchTool, currentSearchText, "_self", currentSubSelector);
       }
       else {
@@ -81,6 +80,34 @@
       }
     });
   });
+
+// show/hide element */
+
+  function show(ele) {
+    var srcElement = document.getElementById(ele);
+      if(srcElement != null) {
+	      if(srcElement.style.display == 'block') {
+     		  srcElement.style.display = 'none';
+   	    }
+        else {
+          srcElement.style.display = 'block';
+        }
+        return false;
+      }
+	}
+	
+  function showsidebar(ele) {
+    var srcElement = document.getElementById(ele);
+      if(srcElement != null) {
+	      if(srcElement.style.display == 'inline') {
+     		  srcElement.style.display = 'none';
+   	    }
+        else {
+          srcElement.style.display = 'inline';
+        }
+        return false;
+      }
+	}
 
 /*!
  * Modernizr v2.5.3
