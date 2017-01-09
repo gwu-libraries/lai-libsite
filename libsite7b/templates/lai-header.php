@@ -347,11 +347,12 @@ include 'libnav.php';
 </span>
 				  </div>
                                 </div>
-				<div class="promo-items-item" id="promo-item-6">
+				<div class="promo-items-item has-promo-body" id="promo-item-6">
                                 <div class="promo-label">
 				<div class="promo-image"><a href="#"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-other-libraries-04.png"></a></div>
 									<h4 class="promo-title"><a href="#">All GW Libraries</a></h4>
 
+							</div>
 <span class="promo-body">
 	<ul>
 	<li><a href="/">Estelle and Melvin Gelman Library</a></li>
@@ -366,7 +367,6 @@ include 'libnav.php';
 	</ul>
 </span>
 
-							</div>
 						</div>
                                             </div>
 
