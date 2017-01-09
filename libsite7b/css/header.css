@@ -65,6 +65,7 @@
   }
 }
 #secondary-nav {
+  background-color: transparent;
   max-width: 1080px;
   margin: auto;
 }
