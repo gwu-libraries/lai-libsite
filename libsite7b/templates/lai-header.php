@@ -98,7 +98,7 @@ include 'libnav.php';
   <?php elseif($campus == 'eckles'): ?>
 
     <div id="hero-image">
-      <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/eckles-04.jpg"/>
+      <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/eckles-12.jpg"/>
       <div id="branch-name">
         Eckles Library at the Mount Vernon Campus
       </div>
