@@ -399,11 +399,13 @@
 		e.stopPropagation();
 	  } else {
 	    closeSearchDropdown(true);
+
 	  }
-	  jQuery("#home-search-explanation").hide();
+
 	});
 
 	jQuery("html").on("click", function() {
+
 	  closeSearchDropdown(false);
 	});
 	function closeSearchDropdown(fromDropdownSelection) {
@@ -411,5 +413,6 @@
 	  jQuery("#home-search-explanation").show();
 	  if (fromDropdownSelection) jQuery("#search-form input[type=text]").focus();
 	}
+
 
   </script>
