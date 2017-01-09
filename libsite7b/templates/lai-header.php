@@ -337,19 +337,18 @@ jQuery(".search-dropdown").on("click", function(e) {
     ul.show();
   e.stopPropagation(); // to prevent the html.onclick below from being triggered
   } else {
-    closeSearchDropdown();
+    closeSearchDropdown(true);
   }
   jQuery("#home-search-explanation").hide();
 });
 
 jQuery("html").on("click", function() {
-  closeSearchDropdown();
+  closeSearchDropdown(false);
 });
-
-function closeSearchDropdown() {
+function closeSearchDropdown(fromDropdownSelection) {
   jQuery(".search-dropdown ul").hide();
   jQuery("#home-search-explanation").show();
-  // this is taking focus from all form fields, adjust behavior to only take focus on page load and selection of dropdown category: jQuery("#search-form input[type=text]").focus();
+  if (fromDropdownSelection) jQuery("#search-form input[type=text]").focus();
 }
 
 </script>
