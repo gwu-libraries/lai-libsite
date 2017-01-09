@@ -913,7 +913,7 @@
 
 	  } else {
 
-	    closeSearchDropdown();
+	    closeSearchDropdown(true);
 
 	  }
 
@@ -923,15 +923,17 @@
 
 	jQuery("html").on("click", function() {
 
-	  closeSearchDropdown();
+	  closeSearchDropdown(false);
 
 	});
 
-	function closeSearchDropdown() {
+	function closeSearchDropdown(fromDropdownSelection) {
 
 	  jQuery("#search-dropdown ul").hide();
 
 	  jQuery("#home-search-explanation").show();
+
+	  if (fromDropdownSelection) jQuery("#search-form input[type=text]").focus();
 
 	}
 
