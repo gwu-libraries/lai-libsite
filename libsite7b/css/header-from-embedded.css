@@ -426,6 +426,10 @@ max-width: 100%; /* to override existing style */
 }
 #catalog-options, #journals-options {
   display: none;
+  height: 50px;
+}
+#internal-search #catalog-options, #internal-search #journals-options {
+  height: 38px;
 }
 .search-dropdown, .search-dropdown li {
   margin: 0;
