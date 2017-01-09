@@ -243,10 +243,11 @@
 
   #search-dropdown ul {
     position: absolute;
-  	display: none;
-		top: 100%;
-		margin: 0;
-		padding: 0;
+    display: none;
+    top: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 10;
   }
 
   #search-dropdown li {
