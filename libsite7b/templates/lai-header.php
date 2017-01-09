@@ -1,72 +1,71 @@
 <?php 
-	if(drupal_is_front_page()) {
-		$campus = 'none';
-	}
-	else if (false !== stripos($_SERVER["REQUEST_URI"], 'eckles')) {
-		$campus = 'eckles';
-	}
-	else if (false !== stripos($_SERVER["REQUEST_URI"], 'virginia')) {
-		$campus = 'virginia';
-	}
-        else if (false !== stripos($_SERVER["REQUEST_URI"], 'utlc')) {
-                $campus = 'utlc';
-        }
-	else {
-		$campus = 'gelman';
-	}
+  if(drupal_is_front_page()) {
+    $campus = 'none';
+  }
+  else if (false !== stripos($_SERVER["REQUEST_URI"], 'eckles')) {
+    $campus = 'eckles';
+  }
+  else if (false !== stripos($_SERVER["REQUEST_URI"], 'virginia')) {
+    $campus = 'virginia';
+  }
+  else if (false !== stripos($_SERVER["REQUEST_URI"], 'utlc')) {
+          $campus = 'utlc';
+  }
+  else {
+    $campus = 'gelman';
+  }
 ?>
 
 <?php if ($_SERVER['SERVER_NAME'] != 'library.gwu.edu'): ?>
-    <div class="staging-header-container">
-        <div class="staging-header-message">
-            <span style="color:#FC2847">WARNING:</span> this is a test server for GW Libraries & Academic Innovation and is intended for internal use only. Content, functionality and design may not match the GW Libraries site (<a href="http://library.gwu.edu">library.gwu.edu</a>)
-        </div>
+  <div class="staging-header-container">
+    <div class="staging-header-message">
+      <span style="color:#FC2847">WARNING:</span> this is a test server for GW Libraries & Academic Innovation and is intended for internal use only. Content, functionality and design may not match the GW Libraries site (<a href="http://library.gwu.edu">library.gwu.edu</a>)
     </div>
+  </div>
 <?php endif; ?>
 
 <div id="container" class="three-six-three logo-slogan">
-	<div id="skip">
-	  <a href="#maincontent">Skip to Main Content</a>
-	  <a href="#secondary-nav">Skip to Main Menu</a>
-	</div>
+  <div id="skip">
+    <a href="#maincontent">Skip to Main Content</a>
+    <a href="#secondary-nav">Skip to Main Menu</a>
+  </div>
 </div>
 
 <div id="topheader-container">
 
   <div id="topheader-content">
 
-		<div id="gwlogo-topheader"><a href="<?php print $front_page; ?>" aria-label="GW Libraries home page"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_iddol_libraries_1cs_pos.png" alt="logo: The George Washington University Libraries" width="199" height="90"><span class="sr-only">GW Libraries home page</span></a>
+    <div id="gwlogo-topheader">
+      <a href="<?php print $front_page; ?>" aria-label="GW Libraries home page">
+        <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_iddol_libraries_1cs_pos.png" alt="logo: The George Washington University Libraries" width="199" height="90">
+        <span class="sr-only">GW Libraries home page</span>
+      </a>
+    </div>
 
-	    </div>
-
-		<p id="lai-division">
-		A division of <a href="https://lai.gwu.edu">Libraries and Academic Innovation</a>
-		</p>
-
+    <p id="lai-division">
+      A division of <a href="https://lai.gwu.edu">Libraries and Academic Innovation</a>
+    </p>
 
     <?php if ($campus == 'gelman' OR $campus == 'none'): ?>
       <div id='header-hours'>
         <?php print render($page['topheader_right']); ?>
       </div>
-    <?php endif; ?>	
+    <?php endif; ?> 
 
 
 <div class="limiter">
-
-	<div id="local-header">		
-
-	</div>
-
+  <div id="local-header">   
+  </div>
 </div>
 
 <!-- Emergency Notice Banner -->
 
 <?php if ($page['emergency_banner']): ?>
-	<div id="bannerContainer">
-		<div id="bannerMessage">
-		  <?php print render($page['emergency_banner']); ?>
-		</div>
-	</div>
+  <div id="bannerContainer">
+    <div id="bannerMessage">
+      <?php print render($page['emergency_banner']); ?>
+    </div>
+  </div>
 <?php endif; ?>
 
 </div>
@@ -77,42 +76,32 @@
 <?php
 include 'libnav.php';
 ?>
-	  
+    
 
 <script>document.createElement('main'); //for IE compatibility with semantic elements</script>
 
 <main id="maincontent" class="main-container center-content">
-
   <div id="hero">
-
   <?php if(($campus == 'gelman' || $campus == 'none') && drupal_is_front_page()): ?>
-
     <div id="hero-image">
       <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/editorial-bg-23.jpg" />
     </div>
-
   <?php elseif(($campus == 'gelman' || $campus == 'none') && !drupal_is_front_page()): ?>
-
     <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/gelman-10.jpg"/>
-
   <?php elseif($campus == 'eckles'): ?>
-
     <div id="hero-image">
-      <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/eckles-04.jpg"/>
+      <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/eckles-12.jpg"/>
       <div id="branch-name">
         Eckles Library at the Mount Vernon Campus
       </div>
     </div>
-
   <?php elseif($campus == 'virginia'): ?>
-
     <div id="hero-image">
       <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/virginia-04.jpg"/>
       <div id="branch-name">
         Virginia Science and Technology Campus Library
       </div>
     </div>
-
   <?php endif; ?>
 
 <!-- Internal Page Searchbox -->
@@ -121,139 +110,79 @@ include 'libnav.php';
     include 'lai-header-in-search.php';
   }
 ?>
+
 <!-- Homepage Searchbox -->
 <?php if(drupal_is_front_page()): ?>
+  <div id="home-search">
+    <h3>What would you like to find at the libraries today?</h3>
+    <form id="search-form">
+    <div class="search-dropdown">
+      <div class="search-dropdown-inner">
+      <a href="#" aria-haspopup="true" class="current-search-text">Search All</a>
+      <ul class="search-dropdown-ul">
+      <li id="search-all" data-placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ...">
+        <a href="#">
+            <span class="search-label">Search All</span>
+            <div class="search-description">Articles and books, plus library databases, research guides and tutorials</div>
+        </a>
+        </li>
+        <li id="search-articlesplus" data-placeholder="Fidel Castro, sustainable energy, gender and identity ...">
+        <a href="#">
+            <span class="search-label">ArticlesPlus</span>
+          <div class="search-description">Journal &amp; newspaper articles, plus books and more</div>
+        </a>
+        </li>
+        <li id="search-catalog" data-placeholder="The Communist Manifesto, calculus, Bladerunner ...">
+          <a href="#">
+            <span class="search-label">Books & More</span>
+        <div class="search-description">Books (including e-books), A/V media, and archival resources</div>
+        </a>
+      </li>
+      <li id="search-journals" data-placeholder="Wall Street Journal, Journal of American History, sociology, ...">
+          <a href="#">
+        <span class="search-label">Browse Journals</span>
+        <div class="search-description">Online access to journals and other periodicals, by subject area and title</div>
+        </a>
+      </li>
+      <li id="search-website" data-placeholder="building hours, study rooms, Churchill ...">
+          <a href="#">
+        <span class="search-label">Library Website</span>
+        <div class="search-description">Library policies, news and events, and research help</div>
+        </a>
+        </li>
+      </ul>
+      </div>
+    </div>
 
-  	<div id="home-search">
+    <input type="text" placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ..."/>
+    <select id="catalog-options">
+      <option>title</option>
+      <option>journal title</option>
+      <option selected="selected">keyword</option>
+      <option>author</option>
+      <option>subject</option>
+      <option>call number</option>
+    </select>
+    <select id="journals-options">
+      <option>title begins with</option>
+      <option>title (exact)</option>
+      <option selected="selected">title keywords</option>
+      <option>ISSN</option>
+    </select>
+      <input type="submit" value="Go"/>
+    </form>
+    <p id="home-search-explanation">
+      Articles and books, plus library databases, research guides and tutorials. 
+    </p>
 
-  	  <h3>What would you like to find at the libraries today?</h3>
+  </div>
 
-                  <form id="search-form">
-
-                	<div class="search-dropdown">
-
-                	  <div class="search-dropdown-inner">
-
-                	  <a href="#" aria-haspopup="true" class="current-search-text">Search All</a>
-
-                	  <ul class="search-dropdown-ul">
-
-                		<li id="search-all" data-placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ...">
-
-                		  <a href="#">
-
-                	        <span class="search-label">Search All</span>
-
-                	        <div class="search-description">Articles and books, plus library databases, research guides and tutorials</div>
-
-                		  </a>
-
-                	    </li>
-
-                	    <li id="search-articlesplus" data-placeholder="Fidel Castro, sustainable energy, gender and identity ...">
-
-                		  <a href="#">
-
-                	        <span class="search-label">ArticlesPlus</span>
-
-                		    <div class="search-description">Journal &amp; newspaper articles, plus books and more</div>
-
-                		  </a>
-
-                	    </li>
-
-                	    <li id="search-catalog" data-placeholder="The Communist Manifesto, calculus, Bladerunner ...">
-
-                	      <a href="#">
-
-                	        <span class="search-label">Books & More</span>
-
-                			<div class="search-description">Books (including e-books), A/V media, and archival resources</div>
-
-                		  </a>
-
-                		</li>
-
-                		<li id="search-journals" data-placeholder="Wall Street Journal, Journal of American History, sociology, ...">
-
-                	      <a href="#">
-
-                			<span class="search-label">Browse Journals</span>
-
-                			<div class="search-description">Online access to journals and other periodicals, by subject area and title</div>
-
-                		  </a>
-
-                		</li>
-
-                		<li id="search-website" data-placeholder="building hours, study rooms, Churchill ...">
-
-                	      <a href="#">
-
-                			<span class="search-label">Library Website</span>
-
-                			<div class="search-description">Library policies, news and events, and research help</div>
-
-                		  </a>
-
-                	    </li>
-
-                	  </ul>
-
-                	  </div>
-
-                	</div>
-
-                    <input type="text" placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ..."/>
-
-                	<select id="catalog-options">
-
-                	  <option>title</option>
-
-                	  <option>journal title</option>
-
-                	  <option selected="selected">keyword</option>
-
-                	  <option>author</option>
-
-                	  <option>subject</option>
-
-                	  <option>call number</option>
-
-                	</select>
-
-                	<select id="journals-options">
-
-                	  <option>title begins with</option>
-
-                	  <option>title (exact)</option>
-
-                	  <option selected="selected">title keywords</option>
-
-                	  <option>ISSN</option>
-
-                	</select>
-
-                    <input type="submit" value="Go"/>
-
-                  </form>
-
-  	  <p id="home-search-explanation">
-        Articles and books, plus library databases, research guides and tutorials. 
-      </p>
-
-  	</div>
-
-  <!--</div> dupe closing hero div? -->
 <?php endif; ?>
-    
 
 <?php if(!drupal_is_front_page()): ?>
 
-<style>
-
-/* temp hack, copied from header.css */
-
+<style type="text/css">
+/* temporarily located here, copied from header.css */
 #internal-featured-services .promo-items-item, #internal-featured-services h4 {
   display: inline-block;
   font-size: 1em;
@@ -276,6 +205,8 @@ include 'libnav.php';
   margin: .5em auto 1em;
   text-align: right;
   max-width: 1080px;
+  position: inherit;
+  z-index: 1;
 }
 #internal-featured-services .promo-body {
   display: none;
@@ -308,7 +239,6 @@ include 'libnav.php';
   padding: .5em 1em;
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
 }
-
 </style>
 
 						<div class="promotional-six-col" id="internal-featured-services">
@@ -370,91 +300,55 @@ include 'libnav.php';
 						</div>
                                             </div>
 
+
 <?php endif; ?>
 
 </div> <!-- closing hero div -->
 
-
 <script type="text/javascript">
-
   jQuery(".search-dropdown").on("click", ".search-dropdown-ul li", function() {
-
   jQuery(".current-search-text").text(jQuery(this).find(".search-label").text());
-
   jQuery("#search-form input[type=text]").attr("placeholder",jQuery(this).data("placeholder"));
-
   jQuery("#home-search-explanation").html(jQuery(this).find(".search-description").html());
-
   jQuery("#catalog-options").hide();
-
   jQuery("#journals-options").hide();
-
   if (this.id == "search-catalog") {
-
     jQuery("#catalog-options").show();
-
   }
-
   if (this.id == "search-journals") {
-
     jQuery("#journals-options").show();
-
   }
-
 });
 
 jQuery(".search-dropdown").on("click", "a", function(e) {
-
   e.preventDefault();
-
 });
 
 jQuery(".search-dropdown").on("keydown", function(e) {
-
   var ul = jQuery(this).find("ul");
-
   if (ul.is(":hidden")) {
-
     ul.show();
-
   }
-
 });
 
 jQuery(".search-dropdown").on("click", function(e) {
-
   var ul = jQuery(this).find("ul");
-
   if (ul.is(":hidden")) {
-
     ul.show();
-
-	e.stopPropagation(); // to prevent the html.onclick below from being triggered
-
+  e.stopPropagation(); // to prevent the html.onclick below from being triggered
   } else {
-
-    closeSearchDropdown();
-
+    closeSearchDropdown(true);
   }
-
   jQuery("#home-search-explanation").hide();
-
 });
 
 jQuery("html").on("click", function() {
-
-  closeSearchDropdown();
-
+  closeSearchDropdown(false);
 });
-
-function closeSearchDropdown() {
-
+function closeSearchDropdown(fromDropdownSelection) {
   jQuery(".search-dropdown ul").hide();
-
   jQuery("#home-search-explanation").show();
-
-  // this is taking focus from all form fields, adjust behavior to only take focus on page load and selection of dropdown category: jQuery("#search-form input[type=text]").focus();
-
+  if (fromDropdownSelection) jQuery("#search-form input[type=text]").focus();
 }
 
 </script>
