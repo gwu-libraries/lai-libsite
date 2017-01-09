@@ -913,27 +913,19 @@
 
 	  } else {
 
-	    closeSearchDropdown();
+	    jQuery("#search-dropdown ul").hide();
+
+	    jQuery("#search-form input[type=text]").focus();
 
 	  }
-
-	  jQuery("#home-search-explanation").hide();
 
 	});
 
 	jQuery("html").on("click", function() {
 
-	  closeSearchDropdown();
-
-	});
-
-	function closeSearchDropdown() {
-
 	  jQuery("#search-dropdown ul").hide();
 
-	  jQuery("#home-search-explanation").show();
-
-	}
+	});
 
   </script>
 
