@@ -398,21 +398,14 @@
 	    ul.show();
 		e.stopPropagation();
 	  } else {
-	    closeSearchDropdown(true);
-
+	    jQuery("#search-dropdown ul").hide();
+	    jQuery("#search-form input[type=text]").focus();
 	  }
-
 	});
 
 	jQuery("html").on("click", function() {
-
-	  closeSearchDropdown(false);
-	});
-	function closeSearchDropdown(fromDropdownSelection) {
 	  jQuery("#search-dropdown ul").hide();
-	  jQuery("#home-search-explanation").show();
-	  if (fromDropdownSelection) jQuery("#search-form input[type=text]").focus();
-	}
+	});
 
 
   </script>
