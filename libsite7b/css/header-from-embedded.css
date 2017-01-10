@@ -495,17 +495,24 @@ height: 1.4em;
   line-height: normal;
 }
 }
-.current-search-text::after {
+.current-search-text::after, .current-search-text::before {
   /* CSS triangle */
   content: "";
 width: 0;
 height: 0;
 border-style: solid;
-border-width: 10.4px 6px 0 6px;
+border-width: 7px 7px 0 7px;
 border-color: #fff transparent transparent transparent;
 position: absolute;
-right: 1em;
-bottom: calc(50% - 6px);
+right: .9em;
+bottom: 1.2em;
+}
+.current-search-text::before {
+  /* CSS triangle */
+border-width: 0 7px 7px 7px;
+border-color: transparent transparent #fff transparent;
+top: 1.2em;
+bottom: auto;
 }
 </style>
 <style type="text/css">
