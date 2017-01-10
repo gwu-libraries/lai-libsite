@@ -252,7 +252,7 @@ include 'libnav.php';
 				<div class="promo-items-item" id="promo-item-2">
                                 <div class="promo-label">
 				<div class="promo-image"><a href="/about/facilities/study-room-reservations"><img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-reservation-02.png"></a></div>
-								<h4 class="promo-title"><a href="/about/facilities/study-room-reservations">Study room reservations</a></h4>
+								<h4 class="promo-title"><a href="/about/facilities/study-room-reservations">Study Room Reservations</a></h4>
 </span>
 							</div>
                                 </div>
