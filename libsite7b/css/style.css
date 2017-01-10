@@ -2085,6 +2085,10 @@ section.pane .workshop-orientation-link {margin-top: .6em;}
 .events-notice {margin-top:3.5em;}
 
 #block-views-libraries_events-block_1 { margin-top: -20px; }
+
+@media screen and (max-width:640px) {
+  #block-views-libraries_events-block_1 { margin-top: -80px; }
+}
 /* end upcoming events */
 
 /* blog 'submitted by + date' formatting */
