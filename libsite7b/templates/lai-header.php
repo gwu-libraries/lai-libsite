@@ -310,6 +310,9 @@ include 'libnav.php';
   jQuery(".current-search-text").text(jQuery(this).find(".search-label").text());
   jQuery("#search-form input[type=text]").attr("placeholder",jQuery(this).data("placeholder"));
   jQuery("#home-search-explanation").html(jQuery(this).find(".search-description").html());
+  jQuery(".search-dropdown ul").hide();
+  jQuery("#home-search-explanation").show();
+  jQuery("#search-form input[type=text]").focus();
   jQuery("#catalog-options").hide();
   jQuery("#journals-options").hide();
   if (this.id == "search-catalog") {
@@ -331,24 +334,11 @@ jQuery(".search-dropdown").on("keydown", function(e) {
   }
 });
 
-jQuery(".search-dropdown").on("click", function(e) {
-  var ul = jQuery(this).find("ul");
-  if (ul.is(":hidden")) {
-    ul.show();
-  e.stopPropagation(); // to prevent the html.onclick below from being triggered
-  } else {
-    closeSearchDropdown(true);
-  }
-  jQuery("#home-search-explanation").hide();
+jQuery(".search-dropdown").on("mouseenter", function() {
+  jQuery(this).find("ul").show();
 });
-
-jQuery("html").on("click", function() {
-  closeSearchDropdown(false);
+jQuery(".search-dropdown").on("mouseleave", function() {
+  jQuery(this).find("ul").hide();
 });
-function closeSearchDropdown(fromDropdownSelection) {
-  jQuery(".search-dropdown ul").hide();
-  jQuery("#home-search-explanation").show();
-  if (fromDropdownSelection) jQuery("#search-form input[type=text]").focus();
-}
 
 </script>
