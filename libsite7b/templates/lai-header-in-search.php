@@ -303,16 +303,22 @@
 	  }
   }
 
-  #current-search-text::after {
-    content: "";
-  	width: 0;
-  	height: 0;
-  	border-style: solid;
-  	border-width: 10.4px 6px 0 6px;
-  	border-color: #fff transparent transparent transparent;
-    position: absolute;
-  	right: 1em;
-  	bottom: calc(50% - 6px);
+  #current-search-text::after, #current-search-text::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 7px 7px 0 7px;
+        border-color: #fff transparent transparent transparent;
+        position: absolute;
+        right: 1.1em;
+        bottom: .8em;
+  }
+  #current-search-text::before {
+        border-width: 0 7px 7px 7px;
+        border-color: transparent transparent #fff transparent;
+        top: .8em;
+        bottom: auto;
   }
 
 </style>
