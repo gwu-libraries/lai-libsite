@@ -77,7 +77,7 @@ include 'libnav.php';
   <div id="hero">
   <?php if(($campus == 'gelman' || $campus == 'none') && drupal_is_front_page()): ?>
     <div id="hero-image">
-      <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/editorial-bg-23.jpg" />
+      <img alt="background image: Gelman library" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/editorial-bg-23.jpg" />
     </div>
   <?php elseif(($campus == 'gelman' || $campus == 'none') && !drupal_is_front_page()): ?>
     <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/gelman-10.jpg"/>
@@ -147,7 +147,7 @@ include 'libnav.php';
       </div>
     </div>
 
-    <input type="text" placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ..."/>
+    <input type="text" aria-label="searchbox: enter your search terms here" placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ..."/>
     <select id="catalog-options">
       <option>title</option>
       <option>journal title</option>

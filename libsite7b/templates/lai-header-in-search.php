@@ -365,7 +365,7 @@
 		    </li>
 		  </ul>
 		</div>
-	    <input type="text" placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ..."/>
+	    <input type="text" aria-label="searchbox: enter your search terms here" placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ..."/>
 		<select id="catalog-options">
 		  <option>title</option>
 		  <option>journal title</option>
