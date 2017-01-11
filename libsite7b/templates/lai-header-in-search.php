@@ -207,6 +207,11 @@
   	max-width: 100%; /* to override existing style */
   }
 
+  #search-form input[type=text]:focus::-webkit-input-placeholder { opacity: 0.5; }
+  #search-form input[type=text]:focus:-moz-placeholder { opacity: 0.2; } /* FF 4-18 */
+  #search-form input[type=text]:focus::-moz-placeholder { opacity: 0.2; } /* FF 19+ */
+  #search-form input[type=text]:focus:-ms-input-placeholder { opacity: 0.5; } /* IE 10+ */
+
   #internal-search #search-form {
     width: 500px;
   }
