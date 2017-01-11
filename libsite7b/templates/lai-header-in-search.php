@@ -377,8 +377,10 @@
 
   jQuery("#search-dropdown").on("click", "li", function() {
 	  jQuery("#current-search-text-a").text(jQuery(this).find(".search-label").text());
-    jQuery("#search-form input[type=text]").attr("placeholder",jQuery(this).data("placeholder"));
-    jQuery("#home-search-explanation").html(jQuery(this).find(".search-description").html());
+	  jQuery("#search-form input[type=text]").attr("placeholder",jQuery(this).data("placeholder"));
+	  jQuery("#home-search-explanation").html(jQuery(this).find(".search-description").html());
+	  jQuery("#search-dropdown ul").hide();
+	  jQuery("#search-form input[type=text]").focus();
 	  jQuery("#catalog-options").hide();
 	  jQuery("#journals-options").hide();
 	  if (this.id == "search-catalog") {
@@ -393,19 +395,11 @@
 	  e.preventDefault();
 	});
 
-	jQuery("#search-dropdown").on("click", function(e) {
-	  var ul = jQuery(this).find("ul");
-	  if (ul.is(":hidden")) {
-	    ul.show();
-		e.stopPropagation();
-	  } else {
-	    jQuery("#search-dropdown ul").hide();
-	    jQuery("#search-form input[type=text]").focus();
-	  }
+	jQuery("#search-dropdown").on("mouseenter", function(e) {
+	  jQuery(this).find("ul").show();
 	});
-
-	jQuery("html").on("click", function() {
-	  jQuery("#search-dropdown ul").hide();
+	jQuery("#search-dropdown").on("mouseleave", function(e) {
+	  jQuery(this).find("ul").hide();
 	});
 
 
