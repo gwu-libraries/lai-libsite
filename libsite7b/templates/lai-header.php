@@ -24,13 +24,6 @@
   </div>
 <?php endif; ?>
 
-<div id="container" class="three-six-three logo-slogan">
-  <div id="skip">
-    <a href="#maincontent">Skip to Main Content</a>
-    <a href="#secondary-nav">Skip to Main Menu</a>
-  </div>
-</div>
-
 <div id="topheader-container">
 
   <div id="topheader-content">
