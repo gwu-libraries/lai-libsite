@@ -370,6 +370,10 @@ align-items: center;
 flex: 2;
 max-width: 100%;
 }
+#search-form input[type=text]:focus::-webkit-input-placeholder { opacity: 0.5; }
+#search-form input[type=text]:focus:-moz-placeholder { opacity: 0.2; } /* FF 4-18 */
+#search-form input[type=text]:focus::-moz-placeholder { opacity: 0.2; } /* FF 19+ */
+#search-form input[type=text]:focus:-ms-input-placeholder { opacity: 0.5; } /* IE 10+ */
 #hero h3, #home-search-explanation {
   text-shadow: 0 0 5px rgba(0,0,0,1);
 }
