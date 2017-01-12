@@ -358,9 +358,12 @@ color: #fff;
 }
 #home-search form select, #home-search form input {
   color: #333;
-padding: 1.2em .75em;
+padding: 1.1em .75em;
+/*-webkit-padding-before: 1.2em;
+-webkit-padding-after: 1.2em;*/
 font-size: 1em;
--moz-appearance: menulist;
+/*-moz-appearance: menulist;*/
+-moz-appearance: none;
 }
 #search-form {
   display: flex;
@@ -430,11 +433,11 @@ max-width: 100%; /* to override existing style */
 }
 #catalog-options, #journals-options {
   display: none;
-  height: 50px;
+  height: 48px;
   /* -webkit-appearance: none; */
 }
 #internal-search #catalog-options, #internal-search #journals-options {
-  height: 38px;
+  height: 36px;
 }
 .search-dropdown, .search-dropdown li {
   margin: 0;
