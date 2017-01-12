@@ -472,6 +472,9 @@ margin: 0 !important;
   color: rgba(255,255,255,.9);
 margin-top: .5em;
 }
+.search-description .search-subdescription {
+  display: none;
+}
 .search-dropdown li:not(:first-child) {
   border-top: 1px dotted #007FB7;
 }
