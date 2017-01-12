@@ -114,34 +114,24 @@ include 'libnav.php';
       <a href="#" aria-haspopup="true" class="current-search-text">Search All</a>
       <ul class="search-dropdown-ul">
       <li id="search-all" data-placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ...">
-        <a href="#">
             <span class="search-label">Search All</span>
-            <div class="search-description">Articles and books, plus library databases, research guides and tutorials</div>
-        </a>
+            <div class="search-description">Articles and books, plus library databases, <a href="http://libguides.gwu.edu/">research guides</a> and tutorials</div>
         </li>
         <li id="search-articlesplus" data-placeholder="Fidel Castro, sustainable energy, gender and identity ...">
-        <a href="#">
             <span class="search-label">ArticlesPlus</span>
           <div class="search-description">Journal &amp; newspaper articles, plus books and more</div>
-        </a>
         </li>
         <li id="search-catalog" data-placeholder="The Communist Manifesto, calculus, Bladerunner ...">
-          <a href="#">
             <span class="search-label">Books & More</span>
-        <div class="search-description">Books (including e-books), A/V media, and archival resources</div>
-        </a>
+        <div class="search-description">Books (including e-books), A/V media, and archival resources <div class="search-subdescription">Search the <a href="http://catalog.wrlc.org/">classic catalog</a></div></div>
       </li>
       <li id="search-journals" data-placeholder="Wall Street Journal, Journal of American History, sociology, ...">
-          <a href="#">
         <span class="search-label">Browse Journals</span>
         <div class="search-description">Online access to journals and other periodicals, by subject area and title</div>
-        </a>
       </li>
       <li id="search-website" data-placeholder="building hours, study rooms, Churchill ...">
-          <a href="#">
         <span class="search-label">Library Website</span>
         <div class="search-description">Library policies, news and events, and research help</div>
-        </a>
         </li>
       </ul>
       </div>
@@ -165,7 +155,7 @@ include 'libnav.php';
       <input type="submit" value="Go"/>
     </form>
     <p id="home-search-explanation">
-      Articles and books, plus library databases, research guides and tutorials. 
+      Articles and books, plus library databases, <a href="http://libguides.gwu.edu/">research guides</a> and tutorials
     </p>
 
   </div>
