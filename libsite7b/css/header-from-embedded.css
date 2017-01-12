@@ -134,7 +134,7 @@
 }
 .hours-joiner { font-size: 90%; }
 /* MEDIA QUERIES */
-@media screen and (max-width:965px) {
+@media screen and (max-width:1100px) {
   #topheader-container #header-hours {
     margin-right: .5em;
     display: inline-block;
