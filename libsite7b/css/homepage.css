@@ -25,20 +25,19 @@
   .page-node-1 .primary-content-360 { width: 100%; }
 }
 
-
-#featured-services .promo-items-item {
+#featured-services .promo-items-item, #featured-services-block .promo-items-item {
   width: 20%;
   float: left;
   padding: 0 .5em;
   box-sizing: border-box;
 }
-#featured-services {
+#featured-services, #featured-services-block {
   float: left;
   width: 100%;
   margin: .4em 0;
 }
 @media screen and (max-width: 840px) {
-  #featured-services {
+  #featured-services, #featured-services-block {
     float: none;
     width: 100%;
   }
@@ -50,11 +49,11 @@
   margin: .5em 0;
 }
 @media screen and (max-width: 640px) {
-  #featured-services {
+  #featured-services, #featured-services-block {
     margin-top: .5em;
     text-align: center;
   }
-  #featured-services .promo-items-item, #featured-services h4 {
+  #featured-services .promo-items-item, #featured-services h4, #featured-services-block .promo-items-item, #featured-services-block h4 {
     width: auto;
     float: none;
     display: inline;
@@ -64,11 +63,11 @@
     line-height: 40px;
     font-weight: normal;
   }
-  #featured-services .promo-image, #featured-services .promo-image img {
+  #featured-services .promo-image, #featured-services .promo-image img, #featured-services-block .promo-image, #featured-services-block .promo-image img {
     width: 40px;
     display: inline;
   }
-  #featured-services .promo-body {
+  #featured-services .promo-body, #featured-services-block .promo-body {
     display: none;
   }
 }
