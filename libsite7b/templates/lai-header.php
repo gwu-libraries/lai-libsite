@@ -43,7 +43,7 @@
     </div>
 
     <p id="lai-division">
-      A division of <a href="https://lai.gwu.edu">Libraries and Academic Innovation</a>
+      A division of <a target="_blank" href="https://lai.gwu.edu">Libraries and Academic Innovation</a>
     </p>
 
     <?php if ($campus == 'gelman' OR $campus == 'none'): ?>
