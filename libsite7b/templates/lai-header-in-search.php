@@ -54,7 +54,7 @@
 
   #internal-search form select, #internal-search form input {
     color: #333;
-  	padding: .75em;
+  	padding: .6em;
 	  font-size: 1em;
   }
 
