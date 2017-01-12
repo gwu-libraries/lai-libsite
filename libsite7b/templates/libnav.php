@@ -63,8 +63,8 @@
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "services'>LIBRARY SERVICES</a></li>
 							<li class='first leaf'><a href='https://writingcenter.gwu.edu/' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/writing-center');\">Writing Center</a>
 							<li class='leaf'><a href='" . $front_page . "services/computers-wireless' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/computers-wireless');\">Computers & Wireless</a></li>
-							<li class='leaf'><a href='http://rooms.library.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/study-rooms');\">Study Room Reservations</a></li>
-							<!--<li class='leaf'><a href='" . $front_page . "' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/account-help');\">Account Help</a></li>-->
+                                                        <li class='leaf'><a href='" . $front_page . "services/computers-wireless/printing' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/computers-wireless/printing');\">Printing</a></li>
+							<li class='leaf'><a href='" . $front_page . "services/off-campus-services' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/off-campus-students');\">Off-Campus Students</a></li>
 							<li class='leaf'><a href='" . $front_page . "services/borrowing-renewing' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/borrow-renew');\">Borrow & Renew</a></li>
 							<li class='leaf'><a href='" . $front_page . "services/reserves' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/course-reserves');\">Course Reserves</a></li>
 							<li class='leaf'><a href='" . $front_page . "services/consortium-loan' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/consortium-loan');\">Consortium Loan</a></li>
@@ -102,6 +102,7 @@
 							<li class='leaf'><a href='" . $front_page . "about/organization/jobs' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/jobs');\">Working at GW Libraries</a></li>
 							<li class='leaf'><a href='" . $front_page . "about/staff-directory' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/directory');\">Staff Directory</a></li>
 							<li class='leaf'><a href='" . $front_page . "about/library-departments' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/departments');\">Library Departments</a></li>
+                                                        <li class='leaf'><a target='_blank' href='https://lai.gwu.edu' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/lai');\">Libraries & Academic Innovation</a></li>
 							<li class='leaf'><a href='" . $front_page . "about/entrance-policies' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/entrance-policies');\">Entrance Policies</a></li>
 							<li class='leaf'><a href='" . $front_page . "strategic-plan' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/strategic-plan');\">Vision & Strategic Plan</a></li>
 							<li class='leaf'><a href='" . $front_page . "about/giving' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/donor-info');\">Donor Information</a></li>
@@ -178,6 +179,7 @@
 							<!--<li class='leaf'><a href='" . $front_page . "about/entrance-policies'>Entrance Policies</a></li>-->
 							<li class='leaf'><a href='" . $front_page . "eckles/contact'>Contact Us</a></li>
 							<li class='leaf'><a href='" . $front_page . "eckles/about'>About Eckles</a></li>
+                                                        <li class='leaf'><a target='_blank' href='https://lai.gwu.edu' onClick=\"ga('send','event','primary-nav','/primary-nav/eckles/about/lai');\">Libraries & Academic Innovation</a></li>
                                                         <li class='leaf'><a href='" . $front_page . "eckles/study-rooms-at-eckles'>Study Rooms at Eckles</a></li>
 						</ul>
 						</div>
@@ -292,6 +294,7 @@
 							<li class='leaf'><a href='" . $front_page . "virginia/access'>Access</a></li>
 							<li class='leaf'><a href='" . $front_page . "virginia/staff'>Staff</a></li>
 							<li class='leaf'><a href='" . $front_page . "virginia/jobs'>Positions Available</a></li>
+                                                        <li class='leaf'><a target='_blank' href='https://lai.gwu.edu' onClick=\"ga('send','event','primary-nav','/primary-nav/virginia/about/lai');\">Libraries & Academic Innovation</a></li>
 							<li class='leaf'><a href='" . $front_page . "virginia/contact-us'>Contact Us</a></li>
 						</ul>
 						</div>
