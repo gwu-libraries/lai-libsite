@@ -230,7 +230,7 @@
 
   #catalog-options, #journals-options {
     display: none;
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;*/
   }
 
   #search-dropdown, #search-dropdown li {
