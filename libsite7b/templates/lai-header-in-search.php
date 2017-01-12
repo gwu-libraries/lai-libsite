@@ -345,7 +345,7 @@
 			    <div class="search-description">Journal &amp; newspaper articles, plus books and more</div>
 			  </a>
 		    </li>
-		    <li id="search-catalog" data-placeholder="The Communist Manifesto, calculus, Bladerunner ...">
+		    <li id="search-catalog" data-placeholder="The Communist Manifesto, calculus, Blade Runner ...">
 		      <a href="#">
 		        <span class="search-label">Books & More</span>
 				<div class="search-description">Books (including e-books), A/V media, and archival resources</div>

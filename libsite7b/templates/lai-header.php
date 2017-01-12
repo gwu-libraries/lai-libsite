@@ -121,7 +121,7 @@ include 'libnav.php';
             <span class="search-label">ArticlesPlus</span>
           <div class="search-description">Journal &amp; newspaper articles, plus books and more</div>
         </li>
-        <li id="search-catalog" data-placeholder="The Communist Manifesto, calculus, Bladerunner ...">
+        <li id="search-catalog" data-placeholder="The Communist Manifesto, calculus, Blade Runner ...">
             <span class="search-label">Books & More</span>
         <div class="search-description">Books (including e-books), A/V media, and archival resources <div class="search-subdescription">Search the <a href="http://catalog.wrlc.org/">classic catalog</a></div></div>
       </li>
