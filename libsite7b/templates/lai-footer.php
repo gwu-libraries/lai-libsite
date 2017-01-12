@@ -34,7 +34,7 @@
             <div id="gwtoday-local-footer">
               <div id="gwtoday-footer">
                 <div class="promotional-four-col">
-                  <div class="footer-logo" id="promo-item-1">
+                  <div class="footer-logo" id="footer-promo-item-1">
                     <div class="field field-name-field-gwtoday-logo field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">
@@ -43,7 +43,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="footer-address" id="promo-item-2">
+                  <div class="footer-address" id="footer-promo-item-2">
                     <div class="field field-name-field-gwtoday-address field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">
@@ -60,7 +60,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="footer-social-links" id="promo-item-3">
+                  <div class="footer-social-links" id="footer-promo-item-3">
                     <div class="field field-name-field-gwtoday-social-links field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">
@@ -84,7 +84,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="footer-quick-links" id="promo-item-4">
+                  <div class="footer-quick-links" id="footer-promo-item-4">
                     <div class="field field-name-field-gwtoday-quick-links field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">

@@ -19,7 +19,7 @@
   border-right: 1px dotted #0096d6;
 }
 @media screen and (max-width:840px) {
-  #promo-item-2.footer-address { border-right: 0; }
+  #footer-promo-item-2.footer-address { border-right: 0; }
 }
 
 .promotional-four-col::after {
@@ -27,7 +27,7 @@
   clear: left;
   display: block;
 }
-.promotional-four-col #promo-item-1 {
+.promotional-four-col #footer-promo-item-1 {
   float: left;
   width: 25%;
   margin-left: 0%;
@@ -39,12 +39,12 @@
   margin-bottom: 0;
 }
 @media screen and (max-width: 840px) {
-  .promotional-four-col #promo-item-1 {
+  .promotional-four-col #footer-promo-item-1 {
     width: 50%;
     margin-right: -50%;
   }
 }
-.promotional-four-col #promo-item-2 {
+.promotional-four-col #footer-promo-item-2 {
   float: left;
   width: 25%;
   margin-left: 25%;
@@ -56,14 +56,14 @@
   margin-bottom: 0;
 }
 @media screen and (max-width: 840px) {
-  .promotional-four-col #promo-item-2 {
+  .promotional-four-col #footer-promo-item-2 {
     width: 50%;
     margin-left: 50%;
     margin-right: -100%;
     padding-left: 1em;
   }
 }
-.promotional-four-col #promo-item-3 {
+.promotional-four-col #footer-promo-item-3 {
   clear: none;
   float: left;
   width: 25%;
@@ -75,14 +75,14 @@
   padding: 0em 0.36em 0em 0.64em;
 }
 @media screen and (max-width: 840px) {
-  .promotional-four-col #promo-item-3 {
+  .promotional-four-col #footer-promo-item-3 {
     clear: left;
     width: 50%;
     margin-left: 0%;
     margin-right: -50%;
   }
 }
-.promotional-four-col #promo-item-4 {
+.promotional-four-col #footer-promo-item-4 {
   float: left;
   width: 25%;
   margin-left: 75%;
@@ -93,7 +93,7 @@
   padding: 0em 0em 0em 1em;
 }
 @media screen and (max-width: 840px) {
-  .promotional-four-col #promo-item-4 {
+  .promotional-four-col #footer-promo-item-4 {
     width: 50%;
     margin-left: 50%;
     margin-right: -100%;
