@@ -20,7 +20,7 @@
           elseif ($campus == "virginia") {
             $streetAdd = "VSTC Library<br>44983 Knoll Square #179";
             $cityAdd = "Ashburn, VA 20147";
-            $phoneAdd = "703.726.8230";
+            $phoneAdd = "571.553.8230";
             $phoneAddLink = "17037268230";
             $emailAdd = "<a href='mailto:virginia@gwu.edu'>virginia@gwu.edu</a>";
           }
