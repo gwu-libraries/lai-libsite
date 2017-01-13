@@ -1,5 +1,5 @@
 name = GW Libraries (libsite7b)
-description = GW Libraries theme 2016-17 (based on Libsite7) (Christian Aldridge with assets/css from Chris Cooper's original UWP theme fall 2011; HTML5 boilerplate http://html5boilerplate.com/ ; Eric Meyer reset.css)
+description = GW Libraries theme 2016-17 (based on Libsite7). Christian Aldridge (web developer) Max Starkenburg (web designer) with assets/css from GW Editorial Theme 2016, Chris Cooper's original UWP theme fall 2011; HTML5 boilerplate http://html5boilerplate.com/ ; Eric Meyer reset.css (and see humans.txt).
 version = 7.x-1.0
 core = 7.x
 engine = phptemplate
