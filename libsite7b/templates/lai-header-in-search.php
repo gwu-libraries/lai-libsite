@@ -154,7 +154,7 @@
 
   #branch-name {
     position: absolute;
-	  bottom: 46px;
+	  bottom: 45px;
 		color: #fff;
 		font-size: 1.3em;
 		text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
@@ -169,7 +169,7 @@
 
   @media screen and (max-width: 1080px) {
     #branch-name {
-      bottom: 94px;
+      bottom: 93px;
   	  font-size: 1em;
   	}
   }
