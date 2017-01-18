@@ -356,6 +356,11 @@ top: 40px;
 #home-search, #home-search form input[type=submit], #home-search-explanation, #home-search h3, #home-search a, #internal-search a {
 color: #fff;
 }
+@media screen and (max-width:640px) {
+  #home-search-explanation a {
+    color: #333;
+  }
+}
 #home-search form select, #home-search form input {
   color: #333;
 padding: 1.1em .75em;
