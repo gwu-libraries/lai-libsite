@@ -68,15 +68,6 @@
       </ul>
     <?php endif; ?>
 
-    <!-- expanded content regions -->
-    <?php if(drupal_is_front_page() || ($_SERVER["REQUEST_URI"] == '/news-events')): ?>
-      <div id='expanded-regions' style='display:block;'>
-      <?php print render($page['expanded_left']); ?>
-      <?php print render($page['expanded_right']); ?>
-      </div>
-    <?php endif; ?>
-    <!-- end expanded content regions -->
-
 	  <!-- start sidebars -->	
 	  <?php if ($page['rsidebar']): 	// drupal_add_library('system', 'drupal.collapse'); ?>
 		  <div id="right-sidebar">

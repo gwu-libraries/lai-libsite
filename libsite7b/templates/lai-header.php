@@ -54,6 +54,12 @@
 <!-- Emergency Notice Banner -->
 
 <?php if ($page['emergency_banner']): ?>
+  <style type="text/css">
+    #topheader-content { height: initial; }
+    @media screen and (max-width: 960px) {
+      #bannerContainer { margin: 1em auto .5em; }
+    }
+  </style>
   <div id="bannerContainer">
     <div id="bannerMessage">
       <?php print render($page['emergency_banner']); ?>
