@@ -15,6 +15,7 @@
   padding: .3em .4em;
   margin: 0;
   border-left: 4px solid #fff;
+  border-color: #fff;
   max-width: 52px;
   white-space: initial;
 }
