@@ -95,7 +95,7 @@
                           <a href="http://library.gwu.edu/accessibility">Accessibility</a><br>
                           <a href="http://go.gwu.edu/gwlibraries">Give to GW Libraries</a><br>
                           <a href="/staff-info">Staff Information</a><br>
-                          <a href="/user">Staff Login</a><br>
+                          <a href="https://<?php print $_SERVER['SERVER_NAME']; ?>/user">Staff Login</a><br>
                         </div>
                       </div>
                     </div>
