@@ -24,7 +24,7 @@
   </div>
 <?php endif; ?>
 
-<div id="topheader-container">
+<div id="topheader-container" <?php if($campus == 'eckles' || $campus == 'virginia'): ?>class="is-branch"<?php endif; ?>>
 
   <div id="topheader-content">
 
@@ -168,6 +168,8 @@ include 'libnav.php';
 
 <?php endif; ?>
 
+</div> <!-- closing hero div -->
+
 <?php if(!drupal_is_front_page()): ?>
 
 <style type="text/css">
@@ -290,8 +292,6 @@ include 'libnav.php';
 
 
 <?php endif; ?>
-
-</div> <!-- closing hero div -->
 
 <script type="text/javascript">
   jQuery(".search-dropdown").on("click", ".search-dropdown-ul li", function() {
