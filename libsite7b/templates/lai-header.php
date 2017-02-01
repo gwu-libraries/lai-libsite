@@ -229,46 +229,46 @@ include 'libnav.php';
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
 }
 </style>
-
+yy
 						<div class="promotional-six-col" id="internal-featured-services">
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="/help/reference/ask-us"><img alt="icon: ask us for help" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-help-02.png"></a></div>
+				<div class="promo-image"><a href="/help/reference/ask-us"><img alt="icon: ask us for help" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-ask-us.png"></a></div>
 								<h4 class="promo-title"><a href="/help/reference/ask-us">Ask Us</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="/about/facilities/study-room-reservations"><img alt="icon: reserve a study room" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-reservation-02.png"></a></div>
+				<div class="promo-image"><a href="/about/facilities/study-room-reservations"><img alt="icon: reserve a study room" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-study-rooms.png"></a></div>
 								<h4 class="promo-title"><a href="/about/facilities/study-room-reservations">Study Room Reservations</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="https://mylibrary.wrlc.org/"><img alt="icon: my library account" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-account-02.png"></a></div>
+				<div class="promo-image"><a href="https://mylibrary.wrlc.org/"><img alt="icon: my library account" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-my-account.png"></a></div>
 									<h4 class="promo-title"><a href="https://mylibrary.wrlc.org/">My Account</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="http://libguides.gwu.edu/databases"><img alt="icon: access our databases" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-databases-04.png"></a></div>
+				<div class="promo-image"><a href="http://libguides.gwu.edu/databases"><img alt="icon: access our databases" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-databases.png"></a></div>
 									<h4 class="promo-title"><a href="http://libguides.gwu.edu/databases">Databases</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				  <div class="promo-image"><a href="/news-events/upcoming-events?field_event_format_value=1"><img alt="icon: workshops" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-workshops-04.png"></a></div>
+				  <div class="promo-image"><a href="/news-events/upcoming-events?field_event_format_value=1"><img alt="icon: workshops" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-workshops.png"></a></div>
 									<h4 class="promo-title"><a href="/news-events/upcoming-events?field_event_format_value=1">Workshops</a></h4>
 </span>
 				  </div>
                                 </div>
 				<div class="promo-items-item has-promo-body">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="#"><img alt="icon: all GW libraries" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-other-libraries-04.png"></a></div>
+				<div class="promo-image"><a href="#"><img alt="icon: all GW libraries" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-all-libraries.png"></a></div>
 									<h4 class="promo-title"><a href="#">All GW Libraries</a></h4>
 
 							</div>
