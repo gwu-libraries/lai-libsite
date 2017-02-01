@@ -229,7 +229,6 @@ include 'libnav.php';
   box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
 }
 </style>
-yy
 						<div class="promotional-six-col" id="internal-featured-services">
 				<div class="promo-items-item">
                                 <div class="promo-label">
