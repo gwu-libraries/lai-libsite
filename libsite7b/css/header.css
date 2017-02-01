@@ -109,13 +109,13 @@
     display: none;
   }
   #secondary-nav ul.menu li {
-    /*width: calc(33% - .5em);*/
+    width: calc(33% - .5em);
     background-color: #0096d6;
     display: inline-block;
     float: left;
     min-height: 0;
     line-height: normal;
-    /*margin: 0 .5em .5em 0 !important;*/
+    margin: 0 .5em .5em 0 !important;
   }
   #secondary-nav ul.menu li a {
     min-height: 0;
