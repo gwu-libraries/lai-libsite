@@ -128,4 +128,3 @@ function libsite7b_preprocess_html(&$vars) {
     $vars['classes_array'][] = 'is-branch';
   }
 }
-
