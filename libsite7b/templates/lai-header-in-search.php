@@ -29,13 +29,13 @@
 
   #internal-search {
     position: absolute;
-		top: auto;
-	 	left: 0;
-		bottom: 100%;
-		min-height: 3rem;
-		line-height: 3rem;
-		z-index: 50000;
-		padding: 0 .5em;
+    top: auto;
+    left: 0;
+    bottom: 100%;
+    min-height: 3rem;
+    line-height: 3rem;
+    z-index: 50;
+    padding: 0 .5em;
   }
 
   #internal-search:hover {
