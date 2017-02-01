@@ -121,11 +121,3 @@ if (isset($_GET['kiosk'])) {
      variable_set('kiosk_since', date('Y-m-d'));
   }
 }
-
-/* Injecting classes into body per library */
-function libsite7b_preprocess_html(&$vars) {
-  if (false !== stripos($_SERVER["REQUEST_URI"], 'eckles') || false !== stripos($_SERVER["REQUEST_URI"], 'virginia')) {
-    $vars['attributes_array']['class'][] = 'is-branch';
-  }
-}
-
