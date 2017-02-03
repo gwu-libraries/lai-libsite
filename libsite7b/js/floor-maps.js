@@ -10,33 +10,63 @@ jQuery(document).ready(function() {
 	var object6 = document.getElementsByTagName("object")[6];
 	var object7 = document.getElementsByTagName("object")[7];
 	var object8 = document.getElementsByTagName("object")[8];
-	// IE Edge seems to need a slight delay
-	setTimeout(function() {
-		object1.addEventListener("load", function() {
-			svgFunctions(object1.contentDocument, object1);
-		});
-		object2.addEventListener("load", function() {
-			svgFunctions(object2.contentDocument, object2);
-		});
-		object3.addEventListener("load", function() {
-			svgFunctions(object3.contentDocument, object3);
-		});
-		object4.addEventListener("load", function() {
-			svgFunctions(object4.contentDocument, object4);
-		});
-		object5.addEventListener("load", function() {
-			svgFunctions(object5.contentDocument, object5);
-		});
-		object6.addEventListener("load", function() {
-			svgFunctions(object6.contentDocument, object6);
-		});
-		object7.addEventListener("load", function() {
-			svgFunctions(object7.contentDocument, object7);
-		});
-		object8.addEventListener("load", function() {
-			svgFunctions(object8.contentDocument, object8);
-		});
-	}, 100);
+
+	// If the SVGs appear to already be loaded (see below), run their functions right away.
+	function runSVGFunctionsNow() {
+                svgFunctions(object1.contentDocument, object1);
+                svgFunctions(object2.contentDocument, object2);
+                svgFunctions(object3.contentDocument, object3);
+                svgFunctions(object4.contentDocument, object4);
+                svgFunctions(object5.contentDocument, object5);
+                svgFunctions(object6.contentDocument, object6);
+                svgFunctions(object7.contentDocument, object7);
+                svgFunctions(object8.contentDocument, object8);
+	}
+
+	// If the SVGs appear not to be loaded (see below), run their functions after the SVG has loaded.
+	function runSVGFunctionsOnLoad() {
+		// IE Edge seems to need a slight delay
+		setTimeout(function() {
+			object1.addEventListener("load", function() {
+				svgFunctions(object1.contentDocument, object1);
+			});
+			object2.addEventListener("load", function() {
+				svgFunctions(object2.contentDocument, object2);
+			});
+			object3.addEventListener("load", function() {
+				svgFunctions(object3.contentDocument, object3);
+			});
+			object4.addEventListener("load", function() {
+				svgFunctions(object4.contentDocument, object4);
+			});
+			object5.addEventListener("load", function() {
+				svgFunctions(object5.contentDocument, object5);
+			});
+			object6.addEventListener("load", function() {
+				svgFunctions(object6.contentDocument, object6);
+			});
+			object7.addEventListener("load", function() {
+				svgFunctions(object7.contentDocument, object7);
+			});
+			object8.addEventListener("load", function() {
+				svgFunctions(object8.contentDocument, object8);
+			});
+		}, 100);
+	}
+
+	// In an ideal world, we'd just be able to run svgFunctions() on the load eventListener, but whether they're already loaded or not 
+	// appears to vary widely depending on OS, browser, and even server (and if they're already loaded, the eventListener is skipped).  
+	// The following conditionals seem to be the best I could do for figuring out whether the SVGs were already loaded or not.
+	if (object1.contentDocument) {
+		var loaded = object1.contentDocument.rootElement ? true : null;
+		if (loaded) {
+			runSVGFunctionsNow();
+		} else {
+			runSVGFunctionsOnLoad();
+		}
+	} else {
+		runSVGFunctionsOnLoad();
+	}
 
 	// IE 9 and 10 don't respect the addEventListener("load") stuff from above, but they seem to have the SVGs already loaded, so just run svgFunctions() right away
 	// Browser detection by weroro at http://stackoverflow.com/questions/10964966/detect-ie-version-prior-to-v9-in-javascript
@@ -45,14 +75,7 @@ jQuery(document).ready(function() {
 		return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1]) : false;
 	}
 	if (isIE() == 9 || isIE() == 10) {
-		svgFunctions(object1.contentDocument, object1);
-		svgFunctions(object2.contentDocument, object2);
-		svgFunctions(object3.contentDocument, object3);
-		svgFunctions(object4.contentDocument, object4);
-		svgFunctions(object5.contentDocument, object5);
-		svgFunctions(object6.contentDocument, object6);
-		svgFunctions(object7.contentDocument, object7);
-		svgFunctions(object8.contentDocument, object8);
+		runSVGFunctionsNow();
 	}
 
 	// Some color variables for different kinds of elements in the maps.
@@ -67,7 +90,7 @@ jQuery(document).ready(function() {
 	var defaultInterstitialBG = "#FFE6A9";
 	
 	// Pre-processing on each SVG file for proper display and functionality
-    function svgFunctions(svgDoc, svg) {
+	function svgFunctions(svgDoc, svg) {
 	
 		// Inject CSS into the SVG via JavaScript because any added by hand would get blown away on subsequent edits in Illustrator, 
 		// and any added to the parent HTML file does't get recognized by the SVG.
