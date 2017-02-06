@@ -333,7 +333,7 @@
 		<div id="search-dropdown">
 		  <div id="current-search-text"><a href="#" aria-haspopup="true" aria-controls="home-search-dropdown-ul" id="current-search-text-a">Search All</a></div>
 		  <ul id="home-search-dropdown-ul" aria-labelledby="current-search-text-a">
-			<li id="search-all" data-placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ...">
+			<li id="search-all" data-placeholder="<?php echo $bentoPlaceholder; ?>">
 			  <a href="#">
 		        <span class="search-label">Search All</span>
 		        <div class="search-description">Articles and books, plus library databases, research guides and tutorials</div>
@@ -365,7 +365,7 @@
 		    </li>
 		  </ul>
 		</div>
-	    <input type="text" aria-label="searchbox: enter your search terms here" placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ..."/>
+	    <input type="text" aria-label="searchbox: enter your search terms here" placeholder="<?php echo $bentoPlaceholder; ?>" />
 		<select id="catalog-options">
 		  <option>title</option>
 		  <option>journal title</option>
