@@ -103,6 +103,21 @@ include 'libnav.php';
     </div>
   <?php endif; ?>
 
+  <?php
+    // Sets placeholder text for "all-search (bento)". Calls function from catalog_pointer module.
+    if (function_exists('search_placeholder')) {
+      if (search_placeholder() != '') {
+        $bentoPlaceholder = search_placeholder();
+      }
+      else {
+        $bentoPlaceholder = 'feminism, Les Miserables, economics, JSTOR, 3-D printing ...';
+      }
+    }
+    else {
+      $bentoPlaceholder = 'feminism, Les Miserables, economics, JSTOR, 3-D printing ...';
+    }
+  ?>
+
 <!-- Internal Page Searchbox -->
 <?php
   if(!drupal_is_front_page()) {
@@ -119,7 +134,7 @@ include 'libnav.php';
       <div class="search-dropdown-inner">
       <a href="#" aria-haspopup="true" class="current-search-text">Search All</a>
       <ul class="search-dropdown-ul">
-      <li id="search-all" data-placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ...">
+      <li id="search-all" data-placeholder="<?php echo $bentoPlaceholder; ?>">
             <span class="search-label">Search All</span>
             <div class="search-description">Articles and books, plus library databases, <a href="http://libguides.gwu.edu/">research guides</a> and tutorials</div>
         </li>
@@ -143,7 +158,7 @@ include 'libnav.php';
       </div>
     </div>
 
-    <input type="text" aria-label="searchbox: enter your search terms here" placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ..."/>
+    <input type="text" aria-label="searchbox: enter your search terms here" placeholder="<?php echo $bentoPlaceholder; ?>"/>
     <select id="catalog-options">
       <option>title</option>
       <option>journal title</option>
