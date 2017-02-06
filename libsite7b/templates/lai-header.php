@@ -113,7 +113,7 @@ include 'libnav.php';
 <!-- Homepage Searchbox -->
 <?php if(drupal_is_front_page()): ?>
         <?php
-          if (function_exists('search_placeholder')) {
+          if (function_exists('search_placeholder') && search_placeholder() != '') {
             $bentoPlaceholder = search_placeholder();
           }
           else {
