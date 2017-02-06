@@ -103,6 +103,21 @@ include 'libnav.php';
     </div>
   <?php endif; ?>
 
+  <?php
+    // Sets placeholder text for "all-search (bento)". Calls function from catalog_pointer module.
+    if (function_exists('search_placeholder')) {
+      if (search_placeholder() != '') {
+        $bentoPlaceholder = search_placeholder();
+      }
+      else {
+        $bentoPlaceholder = 'feminism, Les Miserables, economics, JSTOR, 3-D printing ...';
+      }
+    }
+    else {
+      $bentoPlaceholder = 'feminism, Les Miserables, economics, JSTOR, 3-D printing ...';
+    }
+  ?>
+
 <!-- Internal Page Searchbox -->
 <?php
   if(!drupal_is_front_page()) {
@@ -112,19 +127,6 @@ include 'libnav.php';
 
 <!-- Homepage Searchbox -->
 <?php if(drupal_is_front_page()): ?>
-        <?php
-          if (function_exists('search_placeholder')) {
-            if (search_placeholder() != '') {
-              $bentoPlaceholder = search_placeholder();
-            }
-            else {
-              $bentoPlaceholder = 'feminism, Les Miserables, economics, JSTOR, 3-D printing ...';
-            }
-          }
-          else {
-            $bentoPlaceholder = 'feminism, Les Miserables, economics, JSTOR, 3-D printing ...';
-          }
-        ?>
   <div id="home-search">
     <h3>What would you like to find at the libraries today?</h3>
     <form id="search-form">
