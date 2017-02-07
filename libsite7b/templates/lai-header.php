@@ -103,6 +103,21 @@ include 'libnav.php';
     </div>
   <?php endif; ?>
 
+  <?php
+    // Sets placeholder text for "all-search (bento)". Calls function from catalog_pointer module.
+    if (function_exists('search_placeholder')) {
+      if (search_placeholder() != '') {
+        $bentoPlaceholder = search_placeholder();
+      }
+      else {
+        $bentoPlaceholder = 'feminism, Les Miserables, economics, JSTOR, 3-D printing ...';
+      }
+    }
+    else {
+      $bentoPlaceholder = 'feminism, Les Miserables, economics, JSTOR, 3-D printing ...';
+    }
+  ?>
+
 <!-- Internal Page Searchbox -->
 <?php
   if(!drupal_is_front_page()) {
@@ -119,7 +134,7 @@ include 'libnav.php';
       <div class="search-dropdown-inner">
       <a href="#" aria-haspopup="true" class="current-search-text">Search All</a>
       <ul class="search-dropdown-ul">
-      <li id="search-all" data-placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ...">
+      <li id="search-all" data-placeholder="<?php echo $bentoPlaceholder; ?>">
             <span class="search-label">Search All</span>
             <div class="search-description">Articles and books, plus library databases, <a href="http://libguides.gwu.edu/">research guides</a> and tutorials</div>
         </li>
@@ -143,7 +158,7 @@ include 'libnav.php';
       </div>
     </div>
 
-    <input type="text" aria-label="searchbox: enter your search terms here" placeholder="feminism, Les Miserables, economics, JSTOR, 3-D printing ..."/>
+    <input type="text" aria-label="searchbox: enter your search terms here" placeholder="<?php echo $bentoPlaceholder; ?>"/>
     <select id="catalog-options">
       <option>title</option>
       <option>journal title</option>
@@ -169,47 +184,45 @@ include 'libnav.php';
 <?php endif; ?>
 
 <?php if(!drupal_is_front_page()): ?>
-
-
-						<div class="promotional-six-col" id="internal-featured-services">
+		<div class="promotional-six-col" id="internal-featured-services">
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="/help/reference/ask-us"><img alt="icon: ask us for help" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-help-02.png"></a></div>
+				<div class="promo-image"><a href="/help/reference/ask-us"><img alt="icon: ask us for help" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-ask-us.png"></a></div>
 								<h4 class="promo-title"><a href="/help/reference/ask-us">Ask Us</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="/about/facilities/study-room-reservations"><img alt="icon: reserve a study room" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-reservation-02.png"></a></div>
+				<div class="promo-image"><a href="/about/facilities/study-room-reservations"><img alt="icon: reserve a study room" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-study-rooms.png"></a></div>
 								<h4 class="promo-title"><a href="/about/facilities/study-room-reservations">Study Room Reservations</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="https://mylibrary.wrlc.org/"><img alt="icon: my library account" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-account-02.png"></a></div>
+				<div class="promo-image"><a href="https://mylibrary.wrlc.org/"><img alt="icon: my library account" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-my-account.png"></a></div>
 									<h4 class="promo-title"><a href="https://mylibrary.wrlc.org/">My Account</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="http://libguides.gwu.edu/databases"><img alt="icon: access our databases" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-databases-04.png"></a></div>
+				<div class="promo-image"><a href="http://libguides.gwu.edu/databases"><img alt="icon: access our databases" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-databases.png"></a></div>
 									<h4 class="promo-title"><a href="http://libguides.gwu.edu/databases">Databases</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				  <div class="promo-image"><a href="/news-events/upcoming-events?field_event_format_value=1"><img alt="icon: workshops" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-workshops-04.png"></a></div>
+				  <div class="promo-image"><a href="/news-events/upcoming-events?field_event_format_value=1"><img alt="icon: workshops" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-workshops.png"></a></div>
 									<h4 class="promo-title"><a href="/news-events/upcoming-events?field_event_format_value=1">Workshops</a></h4>
 </span>
 				  </div>
                                 </div>
 				<div class="promo-items-item has-promo-body">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="#"><img alt="icon: all GW libraries" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-other-libraries-04.png"></a></div>
+				<div class="promo-image"><a href="#"><img alt="icon: all GW libraries" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-all-libraries.png"></a></div>
 									<h4 class="promo-title"><a href="#">All GW Libraries</a></h4>
 
 							</div>
