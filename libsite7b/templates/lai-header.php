@@ -184,67 +184,7 @@ include 'libnav.php';
 <?php endif; ?>
 
 <?php if(!drupal_is_front_page()): ?>
-
-<style type="text/css">
-/* temporarily located here, copied from header.css */
-#internal-featured-services .promo-items-item, #internal-featured-services h4 {
-  display: inline-block;
-  font-size: 1em;
-  white-space: nowrap;
-  line-height: 30px;
-  font-weight: normal;
-  position: relative;
-  margin: 0;
-}
-@media screen and (max-width: 800px) {
-  #internal-featured-services h4 {
-    display: none;
-  }
-}
-#internal-featured-services .promo-image, #internal-featured-services .promo-image img {
-  width: 30px;
-  display: inline-block;
-}
-#internal-featured-services {
-  margin: .5em auto 1em;
-  text-align: right;
-  max-width: 1080px;
-  position: inherit;
-  z-index: 1;
-}
-#internal-featured-services .promo-body {
-  display: none;
-}
-#internal-featured-services .promo-label {
-  padding: .25em 1em;
-  margin: 0 -.5em;
-  border: 1px solid transparent;
-  z-index: 3 !important;
-  position: relative;
-  display: inline-block;
-}
-#internal-featured-services .promo-items-item:hover .promo-label {
-  border: 1px solid #ccc;
-  background-color: #eee;
-}
-#internal-featured-services .promo-items-item.has-promo-body .promo-label {
-  border-bottom-width: 0;
-}
-#internal-featured-services .promo-items-item:hover .promo-body {
-  z-index: 2 !important;
-  display: block;
-  position: absolute;
-  top: 100%;
-  margin-top: -2px;
-  right: -.5em;
-  border: 1px solid #ccc;
-  background-color: #eee;
-  text-align: left;
-  padding: .5em 1em;
-  box-shadow: 0px 8px 10px 0px rgba(0, 0, 0, 0.15);
-}
-</style>
-						<div class="promotional-six-col" id="internal-featured-services">
+		<div class="promotional-six-col" id="internal-featured-services">
 				<div class="promo-items-item">
                                 <div class="promo-label">
 				<div class="promo-image"><a href="/help/reference/ask-us"><img alt="icon: ask us for help" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-ask-us.png"></a></div>
