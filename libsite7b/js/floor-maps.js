@@ -330,7 +330,9 @@ jQuery(document).ready(function() {
 					this.classList.remove("stacksInterstitial");
 					this.classList.remove("defaultInterstitial");
 				} else {
-					jQuery(this).attr("class",jQuery(this).attr("class").replace(" highlighted","").replace(" roomInterstitial","").replace(" stacksInterstitial","").replace(" defaultInterstitial",""));
+					var currClass = jQuery(this).attr("class") ? jQuery(this).attr("class") : "";
+					var newClass = currClass.replace(" highlighted","").replace(" roomInterstitial","").replace(" stacksInterstitial","").replace(" defaultInterstitial","");
+					jQuery(this).attr("class",newClass);
 				}
 			});
 		});
