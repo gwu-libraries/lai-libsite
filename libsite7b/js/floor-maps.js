@@ -205,6 +205,10 @@ jQuery(document).ready(function() {
 			// Turn on the tooltip and set its absolute positioning
 			// The "top" value is the above calculated offset of the SVG from the page plus the offset of the element relative to the SVG
 			// The "left" value is the above calculated offset of the SVG from the page plus the offset of the element relative to the SVG plus the proportional width of the element (so that the tooltip appears at its right)
+			// Also remove the empty paragraph that Drupal seems to be inserting.
+			if (jQuery("#map-feature").children("p:empty")) {
+				jQuery("#map-feature").children("p:empty").remove();
+			}
 			jQuery("#map-feature").show().css({
 				top: jQuery(this).offset().top + thisMapTop, 
 				left: jQuery(this).offset().left + thisMapLeft +  jQuery(this).find("path,polygon,rect,circle")[0].getBBox().width / ratio,
