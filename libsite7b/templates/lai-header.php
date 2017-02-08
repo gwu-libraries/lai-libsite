@@ -187,36 +187,36 @@ include 'libnav.php';
 		<div class="promotional-six-col" id="internal-featured-services">
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="/help/reference/ask-us"><img alt="icon: ask us for help" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-ask-us.png"></a></div>
-								<h4 class="promo-title"><a href="/help/reference/ask-us">Ask Us</a></h4>
+				<div class="promo-image"><a href="/help/reference/ask-us" onclick="ga('send', 'event', 'svc ask-us', '/ask-us');"><img alt="icon: ask us for help" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-ask-us.png"></a></div>
+								<h4 class="promo-title"><a href="/help/reference/ask-us" onclick="ga('send', 'event', 'svc ask-us', '/ask-us');">Ask Us</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="/about/facilities/study-room-reservations"><img alt="icon: reserve a study room" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-study-rooms.png"></a></div>
-								<h4 class="promo-title"><a href="/about/facilities/study-room-reservations">Study Room Reservations</a></h4>
+				<div class="promo-image"><a href="/about/facilities/study-room-reservations" onclick="ga('send', 'event', 'svc rooms', '/study-room-reservations');"><img alt="icon: reserve a study room" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-study-rooms.png"></a></div>
+								<h4 class="promo-title"><a href="/about/facilities/study-room-reservations" onclick="ga('send', 'event', 'svc rooms', '/study-room-reservations');">Study Room Reservations</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="https://mylibrary.wrlc.org/"><img alt="icon: my library account" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-my-account.png"></a></div>
-									<h4 class="promo-title"><a href="https://mylibrary.wrlc.org/">My Account</a></h4>
+				<div class="promo-image"><a href="https://mylibrary.wrlc.org/" onclick="ga('send', 'event', 'svc my-account', 'mylibrary.wrlc.org');"><img alt="icon: my library account" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-my-account.png"></a></div>
+									<h4 class="promo-title"><a href="https://mylibrary.wrlc.org/" onclick="ga('send', 'event', 'svc my-account', 'mylibrary.wrlc.org');">My Account</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="http://libguides.gwu.edu/databases"><img alt="icon: access our databases" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-databases.png"></a></div>
-									<h4 class="promo-title"><a href="http://libguides.gwu.edu/databases">Databases</a></h4>
+				<div class="promo-image"><a href="http://libguides.gwu.edu/databases" onclick="ga('send', 'event', 'svc databases', 'libguides.gwu.edu/databases');"><img alt="icon: access our databases" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-databases.png"></a></div>
+									<h4 class="promo-title"><a href="http://libguides.gwu.edu/databases" onclick="ga('send', 'event', 'svc databases', 'libguides.gwu.edu/databases');">Databases</a></h4>
 </span>
 							</div>
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				  <div class="promo-image"><a href="/news-events/upcoming-events?field_event_format_value=1"><img alt="icon: workshops" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-workshops.png"></a></div>
-									<h4 class="promo-title"><a href="/news-events/upcoming-events?field_event_format_value=1">Workshops</a></h4>
+				  <div class="promo-image"><a href="/news-events/upcoming-events?field_event_format_value=1" onclick="ga('send', 'event', 'svc workshops', '/upcoming-events');"><img alt="icon: workshops" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-workshops.png"></a></div>
+									<h4 class="promo-title"><a href="/news-events/upcoming-events?field_event_format_value=1" onclick="ga('send', 'event', 'svc workshops', '/upcoming-events');">Workshops</a></h4>
 </span>
 				  </div>
                                 </div>
