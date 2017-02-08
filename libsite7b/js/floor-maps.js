@@ -54,6 +54,18 @@ jQuery(document).ready(function() {
 		}, 100);
 	}
 
+	// Some color variables for different kinds of elements in the maps.
+	// Not sure why, but these need to be set before the following code runs, else they are returning as "undefined" in some browsers/OSs/servers.
+	var roombg = "#7AC143";
+	var stackbg = "#0096d6";
+	var defaultbg = "#FFD261";
+	var roomUnhighlightedBG = "transparent";
+	var stackUnhighlightedBG = "#AFCCDD";
+	var defaultUnhighlightedBG = "transparent";
+	var roomInterstitialBG = "#B3D998";
+	var stacksInterstitialBG = "#6FB8DA";
+	var defaultInterstitialBG = "#FFE6A9";
+	
 	// In an ideal world, we'd just be able to run svgFunctions() on the load eventListener, but whether they're already loaded or not 
 	// appears to vary widely depending on OS, browser, and even server (and if they're already loaded, the eventListener is skipped).  
 	// The following conditionals seem to be the best I could do for figuring out whether the SVGs were already loaded or not.
@@ -78,20 +90,8 @@ jQuery(document).ready(function() {
 		runSVGFunctionsNow();
 	}
 
-	// Some color variables for different kinds of elements in the maps.
-	var roombg = "#7AC143";
-	var stackbg = "#0096d6";
-	var defaultbg = "#FFD261";
-	var roomUnhighlightedBG = "transparent";
-	var stackUnhighlightedBG = "#AFCCDD";
-	var defaultUnhighlightedBG = "transparent";
-	var roomInterstitialBG = "#B3D998";
-	var stacksInterstitialBG = "#6FB8DA";
-	var defaultInterstitialBG = "#FFE6A9";
-	
 	// Pre-processing on each SVG file for proper display and functionality
 	function svgFunctions(svgDoc, svg) {
-	
 		// Inject CSS into the SVG via JavaScript because any added by hand would get blown away on subsequent edits in Illustrator, 
 		// and any added to the parent HTML file does't get recognized by the SVG.
 		// The CSS fixes the font, adds styling for the "flashing" effect when a specific element has been linked via a hash, and various hover colors
