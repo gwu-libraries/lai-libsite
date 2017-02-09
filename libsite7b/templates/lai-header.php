@@ -254,7 +254,7 @@ jQuery(".search-dropdown").on("click", ".search-dropdown-ul li", function() {
   searchDropdown(jQuery(this));
 });
 jQuery(".search-label").on("keypress", function(e) {
-  if (e.which == 13) {
+  if (e.which == 13) { // Enter
     searchDropdown(jQuery(this).parent());
   }
 });
@@ -284,6 +284,25 @@ jQuery(".search-dropdown").on("keydown", function(e) {
   var ul = jQuery(this).find("ul");
   if (ul.is(":hidden")) {
     ul.show();
+  }
+  var searchLabels = jQuery(".search-label");
+  var nearestLabel = searchLabels.filter(":focus");
+  var nearestLabelIndex = searchLabels.index(searchLabels.filter(":focus"));
+  if (e.which == 38) { // Up arrow
+    if (nearestLabel.length == 0) {
+      searchLabels.last().focus();
+    } else {
+      searchLabels.eq(nearestLabelIndex - 1).focus();
+    }
+    e.preventDefault(); // page scrolling
+  }
+  if (e.which == 40) { // Down arrow
+    if (nearestLabelIndex == searchLabels.length - 1) {
+      searchLabels.first().focus();
+    } else {
+      searchLabels.eq(nearestLabelIndex + 1).focus();
+    }
+    e.preventDefault(); // page scrolling
   }
 });
 
