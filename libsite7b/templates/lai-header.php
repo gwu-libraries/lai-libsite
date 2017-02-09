@@ -256,6 +256,7 @@ jQuery(".search-dropdown").on("click", ".search-dropdown-ul li", function() {
 jQuery(".search-label").on("keypress", function(e) {
   if (e.which == 13) { // Enter
     searchDropdown(jQuery(this).parent());
+    e.preventDefault();
   }
 });
 
