@@ -28,7 +28,7 @@
 							<li class='leaf'><a href='" . $front_page . "howdoi' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/guides/howdoi');\">How Do I? (Tutorials)</a></li>						
 							
 							<li class='leaf leaf-section-title'>Get Help</li>
-							<li class='leaf'><a href='" . $front_page . "help/reference/ask-us' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/ask');\">Ask A Librarian</a></li>
+							<li class='leaf'><a href='" . $front_page . "help/reference/ask-us' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/ask');\">Ask Us</a></li>
 							<li class='leaf'><a href='https://gwu.mywconline.net/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/wconline');\">Research Consultation</a></li>
 	            <li class='leaf'><a href='" . $front_page . "reference/directory' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research-staff');\">Research Staff</a></li>
 							<li class='leaf'><a href='" . $front_page . "howdoi' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/help/howdoi');\">How Do I? (Tutorials)</a></li>					
