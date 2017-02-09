@@ -135,23 +135,23 @@ include 'libnav.php';
       <a href="#" aria-haspopup="true" class="current-search-text">Search All</a>
       <ul class="search-dropdown-ul">
       <li id="search-all" data-placeholder="<?php echo $bentoPlaceholder; ?>">
-            <span class="search-label">Search All</span>
-            <div class="search-description">Articles and books, plus library databases, <a href="http://libguides.gwu.edu/">research guides</a> and tutorials</div>
+            <span class="search-label" tabindex="0">Search All</span>
+            <div class="search-description">Articles and books, plus library databases, <a href="http://libguides.gwu.edu/" tabindex="-1">research guides</a> and tutorials</div>
         </li>
         <li id="search-articlesplus" data-placeholder="Fidel Castro, sustainable energy, gender and identity ...">
-            <span class="search-label">ArticlesPlus</span>
+            <span class="search-label" tabindex="0">ArticlesPlus</span>
           <div class="search-description">Journal &amp; newspaper articles, plus books and more</div>
         </li>
         <li id="search-catalog" data-placeholder="The Communist Manifesto, calculus, Blade Runner ...">
-            <span class="search-label">Books & More</span>
+            <span class="search-label" tabindex="0">Books & More</span>
         <div class="search-description">Books (including e-books), A/V media, and archival resources <div class="search-subdescription">Search the <a href="http://catalog.wrlc.org/">classic catalog</a></div></div>
       </li>
       <li id="search-journals" data-placeholder="Wall Street Journal, Journal of American History, sociology, ...">
-        <span class="search-label">Browse Journals</span>
+        <span class="search-label" tabindex="0">Browse Journals</span>
         <div class="search-description">Online access to journals and other periodicals, by subject area and title</div>
       </li>
       <li id="search-website" data-placeholder="building hours, study rooms, Churchill ...">
-        <span class="search-label">Library Website</span>
+        <span class="search-label" tabindex="0">Library Website</span>
         <div class="search-description">Library policies, news and events, and research help</div>
         </li>
       </ul>
@@ -249,22 +249,32 @@ include 'libnav.php';
 </div> <!-- closing hero div -->
 
 <script type="text/javascript">
-  jQuery(".search-dropdown").on("click", ".search-dropdown-ul li", function() {
-  jQuery(".current-search-text").text(jQuery(this).find(".search-label").text());
-  jQuery("#search-form input[type=text]").attr("placeholder",jQuery(this).data("placeholder"));
-  jQuery("#home-search-explanation").html(jQuery(this).find(".search-description").html());
+
+jQuery(".search-dropdown").on("click", ".search-dropdown-ul li", function() {
+  searchDropdown(jQuery(this));
+});
+jQuery(".search-label").on("keypress", function(e) {
+  if (e.which == 13) {
+    searchDropdown(jQuery(this).parent());
+  }
+});
+
+function searchDropdown(passedThis) {
+  jQuery(".current-search-text").text(passedThis.find(".search-label").text());
+  jQuery("#search-form input[type=text]").attr("placeholder",passedThis.data("placeholder"));
+  jQuery("#home-search-explanation").html(passedThis.find(".search-description").html());
   jQuery(".search-dropdown ul").hide();
   jQuery("#home-search-explanation").show();
   jQuery("#search-form input[type=text]").focus();
   jQuery("#catalog-options").hide();
   jQuery("#journals-options").hide();
-  if (this.id == "search-catalog") {
+  if (passedThis.attr("id") == "search-catalog") {
     jQuery("#catalog-options").show();
   }
-  if (this.id == "search-journals") {
+  if (passedThis.attr("id") == "search-journals") {
     jQuery("#journals-options").show();
   }
-});
+}
 
 jQuery(".search-dropdown").on("click", "a", function(e) {
   e.preventDefault();

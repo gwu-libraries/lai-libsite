@@ -76,6 +76,13 @@
 	  e.preventDefault();
 	});
 
+	jQuery("#search-dropdown").on("keydown", function(e) {
+	  var ul = jQuery(this).find("ul");
+	  if (ul.is(":hidden")) {
+	    ul.show();
+	  }
+	});
+
 	jQuery("#search-dropdown").on("mouseenter", function(e) {
 	  jQuery(this).find("ul").show();
 	});
