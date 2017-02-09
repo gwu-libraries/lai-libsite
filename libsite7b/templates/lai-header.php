@@ -187,8 +187,8 @@ include 'libnav.php';
 		<div class="promotional-six-col" id="internal-featured-services">
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="/help/reference/ask-us" onclick="ga('send', 'event', 'svc ask-us', '/ask-us');"><img alt="icon: ask us for help" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-ask-us.png"></a></div>
-								<h4 class="promo-title"><a href="/help/reference/ask-us" onclick="ga('send', 'event', 'svc ask-us', '/ask-us');">Ask Us</a></h4>
+				<div class="promo-image"><a href="/help/reference/ask-us" onclick="ga('send', 'event', 'service links', 'ask-us (internal <?php echo $campus; ?>)');"><img alt="icon: ask us for help" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-ask-us.png"></a></div>
+								<h4 class="promo-title"><a href="/help/reference/ask-us" onclick="ga('send', 'event', 'service links', 'ask-us (internal <?php echo $campus; ?>)');">Ask Us</a></h4>
 </span>
 							</div>
                                 </div>
