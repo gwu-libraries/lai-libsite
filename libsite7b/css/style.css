@@ -533,6 +533,7 @@ html.no-touch .touch-show-nav {
   padding: 1em 1.6em .6em;
 }
 .sub-menu-group .leaf-section-title:hover {background-color:#f6f3eb;}
+.sub-menu-group .leaf-section-title-linked a {padding-left: 0; font-weight: 700;}
 /* overides for old nav */
 /* #secondary-nav ul.menu li ul {display:initial;} */
 #secondary-nav ul.menu li {margin:0;}
