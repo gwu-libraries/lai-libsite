@@ -2060,20 +2060,60 @@ section.pane .workshop-orientation-link {margin-top: .6em;}
 /* upcoming events */
 .views-exposed-widget .description {margin-top:1em;}
 .views-exposed-form .form-item {margin-top:.3em;}
-.views-field-field-events-image {
-  float: left;
-  margin: .35em 1em .3em 0;
-}
-.field-name-field-events-image {
-  float: left;
-  margin: .2em 1em .9em 0;
-}
 .field-name-field-event-date .date-display-range {display:inline-block;}
 .view-libraries-events .views-row {margin-bottom:3em;}
 .view-libraries-events .view-footer {margin-top:2em;}
 .view-libraries-events .view-footer p {font-size:1em; font-style:italic;}
 .view-libraries-events.view-display-id-block_1 .views-row {margin-bottom:1em;}
 .view-libraries-events.view-display-id-block_2 .views-row {margin-bottom:1em;}
+.view-libraries-events.view-display-id-page .views-row {
+  border-top: 1px dotted #2971A7;
+  padding: 1em 0;
+}
+.view-libraries-events.view-display-id-page .views-field-title {
+  display: inline-block;
+  width: 25%;
+  vertical-align: top;
+}
+.view-libraries-events.view-display-id-page .views-field-title a {
+  display: block;
+  margin-bottom: .5em;
+}
+.view-display-id-page .event-title-and-image {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.view-libraries-events.view-display-id-page .views-field-body {
+  display: inline-block;
+  width: 44%;
+  vertical-align: top;
+  padding-right: 30px;
+  box-sizing: border-box;
+}
+.view-libraries-events.view-display-id-page .views-field-field-event-date {
+  display: inline-block;
+  width: 30%;
+  vertical-align: top;
+  box-sizing: border-box;
+  padding: .5em 1em;
+  background-color: rgba(0,150,214,.15);
+  border: 1px dotted #2971A7;
+  border-width: 0 1px 1px 0;
+  margin-top: -1em;
+}
+.view-libraries-events.view-display-id-page .event-type {
+  float: right;
+  font-size: .9em;
+  font-weight: bold;
+  margin: 0 0 .5em 2em;
+  width: 7em;
+  text-align: right;
+}
+
+.field-name-field-events-image {
+  float: right;
+  margin: 0 1em .5em 2em;
+}
 
 .old-event {
   font-weight: 700;
