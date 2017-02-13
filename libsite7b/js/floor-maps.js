@@ -26,33 +26,42 @@ jQuery(document).ready(function() {
 	// If the SVGs appear not to be loaded (see below), run their functions after the SVG has loaded.
 	function runSVGFunctionsOnLoad() {
 		// IE Edge seems to need a slight delay
-		setTimeout(function() {
-			object1.addEventListener("load", function() {
-				svgFunctions(object1.contentDocument, object1);
-			});
-			object2.addEventListener("load", function() {
-				svgFunctions(object2.contentDocument, object2);
-			});
-			object3.addEventListener("load", function() {
-				svgFunctions(object3.contentDocument, object3);
-			});
-			object4.addEventListener("load", function() {
-				svgFunctions(object4.contentDocument, object4);
-			});
-			object5.addEventListener("load", function() {
-				svgFunctions(object5.contentDocument, object5);
-			});
-			object6.addEventListener("load", function() {
-				svgFunctions(object6.contentDocument, object6);
-			});
-			object7.addEventListener("load", function() {
-				svgFunctions(object7.contentDocument, object7);
-			});
-			object8.addEventListener("load", function() {
-				svgFunctions(object8.contentDocument, object8);
-			});
-		}, 100);
+		if (/Edge/.test(navigator.userAgent)) {
+			setTimeout(function() {
+				svgOnloads();
+			}, 200);
+		// but Chrome seems not to work when the slight delay is added
+		} else {
+			svgOnloads();
+		}
 	}
+	function svgOnloads() {
+		object1.addEventListener("load", function() {
+			svgFunctions(object1.contentDocument, object1);
+		});
+		object2.addEventListener("load", function() {
+			svgFunctions(object2.contentDocument, object2);
+		});
+		object3.addEventListener("load", function() {
+			svgFunctions(object3.contentDocument, object3);
+		});
+		object4.addEventListener("load", function() {
+			svgFunctions(object4.contentDocument, object4);
+		});
+		object5.addEventListener("load", function() {
+			svgFunctions(object5.contentDocument, object5);
+		});
+		object6.addEventListener("load", function() {
+			svgFunctions(object6.contentDocument, object6);
+		});
+		object7.addEventListener("load", function() {
+			svgFunctions(object7.contentDocument, object7);
+		});
+		object8.addEventListener("load", function() {
+			svgFunctions(object8.contentDocument, object8);
+		});
+	}
+
 
 	// Some color variables for different kinds of elements in the maps.
 	// Not sure why, but these need to be set before the following code runs, else they are returning as "undefined" in some browsers/OSs/servers.
