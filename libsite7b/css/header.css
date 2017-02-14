@@ -61,6 +61,15 @@
   margin: auto;
   text-align: right;
 }
+@media screen and (min-width: 840px) {
+  .is-branch #secondary-nav > ul {
+    border-right: 1px solid rgb(200,177,139);
+  }
+  .is-branch #secondary-nav > ul > li {
+    border-top: 5px solid rgb(200,177,139) !important;
+    margin: -3px 0 0 -4px !important;
+  }
+}
 @media screen and (max-width: 960px) {
   #secondary-nav >  ul {
     width: auto;
@@ -185,12 +194,14 @@
     display: none;
   }
 }
-.is-branch #hero {
-  border-right: 1px solid rgb(200,177,139);
+@media screen and (min-width: 840px) {
+  .is-branch #hero {
+    border-right: 1px solid rgb(200,177,139);
+  }
 }
 #branch-name {
   position: absolute;
-  bottom: 45px;
+  bottom: 0;
   color: #fff;
   font-size: 1.3em;
   text-shadow: 1px 1px 10px rgba(0,0,0,0.5);
@@ -204,7 +215,7 @@
 }
 @media screen and (max-width: 1080px) {
   #branch-name {
-    bottom: 93px;
+    bottom: 3rem;
     font-size: 1em;
   }
 }
