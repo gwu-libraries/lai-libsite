@@ -76,6 +76,32 @@
 	  e.preventDefault();
 	});
 
+	jQuery("#search-dropdown").on("keydown", function(e) {
+	  var ul = jQuery(this).find("ul");
+	  if (ul.is(":hidden")) {
+	    ul.show();
+	  }
+	  var searchLabels = jQuery("#internal-search a");
+	  var nearestLabel = searchLabels.filter(":focus");
+	  var nearestLabelIndex = searchLabels.index(searchLabels.filter(":focus"));
+	  if (e.which == 38) { // Up arrow
+	    if (nearestLabel.length == 0) {
+	      searchLabels.last().focus();
+	    } else {
+	      searchLabels.eq(nearestLabelIndex - 1).focus();
+	    }
+	    e.preventDefault(); // page scrolling
+	  }
+	  if (e.which == 40) { // Down arrow
+	    if (nearestLabelIndex == searchLabels.length - 1) {
+	      searchLabels.first().focus();
+	    } else {
+	      searchLabels.eq(nearestLabelIndex + 1).focus();
+	    }
+	    e.preventDefault(); // page scrolling
+	  }
+	});
+
 	jQuery("#search-dropdown").on("mouseenter", function(e) {
 	  jQuery(this).find("ul").show();
 	});

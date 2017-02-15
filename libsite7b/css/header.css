@@ -468,6 +468,9 @@
 .search-label {
   font-weight: bold;
 }
+.search-label:focus {
+  outline: 1px dotted #fff;
+}
 .search-description {
   width: 350px;
   font-size: .85em;
