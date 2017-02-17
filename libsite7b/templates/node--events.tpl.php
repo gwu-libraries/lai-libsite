@@ -83,7 +83,7 @@
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <?php print $user_picture; ?>
+  <?php // print $user_picture; ?>
 
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
@@ -119,7 +119,6 @@
       )));
 
       // Setting Body content.
-      $test2 =  $content['body']['#object']->body['und'][0]['value'];
       $bodyVal = $content['body']['#object']->body['und'][0]['value'];
 
       // Checking if there is Body content, otherwise using Summary.
@@ -138,8 +137,21 @@
       hide($content['body']);
       hide($content['field_events_image']);
       print render($content['field_events_image']);
+      print "<div id='bodyMod-wrapper'>";
       print render($bodyMod);
-      print render($content);
+      print "</div>";
+      print "<div id='content-wrapper'>";
+      //print render($content);
+      print "</div>";
+      print "<div id='some-fields-wrapper-example'>";
+      print render($content['field_event_date']);
+      print render($content['field_event_location']);
+      print render($content['field_event_type']);
+      print "</div>";
+      print "<div id='other-fields-wrapper-example'>";
+      print render($content['field_event_format']);
+      print render($content['field_event_location']);
+      print "</div>";
     ?>
 
     <?php print '<div class="events-notice"><p><i class="fa fa-info-circle"></i> Please see our <a href="/news-events/upcoming-events">Upcoming Events</a> page or our <a href="/news-events/past-events">Archive of Past Events</a> for a complete list of events in the GW Libraries.</p></div>'; ?>
@@ -152,9 +164,9 @@
 
   </div>
 
-  <?php print render($content['links']); ?>
+  <?php // print render($content['links']); ?>
 
-  <?php print render($content['comments']); ?>
+  <?php // print render($content['comments']); ?>
 
 </div>
 
