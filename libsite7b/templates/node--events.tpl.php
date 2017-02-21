@@ -153,17 +153,7 @@
 
     <?php print '<div class="events-notice"><p><i class="fa fa-info-circle"></i> Please see our <a href="/news-events/upcoming-events">Upcoming Events</a> page or our <a href="/news-events/past-events">Archive of Past Events</a> for a complete list of events in the GW Libraries.</p></div>'; ?>
 
-    <?php
-      //print '<br /><br /><pre>';
-      //print_r($content);
-      //print '</pre>';
-    ?>
-
   </div>
-
-  <?php // print render($content['links']); ?>
-
-  <?php // print render($content['comments']); ?>
 
 </div>
 
