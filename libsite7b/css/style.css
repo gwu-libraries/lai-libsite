@@ -2115,6 +2115,17 @@ section.pane .workshop-orientation-link {margin-top: .6em;}
   margin: 0 1em .5em 2em;
 }
 
+#events-metadata-wrapper {
+  border: 1px dotted #2971A7;
+  background-color: rgba(0,150,214,.15);
+  border-width: 1px 0;
+  padding: 1em;
+  line-height: 2em;
+}
+#events-metadata-wrapper .field-label {
+  font-size: .9em;
+  text-transform: uppercase;
+}
 .old-event {
   font-weight: 700;
   padding: 1em;
