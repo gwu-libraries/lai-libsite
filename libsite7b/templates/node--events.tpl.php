@@ -143,14 +143,11 @@
       print "<div id='content-wrapper'>";
       //print render($content);
       print "</div>";
-      print "<div id='some-fields-wrapper-example'>";
+      print "<div id='events-metadata-wrapper'>";
       print render($content['field_event_date']);
       print render($content['field_event_location']);
       print render($content['field_event_type']);
-      print "</div>";
-      print "<div id='other-fields-wrapper-example'>";
       print render($content['field_event_format']);
-      print render($content['field_event_location']);
       print "</div>";
     ?>
 
