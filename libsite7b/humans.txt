@@ -24,6 +24,7 @@
 	Glyphicons: http://glyphicons.com/ 
 	Font Awesome: http://fortawesome.github.io/Font-Awesome
 	Accessible MegaMenu: https://adobe-accessibility.github.io/Accessible-Mega-Menu/
+	js-loc-callnumbers: https://github.com/rayvoelker/js-loc-callnumbers
 
 
 /* SITE */

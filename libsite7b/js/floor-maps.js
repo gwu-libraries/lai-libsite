@@ -99,6 +99,10 @@ jQuery(document).ready(function() {
 		runSVGFunctionsNow();
 	}
 
+	// Declares these once (instead of 8 or more times)
+	var alreadyFoundStack = false;
+	var locCC = new locCallClass(); // depends on locCallClass.js
+
 	// Pre-processing on each SVG file for proper display and functionality
 	function svgFunctions(svgDoc, svg) {
 		// Inject CSS into the SVG via JavaScript because any added by hand would get blown away on subsequent edits in Illustrator, 
@@ -130,19 +134,32 @@ jQuery(document).ready(function() {
 		var hash = window.location.hash;
 		if (hash) {
 			setTimeout(function() { // else things get misaligned since the SVGs are still loading and .offset().top isn't calculated correctly
-				// Go through each of the links in the SVG ...
+				// Go through each of the links in the SVG
 				jQuery(svgDoc).find("[xlink\\:href]").each(function() {
-					// ... until one matches the hash
-					if (jQuery(this).attr("xlink:href") == hash.substring(1)) {
+					var xlinkHref = jQuery(this).attr("xlink:href");
+					// If we're looking for a stack via a call number, and are currently on a stack, check to see if the call number is between the current stack's range
+					if (hash.indexOf("#stack-") == 0 && xlinkHref.indexOf("stack-") == 0 && xlinkHref.indexOf("-inner") != xlinkHref.length - 6) {
+						if (locCC.isBetween(xlinkHref.split("-")[1], xlinkHref.split("-")[2], hash.substring(6)) && alreadyFoundStack == false) {
+							alreadyFoundStack = xlinkHref;
+						}
+					}
+					// If we've matched the hash exactly, or found the right stack range, proceed to scroll to it and highlight it
+					if (xlinkHref == hash.substring(1) || xlinkHref == alreadyFoundStack) {
 						var aThis = jQuery(this);
 						// Scroll to the SVG in question
 						jQuery("html, body").animate({
 							scrollTop: jQuery(svg).closest(".map-info-wrap").offset().top
 						}, 1000, function() {
+							// Pop open the stack description almost right away, because sometimes when we're scrolling to the correct location, 
+							// the mouse happens to be over another stack, and we don't want its description opening and confusing matters.
+							// However, this doesn't seem to work without a small delay.
+							setTimeout(function() {
+								aThis.mouseover();
+							}, 200);
 							// After scrolling to the appropriate SVG, get the element (path, rect, polygon or circle) to "flash", 
 							// as well as any visually "contained" element that also needs to flash at the same time (e.g. the rectangles under stack text).
 							var thisPath = aThis.find("path, rect, polygon, circle");
-							var hashEscaped = hash.substring(1).replace(/\./g,"\\.");
+							var hashEscaped = aThis.attr("xlink:href").replace(/\./g,"\\."); // use attribute instead of actual hash in case it's a call number.
 							var innerA = jQuery(svgDoc).find("[xlink\\:href=" + hashEscaped + "-inner]");
 							var innerPath = false;
 							if (innerA.length) {
