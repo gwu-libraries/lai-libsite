@@ -64,7 +64,7 @@ jQuery(document).ready(function() {
   <?php endif; ?>
 
   <?php if ($rows): ?>
-  <button class="directory-expand-4">Complete staff list for Special Collections & Global Resources Center</button>
+  <button class="directory-expand-4">Complete staff list for Specialized Collections</button>
     <div class="directory-content-4">
       <div class="view-content">
         <?php print $rows; ?>
