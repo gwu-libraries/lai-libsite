@@ -2258,7 +2258,12 @@ th.views-field-field-office-number {display:none;}
     width: 23%;
 }
 
-.directory-stg-row img {
+.directory-consultation-row {
+    padding: 2%;
+    width: 200px;
+}
+
+.directory-stg-row img, .directory-consultation-row img {
     width: 70%;
 }
 
