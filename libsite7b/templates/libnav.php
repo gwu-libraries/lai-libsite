@@ -29,7 +29,7 @@
 							
 							<li class='leaf leaf-section-title'>Get Help</li>
 							<li class='leaf'><a href='" . $front_page . "help/reference/ask-us' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/ask');\">Ask Us</a></li>
-							<li class='leaf'><a href='https://gwu.mywconline.net/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/wconline');\">Research Consultation</a></li>
+							<li class='leaf'><a href='" . $front_page . "reference/research-consultations' onClick=\"ga('send','event','primary-nav','/primary-nav/reference/research-consultations');\">Research Consultation</a></li>
 	            <li class='leaf'><a href='" . $front_page . "reference/directory' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research-staff');\">Research Staff</a></li>
 							<li class='leaf'><a href='" . $front_page . "howdoi' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/help/howdoi');\">How Do I? (Tutorials)</a></li>					
                                                         <li class='leaf'><a href='https://undergraduate.research.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/help/cufr');\">Center for Undergraduate Fellowships & Research</a></li>                              
@@ -130,7 +130,6 @@
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "eckles/reference'>RESEARCH</a></li>
 
 							<li class='first leaf leaf-section-title'>Eckles</li>
-							<li class='first leaf'><a href='" . $front_page . "eckles/reference'>Research Help at Eckles</a></li>
 							<li class='first leaf'><a href='" . $front_page . "eckles/the-eckles-prize-for-freshman-research-excellence'>Eckles Prize</a></li>
 
 							<li class='first leaf leaf-section-title'>Find</li>
@@ -148,7 +147,7 @@
 
 							<li class='leaf leaf-section-title'>Get Help</li>
 							<li class='leaf'><a href='" . $front_page . "help/reference/ask-us'>Ask Us</a></li>
-							<li class='leaf'><a href='" . $front_page . "research/raa'>Research Consultation</a></li>
+							<li class='leaf'><a href='" . $front_page . "reference/research-consultations'>Research Consultation</a></li>
 							<li class='leaf'><a href='" . $front_page . "howdoi'>How Do I? (Tutorials)</a></li>		
 					  </ul>
 					  </div>
