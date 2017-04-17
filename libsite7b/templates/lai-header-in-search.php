@@ -102,7 +102,7 @@
 	  }
 	});
 
-	jQuery("#search-dropdown").on("mouseenter", function(e) {
+	jQuery("#search-dropdown").on("mouseenter mouseover", function(e) {
 	  jQuery(this).find("ul").show();
 	});
 	jQuery("#search-dropdown").on("mouseleave", function(e) {

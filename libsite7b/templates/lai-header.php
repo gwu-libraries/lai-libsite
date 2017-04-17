@@ -307,7 +307,7 @@ jQuery(".search-dropdown").on("keydown", function(e) {
   }
 });
 
-jQuery(".search-dropdown").on("mouseenter", function() {
+jQuery(".search-dropdown").on("mouseenter mouseover", function() {
   jQuery(this).find("ul").show();
 });
 jQuery(".search-dropdown").on("mouseleave", function() {
