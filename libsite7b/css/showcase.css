@@ -122,8 +122,11 @@ section.pane {
   padding-top: 0;
   margin-bottom: 0;
 }
-#backToTopContainer, section.pane h1.page-title {
+#backToTopContainer, section.pane h1.page-title, #main-sidebar {
   display: none !important;
+}
+.primary-content-063 {
+  margin-left: 0;
 }
 #showcase-text {
   margin: auto;
