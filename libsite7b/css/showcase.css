@@ -39,7 +39,7 @@
     display: inline;
   }
   #showcase-intro {
-    background-image: none;
+    background-image: none !important;
   }
   #showcase-leading-image {
     left: 0;
