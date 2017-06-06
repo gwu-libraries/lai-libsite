@@ -79,6 +79,16 @@
         gwSearch(currentSearchTool, currentSearchText, "_self");
       }
     });
+
+    // Scripts for Digital Showcases
+    jQuery(".showcase-gallery").on("mouseover", "div", function() {
+      jQuery(".showcase-gallery > div").removeClass("showcase-hovered");
+      jQuery(this).addClass("showcase-hovered");
+    });
+    jQuery(window).on('scroll', function() {
+      jQuery('#showcase-intro').css('background-position-y', jQuery(window).scrollTop() * .3 + 0);
+    });
+
   });
 
 /*!
