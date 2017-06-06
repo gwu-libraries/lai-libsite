@@ -50,7 +50,7 @@
 							<li class='leaf'><a href='" . $front_page . "collections/kiev' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/kiev');\">Kiev Judaica Collection</a></li>
 							<li class='leaf'><a href='" . $front_page . "churchillcenter' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/churchill');\">National Churchill Library & Center</a></li>
 							<li class='leaf'><a href='" . $front_page . "collections/media-resources-center' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/media');\" >Media</a></li>
-							<li class='leaf'><a href='" . $front_page . "collections/collection-development-librarians' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/collection-development-librarians');\" >Collection Development Librarians</a></li>
+							<li class='leaf'><a href='" . $front_page . "collections-assessment' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections-assessment');\" >Collections Assessment &amp; Development</a></li>
 							<li class='last leaf'><a href='" . $front_page . "collections' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/more');\">(more...)</a></li>
 						</ul>
 						</div>
