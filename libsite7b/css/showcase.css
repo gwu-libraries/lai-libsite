@@ -82,17 +82,16 @@
   height: 400px;
   overflow: hidden;
   max-width: calc((100% - 552px) / 9);
-  transition: all .5s;
 }
 .showcase-gallery > div.showcase-hovered {
-  max-width: 1000px;
+  max-width: 1080px;
   transition: all 2.5s;
 }
-@media screen and (max-width: 800px) { .showcase-gallery > div, .showcase-gallery > div.showcase-hovered, .showcase-gallery img {
+@media screen and (max-width: 800px) { .showcase-gallery > div, .showcase-gallery > div.showcase-hovered, .showcase-gallery img, .showcase-gallery a {
     max-width: 100%;
     max-height: 100%;
     width: 100px;
-    height: 150px;
+    height: 100%;
     float: left;
 } }
 .showcase-caption {
@@ -110,9 +109,9 @@
 .showcase-hovered .showcase-caption {
   white-space: normal;
 }
-.showcase-gallery a, .showcase-gallery img {
+.showcase-gallery a {
   display: block;
-  width: 550px;
+  width: 1080px;
 }
 #maincontent {
   max-width: none;
