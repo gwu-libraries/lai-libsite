@@ -78,28 +78,24 @@
   box-shadow: 0 0 5px #666;
   margin: 0;
   padding: 0;
-  max-height: 550px;
+  max-height: 400px;
   height: 400px;
   overflow: hidden;
-  max-width: 85px;
+  max-width: calc((100% - 552px) / 9);
   transition: all .5s;
 }
 .showcase-gallery > div.showcase-hovered {
-  width: auto;
-  max-width: 500px;
+  max-width: 1000px;
   transition: all 2.5s;
 }
-@media screen and (max-width: 1080px) { .showcase-gallery > div { max-width: 6% } }
-@media screen and (max-width: 900px) { .showcase-gallery > div { max-width: 5.5% } }
-@media screen and (max-width: 800px) { .showcase-gallery > div { max-width: 5% } }
-@media screen and (max-width: 600px) { .showcase-gallery > div, .showcase-gallery > div.showcase-hovered, .showcase-gallery img {
+@media screen and (max-width: 800px) { .showcase-gallery > div, .showcase-gallery > div.showcase-hovered, .showcase-gallery img {
     max-width: 100%;
     max-height: 100%;
     width: 100px;
     height: 150px;
     float: left;
 } }
-.showcase-gallery .showcase-caption {
+.showcase-caption {
   position: absolute;
   bottom: 0;
   background-color: rgba(0,0,0,.7);
@@ -109,10 +105,14 @@
   box-sizing: border-box;
   overflow: hidden;
   width: 100%;
+  white-space: nowrap;
 }
-.showcase-gallery a {
-  width: 300px;
+.showcase-hovered .showcase-caption {
+  white-space: normal;
+}
+.showcase-gallery a, .showcase-gallery img {
   display: block;
+  width: 550px;
 }
 #maincontent {
   max-width: none;
