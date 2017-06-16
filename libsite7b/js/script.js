@@ -99,9 +99,6 @@
       jQuery(".showcase-hovered").css("max-width", "");
       jQuery(".showcase-gallery > div").not(".showcase-hovered").css("max-width","calc((100%  - 3px - " + maxWidth + "px) / " + length + ")");
     });
-    jQuery(window).on('scroll', function() {
-      jQuery('#showcase-intro').css('background-position-y', jQuery(window).scrollTop() * .3 + 0);
-    });
 
   });
 
