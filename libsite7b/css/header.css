@@ -92,11 +92,13 @@
 #nav-hours {
   display: none;
 }
+/*
 .nav-item > a.open, .nav-item > a:focus {
   background-color: #0096d6;
   border-bottom-color: #0096d6;
   border-bottom-width: 0;
 }
+*/
 .nav-menu li a {
   padding: 0 .75rem;
   color: #fff;
@@ -133,7 +135,9 @@
   }
 }
 .sub-nav {
+/*
   background-color: #0096d6;
+*/
   border-width: 0;
   box-shadow: #333 2px 2px 10px;
   margin-top: 0;
@@ -144,9 +148,6 @@
 .nav-item:first-child .sub-nav {
   right: auto;
   left: 0;
-}
-.sub-nav * {
-  color: #fff;
 }
 .sub-nav a {
   text-decoration: none;
@@ -289,7 +290,7 @@
 }
 #home-search form select, #home-search form input {
   color: #333;
-  padding: 1.1em .75em;
+  padding: .75em;
   /*-webkit-padding-before: 1.2em;
   -webkit-padding-after: 1.2em;*/
   font-size: 1em;
@@ -312,9 +313,9 @@
   text-shadow: 0 0 5px rgba(0,0,0,1);
 }
 #hero h3 {
-  font-size: 1.7em;
+  font-size: 1.3em;
   font-weight: bold;
-  margin-bottom: 1.5em;
+  margin-bottom: 1em;
 }
 @media screen and (max-width: 840px) {
   #hero h3 {
@@ -327,7 +328,7 @@
   }
 }
 #home-search-explanation {
-  margin-top: 1.5em;
+  margin-top: 1em;
 }
 @media screen and (max-width: 640px) {
   #home-search-explanation {
@@ -491,7 +492,7 @@
   width: 0;
   overflow: hidden;
   display: block;
-  height: 1.4em;
+  height: 1em;
 }
 @media screen and (max-width: 1080px) {
   #internal-search #current-search-text a {
@@ -510,12 +511,12 @@
   border-color: #fff transparent transparent transparent;
   position: absolute;
   right: 1.1em;
-  bottom: .8em;
+  bottom: .7em;
 }
 #current-search-text::before {
   border-width: 0 7px 7px 7px;
   border-color: transparent transparent #fff transparent;
-  top: .8em;
+  top: .7em;
   bottom: auto;
 }
 
@@ -526,7 +527,7 @@
   max-width: 100%; /* to override existing style */
 }
 #internal-search #search-form {
-  width: 500px;
+  width: 450px;
 }
 @media screen and (max-width: 1080px) {
   #internal-search #search-form {
@@ -593,7 +594,7 @@
 }
 .search-dropdown-inner {
   display: block;
-  padding: 1.25em 1em;
+  padding: .9em 1em;
 }
 .current-search-text {
   padding-right: 1.5em; 
@@ -602,7 +603,7 @@
   width: 0;
   overflow: hidden;
   display: block;
-  height: 1.4em;
+  height: 1em;
 }
 @media screen and (max-width: 1080px) {
   #internal-search .current-search-text {
@@ -622,13 +623,13 @@
   border-color: #fff transparent transparent transparent;
   position: absolute;
   right: .9em;
-  bottom: 1.2em;
+  bottom: 1em;
 }
 .current-search-text::before {
   /* CSS triangle */
   border-width: 0 7px 7px 7px;
   border-color: transparent transparent #fff transparent;
-  top: 1.2em;
+  top: 1em;
   bottom: auto;
 }
 

@@ -101,7 +101,8 @@
 }
 #gwtoday-footer .footer-logo, #gwtoday-footer .footer-address, #gwtoday-footer .footer-social-links, #gwtoday-footer .footer-quick-links {
   border-bottom: none;
-  height: 180px;
+  min-height: 180px;
+  height: auto;
   overflow: hidden;
 }
 

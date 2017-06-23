@@ -3,7 +3,7 @@
 <!--<section class="pane clear" id="local-footer">-->
 
 	<?php 
-	  if ($campus == "gelman" || $campus == "none" || $campus == "utlc") {
+	  if ($campus == "gelman" || $campus == "none") {
             $streetAdd = "2130 H Street NW";
             $cityAdd = "Washington, DC 20052";
             $phoneAdd = "202.994.6558";
@@ -23,6 +23,13 @@
             $phoneAdd = "571.553.8230";
             $phoneAddLink = "17037268230";
             $emailAdd = "<a href='mailto:virginia@gwu.edu'>virginia@gwu.edu</a>";
+          }
+          elseif ($campus == "utlc") {
+            $streetAdd = "2130 H Street NW";
+            $cityAdd = "Washington, DC 20052";
+            $phoneAdd = "202.994.4026";
+            $phoneAddLink = "12029944026";
+            $emailAdd = "<a href='mailto:utlc@gwu.edu'>utlc@gwu.edu</a>";
           }
 	?>
 
@@ -64,7 +71,7 @@
                     <div class="field field-name-field-gwtoday-social-links field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">
-                        <?php if ($campus == "gelman" || $campus == "none" || $campus == "UTLC"): ?>
+                        <?php if ($campus == "gelman" || $campus == "none"): ?>
                           <p><a href="https://twitter.com/gelmanlibrary" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/twitter-logo.png" style="width: 33px; height: 26px;"></a></p>
                           <p><a href="https://twitter.com/gelmanlibrary" target="_blank">Follow us on Twitter</a></p>
                           <p><a href="https://www.facebook.com/gelmanlibrary" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
@@ -79,6 +86,10 @@
                           <p><a href="https://www.facebook.com/vstclibrary" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
                           <p><a href="https://www.facebook.com/vstclibrary">Like us on Facebook</a></p>
 
+                        <?php elseif ($campus == "utlc"): ?>
+                          <p><a href="https://www.youtube.com/user/GWUTLC" alt="logo: YouTube" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/youtube-logo.png" style="width: 33px;"></a></p>
+                          <p><a href="https://www.youtube.com/user/GWUTLC">UTLC on YouTube</a></p>
+
                         <?php endif; ?>
                         </div>
                       </div>
@@ -88,6 +99,13 @@
                     <div class="field field-name-field-gwtoday-quick-links field-type-text-long field-label-hidden">
                       <div class="field-items">
                         <div class="field-item even">
+                          <?php if ($campus == "utlc"): ?>
+                          <a href="/utlc/contact">Contact UTLC</a><br/>
+                          <a href="/about/facilities/maps">Maps &amp; Directions</a><br/>
+                          <a href="/accessibility">Accessibility</a><br/>
+                          <a href="https://lai.gwu.edu/staff-info">Staff Information</a><Br/>
+                          <a href="/user">Staff Login</a><br/>
+                          <?php else: ?>
                           <a href="/hours">Hours</a><br>
                           <a href="/contact">Contact Us</a><br>
                           <a href="/about/feedback">Send Feedback</a><br>
@@ -96,6 +114,7 @@
                           <a href="http://go.gwu.edu/gwlibraries">Give to GW Libraries</a><br>
                           <a target="_blank" href="https://lai.gwu.edu/staff-info">Staff Information</a><br>
                           <a href="https://<?php print $_SERVER['SERVER_NAME']; ?>/user">Staff Login</a><br>
+                          <?php endif; ?>
                         </div>
                       </div>
                     </div>
