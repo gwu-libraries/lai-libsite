@@ -169,7 +169,7 @@ p, li {
    Lists
    ========================================================================== */
 
-ul, ol { margin: 1em 0; padding: 0 0 0 10px; /* from 0 0 0 40px */ }
+ul, ol { margin: 1em 0; padding: 0 0 0 20px; /* from 0 0 0 40px and then 0 0 0 10px */ }
 dd { margin: 0 0 0 2.6em; }
 dt { margin-top: .8em; }
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
