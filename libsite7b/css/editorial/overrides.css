@@ -7,8 +7,13 @@
   margin-top: 0.375em;
   margin-bottom: 0.1875em;
   font-size: 28px;
+  font-size: 24px;
   letter-spacing: 0.05em;
   border-bottom: 0.03571em solid #c8b18b;
+}
+.region-sidebar h2 {
+  font-size: 24px;
+  margin: 1em 0 0;
 }
 .block-menu h2.block-title {
     border-bottom-width: 0px;
@@ -61,6 +66,10 @@ span.heroHeroBtn a:after {
 
 .view-staff-directory table {
   clear: right;
+}
+
+tbody, form tbody {
+  border-top: 0;
 }
 
 /*

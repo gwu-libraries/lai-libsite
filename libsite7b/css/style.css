@@ -2154,8 +2154,9 @@ section.pane .workshop-orientation-link {margin-top: .6em;}
 
 /* Library Departments and Staff Directory styles */
 
-.group-heading-text-one {padding-left:.5em; margin-top:.5em; color:#fff; font-size:1.7em; margin-bottom:.5em;}
-.group-heading-text-two {padding-left:.5em; margin-top:.5em;}
+.group-heading-text-one {padding-left:.5em; margin-top:.5em; color:#fff; font-size:1.3em; margin-bottom:.5em;}
+.group-heading-text-one span {font-size: .75em;}
+.group-heading-text-two {padding-left:.5em; margin-top:.5em; font-size: 1em; }
 .group-heading-one {margin-bottom: 1em; background-color: #004165;}
 .group-heading-two {background-color: rgb(222, 231, 236);}
 .first-row-spacing {margin-top:1em;}
