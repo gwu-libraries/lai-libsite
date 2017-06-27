@@ -79,6 +79,27 @@
         gwSearch(currentSearchTool, currentSearchText, "_self");
       }
     });
+
+    // Scripts for Digital Showcases
+
+    jQuery(".showcase-gallery > div.showcase-hovered").css("transition","none");
+    var length = jQuery(".showcase-gallery > div").length - 1;
+    jQuery(".showcase-gallery img").each(function() {
+      jQuery(this).css("width", 400 / jQuery(this).height() * jQuery(this).width());
+    });
+    var maxWidth = jQuery(".showcase-hovered").find("img").width();
+    jQuery(".showcase-hovered").css("max-width", maxWidth);
+    jQuery(".showcase-gallery > div").not(".showcase-hovered").css("max-width","calc((100%  - 3px - " + maxWidth + "px) / " + length + ")");
+    
+    jQuery(".showcase-gallery").on("mouseover", "div", function() {
+      jQuery(".showcase-gallery > div").removeClass("showcase-hovered");
+      jQuery(this).addClass("showcase-hovered");
+      var maxWidth = jQuery('.showcase-hovered img').width();
+      jQuery(".showcase-hovered a").css("width", maxWidth);
+      jQuery(".showcase-hovered").css("max-width", "");
+      jQuery(".showcase-gallery > div").not(".showcase-hovered").css("max-width","calc((100%  - 3px - " + maxWidth + "px) / " + length + ")");
+    });
+
   });
 
 /*!
