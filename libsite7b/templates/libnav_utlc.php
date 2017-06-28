@@ -65,17 +65,18 @@
                                                 <ul class='sub-menu-group'>
                                                         <li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "utlc/resources'>RESOURCES</a></li>
                                                         <li class='first leaf'><a href='" . $front_page . "utlc/resources/course-design-guide'>Course Design Guide</a></li>
-                                                        <li class='leaf'><a href='" . $frton_page . "utlc/resources/critical-thinking-resources-teaching-day-2016'>Critical Thinking Resources from Teaching Day 2016</a></li>
-                                                        <li class='leaf'><a href='" . $front_page . "utlc/resources/awards'>Faculty Awards</a></li>
+                                                        <li class='leaf'><a href='" . $front_page . "utlc/resources/critical-thinking-resources-teaching-day-2016'>Critical Thinking</a></li>
+                                                        <li class='leaf'><a href='" . $front_page . "utlc/resources/diversity-teaching-dynamics'>Diversity &amp; Teaching Dynamics</a></li>
+                                                        <!--<li class='leaf'><a href='" . $front_page . "utlc/resources/awards'>Faculty Awards</a></li>-->
                                                         <li class='leaf'><a href='" . $front_page . "utlc/resources/first-day-class-ideas'>First Day of Class</a></li>
                                                         <!--<li class='leaf'><a href='" . $front_page . "utlc/writing-course-goals'>Writing Course Goals</a></li>-->
                                                         <li class='leaf'><a href='" . $front_page . "utlc/resources/group-work-and-colts'>Group Work and CoLTs</a></li>
-                                                        <li class='leaf'><a href='" . $front_page . "utlc/teaching/information-new-faculty'>Information for New Faculty</a></li>
-                                                        <li class='leaf'><a href='" . $front_page . "utlc/scholarship-teaching-and-learning-sotl-guide'>Scholarship of Teaching and Learning (SoTL) Guide</a></li>
+                                                        <li class='leaf'><a href='" . $front_page . "utlc/teaching/information-new-faculty'>New Faculty Information</a></li>
+                                                        <li class='leaf'><a href='" . $front_page . "utlc/scholarship-teaching-and-learning-sotl-guide'>Scholarship of Teaching &amp; Learning</a></li>
                                                         <li class='leaf'><a href='" . $front_page . "utlc/syllabus-rubric'>Syllabus Rubric</a></li>
                                                         <li class='leaf'><a href='" . $front_page . "utlc/teaching-assessment-tool'>Teaching Assessment Tool</a></li>
                                                         <li class='leaf'><a href='" . $front_page . "utlc/resources/teaching-planning-tips'>Teaching &amp; Planning Tips</a></li>
-                                                        <li class='leaf'><a href='" . $front_page . "utlc/tenure-promotion'>Tenure & Promotion</a></li>
+                                                        <!--<li class='leaf'><a href='" . $front_page . "utlc/tenure-promotion'>Tenure & Promotion</a></li>-->
                                                         <!--<li class='leaf'><a href='" . $front_page . "utlc/about/academy-distinguished-teachers'>Academy of Distinguished Teachers</a></li>-->
 
                                                 </ul>
