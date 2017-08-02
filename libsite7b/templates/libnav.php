@@ -72,6 +72,7 @@
 							<li class='leaf'><a href='" . $front_page . "research/data-services' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/data-services');\">Data Services</a></li>
 							<li class='leaf'><a href='" . $front_page . "services/interlibrary-loan' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/interlibrary-loan');\">Interlibrary Loan</a></li>
 							<li class='leaf'><a href='" . $front_page . "services/library-instruction' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/instruction');\">Library Instruction</a></li>
+							<li class='leaf'><a href='http://libguides.gwu.edu/facultyresources' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/faculty-resources');\">Faculty Resources</a></li>
 							<li class='leaf'><a href='" . $front_page . "contact' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/contact-us');\">Contact Us</a></li>
 							<li class='last leaf'><a href='" . $front_page . "services' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/more');\">(more...)</a></li>
 						</ul>
