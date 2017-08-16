@@ -8,7 +8,7 @@
                                                 <ul class='sub-menu-group'>
                                                         <li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "utlc/about'>ABOUT</a></li>
                                                         <li class='first leaf'><a href='" . $front_page . "utlc/about/our-office'>Our Office</a></li>
-                                                        <li class='leaf'><a href='" . $front_page . "utlc/about/utlc-faculty-advisory-board'>UTLC Faculty Advisory Board</a></li>
+                                                        <li class='leaf'><a href='" . $front_page . "utlc/about/faculty-advisory-and-support-team'>Faculty Advisory and Support Team</a></li>
                                                         <li class='leaf'><a href='" . $front_page . "utlc/about/partners'>Partners</a></li>
                                                 </ul>
                                                 </div>
