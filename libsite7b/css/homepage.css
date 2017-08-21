@@ -44,7 +44,7 @@
 }
 #featured-services h4 {
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.3em;
   line-height: normal;
   margin: .5em 0;
 }
@@ -107,17 +107,14 @@
 
 #block-views-libraries_events-block_1 .date-display-range { display: inline; }
 
-#block-views-libraries_events-block_1 h2, #branches h2 {
-  font-family: "AvenirLTStd-HeavyOblique", Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-style: italic;
-  padding-top: 0em;
-  padding-bottom: 0em;
-  font-size: 22px;
-  border-bottom-width: 0.03571em;
-  border-bottom-style: solid;
-  border-bottom-color: #c8b18b;
+#block-views-libraries_events-block_1 h2 {
+  margin-top: 1em;
 }
+
+#branches h2 {
+  margin-top: 0;
+}
+
 #block-views-libraries_events-block_1 .views-row {
   min-height: 100px;
   padding-bottom: 1em;
@@ -184,7 +181,7 @@ header.major p { display: none; }  /*hide mystery empty p*/
 }
 #branches h4 {
   font-weight: bold;
-  font-size: 1.4em;
+  font-size: 1.3em;
   line-height: normal;
   margin: .5em 0;
 }

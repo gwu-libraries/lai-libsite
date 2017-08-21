@@ -1,0 +1,130 @@
+#main-sidebar ul.menu {
+  font-size: 1em;
+}
+
+.region-sidebar h2.block-title, .region-rsidebar h2.block-title, #branches h2 {
+  font-family: "AvenirLTStd-HeavyOblique", Helvetica, Arial, sans-serif;
+  margin-top: 0.375em;
+  margin-bottom: 0.1875em;
+  font-size: 28px;
+  font-size: 24px;
+  letter-spacing: 0.05em;
+  border-bottom: 0.03571em solid #c8b18b;
+}
+.region-sidebar h2 {
+  font-size: 24px;
+  margin: 1em 0 0;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+.block-menu h2.block-title {
+    border-bottom-width: 0px;
+}
+
+.block-views {
+  margin-bottom: 2em;
+}
+
+li.expanded, li.collapsed, li.leaf {
+  padding: 0;
+}
+
+p, li {
+  line-height: 1.5em;
+}
+
+span.heroHeroBtn a:after {
+  background-image: url("../../images/arrows/readmore.png");
+}
+
+#header-hours {
+  font-size: .55em;
+  line-height: 1.3em;
+}
+
+#header-hours .container {
+  margin: 0;
+}
+
+#header-hours tbody {
+  border-width: 0;
+}
+
+.search-dropdown-inner {
+  line-height: 1.231;
+}
+
+#internal-featured-services h4.promo-title a {
+  font-family: "AvenirLTStd-Roman", Helvetica, Arial, sans-serif;
+}
+
+.search-form {
+  margin-bottom: 0;
+}
+
+#block-block-37 h2 { /* VSTC hours page */
+  border-bottom: 0;
+}
+
+.view-staff-directory table {
+  clear: right;
+}
+
+tbody, form tbody {
+  border-top: 0;
+}
+
+
+ul.nav-menu li	 {
+  color: #688A9C;
+}
+
+ul.nav-menu a {
+  color: #fefefe;
+}
+
+ul.nav-menu li:hover {
+  background-color: #0D78AA;
+}
+ul.nav-menu li ul li:hover {
+  background-color: #0D78AA;
+}
+
+ul.nav-menu li li a {
+  padding: 0 .75em;
+}
+
+.leaf-extended {
+  margin-left: -.75em;
+}
+
+ul.nav-menu li li, .sub-menu-group .leaf-section-title {
+  background-color: #033C5A;
+  min-height: 2.5rem;
+  line-height: 2.5em;
+  min-width: 200px;
+}
+
+.sub-menu-group .leaf-section-title {
+  color: rgba(255,255,255,.8);
+  text-transform: uppercase;
+  padding: 0 .75em;
+  background-color: #003055;
+}
+.sub-menu-group .leaf-section-title::before, 
+.sub-menu-group .leaf-section-title::after {
+  content: "■";
+  display: none;
+  margin: 0 .5em;
+}
+.sub-menu-group .leaf-section-title a {
+  font-weight: 700 !important;
+  text-transform: uppercase;
+}

@@ -1,0 +1,242 @@
+/******************************** Button Styling ***************************/
+.reg-button a, li.cke_panel_listItem a span.reg-button {
+  font-size: 16px;
+  padding: 1em 1.5em;
+  line-height: 1.25em;
+  letter-spacing: 1;
+  border: 1px;
+}
+
+.reg-button a, .big-button a, .red-standard-button a, .small-button a, li.cke_panel_listItem a span.reg-button, li.cke_panel_listItem a span.big-button, li.cke_panel_listItem a span.standard-button, li.cke_panel_listItem a span.small-button {
+  color: #FFF;
+  font-family: "AvenirLTStd-Roman", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+.reg-button:hover a, .big-button:hover a, .red-standard-button:hover a, .small-button:hover a, .white-button a,.reg-button:hover, .big-button:hover  {
+  color: #033c5a;
+}
+
+.big-button a, .big-button:hover a, li.cke_panel_listItem a span.big-button {
+  padding: 1em 1.75em !important;
+  border: solid 1px;
+  color: #FFF;
+  line-height: 1.25em;
+  letter-spacing: 1;
+  font-size: 20px;
+}
+
+.ghost-button a, li.cke_panel_listItem a span.ghost-button{
+  border: 2px Solid !important;
+  background-color: transparent;
+}
+
+.small-button a, li.cke_panel_listItem a span.small-button {
+  font-size: 12px;
+  padding: 1em 1em;
+  line-height: 1.25em;
+  letter-spacing: 1;
+  border: 1px;
+}
+
+.reg-button a, .big-button a, .ghost-button a, .small-button a, li.cke_panel_listItem a span.reg-button, li.cke_panel_listItem a span.big-button, li.cke_panel_listItem a span.ghost-button, li.cke_panel_listItem a span.small-button  {
+  display: inline-block;
+  width: auto;
+  color: #FFF;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 400;
+  text-decoration: none;
+  /*text-align: center; */
+  letter-spacing: 1;
+  -webkit-transition: all 0.2s ease 0s; /* Chrome, Safari, Opera */
+  transition: all 0.2s ease 0s;
+  font-family: "AvenirLTStd-Roman", Helvetica, Arial, sans-serif;
+  font-weight: !important;
+}
+
+.darkblue a, .darkblue:visited a, li.cke_panel_listItem a span.darkblue {
+  background-color: #004065;
+  border-color: #004065;
+  color: #FFF;
+}
+.darkblue:hover a {
+  background-color: #D9D0BB;
+  border-color: #D9D0BB;
+  color: #033C5A;
+}
+.lightblue a, .lightblue:visited a, li.cke_panel_listItem a span.lightblue {
+  background-color: #0073AA;
+  border-color: #0073AA;
+}
+
+.lightblue:hover  a{
+  background-color: #D9D0BB;
+  border-color: #D9D0BB;
+  color: #033C5A !important;
+}
+
+.green a, .green:visited a, li.cke_panel_listItem a span.green {
+  background-color: #78BE20;
+}
+
+.green:hover a {
+  background-color: #D9D0BB;
+  border-color: #D9D0BB;
+  color: #033C5A;
+}
+
+.yellow a, .yellow:visited a, li.cke_panel_listItem a span.yellow {
+  background-color: #FFD400;
+  border-color:  #FFD400;
+  color: #033C5A;
+}
+
+.yellow:hover a {
+  background-color: #D9D0BB;
+  border-color:  #D9D0BB;
+  color: #033C5A;
+}
+
+.reg-button.yellow a {
+  color: #033C5A;
+}
+.white-button, .white-button:visited {
+  background-color: transparent;
+}
+
+.white-button:hover a {
+  background-color: #D9D0BB;
+  color: #033C5A !important;
+}
+
+
+.ghost-button a, li.cke_panel_listItem a span.ghost-button  {
+  background-color: transparent;
+  border-color: #F8E08E;
+  color: #033C5A;
+}
+.ghost-button.darkblue a, .ghost-button.darkblue :visited a, li.cke_panel_listItem a span.ghost-button.darkblue {
+  border: 2px solid;
+}
+.ghost-button.lightblue a, .ghost-button.lightblue:visited a, li.cke_panel_listItem a span.ghost-button.lightblue {
+  background-color: transparent;
+  border-color: #0073aa;
+  color: #0073aa;
+}
+
+.ghost-button.darkblue:hover a, .ghost-button.lightblue:hover a {
+  border-color: #D9D0BB !important;
+  background: #D9D0BB;
+  color: #033C5a;
+}
+
+.ghost-button.green a, .ghost-button.green:visited a, li.cke_panel_listItem a span.ghost-button.green {
+  border-color: #78BE20;
+  color: #008364;
+}
+
+.red-standard-button a, .red-standard-button:visited a {
+  background-color: #C9102F;
+}
+
+.red-standard-button:hover a {
+  background-color: #FFD400; color: #033C5A;
+}
+
+.red-ghost-button a, .red-ghost-button:visited a, .red-ghost-button a, .red-ghost-button:visited a {
+  background: none;
+  color: #C9102F !important;
+}
+
+.white-button a, .white-button:visited a {
+  background-color: transparent;
+  border-color: transparent !important;
+  color: #033C5A !important;
+}
+.red-standard-button a, .red-standard-button:hover a {
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 400;
+  text-decoration: none;
+  /*text-align: center; */
+  letter-spacing: 1;
+  border: 0px none;
+  color: #FFF;
+  line-height: 1.25em;
+}
+
+.red-ghost-button:hover a, .red-ghost-button a {
+  border-radius: 5px;
+  color: #C9102F !important;
+  border: 2px solid #C9102F;
+}
+.red-ghost-button:hover a {
+  background-color: #FFD400;
+  border-color: #FFD400 !important;
+  color: #033c5a;
+
+}
+
+.red-ghost-button a {
+  border: 2px solid #C9102F !important;
+}
+
+ .white-button a, .white-button:hover a {
+  border-radius: 5px;
+
+ }
+
+.white-button:hover a {
+  border-color: #D9D0BB;
+  background: #D9D0BB;
+  color: #033c5a;
+}
+
+.ghost-button.yellow a, .ghost-button.yellow:visited a, li.cke_panel_listItem a span.ghost-button.yellow {
+  background: none;
+  border-color: #FFD400 !important;
+  color: #033c5a;
+}
+.ghost-button.yellow:hover a, .ghost-button.green:hover a {
+  background-color: #D9D0BB;
+  border-color: #D9D0BB !important;
+  color: #033C5A;
+}
+
+.ghost-button.darkblue a, .ghost-button.darkblue:visited a {
+  background-color: transparent;
+  border-color: #004065;
+  color: #004065;
+}
+.ghost-button.big-button a, .ghost-button.big-button:visited a {
+  background-color: transparent;
+  border: 3px solid;
+  font-size: 20px;
+  padding: 1em 1.75em;
+}
+
+.cke_openbutton {
+    display: block;
+}
+.cke_skin_karma {
+    display: block !important;
+}
+
+a.a-cta {
+  font-family: "AvenirLT-Heavy", Helvetica, Arial, sans-serif;
+  color: #0073AA;
+  font-size: 1.17em;
+  line-height: 1.28205em;
+  text-decoration: none;
+  font-weight: normal !important;
+}
+
+footer.call-to-action a.a-cta {
+  font-family: "AvenirLT-Heavy", Helvetica, Arial, sans-serif;
+  color: #0073AA;
+  font-size: 1.17em;
+  line-height: 1.28205em;
+  text-decoration: none;
+  font-weight: normal !important;
+}

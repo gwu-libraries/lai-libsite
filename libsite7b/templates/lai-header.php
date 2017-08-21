@@ -28,12 +28,21 @@
 
   <div id="topheader-content">
 
+    <?php if ($campus == 'utlc'): ?>
+    <div id="gwlogo-topheader" style="width: 460px;">
+      <a href="/utlc" aria-label="UTLC home page">
+        <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/utlc-logo-01.png" alt="logo: University Teaching and Learning Center" style="width: 460px;">
+        <span class="sr-only">UTLC home page</span>
+      </a>
+    </div>
+    <?php else: ?>
     <div id="gwlogo-topheader">
       <a href="<?php print $front_page; ?>" aria-label="GW Libraries home page">
         <img src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/logos/gw_iddol_libraries_1cs_pos.png" alt="logo: The George Washington University Libraries" width="199" height="90">
         <span class="sr-only">GW Libraries home page</span>
       </a>
     </div>
+    <?php endif; ?>
 
     <p id="lai-division">
       A division of <a target="_blank" href="https://lai.gwu.edu">Libraries and Academic Innovation</a>
@@ -101,6 +110,43 @@ include 'libnav.php';
         Virginia Science and Technology Campus Library
       </div>
     </div>
+  <?php elseif($campus == 'utlc' && request_path() == 'utlc'): ?>
+    <div id="panels-ipe-paneid-3" class="panels-ipe-portlet-wrapper panels-ipe-portlet-marker">
+      <div class="panels-ipe-portlet-content">
+        <div class="panel-pane pane-views-panes pane-promotion-slider-12-col-panel-pane-1">
+          <div class="view view-promotion-slider-12-col view-id-promotion_slider_12_col view-display-id-panel_pane_1 view-dom-id-564713f4d738dd65125afa82f448335a">
+            <div class="view-content">
+              <div class="promo-slider-12-col"><div id="flexslider-1" class="flexslider flexslider-processed">
+                <ul class="slides">
+                  <li class="flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;" aria-hidden="false">
+                    <div class="promo-slider-12-col-item">
+                      <div class="promo-slider-12-col-img">
+                        <img typeof="foaf:Image" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/utlc-hero-02.jpg" alt="hero image of UTLC activities" title="" draggable="false" width="1080">
+                      </div>
+                      <div class="promo-slider-12-col-info">
+                        <div class="promo-slider-12-col-inner">
+                           <p style="margin-top: 1em;">The University Teaching & Learning Center (UTLC) is a faculty-driven effort to expand course design and teaching support to all GW faculty members.</p>
+                           <span class="heroHeroBtn">
+                              <a href="/utlc/about" target="_self">Read more</a>.
+                           </span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ol class="flex-control-nav flex-control-paging"></ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+<!--
+    <div id="hero-image">
+      <img alt="hero image of UTLC activities" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/utlc-hero-02.jpg"/>
+    </div>
+-->
   <?php endif; ?>
 
   <?php
@@ -120,7 +166,7 @@ include 'libnav.php';
 
 <!-- Internal Page Searchbox -->
 <?php
-  if(!drupal_is_front_page()) {
+  if(!drupal_is_front_page() && $campus !== 'utlc') {
     include 'lai-header-in-search.php';
   }
 ?>
@@ -185,7 +231,7 @@ include 'libnav.php';
 
 </div> <!-- closing hero div -->
 
-<?php if(!drupal_is_front_page()): ?>
+<?php if(!drupal_is_front_page() && $campus !== 'utlc'): ?>
 		<div class="promotional-six-col" id="internal-featured-services">
 				<div class="promo-items-item">
                                 <div class="promo-label">

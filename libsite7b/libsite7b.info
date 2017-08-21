@@ -23,16 +23,15 @@ features[] = logo
 features[] = name
 features[] = favicon
 
-stylesheets[all][0] = css/reset.css
-stylesheets[all][1] = css/style.css
-stylesheets[all][2] = css/custom-drupal.css
-stylesheets[all][3] = css/node.css
-stylesheets[all][4] = css/front.css
-stylesheets[all][5] = css/topheader.css
-stylesheets[all][6] = css/bootstrap-pillaged.css
-stylesheets[all][7] = css/footer.css
-stylesheets[all][8] = css/homepage.css
-stylesheets[all][9] = css/header.css
+stylesheets[all][0] = css/style.css
+stylesheets[all][1] = css/custom-drupal.css
+stylesheets[all][2] = css/node.css
+stylesheets[all][3] = css/front.css
+stylesheets[all][4] = css/topheader.css
+stylesheets[all][5] = css/bootstrap-pillaged.css
+stylesheets[all][6] = css/footer.css
+stylesheets[all][7] = css/homepage.css
+stylesheets[all][8] = css/header.css
 
 scripts[] = js/script.js
 
