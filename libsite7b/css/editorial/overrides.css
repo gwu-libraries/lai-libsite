@@ -128,3 +128,12 @@ ul.nav-menu li li, .sub-menu-group .leaf-section-title {
   font-weight: 700 !important;
   text-transform: uppercase;
 }
+
+.view-libraries-events h3 {
+  margin-top: .5em;
+  font-size: 20px;
+}
+
+.date .date-display-single, .date-display-single, .date .date-display-start, .date-display-start, .date .date-display-end, .date-display-end {
+  font-size: 1em;
+}
