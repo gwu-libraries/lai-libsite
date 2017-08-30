@@ -23,7 +23,7 @@
                                                         <li class='leaf'><a href='" . $front_page . "utlc/programs/teaching-day-2017'>Teaching Day 2017</a></li>
                                                         <li class='leaf'><a href='" . $front_page . "utlc/services/utlc-consultation-form'>Teaching and Course Design Consultations</a></li>
                                                         <li class='leaf'><a href='" . $front_page . "utlc/programs/eportfolios'>ePortfolios</a></li>
-                                                        <li class='leaf'><a href='" . $front_page . "utlc/programs/early-career-faculty-program'>Early Career Faculty Program</a></li>
+                                                        <li class='leaf'><a href='" . $front_page . "utlc/programs/teaching-network-for-early-career-faculty'>Teaching Network for Early Career Faculty</a></li>
                                                 </ul>
                                                 </div>
                                         </li>
