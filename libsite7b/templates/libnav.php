@@ -62,6 +62,7 @@
 						<ul class='sub-menu-group'>
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "services'>LIBRARY SERVICES</a></li>
 							<li class='first leaf'><a href='https://writingcenter.gwu.edu/' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/writing-center');\">Writing Center</a>
+							<li class='leaf'><a href='https://lai.gwu.edu/stemworks' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/stemworks');\">STEMworks</a>
 							<li class='leaf'><a href='" . $front_page . "services/computers-wireless' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/computers-wireless');\">Computers & Wireless</a></li>
                                                         <li class='leaf'><a href='" . $front_page . "services/computers-wireless/printing' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/computers-wireless/printing');\">Printing</a></li>
 							<li class='leaf'><a href='" . $front_page . "services/off-campus-services' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/off-campus-students');\">Off-Campus Students</a></li>
