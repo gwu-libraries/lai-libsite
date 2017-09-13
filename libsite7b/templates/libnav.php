@@ -106,7 +106,7 @@
 							<li class='leaf'><a href='" . $front_page . "about/library-departments' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/departments');\">Library Departments</a></li>
                                                         <li class='leaf'><a target='_blank' href='https://lai.gwu.edu' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/lai');\">Libraries & Academic Innovation</a></li>
 							<li class='leaf'><a href='" . $front_page . "about/entrance-policies' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/entrance-policies');\">Entrance Policies</a></li>
-							<li class='leaf'><a href='" . $front_page . "strategic-plan' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/strategic-plan');\">Vision & Strategic Plan</a></li>
+							<li class='leaf'><a target='_blank' href='https://lai.gwu.edu/vision' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/strategic-plan');\">Vision</a></li>
 							<li class='leaf'><a href='" . $front_page . "about/giving' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/donor-info');\">Donor Information</a></li>
 							<li class='leaf'><a href='" . $front_page . "contact' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/contact-us');\">Contact Us</a></li>
 							<li class='last leaf'><a href='" . $front_page . "about' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/more');\">(more...)</a></li>
