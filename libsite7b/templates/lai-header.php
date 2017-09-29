@@ -205,7 +205,7 @@ include 'libnav.php';
     </div>
 
     <input type="text" aria-label="searchbox: enter your search terms here" placeholder="<?php echo $bentoPlaceholder; ?>"/>
-    <select id="catalog-options">
+    <select id="catalog-options" title="Narrow down your Books &amp; More search by selecting one of these options">
       <option>title</option>
       <option>journal title</option>
       <option selected="selected">keyword</option>
@@ -213,7 +213,7 @@ include 'libnav.php';
       <option>subject</option>
       <option>call number</option>
     </select>
-    <select id="journals-options">
+    <select id="journals-options" title="Narrow down your Browse Journals search by selecting one of these options">
       <option>title begins with</option>
       <option>title (exact)</option>
       <option selected="selected">title keywords</option>
