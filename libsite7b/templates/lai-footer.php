@@ -110,7 +110,7 @@
                           <a href="/contact">Contact Us</a><br>
                           <a href="/about/feedback">Send Feedback</a><br>
                           <a href="/about/facilities/maps">Maps &amp; Directions</a><br>
-                          <a href="http://library.gwu.edu/accessibility">Accessibility</a><br>
+                          <a href="/accessibility">Accessibility</a><br>
                           <a href="http://go.gwu.edu/gwlibraries">Give to GW Libraries</a><br>
                           <a target="_blank" href="https://lai.gwu.edu/staff-info">Staff Information</a><br>
                           <a href="https://<?php print $_SERVER['SERVER_NAME']; ?>/user">Staff Login</a><br>
