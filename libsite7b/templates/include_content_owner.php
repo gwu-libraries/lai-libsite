@@ -54,6 +54,6 @@ else {
 	$phoneString = "";
 }
 
-echo "<div class='content_owner'>" . $messageVar . "<a href='" . $formPath . "?page=http://library.gwu.edu" . $_SERVER["REQUEST_URI"] . "'>" . $contentOwnerName . "</a>" . $phoneString . " </div>";
+echo "<div class='content_owner'>" . $messageVar . "<a href='" . $formPath . "?page=https://library.gwu.edu" . $_SERVER["REQUEST_URI"] . "'>" . $contentOwnerName . "</a>" . $phoneString . " </div>";
 
 ?>
