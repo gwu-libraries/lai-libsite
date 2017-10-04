@@ -19,7 +19,7 @@
 <?php if ($_SERVER['SERVER_NAME'] != 'library.gwu.edu'): ?>
   <div class="staging-header-container">
     <div class="staging-header-message">
-      <span style="color:#FC2847">WARNING:</span> this is a test server for GW Libraries & Academic Innovation and is intended for internal use only. Content, functionality and design may not match the GW Libraries site (<a href="http://library.gwu.edu">library.gwu.edu</a>)
+      <span style="color:#FC2847">WARNING:</span> this is a test server for GW Libraries & Academic Innovation and is intended for internal use only. Content, functionality and design may not match the GW Libraries site (<a href="https://library.gwu.edu">library.gwu.edu</a>)
     </div>
   </div>
 <?php endif; ?>
