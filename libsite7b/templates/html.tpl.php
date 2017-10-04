@@ -9,19 +9,19 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge" >
   <meta property="og:description" name="description" content="GW Libraries at the George Washington University, including the Gelman Library on the Foggy Bottom Campus, Eckles Library at Mount Vernon Campus, and the Virginia Science and Technology Campus Library" />
-  <meta property="og:url" content="http://library.gwu.edu" />
+  <meta property="og:url" content="https://library.gwu.edu" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="<?php print $head_title; ?>" />
-  <meta property="og:image" content="http://library.gwu.edu/sites/all/themes/Libsite7/images/gw_iddol_libraries_4cp_pos_62h_cropped.png" />
+  <meta property="og:image" content="https://library.gwu.edu/sites/all/themes/Libsite7/images/gw_iddol_libraries_4cp_pos_62h_cropped.png" />
   <meta property="og:locale" content="en_US" />
-  <link rel="canonical" href="http://library.gwu.edu" />
+  <link rel="canonical" href="https://library.gwu.edu" />
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
 
   <!-- check for mobile opt-out (ignore media queries/responsive) and set viewport -->
   <?php echo $_SESSION['viewport']; ?>
 
-  <link type="text/plain" rel="author" href="http://library.gwu.edu/humans.txt" />
+  <link type="text/plain" rel="author" href="https://library.gwu.edu/humans.txt" />
 
   <!-- favicon -->
   <link rel="shortcut icon" href="<?php print base_path() ?><?php print drupal_get_path('theme', $themename); ?>/favicon.ico" type="image/x-icon" />
