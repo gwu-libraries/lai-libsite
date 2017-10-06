@@ -145,7 +145,7 @@
 	<?php endif; ?>
 	
 	<div class="primary-content-<?php echo $primwid ?>">
-		<section class="all-purpose-detail pane">
+		<section class="all-purpose-detail pane" aria-label="Primary Content">
 
       <?php if ($page['content_above_title']): ?>	
 			  <div id="content-above-title">
