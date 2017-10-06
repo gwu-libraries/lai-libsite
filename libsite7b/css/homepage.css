@@ -10,6 +10,16 @@
   display: none;
 }
 
+.page-title {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+
+
 /* Featured Services icons on homepage */
 
 /* these first 2 media queries are for the services block: 129 is the block no. on CA dev, 127 is no. on test.lib */
