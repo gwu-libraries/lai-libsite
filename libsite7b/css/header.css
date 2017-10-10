@@ -159,6 +159,7 @@
 }
 .sub-menu-group .leaf-section-title:hover {
   background-color: #0096d6;
+  background-color: #0079B0;
 }
 #secondary-nav ul li.expanded {
   border-width: 0;
@@ -388,6 +389,7 @@
   padding: 0;
   display: inline-block;
   background-color: #0096d6;
+  background-color: #0079B0;
   color: #fff;
   text-align: left;
   line-height: normal;
@@ -442,6 +444,7 @@
   padding: 0;
   display: block;
   background-color: #0096d6;
+  background-color: #0079B0;
   color: #fff;
   text-align: left;
 }
@@ -483,6 +486,7 @@
 }
 #search-dropdown  ul li:hover {
   background-color: #007FB7;
+  background-color: #006899;
 }
 #current-search-text {
   display: block;
@@ -552,6 +556,7 @@
   padding: 0;
   display: inline-block;
   background-color: #0096d6;
+  background-color: #0079B0;
   color: #fff;
   text-align: left;
 }
@@ -591,6 +596,7 @@
 }
 .search-dropdown  ul li:hover {
   background-color: #007FB7;
+  background-color: #006899;
 }
 .search-dropdown-inner {
   display: block;
