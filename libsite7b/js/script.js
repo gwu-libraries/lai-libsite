@@ -51,6 +51,32 @@
  // execute searches when the search form is submitted
   
   jQuery(document).ready(function(event) {
+
+    // Fixed position menus after scrolling down past their location on the page
+    if (jQuery(window).width() > 640) {
+/*
+      var navHeight = jQuery("#secondary-nav").outerHeight();
+      if (navHeight == null) navHeight = 0;
+*/
+      var drupalToolbarHeight = jQuery("#toolbar").outerHeight();
+      if (drupalToolbarHeight == null) drupalToolbarHeight = 0;
+      var warningHeight = jQuery(".staging-header-container").first().outerHeight();
+      if (warningHeight == null) warningHeight = 0;
+      var headerHeight = jQuery("#topheader-content").outerHeight();
+      if (headerHeight == null) headerHeight = 0;
+      var fixedHeight = drupalToolbarHeight + warningHeight + headerHeight;
+      jQuery(document).on("scroll", function() {
+        if (jQuery(document).scrollTop() > fixedHeight - drupalToolbarHeight) {
+          jQuery("#secondary-nav").css("position","fixed");
+          jQuery("#secondary-nav").css("z-index","10");
+          jQuery("#secondary-nav").css("top", drupalToolbarHeight + "px");
+        } else {
+          jQuery("#secondary-nav").css("position","static");
+        }
+      });
+    }
+
+
     jQuery("#search-form").on("submit", function(event) {
       event.preventDefault();
 
