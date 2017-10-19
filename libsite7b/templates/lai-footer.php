@@ -59,7 +59,7 @@
                           </div>
                           <div><?php echo $cityAdd; ?><br>
                             <br>
-                            <p class="mobile-show"><span class="phone" style="line-height: 1.5em;"><a href='<?php echo $phoneAddLink; ?>' class='tel'><?php echo $phoneAdd; ?></a></span></p>
+                            <p class="mobile-show"><span class="phone" style="line-height: 1.5em;"><a href='tel:<?php echo $phoneAddLink; ?>' class='tel'><?php echo $phoneAdd; ?></a></span></p>
                             <p class="mobile-hide" style="display: inline-block;"><span class="phone" style="line-height: 1.5em;"><?php echo $phoneAdd; ?></span></p>
                             <p><span style="line-height: 2.5em;"><?php echo $emailAdd; ?></span></p>
                           </div>
