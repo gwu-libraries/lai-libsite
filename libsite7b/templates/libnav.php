@@ -90,6 +90,7 @@
 							<li class='leaf'><a href='" . $front_page . "news-events/blogs-and-social-media' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/blogs-social');\">Blogs and Social Media</a></li>
 							<li class='leaf'><a href='" . $front_page . "news-events/vision' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/vision');\">Vision Magazine</a></li>
                                                         <li class='leaf'><a href='http://acadtech.gwu.edu/press-room' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/acadtech-pressroom');\">Academic Technologies Press Room</a></li>
+                                                        <li class='leaf'><a href='" . $front_page . "showcases' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/digital-showcases');\">Digital Showcases</a></li>
 						</ul>
 						</div>
 					</li>
