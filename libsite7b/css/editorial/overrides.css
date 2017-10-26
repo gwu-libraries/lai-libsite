@@ -136,3 +136,16 @@ ul.nav-menu li li, .sub-menu-group .leaf-section-title {
 .date .date-display-single, .date-display-single, .date .date-display-start, .date-display-start, .date .date-display-end, .date-display-end {
   font-size: 1em;
 }
+
+.lightblue:not(.ghost-button) a, .darkblue:not(.ghost-button) a, .green:not(.ghost-button) a {
+  color: #fff !important;
+}
+
+.lightblue:not(.ghost-button):hover a, .darkblue:not(.ghost-button):hover a, .green:not(.ghost-button):hover a {
+  color: #033C5A !important;
+}
+
+.yellow:not(.ghost-button) a {
+  color: #033C5A;
+}
+
