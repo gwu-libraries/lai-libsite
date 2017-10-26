@@ -219,9 +219,6 @@
 	
 <!-- GW Footer -->
 <?php include 'lai-footer.php'; include 'jsbottom.html';?>
-<?php
-// print '<pre>';
-// print_r($variables);
-// print_r($node);
-// print '</pre>';
-?>
+
+<?php /* The following line has been included to remove the title from pages where advanced users don't want it to appear. this function is part of the remove_title MODULE. */ ?>
+<?php remove_title(); ?>
