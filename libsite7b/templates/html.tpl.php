@@ -21,8 +21,6 @@
   <!-- check for mobile opt-out (ignore media queries/responsive) and set viewport -->
   <?php echo $_SESSION['viewport']; ?>
 
-  <link type="text/plain" rel="author" href="http://library.gwu.edu/humans.txt" />
-
   <!-- favicon -->
   <link rel="shortcut icon" href="<?php print base_path() ?><?php print drupal_get_path('theme', $themename); ?>/favicon.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="<?php print base_path() ?><?php print drupal_get_path('theme', $themename); ?>/apple-touch-icon-iphone.png" />
