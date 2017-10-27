@@ -221,4 +221,4 @@
 <?php include 'lai-footer.php'; include 'jsbottom.html';?>
 
 <?php /* The following line has been included to remove the title from pages where advanced users don't want it to appear. this function is part of the remove_title MODULE. */ ?>
-<?php if module_exists(remove_title) {remove_title();} ?>
+<?php if (module_exists('remove_title')) {remove_title();} ?>
