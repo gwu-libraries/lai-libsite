@@ -3449,6 +3449,36 @@ input.gsc-search-button-v2 {padding:6px !important;}
 
 }
 
+.view-grc-testimonials .views-field-body::before {
+  content: url(../images/icons/quote.png);
+  float: left;
+  margin-top: -.5em;
+  margin-bottom: -.5em;
+  margin-right: .2em;
+}
+
+.view-grc-testimonials blockquote {
+  margin: 0;
+}
+.view-grc-testimonials blockquote p {
+  font-style: italic;
+  font-family: "AvenirLT-Oblique", Helvetica, Arial, sans-serif;
+}
+
+.view-grc-testimonials .views-field-field-full-name, .view-grc-testimonials .views-field-field-information {
+  padding-left: 35px;
+  font-weight: bold;
+}
+
+.view-grc-testimonials .views-field-field-full-name {
+  color: #033c5a;
+}
+
+.view-grc-testimonials .views-row {
+  margin-bottom: 2em;
+}
+
+
 /****************** PRINT STYLES ************/
 
 @media all {
