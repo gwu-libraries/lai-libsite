@@ -86,7 +86,7 @@
 						<ul class='sub-menu-group'>
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "news-events'>NEWS & EVENTS</a></li>
 							<li class='first leaf'><a href='" . $front_page . "news-events' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/news');\">News</a></li>
-                                                        <li class='leaf'><a href='" . $front_page . "events' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/events');\">Upcoming Events</a></li>
+                                                        <li class='leaf'><a href='" . $front_page . "news-events/upcoming-events' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/events');\">Upcoming Events</a></li>
 							<li class='leaf'><a href='" . $front_page . "news-events/blogs-and-social-media' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/blogs-social');\">Blogs and Social Media</a></li>
 							<li class='leaf'><a href='https://lai.gwu.edu/magazine' onClick=\"ga('send','event','primary-nav','https://lai.gwu.edu/magazine');\" target='_blank'>Vision Magazine</a></li>
                                                         <li class='leaf'><a href='http://acadtech.gwu.edu/press-room' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/acadtech-pressroom');\">Academic Technologies Press Room</a></li>

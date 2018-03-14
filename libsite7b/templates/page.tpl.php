@@ -1,6 +1,10 @@
 <?php
+global $user;
   // Define the themename for drupal_get_path calls
   $themename = 'libsite7b';
+  $nid = $_GET['nid'];
+
+
 ?>
 
 <div id="container" class="three-six-three logo-slogan">
@@ -156,7 +160,10 @@
 		  <!-- page title -->
 	    <?php if(!drupal_is_front_page()): ?>
 	      <?php print render($title_prefix); ?>
-	        <?php if ($title): ?>
+                     		<?php if ( (in_array("administrator", $user->roles)) || (in_array("libraryhours", $user->roles)) ) { 
+			if (strpos($_SERVER['REQUEST_URI'],'library-hours')){ get_library_hours_tabs($nid); }
+			} ?>
+                          <?php if ($title): ?>
 	          <h1 class="page-title"><?php print $title; ?></h1>
 	        <?php endif; ?>
 	      <?php print render($title_suffix); ?>
