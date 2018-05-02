@@ -20,10 +20,10 @@
                                                 <ul class='sub-menu-group'>
                                                         <li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "utlc/programs'>PROGRAMS</a></li>
                                                         <li class='first leaf'><a href='" . $front_page . "utlc/programs/course-design-institute-cdi'>Course Design Institute (CDI)</a></li>
-                                                        <li class='leaf'><a href='" . $front_page . "utlc/programs/teaching-day-2017'>Teaching Day 2017</a></li>
+                                                        <li class='leaf'><a href='" . $front_page . "utlc/programs/teaching-day'>Teaching Day</a></li>
                                                         <li class='leaf'><a href='" . $front_page . "utlc/services/utlc-consultation-form'>Teaching and Course Design Consultations</a></li>
-                                                        <li class='leaf'><a href='" . $front_page . "utlc/programs/eportfolios'>ePortfolios</a></li>
                                                         <li class='leaf'><a href='" . $front_page . "utlc/programs/teaching-network-for-early-career-faculty'>Teaching Network for Early Career Faculty</a></li>
+                                                        <li class='leaf'><a href='" . $front_page . "utlc/programs-and-services/online-faculty-development'>Online Faculty Development</a></li>
                                                 </ul>
                                                 </div>
                                         </li>

@@ -219,7 +219,7 @@ include 'libnav.php';
       <option selected="selected">title keywords</option>
       <option>ISSN</option>
     </select>
-      <input type="submit" value="Go"/>
+      <input type="submit" value="Go" id="go" onClick="ga('send','event','search','/search-all');" >
     </form>
     <p id="home-search-explanation">
       Articles and books, plus library databases, <a href="http://libguides.gwu.edu/">research guides</a> and tutorials
@@ -315,11 +315,26 @@ function searchDropdown(passedThis) {
   jQuery("#search-form input[type=text]").focus();
   jQuery("#catalog-options").hide();
   jQuery("#journals-options").hide();
+  if (passedThis.attr("id") == "search-all") {
+	  jQuery("#go").remove();
+      jQuery("#search-form").append('<input id="go" class="search-all" type="submit" value="Go" title="Search" onClick="ga(\'send\',\'event\',\'search\',\'/search-all\');" alt="Search"> ');  
+  }
+  if (passedThis.attr("id") == "search-articlesplus") {
+	  jQuery("#go").remove();
+      jQuery("#search-form").append('<input id="go" class="search-articlesplus" type="submit" value="Go" title="Search" onClick="ga(\'send\',\'event\',\'search\',\'/search-articlesplus\');" alt="Search"> ');    }
   if (passedThis.attr("id") == "search-catalog") {
     jQuery("#catalog-options").show();
+	  jQuery("#go").remove();
+      jQuery("#search-form").append('<input id="go" class="search-catalog" type="submit" value="Go" title="Search" onClick="ga(\'send\',\'event\',\'search\',\'/search-catalog\');" alt="Search"> ');  
   }
   if (passedThis.attr("id") == "search-journals") {
     jQuery("#journals-options").show();
+	  jQuery("#go").remove();
+      jQuery("#search-form").append('<input id="go" class="search-journals" type="submit" value="Go" title="Search" onClick="ga(\'send\',\'event\',\'search\',\'/search-journals\');" alt="Search"> ');  
+  }
+  if (passedThis.attr("id") == "search-website") {
+	  jQuery("#go").remove();
+      jQuery("#search-form").append('<input id="go" class="search-website" type="submit" value="Go" title="Search" onClick="ga(\'send\',\'event\',\'search\',\'/search-website\');" alt="Search"> ');  
   }
 }
 

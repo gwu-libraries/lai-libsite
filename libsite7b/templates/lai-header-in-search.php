@@ -50,7 +50,7 @@
 		  <option selected="selected">title keywords</option>
 		  <option>ISSN</option>
 		</select>
-		<input type="image" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png" alt="Submit search"/>
+		<input type="image" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png" alt="Submit search" id="go" onClick="ga('send','event','search','/search-all');"/>
 	  </form>
 	</div>
 
@@ -64,13 +64,32 @@
 	  jQuery("#search-form input[type=text]").focus();
 	  jQuery("#catalog-options").hide();
 	  jQuery("#journals-options").hide();
-	  if (this.id == "search-catalog") {
-	    jQuery("#catalog-options").show();
-	  }
-	  if (this.id == "search-journals") {
-	    jQuery("#journals-options").show();
-	  }
+if (this.id == "search-all") {
+    jQuery("#go").remove();
+    jQuery("#search-form").append("<input type=\"image\" src=\"<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png\" alt=\"Submit search\" id=\"go\" class=\"search-all\" onClick=\"ga('send','event','search','/search-all');\" /> ");  
+  }
+  if (this.id == "search-articlesplus") {
+    jQuery("#go").remove();
+    jQuery("#search-form").append("<input type=\"image\" src=\"<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png\" alt=\"Submit search\" id=\"go\" class=\"search-articlesplus\" onClick=\"ga('send','event','search','/search-articlesplus');\" /> ");  
+  }
+  if (this.id == "search-catalog") {
+    jQuery("#catalog-options").show();
+    jQuery("#go").remove();
+    jQuery("#search-form").append("<input type=\"image\" src=\"<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png\" alt=\"Submit search\" id=\"go\" class=\"search-catalog\" onClick=\"ga('send','event','search','/search-catalog');\" />");  
+  }
+  if (this.id == "search-journals") {
+    jQuery("#journals-options").show();
+    jQuery("#go").remove();
+    jQuery("#search-form").append("<input type=\"image\" src=\"<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png\" alt=\"Submit search\" id=\"go\" class=\"search-journals\" onClick=\"ga('send','event','search','/search-journals');\" /> ");  
+  }
+  if (this.id == "search-website") {
+    jQuery("#go").remove();
+    jQuery("#search-form").append("<input type=\"image\" src=\"<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png\" alt=\"Submit search\" id=\"go\" class=\"search-website\" onClick=\"ga('send','event','search','/search-website');\" /> ");  
+  }
   });
+
+
+	 
 
 	jQuery("#search-dropdown").on("click", "a", function(e) {
 	  e.preventDefault();

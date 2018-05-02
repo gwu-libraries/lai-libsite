@@ -79,6 +79,8 @@
                         <?php elseif ($campus == "eckles"): ?>
                           <p><a href="https://twitter.com/eckleslibrary" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/twitter-logo.png" style="width: 33px; height: 26px;"></a></p>
                           <p><a href="https://twitter.com/eckleslibrary" target="_blank">Follow us on Twitter</a></p>
+                          <p><a href="https://instagram.com/eckleslibrary" alt="logo: Instagram" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/198px-Instagram_logo_2016.svg.png" style="width: 33px; height: 26px;"></a></p>
+                          <p><a href="https://instagram.com/eckleslibrary" target="_blank">Follow us on Instagram</a></p>
                           <p><a href="https://www.facebook.com/eckleslibrary" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
                           <p><a href="https://www.facebook.com/eckleslibrary">Like us on Facebook</a></p>
 
