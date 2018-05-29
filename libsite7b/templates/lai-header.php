@@ -380,6 +380,14 @@ jQuery("#search-input, #primo-dropdown-copy li").on("keyup", function(e) {
   }
 });
 
+// Show on click the dropdown with the search query next to the scopes if something's been typed in (it could have previously been hidden by tabbing focus away)
+jQuery("#search-input").on("click", function(e) {
+  var query = jQuery("#search-input").val().trim();
+  if (query != "") { // Only bother if something's been typed
+    jQuery("#primo-dropdown-copy").show();
+  }
+});
+
 // Run a search if clicking directly on a scope in the copy of what the user has typed
 jQuery("#primo-dropdown-copy li").on("click", function() {
   jQuery("#current-scope").text(jQuery(this).find(".search-scope").text());
