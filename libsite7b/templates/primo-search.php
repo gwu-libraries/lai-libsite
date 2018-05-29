@@ -1,4 +1,3 @@
-  <div id="internal-search">
     <form id="search-form">
       <div id="primo-container">
         <!-- The main search box/input -->
@@ -38,4 +37,3 @@
        </button>
       </div>
     </form>
-  </div>
