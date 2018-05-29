@@ -324,4 +324,79 @@ jQuery("#scope-dropdown").on("mouseleave", function() {
   jQuery(this).find("ul").hide();
 });
 
+
+/* Populate a list below the search input with a copy of what the user is typing, as a shortcut to the scopes */
+jQuery("#primo-dropdown-copy").html(jQuery("#scope-dropdown ul").clone().css("min-width",jQuery("#search-input").outerWidth()).show());
+jQuery("#primo-dropdown-copy li").wrapInner('<span class="search-scope"></span>');
+jQuery("#primo-dropdown-copy li").prepend(jQuery("#primo-go svg").clone());
+jQuery("#primo-dropdown-copy li").prepend('<span class="search-query"></span>');
+jQuery("#primo-dropdown-copy li").on("focus", function(e) {
+  jQuery("#primo-dropdown-copy li").removeClass("highlightedQuery");
+  jQuery(this).addClass("highlightedQuery");
+});
+jQuery("#search-input, #primo-dropdown-copy li").on("keyup", function(e) {
+  var query = jQuery("#search-input").val().trim();
+  if (query != "") { // Only bother if something's been typed
+    if (e.which != 13) { // If it's not the Enter key
+      jQuery("#primo-dropdown-copy .search-query").text(query);
+      jQuery("#primo-dropdown-copy").show();
+    } else {
+      // If hitting Enter when focus is on a scoped option, use that scope
+      jQuery("#current-scope").text(jQuery(".highlightedQuery .search-scope").text());
+      jQuery("#search-form").submit();
+    }
+    var searchQueries = jQuery("#primo-dropdown-copy li");
+    var nearestQuery = searchQueries.filter(".highlightedQuery");
+    var nearestQueryIndex = searchQueries.index(nearestQuery);
+    // Can't use .focus() alone for these since that removes the cursor from the text input, thus losing the keyup event,
+    // but do use .focus() if the user has already lost focus in the output by tabbing out into the options
+    if (e.which == 38) { // Up arrow
+      if (nearestQuery.length == 0) {
+        searchQueries.removeClass("highlightedQuery");
+        searchQueries.last().addClass("highlightedQuery");
+        if (e.target.id !== "search-input") searchQueries.last().focus();
+      } else {
+        searchQueries.removeClass("highlightedQuery");
+        searchQueries.eq(nearestQueryIndex - 1).addClass("highlightedQuery");
+        if (e.target.id !== "search-input") searchQueries.eq(nearestQueryIndex - 1).focus();
+      }
+      e.preventDefault(); // page scrolling
+    }
+    if (e.which == 40) { // Down arrow
+      if (nearestQueryIndex == searchQueries.length - 1) {
+        searchQueries.removeClass("highlightedQuery");
+        searchQueries.first().addClass("highlightedQuery");
+        if (e.target.id !== "search-input") searchQueries.first().focus();
+      } else {
+        searchQueries.removeClass("highlightedQuery");
+        searchQueries.eq(nearestQueryIndex + 1).addClass("highlightedQuery");
+        if (e.target.id !== "search-input") searchQueries.eq(nearestQueryIndex + 1).focus();
+      }
+      e.preventDefault(); // page scrolling
+    }
+  } else {
+    jQuery("#primo-dropdown-copy").hide();
+  }
+});
+
+// Run a search if clicking directly on a scope in the copy of what the user has typed
+jQuery("#primo-dropdown-copy li").on("click", function() {
+  jQuery("#current-scope").text(jQuery(this).find(".search-scope").text());
+  jQuery("#search-form").submit();
+});
+
+// If hitting Enter when highlight is on a scoped option, use that scope.  Calling this on keyup above doesn't work for #search-input since the form is sumbitted before keyup is called
+jQuery("#search-input").on("keydown", function(e) {
+  if (e.which == 13 && jQuery(".highlightedQuery").length == 1) {
+    jQuery("#current-scope").text(jQuery(".highlightedQuery .search-scope").text());
+  }
+});
+
+// Prevent page scrolling on up/down arrow when going through options in primo-dropdown-copy (keyup wasn't enough)
+jQuery("#primo-dropdown-copy li").on("keydown", function(e) {
+  if (e.which == 38 || e.which == 40) {
+    e.preventDefault();
+  }
+});
+
 </script>
