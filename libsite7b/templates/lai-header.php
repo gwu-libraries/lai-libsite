@@ -327,6 +327,7 @@ jQuery("#scope-dropdown").on("mouseleave", function() {
 
 /* Populate a list below the search input with a copy of what the user is typing, as a shortcut to the scopes */
 jQuery("#primo-dropdown-copy").html(jQuery("#scope-dropdown ul").clone().css("min-width",jQuery("#search-input").outerWidth()).show());
+jQuery("#primo-dropdown-copy li").removeAttr("id");
 jQuery("#primo-dropdown-copy li").wrapInner('<span class="search-scope"></span>');
 jQuery("#primo-dropdown-copy li").prepend(jQuery("#primo-go svg").clone());
 jQuery("#primo-dropdown-copy li").prepend('<span class="search-query"></span>');
@@ -396,6 +397,30 @@ jQuery("#search-input").on("keydown", function(e) {
 jQuery("#primo-dropdown-copy li").on("keydown", function(e) {
   if (e.which == 38 || e.which == 40) {
     e.preventDefault();
+  }
+});
+
+// These are to undo above keyup that triggers the dropdowns to be shown on keys like up/down/tab
+jQuery("#current-scope").on("focusout", function(e) {
+  if (e.relatedTarget == null || e.relatedTarget.id == "search-input") {
+    jQuery("#scope-dropdown ul").hide();
+  }
+});
+jQuery("#search-input").on("focusout", function(e) {
+  if (e.relatedTarget == null || jQuery(e.relatedTarget).closest("#search-form").length == 0) {
+    jQuery("#primo-dropdown-copy").hide();
+  }
+});
+
+// Hide dropdowns if you click away from them or tab away from them
+jQuery("#scope-dropdown ul").on("focusout", function(e) {
+  if (e.relatedTarget == null || jQuery("#" + e.relatedTarget.id).closest(jQuery(this)).length == 0) {
+    jQuery(this).hide();
+  }
+});
+jQuery("#primo-dropdown-copy").on("focusout", function(e) {
+  if (e.relatedTarget == null || jQuery(e.relatedTarget).closest(jQuery(this)).length == 0 && e.relatedTarget.id != "search-form") {
+    jQuery(this).hide();
   }
 });
 
