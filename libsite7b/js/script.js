@@ -1,45 +1,28 @@
 // gwSearch Function can be called from anywhere on the site
-  function gwSearch(searchTool, searchString, windowTarget, subSelector){
+  function gwSearch(searchTool, searchString, windowTarget){
 
-    var bentoSearchBase = "/search-all?query=";
-    var articlesPlusSearchBase = "http://gw.summon.serialssolutions.com/search?s.q=";
-    var articlesPlusSearchTail = "&s.fvf%5B%5D=ContentType%2CNewspaper+Article%2Ct";
-    var finditSearchBase = "http://findit.library.gwu.edu/search?q=";
-    var journalTitleSearchBase = "http://findit.library.gwu.edu/?V=1.0&N=100&L=UZ4UG4LZ9G&C=";
-    var journalTitleSearchTail = "&S=T_W_A";
+    var primoBase = "https://wrlc-gwu.primo.exlibrisgroup.com/discovery/";
+    var primoEverythingBase = "search?vid=01WRLC_GWA:live&query=any,contains,";
+    var primoEverythingTail = "&tab=Everything&search_scope=DN_and_CI";
+    var primoWRLCBase = "search?vid=01WRLC_GWA:live&query=any,contains,";
+    var primoWRLCTail = "&tab=WRLC&search_scope=DiscoveryNetwork";
+    var primoArticlesBase = "search?vid=01WRLC_GWA:live&query=any,contains,";
+    var primoArticlesTail = "&tab=CentralIndex&search_scope=CentralIndex&sortby=rank&mfacet=rtype,include,articles,1";
+    var primoReservesBase = "search?query=any,contains,";
+    var primoReservesTail = "&tab=CourseReserves&search_scope=CourseReserves&vid=01WRLC_GWA:live&offset=0";
     var websiteSearchBase = "/search/node?keys=";
         
     var searchStringClean = encodeURIComponent(searchString);
     var searchURL = "";
 
-    if (searchTool == "Search All") {
-        searchURL = bentoSearchBase + searchStringClean;
-    } else if (searchTool == "Books & More") {
-        if (subSelector == "keyword"){
-            searchURL = finditSearchBase + searchStringClean;
-        } else if (subSelector == "title") {
-            searchURL = finditSearchBase + "title:%22" + searchStringClean + "%22";
-        } else if (subSelector == "author") {
-            searchURL = finditSearchBase + "author:%22" + searchStringClean + "%22";
-        } else if (subSelector == "subject") {
-            searchURL = finditSearchBase + "subjectterms:" + searchStringClean;
-        } else if (subSelector == "call number") {
-            searchURL = finditSearchBase + "lccallnum:" + searchStringClean;
-        } else if (subSelector == "journal title") {
-            searchURL = finditSearchBase + "titlecombined:" + searchStringClean + "&facet=ContentType%3AJournal+%2F+eJournal&facet=ContentType%3ANewspaper&page=1";
-        } 
-    } else if (searchTool == "ArticlesPlus" ){
-        searchURL = articlesPlusSearchBase + searchStringClean + articlesPlusSearchTail;
-    } else if (searchTool == "Browse Journals"){
-        if (subSelector == "title keywords") {
-            searchURL = journalTitleSearchBase + searchStringClean + "&S=T_W_A";
-        } else if (subSelector == "title begins with") {
-            searchURL = journalTitleSearchBase + searchStringClean + "&S=A_T_B";
-        } else if (subSelector == "title (exact)") {
-            searchURL = journalTitleSearchBase + searchStringClean + "&S=A_T_M";
-        } else if (subSelector == "ISSN") { 
-            searchURL = journalTitleSearchBase + searchStringClean + "&S=I_M";
-        }
+    if (searchTool == "Catalog + Articles") {
+        searchURL = primoBase + primoEverythingBase + searchStringClean + primoEverythingTail;
+    } else if (searchTool == "Catalog") {
+        searchURL = primoBase + primoWRLCBase + searchStringClean + primoWRLCTail;
+    } else if (searchTool == "Articles") {
+        searchURL = primoBase + primoArticlesBase + searchStringClean + primoArticlesTail;
+    } else if (searchTool == "Course Reserves") {
+        searchURL = primoBase + primoReservesBase + searchStringClean + primoReservesTail;
     } else if (searchTool == "Library Website") {
         searchURL = websiteSearchBase + searchStringClean;
     } else {
@@ -81,29 +64,13 @@
       event.preventDefault();
 
       // collect text box input
-      var currentSearchText = jQuery("#search-form [type=text]").val();
+      var currentSearchText = jQuery("#search-input").val();
 
-      // collect selected search type conditional is for different element for home and interior pages
-      if (jQuery("#current-search-text-a").length) {
-        var currentSearchTool = jQuery("#current-search-text-a").text();
-      } else {
-        var currentSearchTool = jQuery(".current-search-text").text();
-      }
+      // collect selected search type
+      var currentSearchTool = jQuery("#current-scope").text().trim();
 
-      // if the search type has a sub selector, collect that
-      if (currentSearchTool == "Books & More") {
-        currentSubSelector = jQuery("#catalog-options option:selected").text();
-      } else if (currentSearchTool == "Browse Journals") {
-        currentSubSelector = jQuery("#journals-options option:selected").text();
-      }
-
-      // run the search conditional for extra argument in the event of a subselector
-      if (currentSearchTool == "Books & More" || currentSearchTool == "Browse Journals") {
-        gwSearch(currentSearchTool, currentSearchText, "_self", currentSubSelector);
-      }
-      else {
-        gwSearch(currentSearchTool, currentSearchText, "_self");
-      }
+      // run the search
+      gwSearch(currentSearchTool, currentSearchText, "_self");
     });
 
     // Scripts for Digital Showcases
