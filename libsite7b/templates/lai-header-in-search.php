@@ -9,7 +9,7 @@
         <div class="primo-divider"></div>
         <!-- The clickable menu of search scopes available -->
         <div id="scope-dropdown">
-          <span aria-haspopup="true" id="current-scope" tabindex="0">
+          <span aria-haspopup="true" id="current-scope" tabindex="0" title="Select an option to limit your search">
             Catalog + Articles
           </span>
           <ul>

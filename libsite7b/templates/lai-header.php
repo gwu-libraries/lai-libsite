@@ -185,7 +185,7 @@ include 'libnav.php';
         <div class="primo-divider"></div>
         <!-- The clickable menu of search scopes available -->
         <div id="scope-dropdown">
-          <span aria-haspopup="true" id="current-scope" tabindex="0">
+          <span aria-haspopup="true" id="current-scope" tabindex="0" title="Select an option to limit your search">
             Catalog + Articles
           </span>
           <ul>
@@ -319,6 +319,10 @@ function searchDropdown(passedThis) {
   }
 }
 
+jQuery("#current-scope").on("click", function() {
+  jQuery("#scope-dropdown ul").show();
+});
+
 jQuery("#scope-dropdown").on("keydown", function(e) {
   var ul = jQuery(this).find("ul");
   if (ul.is(":hidden")) {
@@ -346,7 +350,9 @@ jQuery("#scope-dropdown").on("keydown", function(e) {
 });
 
 jQuery("#scope-dropdown").on("mouseenter mouseover", function() {
-  jQuery(this).find("ul").show();
+  if (jQuery("#current-scope").css("font-size") != "0px") {
+    jQuery(this).find("ul").show();
+  }
 });
 jQuery("#scope-dropdown").on("mouseleave", function() {
   jQuery(this).find("ul").hide();
