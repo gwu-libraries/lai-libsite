@@ -199,6 +199,9 @@ include 'libnav.php';
             <li id="search-course-reserves" tabindex="0" data-placeholder="history, ANTH 1001 ..." data-description="Materials placed on reserve at the library for specific courses">
               Course Reserves
             </li>
+            <li id="search-website" tabindex="0" data-placeholder="building hours, study rooms, Churchill ..." data-description="Library policies, news and events, and research help">
+              Library Website
+            </li>
           </ul>
         </div>
         <button id="primo-go" aria-label="Search" onclick="ga('send','event','search','primo-all')">
