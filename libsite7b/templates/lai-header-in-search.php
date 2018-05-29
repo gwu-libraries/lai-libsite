@@ -9,7 +9,9 @@
         <div class="primo-divider"></div>
         <!-- The clickable menu of search scopes available -->
         <div id="scope-dropdown">
-          <span aria-haspopup="true" id="current-scope" tabindex="0">Catalog + Articles</span>
+          <span aria-haspopup="true" id="current-scope" tabindex="0">
+            Catalog + Articles
+          </span>
           <ul>
             <li id="search-all" tabindex="0" data-placeholder="<?php echo $bentoPlaceholder; ?>" data-description="Articles and books, plus library databases and &lt;a href=&quot;http://libguides.gwu.edu/&quot;&gt;research guides&lt;/a&lt;">
               Catalog + Articles

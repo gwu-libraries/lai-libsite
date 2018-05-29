@@ -255,6 +255,7 @@
 #internal-search #search-input {
   height: 36px;
   height: auto;
+  padding-left: .5em;
 }
 
 #primo-dropdown-copy {
@@ -274,6 +275,10 @@
   border: 1px solid #e1e1e1;
   border-width: 0 1px 0 0;
   width: 1px;
+  margin-left: .5em;
+}
+#internal-search .primo-divider {
+  height: 20px;
 }
 
 #scope-dropdown {
@@ -297,18 +302,22 @@
   margin-left: 1em;
 }
 
-#current-scope::after {
+#current-scope::after, #scope-dropdown li::after {
   content: '\25BC'; /* Triangle */
   transform: scaleY(.6) scaleX(1);
-  padding-left: .5em;
+  padding-left: .25em;
+}
+
+#scope-dropdown li::after {
+  color: transparent;
 }
 
 #scope-dropdown ul {
   display: none;
   white-space: nowrap;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: -2px;
+  right: -16px;
   z-index: 4;
   color: #3a3a3a;
   background-color: #fff;
@@ -318,7 +327,7 @@
   list-style-type: none;
 }
 #internal-search #scope-dropdown ul {
-  top: -22px;
+  top: -23px;
 }
 #scope-dropdown li {
   margin: 0;
@@ -334,10 +343,6 @@
   #scope-dropdown {
     width: 2em;
     white-space: nowrap;
-  }
-  #scope-dropdown ul {
-    left: auto;
-    right: 0;
   }
   #current-scope {
     outline: none;
@@ -381,6 +386,9 @@
   margin: 0 1em 0;
   width: 30px;
   position: relative;
+}
+#internal-search #primo-go {
+  margin-right: .5em;
 }
 #primo-go:focus {
   outline: 1px dotted #0f7d00;
@@ -526,6 +534,9 @@
 #internal-search:hover {
   background-color: #007FB7;
 }
+#internal-search #search-form {
+  width: 450px;
+}
 @media screen and (max-width: 1080px) {
   #internal-search {
     bottom: auto;
@@ -533,6 +544,9 @@
     position: static;
     background-color: #004065;
     z-index: 10;
+  }
+  #internal-search #search-form {
+    width: auto;
   }
 }
 #internal-search #search-input {
