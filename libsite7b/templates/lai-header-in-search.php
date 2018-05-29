@@ -1,132 +1,36 @@
-<div id="internal-search">
-	  <form id="search-form">
-		<div id="search-dropdown">
-		  <div id="current-search-text"><a href="#" aria-haspopup="true" aria-controls="home-search-dropdown-ul" id="current-search-text-a">Search All</a></div>
-		  <ul id="home-search-dropdown-ul" aria-labelledby="current-search-text-a">
-			<li id="search-all" data-placeholder="<?php echo $bentoPlaceholder; ?>">
-			  <a href="#">
-		        <span class="search-label">Search All</span>
-		        <div class="search-description">Articles and books, plus library databases, research guides and tutorials</div>
-			  </a>
-		    </li>
-		    <li id="search-articlesplus" data-placeholder="Fidel Castro, sustainable energy, gender and identity ...">
-			  <a href="#">
-		        <span class="search-label">ArticlesPlus</span>
-			    <div class="search-description">Journal &amp; newspaper articles, plus books and more</div>
-			  </a>
-		    </li>
-		    <li id="search-catalog" data-placeholder="The Communist Manifesto, calculus, Blade Runner ...">
-		      <a href="#">
-		        <span class="search-label">Books & More</span>
-				<div class="search-description">Books (including e-books), A/V media, and archival resources</div>
-			  </a>
-			</li>
-			<li id="search-journals" data-placeholder="Wall Street Journal, Journal of American History, sociology, ...">
-		      <a href="#">
-				<span class="search-label">Browse Journals</span>
-				<div class="search-description">Online access to journals and other periodicals, by subject area and title</div>
-			  </a>
-			</li>
-			<li id="search-website" data-placeholder="building hours, study rooms, Churchill ...">
-		      <a href="#">
-				<span class="search-label">Library Website</span>
-				<div class="search-description">Library policies, news and events, and research help</div>
-			  </a>
-		    </li>
-		  </ul>
-		</div>
-	    <input type="text" aria-label="searchbox: enter your search terms here" placeholder="<?php echo $bentoPlaceholder; ?>" />
-		<select id="catalog-options">
-		  <option>title</option>
-		  <option>journal title</option>
-		  <option selected="selected">keyword</option>
-		  <option>author</option>
-		  <option>subject</option>
-		  <option>call number</option>
-		</select>
-		<select id="journals-options">
-		  <option>title begins with</option>
-		  <option>title (exact)</option>
-		  <option selected="selected">title keywords</option>
-		  <option>ISSN</option>
-		</select>
-		<input type="image" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png" alt="Submit search" id="go" onClick="ga('send','event','search','/search-all');"/>
-	  </form>
-	</div>
-
- <script type="text/javascript">
-
-  jQuery("#search-dropdown").on("click", "li", function() {
-	  jQuery("#current-search-text-a").text(jQuery(this).find(".search-label").text());
-	  jQuery("#search-form input[type=text]").attr("placeholder",jQuery(this).data("placeholder"));
-	  jQuery("#home-search-explanation").html(jQuery(this).find(".search-description").html());
-	  jQuery("#search-dropdown ul").hide();
-	  jQuery("#search-form input[type=text]").focus();
-	  jQuery("#catalog-options").hide();
-	  jQuery("#journals-options").hide();
-if (this.id == "search-all") {
-    jQuery("#go").remove();
-    jQuery("#search-form").append("<input type=\"image\" src=\"<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png\" alt=\"Submit search\" id=\"go\" class=\"search-all\" onClick=\"ga('send','event','search','/search-all');\" /> ");  
-  }
-  if (this.id == "search-articlesplus") {
-    jQuery("#go").remove();
-    jQuery("#search-form").append("<input type=\"image\" src=\"<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png\" alt=\"Submit search\" id=\"go\" class=\"search-articlesplus\" onClick=\"ga('send','event','search','/search-articlesplus');\" /> ");  
-  }
-  if (this.id == "search-catalog") {
-    jQuery("#catalog-options").show();
-    jQuery("#go").remove();
-    jQuery("#search-form").append("<input type=\"image\" src=\"<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png\" alt=\"Submit search\" id=\"go\" class=\"search-catalog\" onClick=\"ga('send','event','search','/search-catalog');\" />");  
-  }
-  if (this.id == "search-journals") {
-    jQuery("#journals-options").show();
-    jQuery("#go").remove();
-    jQuery("#search-form").append("<input type=\"image\" src=\"<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png\" alt=\"Submit search\" id=\"go\" class=\"search-journals\" onClick=\"ga('send','event','search','/search-journals');\" /> ");  
-  }
-  if (this.id == "search-website") {
-    jQuery("#go").remove();
-    jQuery("#search-form").append("<input type=\"image\" src=\"<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/search.png\" alt=\"Submit search\" id=\"go\" class=\"search-website\" onClick=\"ga('send','event','search','/search-website');\" /> ");  
-  }
-  });
-
-
-	 
-
-	jQuery("#search-dropdown").on("click", "a", function(e) {
-	  e.preventDefault();
-	});
-
-	jQuery("#search-dropdown").on("keydown", function(e) {
-	  var ul = jQuery(this).find("ul");
-	  if (ul.is(":hidden")) {
-	    ul.show();
-	  }
-	  var searchLabels = jQuery("#internal-search a");
-	  var nearestLabel = searchLabels.filter(":focus");
-	  var nearestLabelIndex = searchLabels.index(searchLabels.filter(":focus"));
-	  if (e.which == 38) { // Up arrow
-	    if (nearestLabel.length == 0) {
-	      searchLabels.last().focus();
-	    } else {
-	      searchLabels.eq(nearestLabelIndex - 1).focus();
-	    }
-	    e.preventDefault(); // page scrolling
-	  }
-	  if (e.which == 40) { // Down arrow
-	    if (nearestLabelIndex == searchLabels.length - 1) {
-	      searchLabels.first().focus();
-	    } else {
-	      searchLabels.eq(nearestLabelIndex + 1).focus();
-	    }
-	    e.preventDefault(); // page scrolling
-	  }
-	});
-
-	jQuery("#search-dropdown").on("mouseenter mouseover", function(e) {
-	  jQuery(this).find("ul").show();
-	});
-	jQuery("#search-dropdown").on("mouseleave", function(e) {
-	  jQuery(this).find("ul").hide();
-	});
-
-
-  </script>
+  <div id="internal-search">
+    <form id="search-form">
+      <div id="primo-container">
+        <!-- The main search box/input -->
+        <input type="text" id="search-input" autocomplete="off" aria-label="searchbox: enter your search terms here" placeholder="<?php echo $bentoPlaceholder; ?>"/>
+        <!-- The div that gets populated with a copy of the entered text and shortcuts to the scopes -->
+        <div id="primo-dropdown-copy"></div>
+        <!-- The slash between the search input and the dropdown -->
+        <div class="primo-divider"></div>
+        <!-- The clickable menu of search scopes available -->
+        <div id="scope-dropdown">
+          <span aria-haspopup="true" id="current-scope" tabindex="0">Catalog + Articles</span>
+          <ul>
+            <li id="search-all" tabindex="0" data-placeholder="<?php echo $bentoPlaceholder; ?>" data-description="Articles and books, plus library databases and &lt;a href=&quot;http://libguides.gwu.edu/&quot;&gt;research guides&lt;/a&lt;">
+              Catalog + Articles
+            </li>
+            <li id="search-catalog" tabindex="0" data-placeholder="The Communist Manifesto, calculus, Blade Runner ..." data-description="Books (including e-books), audio/video media, and archival resources in the Washington Research Libraries Consortium">
+              Catalog
+            </li>
+            <li id="search-articles" tabindex="0" data-placeholder="Fidel Castro, sustainable energy, gender and identity ..." data-description="Journal &amp; newspaper articles">
+              Articles
+            </li>
+            <li id="search-course-reserves" tabindex="0" data-placeholder="history, ANTH 1001 ..." data-description="Materials placed on reserve at the library for specific courses">
+              Course Reserves
+            </li>
+          </ul>
+        </div>
+        <button id="primo-go" aria-label="Search" onclick="ga('send','event','search','primo-all')">
+          <!-- Mangifying glass icon -->
+          <svg width="100%" height="100%" viewBox="0 0 24 24" y="264" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+            <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path>
+          </svg>
+       </button>
+      </div>
+    </form>
+  </div>
