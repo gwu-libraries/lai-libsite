@@ -17,7 +17,7 @@
 							<li class='leaf'><a href='http://findit.library.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/journals');\">Journals</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlecitation' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/journals-tut');\">Tutorial</a></span></li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/databases' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db');\">Subject Databases</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlesbytopic' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db-tut');\">Tutorial</a></span></li>
 							<li class='leaf'><a href='http://gw.summon.serialssolutions.com/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus');\">ArticlesPlus</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/aboutarticlesplus' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus-tut');\">Tutorial</a></span></li>
-							<li class='leaf'><a href='http://catalog.wrlc.org' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/classic-cat');\">Classic Catalog</a></li>
+							<li class='leaf'><a href='http://catalog.wrlc.org' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/classic-cat');\">Classic Catalog</a> <span class='leaf-extended'>(<a href='" .$front_page . "new-search-experience'>retiring July 2018</a>)</span></li>
                                                         <li class='leaf'><a href='https://scholarspace.library.gwu.edu' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/scholarspace');\">GW ScholarSpace</a></li>
 
 
@@ -140,7 +140,7 @@
 							<li class='leaf'><a href='http://findit.library.gwu.edu/'>Journals</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlecitation'>Tutorial</a></span></li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/databases'>Subject Databases</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlesbytopic'>Tutorial</a></span></li>
 							<li class='leaf'><a href='http://gw.summon.serialssolutions.com/'>ArticlesPlus</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/aboutarticlesplus'>Tutorial</a></span></li>
-							<li class='leaf'><a href='http://catalog.wrlc.org'>Classic Catalog</a><span class='leaf-extended'></li>
+							<li class='leaf'><a href='http://catalog.wrlc.org'>Classic Catalog</a> <span class='leaf-extended'>(<a href='" .$front_page . "new-search-experience'>retiring July 2018</a>)</span></li>
 
 							<li class='first leaf leaf-section-title'>Research Guides</li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/'>Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823'>Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054'>Psychology</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>
@@ -228,7 +228,7 @@
 							<li class='leaf'><a href='http://findit.library.gwu.edu/'>Journals</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlecitation'>Tutorial</a></span></li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/databases'>Subject Databases</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlesbytopic'>Tutorial</a></span></li>
 							<li class='leaf'><a href='http://gw.summon.serialssolutions.com/'>ArticlesPlus</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/aboutarticlesplus'>Tutorial</a></span></li>
-							<li class='leaf'><a href='http://catalog.wrlc.org'>Classic Catalog</a><span class='leaf-extended'></li>
+							<li class='leaf'><a href='http://catalog.wrlc.org'>Classic Catalog</a> <span class='leaf-extended'>(<a href='" .$front_page . "new-search-experience'>retiring July 2018</a>)</span></li>
 
 							<li class='first leaf leaf-section'>Research Guides</li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/'>Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823'>Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054'>Psychology</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>

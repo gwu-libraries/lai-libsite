@@ -190,7 +190,7 @@ include 'libnav.php';
         </li>
         <li id="search-catalog" data-placeholder="The Communist Manifesto, calculus, Blade Runner ...">
             <span class="search-label" tabindex="0">Books & More</span>
-        <div class="search-description">Books (including e-books), A/V media, and archival resources <div class="search-subdescription">Search the <a href="http://catalog.wrlc.org/">classic catalog</a></div></div>
+        <div class="search-description">Books (including e-books), A/V media, and archival resources <div class="search-subdescription">Search the <a href="http://catalog.wrlc.org/">classic catalog</a> (<a href="/new-search-experience">retiring July 2018</a>)</div></div>
       </li>
       <li id="search-journals" data-placeholder="Wall Street Journal, Journal of American History, sociology, ...">
         <span class="search-label" tabindex="0">Browse Journals</span>
