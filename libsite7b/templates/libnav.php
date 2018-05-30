@@ -223,20 +223,20 @@
 					  <div class='sub-nav'>
 						<ul class='sub-menu-group'>			
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "virginia/research'>RESEARCH</a></li>						
-							<li class='first leaf leaf-section'>Find</li>
+							<li class='first leaf leaf-section-title'>Find</li>
 							<li class='leaf'><a href='http://findit.library.gwu.edu/catalog/'>Books & Media</a><span class='leaf-extended'></li>
 							<li class='leaf'><a href='http://findit.library.gwu.edu/'>Journals</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlecitation'>Tutorial</a></span></li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/databases'>Subject Databases</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlesbytopic'>Tutorial</a></span></li>
 							<li class='leaf'><a href='http://gw.summon.serialssolutions.com/'>ArticlesPlus</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/aboutarticlesplus'>Tutorial</a></span></li>
 							<li class='leaf'><a href='http://catalog.wrlc.org'>Classic Catalog</a> <span class='leaf-extended'>(<a href='" .$front_page . "new-search-experience'>retiring July 2018</a>)</span></li>
 
-							<li class='first leaf leaf-section'>Research Guides</li>
+							<li class='first leaf leaf-section-title'>Research Guides</li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/'>Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823'>Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054'>Psychology</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/'>Topics: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12069'>Industry</a> | <a href='http://libguides.gwu.edu/content.php?pid=112501'>Grants</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>	
 							<li class='leaf'><a href='http://libguides.gwu.edu/'>Tools: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=23115'>RefWorks</a> | <a href='http://libguides.gwu.edu/content.php?pid=8881'>Citation Styles</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>							
 							<li class='leaf'><a href='" . $front_page . "howdoi'>How Do I? (Tutorials)</a></li>			
 			
-							<li class='leaf leaf-section'>Get Help</li>
+							<li class='leaf leaf-section-title'>Get Help</li>
 							<li class='leaf'><a href='" . $front_page . "virginia/reference'>Reference and Research Help</a></li>
 							<li class='leaf'><a href='" . $front_page . "howdoi'>How Do I? (Tutorials)</a></li>				
 						</ul>
