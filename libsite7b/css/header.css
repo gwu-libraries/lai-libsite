@@ -422,6 +422,7 @@
 }
 #home-search-explanation {
   margin: 1em auto;
+  max-width: 600px;
 }
 #home-search-explanation a {
   text-decoration: underline;
@@ -448,7 +449,7 @@
     top: 10px;
   }
   #primo-container, #home-search-explanation {
-    max-width: 640px;
+    max-width: 600px;
   }
 }
 @media screen and (max-width: 840px) {
@@ -488,6 +489,7 @@
     padding: 0 .5em .5em;
     box-sizing: border-box;
     text-shadow: none;
+    max-width: 640px;
   }
   #hero {
     min-height: 100px;

@@ -181,7 +181,7 @@ include 'libnav.php';
     include 'primo-search.php';
     ?>
     <p id="home-search-explanation">
-      Articles and books, plus library databases and <a href="http://libguides.gwu.edu/">research guides</a>
+      Articles, books, e-books, media, and archival resources at GW and WRLC libraries, plus <a href="http://libguides.gwu.edu/">research guides</a>
     </p>
 
   </div>

@@ -12,10 +12,10 @@
             Catalog + Articles
           </span>
           <ul>
-            <li id="search-all" tabindex="0" data-placeholder="<?php echo $bentoPlaceholder; ?>" data-description="Articles and books, plus library databases and &lt;a href=&quot;http://libguides.gwu.edu/&quot;&gt;research guides&lt;/a&gt;">
+            <li id="search-all" tabindex="0" data-placeholder="<?php echo $bentoPlaceholder; ?>" data-description="Articles, books, e-books, media, and archival resources at GW and WRLC libraries, plus &lt;a href=&quot;http://libguides.gwu.edu/&quot;&gt;research guides&lt;/a&gt;">
               Catalog + Articles
             </li>
-            <li id="search-catalog" tabindex="0" data-placeholder="The Communist Manifesto, calculus, Blade Runner ..." data-description="Books (including e-books), audio/video media, and archival resources in the Washington Research Libraries Consortium">
+            <li id="search-catalog" tabindex="0" data-placeholder="The Communist Manifesto, calculus, Blade Runner ..." data-description="Books, e-books, media, and archival resources at GW and WRLC libraries">
               Catalog
             </li>
             <li id="search-articles" tabindex="0" data-placeholder="Fidel Castro, sustainable energy, gender and identity ..." data-description="Journal &amp; newspaper articles">
