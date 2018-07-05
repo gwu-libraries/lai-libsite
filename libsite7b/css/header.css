@@ -3,7 +3,7 @@
 #topheader-container {
   background-image: none;
   background-color: transparent;
-  height: 120px;
+  min-height: 120px;
   margin-bottom: 0;
 }
 @media screen and (max-width: 960px) {
@@ -13,16 +13,16 @@
 }
 @media screen and (max-width: 640px) {
   #topheader-container {
-    height: 72px;
+    min-height: 72px;
   }
 }
 #topheader-content {
   position: relative;
   max-width: 1080px;
-  height: 120px;
+  min-height: 120px;
 }
 @media screen and (max-width:640px) {
-  #topheader-content { height: 64px; }
+  #topheader-content { min-height: 64px; }
 }
 #gwlogo-topheader, #gwlogo-topheader img {
   width: 250px;
