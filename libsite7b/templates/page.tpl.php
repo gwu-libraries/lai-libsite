@@ -179,8 +179,6 @@ global $user;
 
         <div id="frontPageBanner">
          	<?php print render($page['page_banner']); ?>
-    	  </div>
-    	
     	</div>
         
 	    <?php elseif ($_SERVER["REQUEST_URI"] == '/news-events'): ?>
@@ -220,7 +218,7 @@ global $user;
   	
 	</div> <!-- close primary content -->
   </div> <!-- close content container -->
-</main> <!-- close main container -->
+</main> <!-- close main container (opened in lai-header.php) -->
 
 <div class="clear"></div>
 	
