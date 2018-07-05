@@ -28,7 +28,7 @@
 
 							<li class="leaf"><a href="http://gw.summon.serialssolutions.com/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus');">ArticlesPlus</a><span class="leaf-extended"> | <a href="http://library.gwu.edu/howdoi/aboutarticlesplus" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus-tut');">Tutorial</a></span></li>
 
-							<li class="leaf"><a href="http://catalog.wrlc.org/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/classic-cat');">Classic Catalog</a></li>
+							<li class="leaf"><a href="http://catalog.wrlc.org/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/classic-cat');">Classic Catalog</a> <span class='leaf-extended'>(<a href='http://library.gwu.edu/new-search-experience'>retiring July 2018</a>)</span></li>
 
                                                         <li class="leaf"><a href="https://scholarspace.library.gwu.edu/" onclick="ga('send','event','primary-nav','/primary-nav/gelman/research/scholarspace');">GW ScholarSpace</a></li>
 
