@@ -76,7 +76,8 @@
   </div>
 <?php endif; ?>
 
-</div>
+</div> <!-- End #topheader-content -->
+</div> <!-- End #topheader-container -->
 
 
 <!-- Primary Navigation -->
