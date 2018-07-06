@@ -235,6 +235,10 @@
 
 #primo-container {
   background-color: #fff;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   border-radius: 3px;
   align-items: center;
@@ -249,6 +253,10 @@
   font-size: 1.2em;
   border-width: 0;
   box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   outline: none;
 }
@@ -272,6 +280,8 @@
 
 .primo-divider {
   height: 30px;
+  -webkit-transform: rotate(15deg);
+  -ms-transform-transform: rotate(15deg);
   transform: rotate(15deg);
   border: 1px solid #e1e1e1;
   border-width: 0 1px 0 0;
