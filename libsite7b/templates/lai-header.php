@@ -262,6 +262,7 @@ jQuery("#scope-dropdown").on("click", "li", function() {
 jQuery("#scope-dropdown").on("keypress", "li", function(e) {
   if (e.which == 13) { // Enter
     searchDropdown(jQuery(this));
+    jQuery("#primo-go").focus();
     e.preventDefault();
   }
 });
