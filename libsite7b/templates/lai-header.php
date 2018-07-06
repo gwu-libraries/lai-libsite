@@ -271,7 +271,6 @@ function searchDropdown(passedThis) {
   jQuery("#search-input").attr("placeholder",passedThis.data("placeholder"));
   jQuery("#home-search-explanation").html(passedThis.data("description"));
   jQuery("#scope-dropdown ul").hide();
-  jQuery("#search-input").focus();
   var passedId = passedThis.attr("id");
   if (passedId == "search-all") {
     jQuery("#primo-go").attr("onclick","ga('send','event','search','primo-all')");
@@ -291,28 +290,35 @@ jQuery("#current-scope").on("click", function() {
 });
 
 jQuery("#scope-dropdown").on("keydown", function(e) {
-  var ul = jQuery(this).find("ul");
-  if (ul.is(":hidden")) {
-    ul.show();
-  }
-  var scopes = jQuery(this).find("li");
-  var nearestScope = scopes.filter(":focus");
-  var nearestScopeIndex = scopes.index(nearestScope);
-  if (e.which == 38) { // Up arrow
-    if (nearestScope.length == 0) {
-      scopes.last().focus();
-    } else {
-      scopes.eq(nearestScopeIndex - 1).focus();
+  if (!e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey && e.which != 27) { // 27 = Escape key
+    var ul = jQuery(this).find("ul");
+    if (ul.is(":hidden")) {
+      ul.show();
     }
-    e.preventDefault(); // page scrolling
-  }
-  if (e.which == 40) { // Down arrow
-    if (nearestScopeIndex == scopes.length - 1) {
-      scopes.first().focus();
-    } else {
-      scopes.eq(nearestScopeIndex + 1).focus();
+    var scopes = jQuery(this).find("li");
+    var nearestScope = scopes.filter(":focus");
+    var nearestScopeIndex = scopes.index(nearestScope);
+    if (jQuery(document.activeElement).is("#current-scope")) {
+      var currentText = jQuery("#current-scope").text().trim();
+      jQuery("#scope-dropdown li").filter(function (){ // .focus() the element in the dropdown that's based on the #current-scope text
+        return jQuery(this).text().trim() == currentText;
+      }).focus();
+      e.preventDefault(); // Else the keypress on #scope-dropdown delegated to li will get called, which will call searchDropdown, which will close the dropdown immediately
+    } else if (e.which == 38) { // Up arrow
+      if (nearestScope.length == 0) {
+        scopes.last().focus();
+      } else {
+        scopes.eq(nearestScopeIndex - 1).focus();
+      }
+      e.preventDefault(); // page scrolling
+    } else if (e.which == 40) { // Down arrow
+      if (nearestScopeIndex == scopes.length - 1) {
+        scopes.first().focus();
+      } else {
+        scopes.eq(nearestScopeIndex + 1).focus();
+      }
+      e.preventDefault(); // page scrolling
     }
-    e.preventDefault(); // page scrolling
   }
 });
 
@@ -336,7 +342,7 @@ jQuery("#primo-dropdown-copy li").on("focus", function(e) {
   jQuery("#primo-dropdown-copy li").removeClass("highlightedQuery");
   jQuery(this).addClass("highlightedQuery");
 });
-jQuery("#search-input, #primo-dropdown-copy li").on("keyup", function(e) {
+jQuery("#search-input, #primo-dropdown-copy li").on("keyup input", function(e) {
   var query = jQuery("#search-input").val().trim();
   if (query != "") { // Only bother if something's been typed
     if (e.which != 13) { // If it's not the Enter key
@@ -430,6 +436,12 @@ jQuery("#scope-dropdown ul").on("focusout", function(e) {
 jQuery("#primo-dropdown-copy").on("focusout", function(e) {
   if (e.relatedTarget == null || jQuery(e.relatedTarget).closest(jQuery(this)).length == 0 && e.relatedTarget.id != "search-form") {
     jQuery(this).hide();
+  }
+});
+jQuery(document).on("touchstart", function(e) { // Touchstart for mobile devices where focusout wasn't working
+  dropdowns = jQuery("#scope-dropdown ul, #primo-dropdown-copy");
+  if (!dropdowns.is(e.target) && dropdowns.has(e.target).length === 0) {
+    dropdowns.hide();
   }
 });
 
