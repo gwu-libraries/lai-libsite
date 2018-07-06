@@ -60,7 +60,7 @@
     }
 
 
-    jQuery("#search-form").on("submit", function(event) {
+    jQuery("#primo-search-form").on("submit", function(event) {
       event.preventDefault();
 
       // collect text box input

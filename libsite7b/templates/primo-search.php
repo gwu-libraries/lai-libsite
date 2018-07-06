@@ -1,4 +1,4 @@
-    <form id="search-form">
+    <form id="primo-search-form">
       <div id="primo-container">
         <!-- The main search box/input -->
         <input type="text" id="search-input" autocomplete="off" aria-label="searchbox: enter your search terms here" placeholder="<?php echo $bentoPlaceholder; ?>"/>

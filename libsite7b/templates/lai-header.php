@@ -351,7 +351,7 @@ jQuery("#search-input, #primo-dropdown-copy li").on("keyup input", function(e) {
     } else {
       // If hitting Enter when focus is on a scoped option, use that scope
       jQuery("#current-scope").text(jQuery(".highlightedQuery .search-scope").text());
-      jQuery("#search-form").submit();
+      jQuery("#primo-search-form").submit();
     }
     var searchQueries = jQuery("#primo-dropdown-copy li");
     var nearestQuery = searchQueries.filter(".highlightedQuery");
@@ -398,7 +398,7 @@ jQuery("#search-input").on("click", function(e) {
 // Run a search if clicking directly on a scope in the copy of what the user has typed
 jQuery("#primo-dropdown-copy li").on("click", function() {
   jQuery("#current-scope").text(jQuery(this).find(".search-scope").text());
-  jQuery("#search-form").submit();
+  jQuery("#primo-search-form").submit();
 });
 
 // If hitting Enter when highlight is on a scoped option, use that scope.  Calling this on keyup above doesn't work for #search-input since the form is sumbitted before keyup is called
@@ -422,7 +422,7 @@ jQuery("#current-scope").on("focusout", function(e) {
   }
 });
 jQuery("#search-input").on("focusout", function(e) {
-  if (e.relatedTarget == null || jQuery(e.relatedTarget).closest("#search-form").length == 0) {
+  if (e.relatedTarget == null || jQuery(e.relatedTarget).closest("#primo-search-form").length == 0) {
     jQuery("#primo-dropdown-copy").hide();
   }
 });
@@ -434,7 +434,7 @@ jQuery("#scope-dropdown ul").on("focusout", function(e) {
   }
 });
 jQuery("#primo-dropdown-copy").on("focusout", function(e) {
-  if (e.relatedTarget == null || jQuery(e.relatedTarget).closest(jQuery(this)).length == 0 && e.relatedTarget.id != "search-form") {
+  if (e.relatedTarget == null || jQuery(e.relatedTarget).closest(jQuery(this)).length == 0 && e.relatedTarget.id != "primo-search-form") {
     jQuery(this).hide();
   }
 });

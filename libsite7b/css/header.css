@@ -489,7 +489,7 @@
   #home-search {
     position: static;
   }
-  #search-form {
+  #primo-search-form {
     background-color: #004065;
     padding: .5em;
     box-sizing: border-box;
@@ -517,14 +517,14 @@
 #home-search, #home-search-explanation, #home-search h3, #home-search a {
   color: #fff;
 }
-#search-form input[type=text]::-webkit-input-placeholder { color: #777; opacity: 1; }
-#search-form input[type=text]:-moz-placeholder { color: #777; opacity: 1 } /* FF 4-18 */
-#search-form input[type=text]::-moz-placeholder { color: #777; opacity: 1; } /* FF 19+ */
-#search-form input[type=text]:-ms-input-placeholder { color: #777; opacity: 1; } /* IE 10+ */
-#search-form input[type=text]:focus::-webkit-input-placeholder { opacity: 0.5; }
-#search-form input[type=text]:focus:-moz-placeholder { opacity: 0.5; }
-#search-form input[type=text]:focus::-moz-placeholder { opacity: 0.5; }
-#search-form input[type=text]:focus:-ms-input-placeholder { opacity: 0.5; }
+#primo-search-form input[type=text]::-webkit-input-placeholder { color: #777; opacity: 1; }
+#primo-search-form input[type=text]:-moz-placeholder { color: #777; opacity: 1 } /* FF 4-18 */
+#primo-search-form input[type=text]::-moz-placeholder { color: #777; opacity: 1; } /* FF 19+ */
+#primo-search-form input[type=text]:-ms-input-placeholder { color: #777; opacity: 1; } /* IE 10+ */
+#primo-search-form input[type=text]:focus::-webkit-input-placeholder { opacity: 0.5; }
+#primo-search-form input[type=text]:focus:-moz-placeholder { opacity: 0.5; }
+#primo-search-form input[type=text]:focus::-moz-placeholder { opacity: 0.5; }
+#primo-search-form input[type=text]:focus:-ms-input-placeholder { opacity: 0.5; }
 
 #hero h3 {
   font-size: 1.3em;
@@ -569,7 +569,7 @@
 #internal-search:hover {
   background-color: #007FB7;
 }
-#internal-search #search-form {
+#internal-search #primo-search-form {
   width: 450px;
 }
 @media screen and (max-width: 1080px) {
@@ -580,7 +580,7 @@
     background-color: #004065;
     z-index: 10;
   }
-  #internal-search #search-form {
+  #internal-search #primo-search-form {
     width: auto;
   }
 }
