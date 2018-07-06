@@ -271,6 +271,7 @@ function searchDropdown(passedThis) {
   jQuery("#current-scope").text(passedThis.text());
   jQuery("#search-input").attr("placeholder",passedThis.data("placeholder"));
   jQuery("#home-search-explanation").html(passedThis.data("description"));
+  jQuery(".highlightedQuery").removeClass("highlightedQuery");
   jQuery("#scope-dropdown ul").hide();
   var passedId = passedThis.attr("id");
   if (passedId == "search-all") {
