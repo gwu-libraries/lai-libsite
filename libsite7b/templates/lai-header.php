@@ -352,6 +352,8 @@ function searchDropdown(passedThis) {
 
 jQuery("#current-scope").on("click", function() {
   jQuery("#scope-dropdown ul").show();
+  jQuery("#primo-dropdown-copy").hide();
+  jQuery(".highlightedQuery").removeClass("highlightedQuery");
 });
 
 jQuery("#scope-dropdown").on("keydown", function(e) {
@@ -359,6 +361,8 @@ jQuery("#scope-dropdown").on("keydown", function(e) {
     var ul = jQuery(this).find("ul");
     if (ul.is(":hidden")) {
       ul.show();
+      jQuery("#primo-dropdown-copy").hide();
+      jQuery(".highlightedQuery").removeClass("highlightedQuery");
     }
     var scopes = jQuery(this).find("li");
     var nearestScope = scopes.filter(":focus");
@@ -390,6 +394,8 @@ jQuery("#scope-dropdown").on("keydown", function(e) {
 jQuery("#scope-dropdown").on("mouseenter mouseover", function() {
   if (jQuery("#current-scope").css("font-size") != "0px") {
     jQuery(this).find("ul").show();
+    jQuery("#primo-dropdown-copy").hide();
+    jQuery(".highlightedQuery").removeClass("highlightedQuery");
   }
 });
 jQuery("#scope-dropdown").on("mouseleave", function() {
@@ -407,12 +413,14 @@ jQuery("#primo-dropdown-copy li").on("focus", function(e) {
   jQuery("#primo-dropdown-copy li").removeClass("highlightedQuery");
   jQuery(this).addClass("highlightedQuery");
 });
-jQuery("#search-input, #primo-dropdown-copy li").on("keydown input focus", function(e) {
+jQuery("#search-input, #primo-dropdown-copy li").on("keydown input focus click", function(e) {
   var query = jQuery("#search-input").val().trim();
   if (query != "") { // Only bother if something's been typed
-    var searchQueries = jQuery("#primo-dropdown-copy li");
-    var nearestQuery = searchQueries.filter(".highlightedQuery");
-    var nearestQueryIndex = searchQueries.index(nearestQuery);
+    if (e.which == 38 || e.which == 40) { // Build these variables for use if the event was an up or down arrow (they're not otherwise used)
+      var searchQueries = jQuery("#primo-dropdown-copy li");
+      var nearestQuery = searchQueries.filter(".highlightedQuery");
+      var nearestQueryIndex = searchQueries.index(nearestQuery);
+    }
     // Can't use .focus() alone for these since that removes the cursor from the text input, thus losing the keydown event,
     // but do use .focus() if the user has already lost focus in the output by tabbing out into the options
     if (e.which == 38) { // Up arrow
@@ -443,6 +451,7 @@ jQuery("#search-input, #primo-dropdown-copy li").on("keydown input focus", funct
     }
   } else { // hide if there is no non-whitespace text
     jQuery("#primo-dropdown-copy").hide();
+    jQuery(".highlightedQuery").removeClass("highlightedQuery");
   }
 });
 
@@ -468,6 +477,7 @@ jQuery("#current-scope").on("focusout", function(e) {
 jQuery("#search-input").on("focusout", function(e) {
   if (e.relatedTarget == null || jQuery(e.relatedTarget).closest("#primo-search-form").length == 0) {
     jQuery("#primo-dropdown-copy").hide();
+    jQuery(".highlightedQuery").removeClass("highlightedQuery");
   }
 });
 
@@ -480,12 +490,14 @@ jQuery("#scope-dropdown ul").on("focusout", function(e) {
 jQuery("#primo-dropdown-copy").on("focusout", function(e) {
   if (e.relatedTarget == null || jQuery(e.relatedTarget).closest(jQuery(this)).length == 0 && e.relatedTarget.id != "primo-search-form") {
     jQuery(this).hide();
+    jQuery(".highlightedQuery").removeClass("highlightedQuery");
   }
 });
 jQuery(document).on("touchstart", function(e) { // Touchstart for mobile devices where focusout wasn't working
   dropdowns = jQuery("#scope-dropdown ul, #primo-dropdown-copy");
   if (!dropdowns.is(e.target) && dropdowns.has(e.target).length === 0) {
     dropdowns.hide();
+    jQuery(".highlightedQuery").removeClass("highlightedQuery");
   }
 });
 
