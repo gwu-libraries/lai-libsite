@@ -505,10 +505,6 @@
     text-shadow: none;
     max-width: 640px;
   }
-  #hero {
-    min-height: 100px;
-    width: auto !important; /* ? */
-  }
   #hero-image {
     display: none;
   }
