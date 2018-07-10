@@ -261,8 +261,25 @@ function preSubmissionCleanup() {
   jQuery(".highlightedQuery").removeClass("highlightedQuery");
   jQuery("#primo-dropdown-copy").hide();
 }
+// sendGAandSubmit() sends an event to Google Analytics with the search scope as determined by where one clicked/typed/highlighted,
+// then submits the search (unless GA is unavailable at the moment, in which case wait 1 second and submit the search anyway)
+function sendGAandSubmit(scope) {
+  // Set a timeout to run the search after a brief time if for some reason 'ga' is defined, but the hitCallback never comes back (e.g. Google goes down)
+  setTimeout(submitSearch, 1000);
+  var searchSubmitted = false;
+  function submitSearch() {
+    if (!searchSubmitted) {
+      searchSubmitted = true;
+      jQuery("#primo-search-form").submit();
+    }
+  }
+  ga('send','event','search', scope, {
+    // Submit the form after the GA event has indeed been sent
+    hitCallback: submitSearch
+  });
+}
 
-// Explicitly submit the form via JS (as opposed to <button type="submit">) so as to call Google Analytics beforehand, 
+// Explicitly submit the form via JS (as opposed to <button type="submit">) so as to call Google Analytics beforehand,
 // lest the event not actually get sent before leaving the page
 jQuery("#primo-go").on("click keypress", function(e) {
   if (e.type == "click" || e.which == 13 || e.which == 32) { // If clicking or hitting Enter (13) or Spacebar (32) on the magnifying glass
@@ -272,21 +289,18 @@ jQuery("#primo-go").on("click keypress", function(e) {
       scope = jQuery("#scope-dropdown li").filter(function (){ // find the element in the dropdown that's based on the #current-scope text
         return jQuery(this).text().trim() == scope;
       }).attr("id"); // and get its ID
-      ga('send','event','search', scope, {
-        hitCallback: function() { // Submit the form after the GA event has indeed been sent
-          jQuery("#primo-search-form").submit();
-        }
-      });
+      sendGAandSubmit(scope);
     } else {
       jQuery("#primo-search-form").submit();
     }
   }
 });
 
-// sendGAandSubmit() sends an event with Google Analytics (if found (sometimes it's not found if logged in or blocked))
-// so that we have an idea of how often the search is being run via a click/enter of the magnifying glass
+// preSubmit() is called if the user hits Enter with focus in the search input or the "autocomplete" dropdown (or clicks therein).
+// If Google Analytics is available (sometimes it's not found if logged in or it's blocked by the browser), send an appropriate event
+// so that we have an idea of how often the search is being run via a click/enter of the magnifying glass (see above)
 // vs. an Enter while on the #primo-dropdown-copy list vs. a click while on the #primo-dropdown-copy
-function sendGAandSubmit(event) {
+function preSubmit(event) {
   preSubmissionCleanup();
   if (typeof ga != "undefined" && !ga.q) { // Only bother if GA is loaded and available, otherwise submit the form straight away
     var scope = jQuery("#current-scope").text().trim();
@@ -297,11 +311,7 @@ function sendGAandSubmit(event) {
       scope = scope + "-autocomplete";
     }
     scope = scope + "-" + event.type;
-    ga('send','event','search', scope, {
-      hitCallback: function() { // Submit the form after the GA event has indeed been sent
-        jQuery("#primo-search-form").submit();
-      }
-    });
+    sendGAandSubmit(scope);
   } else {
     jQuery("#primo-search-form").submit();
   }
@@ -314,7 +324,7 @@ jQuery("#search-input").on("keypress", function(e) {
     if (jQuery(".highlightedQuery").length == 1) {
       jQuery("#current-scope").text(jQuery(".highlightedQuery .search-scope").text());
     }
-    sendGAandSubmit(e);
+    preSubmit(e);
     e.preventDefault();
     return false;
   }
@@ -438,7 +448,7 @@ jQuery("#search-input, #primo-dropdown-copy li").on("keydown input focus", funct
 // Run a search if clicking directly on a scope in the copy of what the user has typed
 jQuery("#primo-dropdown-copy li").on("click", function(e) {
   jQuery("#current-scope").text(jQuery(this).find(".search-scope").text());
-  sendGAandSubmit(e);
+  preSubmit(e);
 });
 
 // Prevent page scrolling on up/down arrow when going through options in primo-dropdown-copy (keyup wasn't enough)
