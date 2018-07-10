@@ -1,3 +1,9 @@
+    <?php
+      $internalID = "";
+      if (!drupal_is_front_page()) {
+        $internalID = "-internal";
+      }
+    ?>
     <form id="primo-search-form">
       <div id="primo-container">
         <!-- The main search box/input -->
@@ -12,24 +18,24 @@
             Catalog + Articles
           </span>
           <ul>
-            <li id="search-all" tabindex="0" data-placeholder="<?php echo $bentoPlaceholder; ?>" data-description="Articles, books, e-books, media, and archival resources at GW and WRLC libraries, plus &lt;a href=&quot;http://libguides.gwu.edu/&quot;&gt;research guides&lt;/a&gt;">
+            <li id="primo-all<?php echo $internalID; ?>" tabindex="0" data-placeholder="<?php echo $bentoPlaceholder; ?>" data-description="Articles, books, e-books, media, and archival resources at GW and WRLC libraries, plus &lt;a href=&quot;http://libguides.gwu.edu/&quot;&gt;research guides&lt;/a&gt;">
               Catalog + Articles
             </li>
-            <li id="search-catalog" tabindex="0" data-placeholder="The Communist Manifesto, calculus, Blade Runner ..." data-description="Books, e-books, media, and archival resources at GW and WRLC libraries">
+            <li id="primo-catalog<?php echo $internalID; ?>" tabindex="0" data-placeholder="The Communist Manifesto, calculus, Blade Runner ..." data-description="Books, e-books, media, and archival resources at GW and WRLC libraries">
               Catalog
             </li>
-            <li id="search-articles" tabindex="0" data-placeholder="Fidel Castro, sustainable energy, gender and identity ..." data-description="Journal &amp; newspaper articles">
+            <li id="primo-articles<?php echo $internalID; ?>" tabindex="0" data-placeholder="Fidel Castro, sustainable energy, gender and identity ..." data-description="Journal &amp; newspaper articles">
               Articles
             </li>
-            <li id="search-course-reserves" tabindex="0" data-placeholder="history, ANTH 1001 ..." data-description="Materials placed on reserve at the library for specific courses">
+            <li id="primo-course-reserves<?php echo $internalID; ?>" tabindex="0" data-placeholder="history, ANTH 1001 ..." data-description="Materials placed on reserve at the library for specific courses">
               Course Reserves
             </li>
-            <li id="search-website" tabindex="0" data-placeholder="building hours, study rooms, Churchill ..." data-description="Library policies, news and events, and research help">
+            <li id="primo-libsite<?php echo $internalID; ?>" tabindex="0" data-placeholder="building hours, study rooms, Churchill ..." data-description="Library policies, news and events, and research help">
               Library Website
             </li>
           </ul>
         </div>
-        <button id="primo-go" aria-label="Search" onclick="ga('send','event','search','primo-all')">
+        <button type="button" id="primo-go" aria-label="Search">
           <!-- Mangifying glass icon -->
           <svg width="100%" height="100%" viewBox="0 0 24 24" y="264" xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
             <path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z"></path>

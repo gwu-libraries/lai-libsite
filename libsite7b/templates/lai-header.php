@@ -256,6 +256,70 @@ include 'libnav.php';
 
 <script type="text/javascript">
 
+// Helper function when submitting the search form
+function preSubmissionCleanup() {
+  jQuery(".highlightedQuery").removeClass("highlightedQuery");
+  jQuery("#primo-dropdown-copy").hide();
+}
+
+// Explicitly submit the form via JS (as opposed to <button type="submit">) so as to call Google Analytics beforehand, 
+// lest the event not actually get sent before leaving the page
+jQuery("#primo-go").on("click keypress", function(e) {
+  if (e.type == "click" || e.which == 13 || e.which == 32) { // If clicking or hitting Enter (13) or Spacebar (32) on the magnifying glass
+    preSubmissionCleanup();
+    if (typeof ga != "undefined" && !ga.q) { // Only bother if GA is loaded and available, otherwise submit the form straight away
+      var scope = jQuery("#current-scope").text().trim();
+      scope = jQuery("#scope-dropdown li").filter(function (){ // find the element in the dropdown that's based on the #current-scope text
+        return jQuery(this).text().trim() == scope;
+      }).attr("id"); // and get its ID
+      ga('send','event','search', scope, {
+        hitCallback: function() { // Submit the form after the GA event has indeed been sent
+          jQuery("#primo-search-form").submit();
+        }
+      });
+    } else {
+      jQuery("#primo-search-form").submit();
+    }
+  }
+});
+
+// sendGAandSubmit() sends an event with Google Analytics (if found (sometimes it's not found if logged in or blocked))
+// so that we have an idea of how often the search is being run via a click/enter of the magnifying glass
+// vs. an Enter while on the #primo-dropdown-copy list vs. a click while on the #primo-dropdown-copy
+function sendGAandSubmit(event) {
+  preSubmissionCleanup();
+  if (typeof ga != "undefined" && !ga.q) { // Only bother if GA is loaded and available, otherwise submit the form straight away
+    var scope = jQuery("#current-scope").text().trim();
+    scope = jQuery("#scope-dropdown li").filter(function (){ // find the element in the dropdown that's based on the #current-scope text
+      return jQuery(this).text().trim() == scope;
+    }).attr("id"); // and get its ID
+    if (jQuery("#primo-dropdown-copy").is(":visible") && jQuery(".highlightedQuery").length) { // Add "-autocomplete" to the GA event if applicable
+      scope = scope + "-autocomplete";
+    }
+    scope = scope + "-" + event.type;
+    ga('send','event','search', scope, {
+      hitCallback: function() { // Submit the form after the GA event has indeed been sent
+        jQuery("#primo-search-form").submit();
+      }
+    });
+  } else {
+    jQuery("#primo-search-form").submit();
+  }
+}
+
+// This captures hitting "Enter" while in the search box.  Do this instead of letting the form submit naturally
+// to make sure GA is sent the event before leaving the page and thus potentially not getting fully sent (keyup is too late).
+jQuery("#search-input").on("keypress", function(e) {
+  if (e.which == 13) {
+    if (jQuery(".highlightedQuery").length == 1) {
+      jQuery("#current-scope").text(jQuery(".highlightedQuery .search-scope").text());
+    }
+    sendGAandSubmit(e);
+    e.preventDefault();
+    return false;
+  }
+});
+
 jQuery("#scope-dropdown").on("click", "li", function() {
   searchDropdown(jQuery(this));
 });
@@ -273,18 +337,6 @@ function searchDropdown(passedThis) {
   jQuery("#home-search-explanation").html(passedThis.data("description"));
   jQuery(".highlightedQuery").removeClass("highlightedQuery");
   jQuery("#scope-dropdown ul").hide();
-  var passedId = passedThis.attr("id");
-  if (passedId == "search-all") {
-    jQuery("#primo-go").attr("onclick","ga('send','event','search','primo-all')");
-  } else if (passedId == "search-catalog") {
-    jQuery("#primo-go").attr("onclick","ga('send','event','search','primo-catalog')");
-  } else if (passedId == "search-articles") {
-    jQuery("#primo-go").attr("onclick","ga('send','event','search','primo-articles')");
-  } else if (passedId == "search-course-reserves") {
-    jQuery("#primo-go").attr("onclick","ga('send','event','search','primo-course-reserves')");
-  } else if (passedId == "search-website") {
-    jQuery("#primo-go").attr("onclick","ga('send','event','search','primo-website')");
-  }
 }
 
 jQuery("#current-scope").on("click", function() {
@@ -344,21 +396,13 @@ jQuery("#primo-dropdown-copy li").on("focus", function(e) {
   jQuery("#primo-dropdown-copy li").removeClass("highlightedQuery");
   jQuery(this).addClass("highlightedQuery");
 });
-jQuery("#search-input, #primo-dropdown-copy li").on("keyup input", function(e) {
+jQuery("#search-input, #primo-dropdown-copy li").on("keydown input focus", function(e) {
   var query = jQuery("#search-input").val().trim();
   if (query != "") { // Only bother if something's been typed
-    if (e.which != 13) { // If it's not the Enter key
-      jQuery("#primo-dropdown-copy .search-query").text(query);
-      jQuery("#primo-dropdown-copy").show();
-    } else {
-      // If hitting Enter when focus is on a scoped option, use that scope
-      jQuery("#current-scope").text(jQuery(".highlightedQuery .search-scope").text());
-      jQuery("#primo-search-form").submit();
-    }
     var searchQueries = jQuery("#primo-dropdown-copy li");
     var nearestQuery = searchQueries.filter(".highlightedQuery");
     var nearestQueryIndex = searchQueries.index(nearestQuery);
-    // Can't use .focus() alone for these since that removes the cursor from the text input, thus losing the keyup event,
+    // Can't use .focus() alone for these since that removes the cursor from the text input, thus losing the keydown event,
     // but do use .focus() if the user has already lost focus in the output by tabbing out into the options
     if (e.which == 38) { // Up arrow
       if (nearestQuery.length == 0) {
@@ -371,8 +415,7 @@ jQuery("#search-input, #primo-dropdown-copy li").on("keyup input", function(e) {
         if (e.target.id !== "search-input") searchQueries.eq(nearestQueryIndex - 1).focus();
       }
       e.preventDefault(); // page scrolling
-    }
-    if (e.which == 40) { // Down arrow
+    } else if (e.which == 40) { // Down arrow
       if (nearestQueryIndex == searchQueries.length - 1) {
         searchQueries.removeClass("highlightedQuery");
         searchQueries.first().addClass("highlightedQuery");
@@ -383,31 +426,19 @@ jQuery("#search-input, #primo-dropdown-copy li").on("keyup input", function(e) {
         if (e.target.id !== "search-input") searchQueries.eq(nearestQueryIndex + 1).focus();
       }
       e.preventDefault(); // page scrolling
+    } else if (e.which != 13) { // If it's not the Enter key. Enter (submission) is instead handled in the #search-input/keypress event above
+      jQuery("#primo-dropdown-copy .search-query").text(query);
+      jQuery("#primo-dropdown-copy").show();
     }
-  } else {
+  } else { // hide if there is no non-whitespace text
     jQuery("#primo-dropdown-copy").hide();
   }
 });
 
-// Show on click the dropdown with the search query next to the scopes if something's been typed in (it could have previously been hidden by tabbing focus away)
-jQuery("#search-input").on("click", function(e) {
-  var query = jQuery("#search-input").val().trim();
-  if (query != "") { // Only bother if something's been typed
-    jQuery("#primo-dropdown-copy").show();
-  }
-});
-
 // Run a search if clicking directly on a scope in the copy of what the user has typed
-jQuery("#primo-dropdown-copy li").on("click", function() {
+jQuery("#primo-dropdown-copy li").on("click", function(e) {
   jQuery("#current-scope").text(jQuery(this).find(".search-scope").text());
-  jQuery("#primo-search-form").submit();
-});
-
-// If hitting Enter when highlight is on a scoped option, use that scope.  Calling this on keyup above doesn't work for #search-input since the form is sumbitted before keyup is called
-jQuery("#search-input").on("keydown", function(e) {
-  if (e.which == 13 && jQuery(".highlightedQuery").length == 1) {
-    jQuery("#current-scope").text(jQuery(".highlightedQuery .search-scope").text());
-  }
+  sendGAandSubmit(e);
 });
 
 // Prevent page scrolling on up/down arrow when going through options in primo-dropdown-copy (keyup wasn't enough)
@@ -417,7 +448,7 @@ jQuery("#primo-dropdown-copy li").on("keydown", function(e) {
   }
 });
 
-// These are to undo above keyup that triggers the dropdowns to be shown on keys like up/down/tab
+// These are to undo above keydown that triggers the dropdowns to be shown on keys like up/down/tab
 jQuery("#current-scope").on("focusout", function(e) {
   if (e.relatedTarget == null || e.relatedTarget.id == "search-input") {
     jQuery("#scope-dropdown ul").hide();
