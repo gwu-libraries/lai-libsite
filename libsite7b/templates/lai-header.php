@@ -254,6 +254,8 @@ include 'libnav.php';
 
 <?php endif; ?>
 
+
+<?php if($campus !== 'utlc'): ?>
 <script type="text/javascript">
 
 // Helper function when submitting the search form
@@ -489,3 +491,4 @@ jQuery(document).on("touchstart", function(e) { // Touchstart for mobile devices
 });
 
 </script>
+<?php endif; ?>
