@@ -310,8 +310,10 @@ function sendGAandSubmit(event) {
 // Explicitly submit the form via JS (as opposed to <button type="submit">) so as to call Google Analytics beforehand,
 // lest the event not actually get sent before leaving the page
 jQuery("#primo-go").on("click keypress", function(e) {
-  e.preventDefault(); // to prevent click from also getting called on the button keypress
-  if (e.type == "click" || e.which == 13 || e.which == 32) { // If clicking or hitting Enter (13) or Spacebar (32) on the magnifying glass
+  if (e.type == "click" || e.which == 13) { // If clicking or hitting Enter on the magnifying glass
+    if (e.type == "keypress") {
+      e.preventDefault(); // To prevent click from also getting called (since the browser apparently triggers a click on <button> Enter)
+    }
     sendGAandSubmit(e);
   }
 });
