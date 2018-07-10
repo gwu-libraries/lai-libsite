@@ -258,21 +258,23 @@ include 'libnav.php';
 <?php if($campus !== 'utlc'): ?>
 <script type="text/javascript">
 
-// Helper function when submitting the search form
-function preSubmissionCleanup() {
+// Called from a few places below, cleans up the form a bit right before finally submitting it
+function cleanupAndSubmit() {
   jQuery(".highlightedQuery").removeClass("highlightedQuery");
   jQuery("#primo-dropdown-copy").hide();
+  jQuery("#primo-search-form").submit();
 }
 // sendGAandSubmit() sends an event to Google Analytics with the search scope as determined by where one clicked/typed/highlighted,
 // then submits the search (unless GA is unavailable at the moment, in which case wait 1 second and submit the search anyway)
 function sendGAandSubmit(scope) {
+console.log(scope);
   // Set a timeout to run the search after a brief time if for some reason 'ga' is defined, but the hitCallback never comes back (e.g. Google goes down)
   setTimeout(submitSearch, 1000);
   var searchSubmitted = false;
   function submitSearch() {
     if (!searchSubmitted) {
       searchSubmitted = true;
-      jQuery("#primo-search-form").submit();
+      cleanupAndSubmit();
     }
   }
   ga('send','event','search', scope, {
@@ -285,7 +287,6 @@ function sendGAandSubmit(scope) {
 // lest the event not actually get sent before leaving the page
 jQuery("#primo-go").on("click keypress", function(e) {
   if (e.type == "click" || e.which == 13 || e.which == 32) { // If clicking or hitting Enter (13) or Spacebar (32) on the magnifying glass
-    preSubmissionCleanup();
     if (typeof ga != "undefined" && !ga.q) { // Only bother if GA is loaded and available, otherwise submit the form straight away
       var scope = jQuery("#current-scope").text().trim();
       scope = jQuery("#scope-dropdown li").filter(function (){ // find the element in the dropdown that's based on the #current-scope text
@@ -293,7 +294,7 @@ jQuery("#primo-go").on("click keypress", function(e) {
       }).attr("id"); // and get its ID
       sendGAandSubmit(scope);
     } else {
-      jQuery("#primo-search-form").submit();
+      cleanupAndSubmit();
     }
   }
 });
@@ -303,7 +304,6 @@ jQuery("#primo-go").on("click keypress", function(e) {
 // so that we have an idea of how often the search is being run via a click/enter of the magnifying glass (see above)
 // vs. an Enter while on the #primo-dropdown-copy list vs. a click while on the #primo-dropdown-copy
 function preSubmit(event) {
-  preSubmissionCleanup();
   if (typeof ga != "undefined" && !ga.q) { // Only bother if GA is loaded and available, otherwise submit the form straight away
     var scope = jQuery("#current-scope").text().trim();
     scope = jQuery("#scope-dropdown li").filter(function (){ // find the element in the dropdown that's based on the #current-scope text
@@ -315,7 +315,7 @@ function preSubmit(event) {
     scope = scope + "-" + event.type;
     sendGAandSubmit(scope);
   } else {
-    jQuery("#primo-search-form").submit();
+    cleanupAndSubmit();
   }
 }
 
