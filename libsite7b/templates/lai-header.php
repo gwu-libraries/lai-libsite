@@ -266,8 +266,7 @@ function cleanupAndSubmit() {
 }
 // sendGAandSubmit() sends an event to Google Analytics with the search scope as determined by where one clicked/typed/highlighted,
 // then submits the search (unless GA is unavailable at the moment, in which case wait 1 second and submit the search anyway)
-function sendGAandSubmit(scope) {
-console.log(scope);
+function sendGAandSubmit(scope,event) {
   // Set a timeout to run the search after a brief time if for some reason 'ga' is defined, but the hitCallback never comes back (e.g. Google goes down)
   setTimeout(submitSearch, 1000);
   var searchSubmitted = false;
@@ -277,7 +276,21 @@ console.log(scope);
       cleanupAndSubmit();
     }
   }
-  ga('send','event','search', scope, {
+  if (jQuery(event.target).closest("#internal-search").length) {
+    scope = scope + " (internal page)";
+  }
+  var eventType = event.type;
+  if (jQuery("#primo-dropdown-copy").is(":visible") && jQuery(".highlightedQuery").length) {
+    eventType = eventType + " (via autocomplete)";
+  }
+  if (jQuery(event.target).closest("#primo-go").length) {
+    eventType = eventType + " (via magnifying glass)";
+  }
+  ga('send', {
+    hitType: 'event',
+    eventCategory: 'search',
+    eventAction: eventType,
+    eventLabel: scope,
     // Submit the form after the GA event has indeed been sent
     hitCallback: submitSearch
   });
@@ -286,13 +299,14 @@ console.log(scope);
 // Explicitly submit the form via JS (as opposed to <button type="submit">) so as to call Google Analytics beforehand,
 // lest the event not actually get sent before leaving the page
 jQuery("#primo-go").on("click keypress", function(e) {
+  e.preventDefault();
   if (e.type == "click" || e.which == 13 || e.which == 32) { // If clicking or hitting Enter (13) or Spacebar (32) on the magnifying glass
     if (typeof ga != "undefined" && !ga.q) { // Only bother if GA is loaded and available, otherwise submit the form straight away
       var scope = jQuery("#current-scope").text().trim();
       scope = jQuery("#scope-dropdown li").filter(function (){ // find the element in the dropdown that's based on the #current-scope text
         return jQuery(this).text().trim() == scope;
       }).attr("id"); // and get its ID
-      sendGAandSubmit(scope);
+      sendGAandSubmit(scope,e);
     } else {
       cleanupAndSubmit();
     }
@@ -309,11 +323,7 @@ function preSubmit(event) {
     scope = jQuery("#scope-dropdown li").filter(function (){ // find the element in the dropdown that's based on the #current-scope text
       return jQuery(this).text().trim() == scope;
     }).attr("id"); // and get its ID
-    if (jQuery("#primo-dropdown-copy").is(":visible") && jQuery(".highlightedQuery").length) { // Add "-autocomplete" to the GA event if applicable
-      scope = scope + "-autocomplete";
-    }
-    scope = scope + "-" + event.type;
-    sendGAandSubmit(scope);
+    sendGAandSubmit(scope,event);
   } else {
     cleanupAndSubmit();
   }

@@ -1,9 +1,3 @@
-    <?php
-      $internalID = "";
-      if (!drupal_is_front_page()) {
-        $internalID = "-internal";
-      }
-    ?>
     <form id="primo-search-form">
       <div id="primo-container">
         <!-- The main search box/input -->
@@ -18,19 +12,19 @@
             Catalog + Articles
           </span>
           <ul>
-            <li id="primo-all<?php echo $internalID; ?>" tabindex="0" data-placeholder="<?php echo $bentoPlaceholder; ?>" data-description="Articles, books, e-books, media, and archival resources at GW and WRLC libraries, plus &lt;a href=&quot;http://libguides.gwu.edu/&quot;&gt;research guides&lt;/a&gt;">
+            <li id="primo-all" tabindex="0" data-placeholder="<?php echo $bentoPlaceholder; ?>" data-description="Articles, books, e-books, media, and archival resources at GW and WRLC libraries, plus &lt;a href=&quot;http://libguides.gwu.edu/&quot;&gt;research guides&lt;/a&gt;">
               Catalog + Articles
             </li>
-            <li id="primo-catalog<?php echo $internalID; ?>" tabindex="0" data-placeholder="The Communist Manifesto, calculus, Blade Runner ..." data-description="Books, e-books, media, and archival resources at GW and WRLC libraries">
+            <li id="primo-catalog" tabindex="0" data-placeholder="The Communist Manifesto, calculus, Blade Runner ..." data-description="Books, e-books, media, and archival resources at GW and WRLC libraries">
               Catalog
             </li>
-            <li id="primo-articles<?php echo $internalID; ?>" tabindex="0" data-placeholder="Fidel Castro, sustainable energy, gender and identity ..." data-description="Journal &amp; newspaper articles">
+            <li id="primo-articles" tabindex="0" data-placeholder="Fidel Castro, sustainable energy, gender and identity ..." data-description="Journal &amp; newspaper articles">
               Articles
             </li>
-            <li id="primo-course-reserves<?php echo $internalID; ?>" tabindex="0" data-placeholder="history, ANTH 1001 ..." data-description="Materials placed on reserve at the library for specific courses">
+            <li id="primo-course-reserves" tabindex="0" data-placeholder="history, ANTH 1001 ..." data-description="Materials placed on reserve at the library for specific courses">
               Course Reserves
             </li>
-            <li id="primo-libsite<?php echo $internalID; ?>" tabindex="0" data-placeholder="building hours, study rooms, Churchill ..." data-description="Library policies, news and events, and research help">
+            <li id="primo-libsite" tabindex="0" data-placeholder="building hours, study rooms, Churchill ..." data-description="Library policies, news and events, and research help">
               Library Website
             </li>
           </ul>
