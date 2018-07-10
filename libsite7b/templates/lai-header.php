@@ -456,10 +456,12 @@ jQuery("#search-input, #primo-dropdown-copy li").on("keydown input focus click",
   }
 });
 
-// Run a search if clicking directly on a scope in the copy of what the user has typed
-jQuery("#primo-dropdown-copy li").on("click", function(e) {
-  jQuery("#current-scope").text(jQuery(this).find(".search-scope").text());
-  sendGAandSubmit(e);
+// Run a search if clicking directly on a scope in the copy of what the user has typed (or if have tabbed to it)
+jQuery("#primo-dropdown-copy li").on("click keydown", function(e) {
+  if (e.type == "click" || e.which == 13) {
+    jQuery("#current-scope").text(jQuery(this).find(".search-scope").text());
+    sendGAandSubmit(e);
+  }
 });
 
 // These are to undo above keydown that triggers the dropdowns to be shown on keys like up/down/tab
