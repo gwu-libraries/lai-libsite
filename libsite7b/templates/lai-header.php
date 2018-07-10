@@ -461,13 +461,6 @@ jQuery("#primo-dropdown-copy li").on("click", function(e) {
   sendGAandSubmit(e);
 });
 
-// Prevent page scrolling on up/down arrow when going through options in primo-dropdown-copy (keyup wasn't enough)
-jQuery("#primo-dropdown-copy li").on("keydown", function(e) {
-  if (e.which == 38 || e.which == 40) {
-    e.preventDefault();
-  }
-});
-
 // These are to undo above keydown that triggers the dropdowns to be shown on keys like up/down/tab
 jQuery("#current-scope").on("focusout", function(e) {
   if (e.relatedTarget == null || e.relatedTarget.id == "search-input") {
