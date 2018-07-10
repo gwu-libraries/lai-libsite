@@ -258,10 +258,15 @@ include 'libnav.php';
 <?php if($campus !== 'utlc'): ?>
 <script type="text/javascript">
 
+// Called from several places.  Basically, remove highlighting of any scope in the #primo-dropdown-copy list ("autocomplete")
+// any time the dropdown gets hidden, lest it determine scope inadvertently
+function hideAutocomplete() {
+  jQuery("#primo-dropdown-copy").hide();
+  jQuery(".highlightedQuery").removeClass("highlightedQuery");
+}
 // Called from a couple of places below, cleans up the form a bit right before finally submitting it
 function cleanupAndSubmit() {
-  jQuery(".highlightedQuery").removeClass("highlightedQuery");
-  jQuery("#primo-dropdown-copy").hide();
+  hideAutocomplete();
   jQuery("#primo-search-form").submit();
 }
 // sendGAandSubmit() sends an event to Google Analytics with the search scope as determined by where one clicked/typed/highlighted,
@@ -352,8 +357,7 @@ function searchDropdown(passedThis) {
 
 jQuery("#current-scope").on("click", function() {
   jQuery("#scope-dropdown ul").show();
-  jQuery("#primo-dropdown-copy").hide();
-  jQuery(".highlightedQuery").removeClass("highlightedQuery");
+  hideAutocomplete();
 });
 
 jQuery("#scope-dropdown").on("keydown", function(e) {
@@ -361,8 +365,7 @@ jQuery("#scope-dropdown").on("keydown", function(e) {
     var ul = jQuery(this).find("ul");
     if (ul.is(":hidden")) {
       ul.show();
-      jQuery("#primo-dropdown-copy").hide();
-      jQuery(".highlightedQuery").removeClass("highlightedQuery");
+      hideAutocomplete();
     }
     var scopes = jQuery(this).find("li");
     var nearestScope = scopes.filter(":focus");
@@ -394,8 +397,7 @@ jQuery("#scope-dropdown").on("keydown", function(e) {
 jQuery("#scope-dropdown").on("mouseenter mouseover", function() {
   if (jQuery("#current-scope").css("font-size") != "0px") {
     jQuery(this).find("ul").show();
-    jQuery("#primo-dropdown-copy").hide();
-    jQuery(".highlightedQuery").removeClass("highlightedQuery");
+    hideAutocomplete();
   }
 });
 jQuery("#scope-dropdown").on("mouseleave", function() {
@@ -450,8 +452,7 @@ jQuery("#search-input, #primo-dropdown-copy li").on("keydown input focus click",
       jQuery("#primo-dropdown-copy").show();
     }
   } else { // hide if there is no non-whitespace text
-    jQuery("#primo-dropdown-copy").hide();
-    jQuery(".highlightedQuery").removeClass("highlightedQuery");
+    hideAutocomplete();
   }
 });
 
@@ -469,8 +470,7 @@ jQuery("#current-scope").on("focusout", function(e) {
 });
 jQuery("#search-input").on("focusout", function(e) {
   if (e.relatedTarget == null || jQuery(e.relatedTarget).closest("#primo-search-form").length == 0) {
-    jQuery("#primo-dropdown-copy").hide();
-    jQuery(".highlightedQuery").removeClass("highlightedQuery");
+    hideAutocomplete();
   }
 });
 
@@ -482,15 +482,14 @@ jQuery("#scope-dropdown ul").on("focusout", function(e) {
 });
 jQuery("#primo-dropdown-copy").on("focusout", function(e) {
   if (e.relatedTarget == null || jQuery(e.relatedTarget).closest(jQuery(this)).length == 0 && e.relatedTarget.id != "primo-search-form") {
-    jQuery(this).hide();
-    jQuery(".highlightedQuery").removeClass("highlightedQuery");
+    hideAutocomplete();
   }
 });
 jQuery(document).on("touchstart", function(e) { // Touchstart for mobile devices where focusout wasn't working
   dropdowns = jQuery("#scope-dropdown ul, #primo-dropdown-copy");
   if (!dropdowns.is(e.target) && dropdowns.has(e.target).length === 0) {
-    dropdowns.hide();
-    jQuery(".highlightedQuery").removeClass("highlightedQuery");
+    hideAutocomplete();
+    jQuery("#scope-dropdown ul").hide();
   }
 });
 
