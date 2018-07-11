@@ -64,7 +64,7 @@
 @media screen and (max-width:720px) {
   #topheader-container {
     background-image: none;
-    height: 62px;
+    min-height: 62px;
     margin-bottom: 0;
   }
   #gwlogo-topheader img {
