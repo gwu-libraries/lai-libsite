@@ -394,10 +394,13 @@ jQuery("#scope-dropdown").on("keydown", function(e) {
   }
 });
 
+var scopeHoverEnabled = true; // Sometimes disable mouseenter/over if they're being triggered via a touch emulation
 jQuery("#scope-dropdown").on("mouseenter mouseover", function() {
-  if (jQuery("#current-scope").css("font-size") != "0px") {
-    jQuery(this).find("ul").show();
-    hideAutocomplete();
+  if (scopeHoverEnabled) {
+    if (jQuery("#current-scope").css("font-size") != "0px") {
+      jQuery(this).find("ul").show();
+      hideAutocomplete();
+    }
   }
 });
 jQuery("#scope-dropdown").on("mouseleave", function() {
@@ -488,11 +491,19 @@ jQuery("#primo-dropdown-copy").on("focusout", function(e) {
   }
 });
 jQuery(document).on("touchstart", function(e) { // Touchstart for mobile devices where focusout wasn't working
+  // set scopeHoverEnabled to false to disallow mouseenter/over on the scope dropdown if mouseenter/over is being triggered via touch emulation (reenabled below for devices with both touch and mouse events).
+  // Though I think perhaps this might only be a problem in the Chrome emulator and certain mobiles browsers that are requesting the desktop version of the site.
+  // In those situations, touch seems to also trigger mouseenter/over, which calls a show(), which then provides an unexpected place for the click to happen, which then triggers a hide(), so the dropdown never ends up being seen by the user.
+  scopeHoverEnabled = false;
   dropdowns = jQuery("#scope-dropdown ul, #primo-dropdown-copy");
   if (!dropdowns.is(e.target) && dropdowns.has(e.target).length === 0) {
     hideAutocomplete();
     jQuery("#scope-dropdown ul").hide();
   }
+});
+// Reenable mouseenter/over ability if a mousemove event is detected on #scope-dropdown (presumably for devices with both touch and mouse events)
+jQuery("#scope-dropdown").on("mousemove", function() {
+  scopeHoverEnabled = true;
 });
 
 </script>
