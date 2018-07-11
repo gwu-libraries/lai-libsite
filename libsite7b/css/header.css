@@ -244,6 +244,7 @@
   align-items: center;
   position: relative;
   margin: auto;
+  justify-content: space-between;
 }
 
 #search-input {
@@ -263,6 +264,18 @@
 #search-input::-ms-clear {
   height: 20px;
   width: 20px;
+}
+/* 
+In certain mobile devices, at small enough sizes and zoom turned on, the increased font-size of the homepage's search box doesn't seem to be playing well with flex-shrink, and the magnifying glass was going off-screen. 
+Setting text-size-adjust to 100% didn't seem to fix things, so setting a max-width with weird looking values as follows:
+ - 30px: magnifying glass width
+ - 1.666667em: magnifying glass horizontal margins of 2em divided by 1.2 (font-size adjustment)
+ - 2.5em: dropdown or arrow width and margin of 3em divided by 1.2 (font-size adjustment)
+ - .4166667em: tilted divider line width and margin of .5em divided by 1.2 (font-size adjustment)
+I originally tried calc(100% - 30px - (2em - 3em - .5em) / 1.2) but that didn't seem to work in the browsers where the font-size/flex conflict was occurring
+*/
+.page-node-1 #search-input {
+  max-width: calc(100% - 30px - 1.666667em - 2.5em - .4166667em);
 }
 #internal-search #search-input {
   height: 36px;
@@ -411,6 +424,8 @@
   margin: 0 1em 0;
   width: 30px;
   height: 30px;
+  min-width: 30px;
+  min-height: 30px;
   position: relative;
 }
 #internal-search #primo-go {
