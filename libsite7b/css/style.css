@@ -3224,6 +3224,7 @@ input.gsc-search-button-v2 {padding:6px !important;}
 		height: 70px;
 		width: 95%;
 		padding: 0 .5em;
+		box-sizing: border-box;
 		text-indent: 0;
 		display: inline-block;
 		background-color: initial;
@@ -3238,7 +3239,7 @@ input.gsc-search-button-v2 {padding:6px !important;}
 		height: auto;
 		width: auto;
 		padding: 0;
-		margin: 0;
+		margin: 0 -.5em 0 0;
 	}
 		
 	#secondary-nav ul.menu li {

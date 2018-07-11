@@ -120,7 +120,7 @@
     display: none;
   }
   #secondary-nav ul.menu li {
-    width: calc(33% - .5em);
+    width: calc(33.333% - .5em);
     background-color: #0096d6;
     display: inline-block;
     float: left;
@@ -261,6 +261,7 @@
   flex: 1;
   outline: none;
 }
+
 #search-input::-ms-clear {
   height: 20px;
   width: 20px;
