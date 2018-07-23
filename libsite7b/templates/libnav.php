@@ -42,7 +42,6 @@
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "collections'>COLLECTIONS</a></li>
 							<li class='first leaf'><a href='" . $front_page . "scrc' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/scrc');\">Special Collections Research Center</a></li>
 							<li class='leaf'><a href='" . $front_page . "grc' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/grc');\">Global Resources Center</a></li>
-							<li class='leaf'><a style='text-transform:none;' href='" . $front_page . "art-design' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/art-design');\">Art & Design Collection from the Corcoran</a></li>
 							<li class='leaf'><a href='http://teamstersarchives.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/teamstersarchives');\">Teamsters Labor History Research Center</a></li>
 							<li class='leaf'><a href='" . $front_page . "scrc/university-archives' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/scrc/university-archives');\">University Archives</a></li>
 							<li class='leaf'><a href='" . $front_page . "collections/kiev' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/kiev');\">Kiev Judaica Collection</a></li>
