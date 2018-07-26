@@ -209,8 +209,8 @@ include 'libnav.php';
                                 </div>
 				<div class="promo-items-item">
                                 <div class="promo-label">
-				<div class="promo-image"><a href="https://mylibrary.wrlc.org/" onclick="ga('send', 'event', 'service links', 'my account (internal <?php echo $campus; ?>)');"><img alt="icon: my library account" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-my-account.png"></a></div>
-									<h4 class="promo-title"><a href="https://mylibrary.wrlc.org/" onclick="ga('send', 'event', 'service links', 'my account (internal <?php echo $campus; ?>)');">My Account</a></h4>
+				<div class="promo-image"><a href="https://wrlc-gwu.primo.exlibrisgroup.com/discovery/account?vid=01WRLC_GWA:live&section=overview&lang=en" onclick="ga('send', 'event', 'service links', 'my account (internal <?php echo $campus; ?>)');"><img alt="icon: my library account" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/icon-my-account.png"></a></div>
+									<h4 class="promo-title"><a href="https://wrlc-gwu.primo.exlibrisgroup.com/discovery/account?vid=01WRLC_GWA:live&section=overview&lang=en" onclick="ga('send', 'event', 'service links', 'my account (internal <?php echo $campus; ?>)');">My Account</a></h4>
 </span>
 							</div>
                                 </div>
