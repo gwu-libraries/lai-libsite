@@ -76,7 +76,8 @@
   </div>
 <?php endif; ?>
 
-</div>
+</div> <!-- End #topheader-content -->
+</div> <!-- End #topheader-container -->
 
 
 <!-- Primary Navigation -->
@@ -165,64 +166,23 @@ include 'libnav.php';
   ?>
 
 <!-- Internal Page Searchbox -->
-<?php
-  if(!drupal_is_front_page() && $campus !== 'utlc') {
-    include 'lai-header-in-search.php';
-  }
-?>
+<?php if(!drupal_is_front_page() && $campus !== 'utlc'): ?>
+  <div id="internal-search">
+    <?php
+    include 'primo-search.php';
+    ?>
+  </div>
+<?php endif; ?>
 
 <!-- Homepage Searchbox -->
 <?php if(drupal_is_front_page()): ?>
   <div id="home-search">
     <h3>What would you like to find at the libraries today?</h3>
-    <form id="search-form">
-    <div class="search-dropdown">
-      <div class="search-dropdown-inner">
-      <a href="#" aria-haspopup="true" class="current-search-text">Search All</a>
-      <ul class="search-dropdown-ul">
-      <li id="search-all" data-placeholder="<?php echo $bentoPlaceholder; ?>">
-            <span class="search-label" tabindex="0">Search All</span>
-            <div class="search-description">Articles and books, plus library databases, <a href="http://libguides.gwu.edu/" tabindex="-1">research guides</a> and tutorials</div>
-        </li>
-        <li id="search-articlesplus" data-placeholder="Fidel Castro, sustainable energy, gender and identity ...">
-            <span class="search-label" tabindex="0">ArticlesPlus</span>
-          <div class="search-description">Journal &amp; newspaper articles, plus books and more</div>
-        </li>
-        <li id="search-catalog" data-placeholder="The Communist Manifesto, calculus, Blade Runner ...">
-            <span class="search-label" tabindex="0">Books & More</span>
-        <div class="search-description">Books (including e-books), A/V media, and archival resources <div class="search-subdescription">Search the <a href="http://catalog.wrlc.org/">classic catalog</a> (<a href="/new-search-experience">retiring July 2018</a>)</div></div>
-      </li>
-      <li id="search-journals" data-placeholder="Wall Street Journal, Journal of American History, sociology, ...">
-        <span class="search-label" tabindex="0">Browse Journals</span>
-        <div class="search-description">Online access to journals and other periodicals, by subject area and title</div>
-      </li>
-      <li id="search-website" data-placeholder="building hours, study rooms, Churchill ...">
-        <span class="search-label" tabindex="0">Library Website</span>
-        <div class="search-description">Library policies, news and events, and research help</div>
-        </li>
-      </ul>
-      </div>
-    </div>
-
-    <input type="text" aria-label="searchbox: enter your search terms here" placeholder="<?php echo $bentoPlaceholder; ?>"/>
-    <select id="catalog-options">
-      <option>title</option>
-      <option>journal title</option>
-      <option selected="selected">keyword</option>
-      <option>author</option>
-      <option>subject</option>
-      <option>call number</option>
-    </select>
-    <select id="journals-options">
-      <option>title begins with</option>
-      <option>title (exact)</option>
-      <option selected="selected">title keywords</option>
-      <option>ISSN</option>
-    </select>
-      <input type="submit" value="Go" id="go" onClick="ga('send','event','search','/search-all');" >
-    </form>
+    <?php
+    include 'primo-search.php';
+    ?>
     <p id="home-search-explanation">
-      Articles and books, plus library databases, <a href="http://libguides.gwu.edu/">research guides</a> and tutorials
+      Articles, books, e-books, media, and archival resources at GW and WRLC libraries, plus <a href="http://libguides.gwu.edu/">research guides</a>
     </p>
 
   </div>
@@ -294,85 +254,257 @@ include 'libnav.php';
 
 <?php endif; ?>
 
+
+<?php if($campus !== 'utlc'): ?>
 <script type="text/javascript">
 
-jQuery(".search-dropdown").on("click", ".search-dropdown-ul li", function() {
+// Called from several places.  Basically, remove highlighting of any scope in the #primo-dropdown-copy list ("autocomplete")
+// any time the dropdown gets hidden, lest it determine scope inadvertently
+function hideAutocomplete() {
+  jQuery("#primo-dropdown-copy").hide();
+  jQuery(".highlightedQuery").removeClass("highlightedQuery");
+}
+// Called from a couple of places below, cleans up the form a bit right before finally submitting it
+function cleanupAndSubmit() {
+  hideAutocomplete();
+  jQuery("#primo-search-form").submit();
+}
+// sendGAandSubmit() sends an event to Google Analytics with the search scope as determined by where one clicked/typed/highlighted,
+// then submits the search (unless GA is unavailable at the moment, in which case wait 1 second and submit the search anyway).
+// Send an appropriate event so that we have an idea of how often the search is being run via a click/enter of the magnifying glass
+// vs. hitting Enter while on the #primo-dropdown-copy list ("autocomplete") vs. a click while on the #primo-dropdown-copy list, etc.
+// When possible (when GA is reachable and the browser hasn't blocked things), wait till the event has indeed been sent before submitting the form.
+function sendGAandSubmit(event) {
+  if (typeof ga != "undefined" && !ga.q) { // Only bother with GA if it's loaded and available, otherwise submit the form straight away
+    // Set a timeout to run the search after a brief time if for some reason 'ga' is defined, but the hitCallback never comes back (e.g. Google goes down)
+    setTimeout(submitSearch, 1000);
+    var searchSubmitted = false;
+    function submitSearch() {
+      if (!searchSubmitted) {
+        searchSubmitted = true;
+        cleanupAndSubmit();
+      }
+    }
+    var scope = jQuery("#current-scope").text().trim();
+    scope = jQuery("#scope-dropdown li").filter(function (){ // find the element in the dropdown that's based on the #current-scope text
+      return jQuery(this).text().trim() == scope;
+    }).attr("id"); // and get its ID
+    if (jQuery(event.target).closest("#internal-search").length) {
+      scope = scope + " (internal page)";
+    }
+    var eventType = event.type;
+    if (jQuery("#primo-dropdown-copy").is(":visible") && jQuery(".highlightedQuery").length) {
+      eventType = eventType + " (via autocomplete)";
+    }
+    if (jQuery(event.target).closest("#primo-go").length) {
+      eventType = eventType + " (via magnifying glass)";
+    }
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'search',
+      eventAction: eventType,
+      eventLabel: scope,
+      // Submit the form after the GA event has indeed been sent
+      hitCallback: submitSearch
+    });
+  } else {
+    cleanupAndSubmit();
+  }
+}
+
+// Explicitly submit the form via JS (as opposed to <button type="submit">) so as to call Google Analytics beforehand,
+// lest the event not actually get sent before leaving the page
+jQuery("#primo-go").on("click keypress", function(e) {
+  if (e.type == "click" || e.which == 13) { // If clicking or hitting Enter on the magnifying glass
+    if (e.type == "keypress") {
+      e.preventDefault(); // To prevent click from also getting called (since the browser apparently triggers a click on <button> Enter)
+    }
+    sendGAandSubmit(e);
+  }
+});
+
+// This captures hitting "Enter" while in the search box.  Do this instead of letting the form submit naturally
+// to make sure GA is sent the event before leaving the page and thus potentially not getting fully sent (keyup is too late).
+jQuery("#search-input").on("keypress", function(e) {
+  if (e.which == 13) {
+    if (jQuery(".highlightedQuery").length == 1) {
+      jQuery("#current-scope").text(jQuery(".highlightedQuery .search-scope").text());
+    }
+    sendGAandSubmit(e);
+    e.preventDefault();
+    return false;
+  }
+});
+
+jQuery("#scope-dropdown").on("click", "li", function() {
   searchDropdown(jQuery(this));
 });
-jQuery(".search-label").on("keypress", function(e) {
+jQuery("#scope-dropdown").on("keypress", "li", function(e) {
   if (e.which == 13) { // Enter
-    searchDropdown(jQuery(this).parent());
+    searchDropdown(jQuery(this));
+    jQuery("#primo-go").focus();
     e.preventDefault();
   }
 });
 
 function searchDropdown(passedThis) {
-  jQuery(".current-search-text").text(passedThis.find(".search-label").text());
-  jQuery("#search-form input[type=text]").attr("placeholder",passedThis.data("placeholder"));
-  jQuery("#home-search-explanation").html(passedThis.find(".search-description").html());
-  jQuery(".search-dropdown ul").hide();
-  jQuery("#home-search-explanation").show();
-  jQuery("#search-form input[type=text]").focus();
-  jQuery("#catalog-options").hide();
-  jQuery("#journals-options").hide();
-  if (passedThis.attr("id") == "search-all") {
-	  jQuery("#go").remove();
-      jQuery("#search-form").append('<input id="go" class="search-all" type="submit" value="Go" title="Search" onClick="ga(\'send\',\'event\',\'search\',\'/search-all\');" alt="Search"> ');  
-  }
-  if (passedThis.attr("id") == "search-articlesplus") {
-	  jQuery("#go").remove();
-      jQuery("#search-form").append('<input id="go" class="search-articlesplus" type="submit" value="Go" title="Search" onClick="ga(\'send\',\'event\',\'search\',\'/search-articlesplus\');" alt="Search"> ');    }
-  if (passedThis.attr("id") == "search-catalog") {
-    jQuery("#catalog-options").show();
-	  jQuery("#go").remove();
-      jQuery("#search-form").append('<input id="go" class="search-catalog" type="submit" value="Go" title="Search" onClick="ga(\'send\',\'event\',\'search\',\'/search-catalog\');" alt="Search"> ');  
-  }
-  if (passedThis.attr("id") == "search-journals") {
-    jQuery("#journals-options").show();
-	  jQuery("#go").remove();
-      jQuery("#search-form").append('<input id="go" class="search-journals" type="submit" value="Go" title="Search" onClick="ga(\'send\',\'event\',\'search\',\'/search-journals\');" alt="Search"> ');  
-  }
-  if (passedThis.attr("id") == "search-website") {
-	  jQuery("#go").remove();
-      jQuery("#search-form").append('<input id="go" class="search-website" type="submit" value="Go" title="Search" onClick="ga(\'send\',\'event\',\'search\',\'/search-website\');" alt="Search"> ');  
-  }
+  jQuery("#current-scope").text(passedThis.text());
+  jQuery("#search-input").attr("placeholder",passedThis.data("placeholder"));
+  jQuery("#home-search-explanation").html(passedThis.data("description"));
+  jQuery(".highlightedQuery").removeClass("highlightedQuery");
+  jQuery("#scope-dropdown ul").hide();
 }
 
-jQuery(".search-dropdown").on("click", "a", function(e) {
-  e.preventDefault();
+jQuery("#current-scope").on("click", function() {
+  jQuery("#scope-dropdown ul").show();
+  hideAutocomplete();
 });
 
-jQuery(".search-dropdown").on("keydown", function(e) {
-  var ul = jQuery(this).find("ul");
-  if (ul.is(":hidden")) {
-    ul.show();
-  }
-  var searchLabels = jQuery(".search-label");
-  var nearestLabel = searchLabels.filter(":focus");
-  var nearestLabelIndex = searchLabels.index(searchLabels.filter(":focus"));
-  if (e.which == 38) { // Up arrow
-    if (nearestLabel.length == 0) {
-      searchLabels.last().focus();
-    } else {
-      searchLabels.eq(nearestLabelIndex - 1).focus();
+jQuery("#scope-dropdown").on("keydown", function(e) {
+  if (!e.shiftKey && !e.ctrlKey && !e.altKey && !e.metaKey && e.which != 27) { // 27 = Escape key
+    var ul = jQuery(this).find("ul");
+    if (ul.is(":hidden")) {
+      ul.show();
+      hideAutocomplete();
     }
-    e.preventDefault(); // page scrolling
-  }
-  if (e.which == 40) { // Down arrow
-    if (nearestLabelIndex == searchLabels.length - 1) {
-      searchLabels.first().focus();
-    } else {
-      searchLabels.eq(nearestLabelIndex + 1).focus();
+    var scopes = jQuery(this).find("li");
+    var nearestScope = scopes.filter(":focus");
+    var nearestScopeIndex = scopes.index(nearestScope);
+    if (jQuery(document.activeElement).is("#current-scope")) {
+      var currentText = jQuery("#current-scope").text().trim();
+      jQuery("#scope-dropdown li").filter(function (){ // .focus() the element in the dropdown that's based on the #current-scope text
+        return jQuery(this).text().trim() == currentText;
+      }).focus();
+      e.preventDefault(); // Else the keypress on #scope-dropdown delegated to li will get called, which will call searchDropdown, which will close the dropdown immediately
+    } else if (e.which == 38) { // Up arrow
+      if (nearestScope.length == 0) {
+        scopes.last().focus();
+      } else {
+        scopes.eq(nearestScopeIndex - 1).focus();
+      }
+      e.preventDefault(); // page scrolling
+    } else if (e.which == 40) { // Down arrow
+      if (nearestScopeIndex == scopes.length - 1) {
+        scopes.first().focus();
+      } else {
+        scopes.eq(nearestScopeIndex + 1).focus();
+      }
+      e.preventDefault(); // page scrolling
     }
-    e.preventDefault(); // page scrolling
   }
 });
 
-jQuery(".search-dropdown").on("mouseenter mouseover", function() {
-  jQuery(this).find("ul").show();
+var scopeHoverEnabled = true; // Sometimes disable mouseenter/over if they're being triggered via a touch emulation
+jQuery("#scope-dropdown").on("mouseenter mouseover", function() {
+  if (scopeHoverEnabled) {
+    if (jQuery("#current-scope").css("font-size") != "0px") {
+      jQuery(this).find("ul").show();
+      hideAutocomplete();
+    }
+  }
 });
-jQuery(".search-dropdown").on("mouseleave", function() {
+jQuery("#scope-dropdown").on("mouseleave", function() {
   jQuery(this).find("ul").hide();
 });
 
+
+/* Populate a list below the search input with a copy of what the user is typing, as a shortcut to the scopes */
+jQuery("#primo-dropdown-copy").html(jQuery("#scope-dropdown ul").clone().css("min-width",jQuery("#search-input").outerWidth()).show());
+jQuery("#primo-dropdown-copy li").removeAttr("id");
+jQuery("#primo-dropdown-copy li").wrapInner('<span class="search-scope"></span>');
+jQuery("#primo-dropdown-copy li").prepend(jQuery("#primo-go svg").clone());
+jQuery("#primo-dropdown-copy li").prepend('<span class="search-query"></span>');
+jQuery("#primo-dropdown-copy li").on("focus", function(e) {
+  jQuery("#primo-dropdown-copy li").removeClass("highlightedQuery");
+  jQuery(this).addClass("highlightedQuery");
+});
+jQuery("#search-input, #primo-dropdown-copy li").on("keydown input focus click", function(e) {
+  var query = jQuery("#search-input").val().trim();
+  if (query != "") { // Only bother if something's been typed
+    if (e.which == 38 || e.which == 40) { // Build these variables for use if the event was an up or down arrow (they're not otherwise used)
+      var searchQueries = jQuery("#primo-dropdown-copy li");
+      var nearestQuery = searchQueries.filter(".highlightedQuery");
+      var nearestQueryIndex = searchQueries.index(nearestQuery);
+    }
+    // Can't use .focus() alone for these since that removes the cursor from the text input, thus losing the keydown event,
+    // but do use .focus() if the user has already lost focus in the output by tabbing out into the options
+    if (e.which == 38) { // Up arrow
+      if (nearestQuery.length == 0) {
+        searchQueries.removeClass("highlightedQuery");
+        searchQueries.last().addClass("highlightedQuery");
+        if (e.target.id !== "search-input") searchQueries.last().focus();
+      } else {
+        searchQueries.removeClass("highlightedQuery");
+        searchQueries.eq(nearestQueryIndex - 1).addClass("highlightedQuery");
+        if (e.target.id !== "search-input") searchQueries.eq(nearestQueryIndex - 1).focus();
+      }
+      e.preventDefault(); // page scrolling
+    } else if (e.which == 40) { // Down arrow
+      if (nearestQueryIndex == searchQueries.length - 1) {
+        searchQueries.removeClass("highlightedQuery");
+        searchQueries.first().addClass("highlightedQuery");
+        if (e.target.id !== "search-input") searchQueries.first().focus();
+      } else {
+        searchQueries.removeClass("highlightedQuery");
+        searchQueries.eq(nearestQueryIndex + 1).addClass("highlightedQuery");
+        if (e.target.id !== "search-input") searchQueries.eq(nearestQueryIndex + 1).focus();
+      }
+      e.preventDefault(); // page scrolling
+    } else if (e.which != 13) { // If it's not the Enter key. Enter (submission) is instead handled in the #search-input/keypress event above
+      jQuery("#primo-dropdown-copy .search-query").text(query);
+      jQuery("#primo-dropdown-copy").show();
+    }
+  } else { // hide if there is no non-whitespace text
+    hideAutocomplete();
+  }
+});
+
+// Run a search if clicking directly on a scope in the copy of what the user has typed (or if have tabbed to it)
+jQuery("#primo-dropdown-copy li").on("click keydown", function(e) {
+  if (e.type == "click" || e.which == 13) {
+    jQuery("#current-scope").text(jQuery(this).find(".search-scope").text());
+    sendGAandSubmit(e);
+  }
+});
+
+// These are to undo above keydown that triggers the dropdowns to be shown on keys like up/down/tab
+jQuery("#current-scope").on("focusout", function(e) {
+  if (e.relatedTarget == null || e.relatedTarget.id == "search-input") {
+    jQuery("#scope-dropdown ul").hide();
+  }
+});
+jQuery("#search-input").on("focusout", function(e) {
+  if (e.relatedTarget == null || jQuery(e.relatedTarget).closest("#primo-search-form").length == 0) {
+    hideAutocomplete();
+  }
+});
+
+// Hide dropdowns if you click away from them or tab away from them
+jQuery("#scope-dropdown ul").on("focusout", function(e) {
+  if (e.relatedTarget == null || jQuery("#" + e.relatedTarget.id).closest(jQuery(this)).length == 0) {
+    jQuery(this).hide();
+  }
+});
+jQuery("#primo-dropdown-copy").on("focusout", function(e) {
+  if (e.relatedTarget == null || jQuery(e.relatedTarget).closest(jQuery(this)).length == 0 && e.relatedTarget.id != "primo-search-form") {
+    hideAutocomplete();
+  }
+});
+jQuery(document).on("touchstart", function(e) { // Touchstart for mobile devices where focusout wasn't working
+  // set scopeHoverEnabled to false to disallow mouseenter/over on the scope dropdown if mouseenter/over is being triggered via touch emulation (reenabled below for devices with both touch and mouse events).
+  // Though I think perhaps this might only be a problem in the Chrome emulator and certain mobiles browsers that are requesting the desktop version of the site.
+  // In those situations, touch seems to also trigger mouseenter/over, which calls a show(), which then provides an unexpected place for the click to happen, which then triggers a hide(), so the dropdown never ends up being seen by the user.
+  scopeHoverEnabled = false;
+  dropdowns = jQuery("#scope-dropdown ul, #primo-dropdown-copy");
+  if (!dropdowns.is(e.target) && dropdowns.has(e.target).length === 0) {
+    hideAutocomplete();
+    jQuery("#scope-dropdown ul").hide();
+  }
+});
+// Reenable mouseenter/over ability if a mousemove event is detected on #scope-dropdown (presumably for devices with both touch and mouse events)
+jQuery("#scope-dropdown").on("mousemove", function() {
+  scopeHoverEnabled = true;
+});
+
 </script>
+<?php endif; ?>

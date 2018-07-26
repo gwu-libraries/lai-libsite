@@ -13,11 +13,9 @@
 	          <ul class='sub-menu-group'>
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "research'>RESEARCH</a></li>
 							<li class='first leaf leaf-section-title'>Find</li>
-							<li class='leaf'><a href='http://findit.library.gwu.edu/catalog/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/books-media');\">Books & Media</a></li>
-							<li class='leaf'><a href='http://findit.library.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/journals');\">Journals</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlecitation' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/journals-tut');\">Tutorial</a></span></li>
+							<li class='leaf'><a href='https://wrlc-gwu.primo.exlibrisgroup.com/discovery/search?vid=01WRLC_GWA:live' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/books-articles-more');\">Books, Articles and More</a></li>
+							<li class='leaf'><a href='https://wrlc-gwu.primo.exlibrisgroup.com/discovery/jsearch?vid=01WRLC_GWA:live' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/journals-primo');\">Journals</a></li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/databases' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db');\">Subject Databases</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlesbytopic' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject-db-tut');\">Tutorial</a></span></li>
-							<li class='leaf'><a href='http://gw.summon.serialssolutions.com/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus');\">ArticlesPlus</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/aboutarticlesplus' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/articlesplus-tut');\">Tutorial</a></span></li>
-							<li class='leaf'><a href='http://catalog.wrlc.org' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/classic-cat');\">Classic Catalog</a> <span class='leaf-extended'>(<a href='" .$front_page . "new-search-experience'>retiring July 2018</a>)</span></li>
                                                         <li class='leaf'><a href='https://scholarspace.library.gwu.edu' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/scholarspace');\">GW ScholarSpace</a></li>
 
 
@@ -44,7 +42,6 @@
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "collections'>COLLECTIONS</a></li>
 							<li class='first leaf'><a href='" . $front_page . "scrc' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/scrc');\">Special Collections Research Center</a></li>
 							<li class='leaf'><a href='" . $front_page . "grc' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/grc');\">Global Resources Center</a></li>
-							<li class='leaf'><a style='text-transform:none;' href='" . $front_page . "art-design' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/art-design');\">Art & Design Collection from the Corcoran</a></li>
 							<li class='leaf'><a href='http://teamstersarchives.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/teamstersarchives');\">Teamsters Labor History Research Center</a></li>
 							<li class='leaf'><a href='" . $front_page . "scrc/university-archives' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/scrc/university-archives');\">University Archives</a></li>
 							<li class='leaf'><a href='" . $front_page . "collections/kiev' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/kiev');\">Kiev Judaica Collection</a></li>
@@ -61,8 +58,8 @@
 					  <div class='sub-nav'>
 						<ul class='sub-menu-group'>
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "services'>LIBRARY SERVICES</a></li>
-							<li class='first leaf'><a href='https://lai.gwu.edu/stemworks' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/stemworks');\">STEMworks</a>
-							<li class='leaf'><a href='https://writingcenter.gwu.edu/' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/writing-center');\">Writing Center</a>
+							<li class='first leaf'><a href='https://lai.gwu.edu/stemworks' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/stemworks');\">STEMworks</a></li>
+							<li class='leaf'><a href='https://writingcenter.gwu.edu/' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/writing-center');\">Writing Center</a></li>
 							<li class='leaf'><a href='" . $front_page . "services/computers-wireless' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/computers-wireless');\">Computers & Wireless</a></li>
                                                         <li class='leaf'><a href='" . $front_page . "services/computers-wireless/printing' onClick=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/services/computers-wireless/printing');\">Printing</a></li>
 							<li class='leaf'><a href='" . $front_page . "services/off-campus-services' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/services/off-campus-students');\">Off-Campus Students</a></li>
@@ -136,11 +133,9 @@
 							<li class='first leaf'><a href='" . $front_page . "eckles/the-eckles-prize-for-freshman-research-excellence'>Eckles Prize</a></li>
 
 							<li class='first leaf leaf-section-title'>Find</li>
-							<li class='leaf'><a href='http://findit.library.gwu.edu/catalog/'>Books & Media</a><span class='leaf-extended'></li>
-							<li class='leaf'><a href='http://findit.library.gwu.edu/'>Journals</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlecitation'>Tutorial</a></span></li>
+							<li class='leaf'><a href='https://wrlc-gwu.primo.exlibrisgroup.com/discovery/search?vid=01WRLC_GWA:live'>Books, Articles and More</a></li>
+							<li class='leaf'><a href='https://wrlc-gwu.primo.exlibrisgroup.com/discovery/jsearch?vid=01WRLC_GWA:live'>Journals</a></li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/databases'>Subject Databases</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlesbytopic'>Tutorial</a></span></li>
-							<li class='leaf'><a href='http://gw.summon.serialssolutions.com/'>ArticlesPlus</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/aboutarticlesplus'>Tutorial</a></span></li>
-							<li class='leaf'><a href='http://catalog.wrlc.org'>Classic Catalog</a> <span class='leaf-extended'>(<a href='" .$front_page . "new-search-experience'>retiring July 2018</a>)</span></li>
 
 							<li class='first leaf leaf-section-title'>Research Guides</li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/'>Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823'>Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054'>Psychology</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>
@@ -224,11 +219,9 @@
 						<ul class='sub-menu-group'>			
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "virginia/research'>RESEARCH</a></li>						
 							<li class='first leaf leaf-section-title'>Find</li>
-							<li class='leaf'><a href='http://findit.library.gwu.edu/catalog/'>Books & Media</a><span class='leaf-extended'></li>
-							<li class='leaf'><a href='http://findit.library.gwu.edu/'>Journals</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlecitation'>Tutorial</a></span></li>
+							<li class='leaf'><a href='https://wrlc-gwu.primo.exlibrisgroup.com/discovery/search?vid=01WRLC_GWA:live'>Books, Articles and More</a></li>
+							<li class='leaf'><a href='https://wrlc-gwu.primo.exlibrisgroup.com/discovery/jsearch?vid=01WRLC_GWA:live'>Journals</a></li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/databases'>Subject Databases</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/findarticlesbytopic'>Tutorial</a></span></li>
-							<li class='leaf'><a href='http://gw.summon.serialssolutions.com/'>ArticlesPlus</a><span class='leaf-extended'> | <a href='" . $front_page . "howdoi/aboutarticlesplus'>Tutorial</a></span></li>
-							<li class='leaf'><a href='http://catalog.wrlc.org'>Classic Catalog</a> <span class='leaf-extended'>(<a href='" .$front_page . "new-search-experience'>retiring July 2018</a>)</span></li>
 
 							<li class='first leaf leaf-section-title'>Research Guides</li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/'>Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823'>Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054'>Psychology</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>
