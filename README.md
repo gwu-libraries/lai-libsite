@@ -11,3 +11,5 @@ The theme has no dependencies, but to configure it as the GW Libraries website y
 
 * Custom Views (export from Test or Prod instance)
 * Custom GW Modules: Catalog Pointer, Library Hours, Twitter Timeline, Events, Events Feed, Stemworks_Events, Connection String, and Insert (these are all in Github as separate repos or in the Drupal-Modules repo) and Remove Title (not yet in GitHub)
+
+[Release Notes](release-notes.md)
