@@ -261,6 +261,17 @@
   flex: 1;
   outline: none;
 }
+/* This is a hack to make font-size different in IE 10 & 11. 
+   Without it, some combination of flex styling and increased font size on the input pushes the 
+   triangle and magnifying glass way off screen on smaller-width IE windows in cases where the 
+   width of the screen leaves too little room to display the scope description in line anymore 
+   (said width before it just shows a triangle has now increased with the change from 
+   "Catalog + Articles" to "Articles + GW & Consortium Catalog"). */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #search-input {
+    font-size: 1em;
+  }
+}
 
 #search-input::-ms-clear {
   height: 20px;
