@@ -9,14 +9,14 @@
         <!-- The clickable menu of search scopes available -->
         <div id="scope-dropdown">
           <span aria-haspopup="true" id="current-scope" tabindex="0" title="Select an option to limit your search">
-            Catalog + Articles
+            Articles + GW &amp; Consortium Catalog
           </span>
           <ul>
             <li id="primo-all" tabindex="0" data-placeholder="<?php echo $bentoPlaceholder; ?>" data-description="Articles, books, e-books, media, and archival resources at GW and WRLC libraries, plus &lt;a href=&quot;http://libguides.gwu.edu/&quot;&gt;research guides&lt;/a&gt;">
-              Catalog + Articles
+              Articles + GW &amp; Consortium Catalog
             </li>
             <li id="primo-catalog" tabindex="0" data-placeholder="The Communist Manifesto, calculus, Blade Runner ..." data-description="Books, e-books, media, and archival resources at GW and WRLC libraries">
-              Catalog
+              GW &amp; Consortium Catalog
             </li>
             <li id="primo-articles" tabindex="0" data-placeholder="Fidel Castro, sustainable energy, gender and identity ..." data-description="Journal &amp; newspaper articles">
               Articles
