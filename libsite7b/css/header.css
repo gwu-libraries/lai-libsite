@@ -408,6 +408,9 @@ Setting text-size-adjust to 100% didn't seem to fix things, so setting a max-wid
     width: 2em;
     white-space: nowrap;
   }
+  #scope-dropdown ul {
+    top: 100%;
+  }
   #current-scope {
     outline: none;
     font-size: 0;
