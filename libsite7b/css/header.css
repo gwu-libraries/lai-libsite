@@ -261,6 +261,17 @@
   flex: 1;
   outline: none;
 }
+/* This is a hack to make font-size different in IE 10 & 11. 
+   Without it, some combination of flex styling and increased font size on the input pushes the 
+   triangle and magnifying glass way off screen on smaller-width IE windows in cases where the 
+   width of the screen leaves too little room to display the scope description in line anymore 
+   (said width before it just shows a triangle has now increased with the change from 
+   "Catalog + Articles" to "Articles + GW & Consortium Catalog"). */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #search-input {
+    font-size: 1em;
+  }
+}
 
 #search-input::-ms-clear {
   height: 20px;
@@ -355,6 +366,15 @@ Setting text-size-adjust to 100% didn't seem to fix things, so setting a max-wid
   padding: 8px 0;
   list-style-type: none;
 }
+@media screen and (max-width: 400px) {
+  #scope-dropdown {
+    position: static;
+  }
+  #scope-dropdown ul, #primo-dropdown-copy ul {
+    font-size: .9em;
+    right: 0;
+  }
+}
 #internal-search #scope-dropdown ul {
   top: -23px;
 }
@@ -383,10 +403,13 @@ Setting text-size-adjust to 100% didn't seem to fix things, so setting a max-wid
   background-color: #f2f2f2;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 940px) {
   #scope-dropdown {
     width: 2em;
     white-space: nowrap;
+  }
+  #scope-dropdown ul {
+    top: 100%;
   }
   #current-scope {
     outline: none;
@@ -460,8 +483,8 @@ Setting text-size-adjust to 100% didn't seem to fix things, so setting a max-wid
 #home-search {
   position: absolute;
   text-align: center;
-  width: 700px;
-  left: 190px;
+  width: 800px;
+  left: 140px;
   top: 30px;
 }
 @media screen and (max-width: 1080px) {
@@ -471,13 +494,18 @@ Setting text-size-adjust to 100% didn't seem to fix things, so setting a max-wid
     top: 20px;
   }
   #primo-container, #home-search-explanation {
-    width: 700px;
+    width: 750px;
   }
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1000px) {
   #home-search {
     top: 10px;
   }
+  #primo-container, #home-search-explanation {
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 940px) {
   #primo-container, #home-search-explanation {
     max-width: 600px;
   }

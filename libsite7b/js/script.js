@@ -15,9 +15,9 @@
     var searchStringClean = encodeURIComponent(searchString);
     var searchURL = "";
 
-    if (searchTool == "Catalog + Articles") {
+    if (searchTool == "Articles + GW & Consortium Catalog") {
         searchURL = primoBase + primoEverythingBase + searchStringClean + primoEverythingTail;
-    } else if (searchTool == "Catalog") {
+    } else if (searchTool == "GW & Consortium Catalog") {
         searchURL = primoBase + primoWRLCBase + searchStringClean + primoWRLCTail;
     } else if (searchTool == "Articles") {
         searchURL = primoBase + primoArticlesBase + searchStringClean + primoArticlesTail;

@@ -356,7 +356,12 @@ function searchDropdown(passedThis) {
 }
 
 jQuery("#current-scope").on("click", function() {
-  jQuery("#scope-dropdown ul").show();
+  var scopeList = jQuery("#scope-dropdown ul");
+  if (scopeList.is(":hidden")) {
+    scopeList.show();
+  } else {
+    scopeList.hide();
+  }
   hideAutocomplete();
 });
 
