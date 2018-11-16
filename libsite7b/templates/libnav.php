@@ -182,26 +182,18 @@
 						</div>
 					</li>
 						
-					<li class='expanded nav-item' id=\"nav-eckles-academic-services\">
-					  <a href='" . $front_page . "eckles/academic-services-at-eckles' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/eckles/acad-services-hover',{'nonInteraction': 1});\">Academic Services</a>
-					  <div class='sub-nav'>
-						<ul class='sub-menu-group'>
-							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "eckles/academic-services-at-eckles'>ACADEMIC SERVICES</a></li>
-							<li class='first leaf'><a href='" . $front_page . "eckles/academic-services-at-eckles#a1'>Economics, Mathematics &amp; Science Tutoring</a></li>
-							<li class='leaf'><a href='" . $front_page . "eckles/academic-services-at-eckles#a3'>The Writing Center</a></li>
-						</ul>
-						</div>
+					<li class='expanded nav-item' id=\"nav-eckles-top-textbooks\">
+					  <a href='" . $front_page . "eckles-top-textbooks' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/eckles-top-textbooks',{'nonInteraction': 1});\">Top Textbooks</a>
+					  <div class='sub-nav'><!-- empty div apparently for accessibleMegaMenu -->
+					  </div>
+					</li>
+
+					<li class='expanded nav-item' id=\"nav-eckles-writing-center\">
+					  <a href='" . $front_page . "eckles/writing-center' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/eckles/writing-center-hover',{'nonInteraction': 1});\">Writing Center</a>
+					  <div class='sub-nav'><!-- empty div apparently for accessibleMegaMenu -->
+					  </div>
 					</li>
 					
-					<li class='expanded nav-item' id=\"nav-eckles-flix\">
-					  <a href='" . $front_page . "eckles/eckles-flix' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/eckles/flix-hover',{'nonInteraction': 1});\">Eckles Flix</a>
-					  <div class='sub-nav'>
-						<ul class='sub-menu-group'>
-							<li class='first leaf'><a href='" . $front_page . "eckles/eckles-flix' title=''>Eckles Flix</a></li>
-						</ul>
-						</div>
-					</li>
-			
 					<li class='expanded nav-item mobile-show' id=\"nav-eckles-hours\">
 					  <a href='" . $front_page . "eckles/hours'>Hours</a>
 					  <div class='sub-nav'><!-- empty div for accessibleMegaMenu -->
