@@ -184,13 +184,19 @@
 						
 					<li class='expanded nav-item' id=\"nav-eckles-top-textbooks\">
 					  <a href='" . $front_page . "eckles-top-textbooks' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/eckles-top-textbooks',{'nonInteraction': 1});\">Top Textbooks</a>
-					  <div class='sub-nav'><!-- empty div apparently for accessibleMegaMenu -->
+					  <div class='sub-nav'>
+						<ul class='sub-menu-group'>
+							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "eckles-top-textbooks'>TOP TEXTBOOKS</a></li>
+						</ul>
 					  </div>
 					</li>
 
 					<li class='expanded nav-item' id=\"nav-eckles-writing-center\">
 					  <a href='" . $front_page . "eckles/writing-center' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/eckles/writing-center-hover',{'nonInteraction': 1});\">Writing Center</a>
-					  <div class='sub-nav'><!-- empty div apparently for accessibleMegaMenu -->
+					  <div class='sub-nav'>
+						<ul class='sub-menu-group'>
+							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "eckles/writing-center'>WRITING CENTER</a></li>
+						</ul>
 					  </div>
 					</li>
 					
