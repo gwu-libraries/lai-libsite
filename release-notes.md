@@ -7,3 +7,6 @@ For intended release 2018/10/08
 
 For intended release 2018/12/03
 * Update Eckles menu items (fixes [158](../../issues/158))
+
+For intended release 2018/03/05
+* GDPR-related cookie notice (styling overrides from the eu_cookie_compliance module) (fixes [168](../../issues/168))

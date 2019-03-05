@@ -1,0 +1,52 @@
+#popup-text a, #popup-text strong {
+  color: #fff;
+}
+#popup-text a {
+  text-decoration: underline;
+}
+
+#sliding-popup .popup-content {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#sliding-popup .popup-content #popup-text {
+  max-width: 80%;
+}
+@media screen and (max-width: 800px) {
+  #sliding-popup .popup-content #popup-text {
+    max-width: 95%;
+  }
+}
+#sliding-popup .popup-content #popup-text p {
+  font-size: 17px;
+  margin: 1em 0;
+  display: block;
+  line-height: 1.5em;
+}
+@media screen and (max-width: 800px) {
+  #sliding-popup .popup-content #popup-text p {
+    font-size: 15px;
+    margin: 0.5em 0 0;
+    line-height: 1.35em;
+  }
+}
+
+#sliding-popup #popup-buttons button {
+  font-family: inherit;
+  font-weight: normal;
+  background-color: #fff;
+  border-color: #004065;
+  padding: 5px 12px;
+  color: #004065;
+  display: inline-block;
+  margin: 0 1em;
+}
+@media screen and (max-width: 800px) {
+  #sliding-popup #popup-buttons button {
+    font-size: 15px;
+  }
+}
