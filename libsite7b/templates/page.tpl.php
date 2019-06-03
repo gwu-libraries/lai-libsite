@@ -2,7 +2,7 @@
 global $user;
   // Define the themename for drupal_get_path calls
   $themename = 'libsite7b';
-  $nid = $_GET['nid'];
+  $nid = isset($_GET['nid']) ? $_GET['nid'] : NULL;
 
 
 ?>
@@ -14,12 +14,12 @@ global $user;
 	</div>
 </div>
 
-<!-- Lib Header -->  
+<!-- Lib Header -->
 <?php include 'lai-header.php'; ?>
 
 <!-- Lib Nav (included in lai-header now) -->
 <?php // include 'libnav.php'; ?>
-	
+
 <?php // navigation ?>
   <?php // print render($page['navbar']); ?>
 
@@ -38,7 +38,7 @@ global $user;
 
 		jQuery(window).resize(function() {
 			if(window.innerWidth<1220)document.getElementById("backToTopContainer").style.display = "none";
-			if(window.innerWidth>1219 && window.pageYOffset>160)document.getElementById("backToTopContainer").style.display = "block";   
+			if(window.innerWidth>1219 && window.pageYOffset>160)document.getElementById("backToTopContainer").style.display = "block";
 		});
 	</script>
 
@@ -51,8 +51,8 @@ global $user;
         <!-- end floating navigation -->
 	<?php endif; ?>
 
-  <div id="content-container"> 
- 
+  <div id="content-container">
+
     <?php if ($tabs): ?><div class="tabs mobile-hide"><?php print render($tabs); ?></div><?php endif; ?>
 
     <?php if(isset($messages) && isset($node)): ?>
@@ -62,8 +62,8 @@ global $user;
 		        <?php print $messages; ?>
 		      </div>
 		    </div> <!-- /.section, /#messages -->
-		  <?php endif; ?>  
-	  <?php endif; ?>  
+		  <?php endif; ?>
+	  <?php endif; ?>
 
     <?php print render($page['help']); ?>
     <?php if ($action_links): ?>
@@ -72,15 +72,15 @@ global $user;
       </ul>
     <?php endif; ?>
 
-	  <!-- start sidebars -->	
+	  <!-- start sidebars -->
 	  <?php if ($page['rsidebar']): 	// drupal_add_library('system', 'drupal.collapse'); ?>
 		  <div id="right-sidebar">
 		    <div class="sidebar-content">
 		      <?php print render($page['rsidebar']); ?>
 		    </div>
-		  </div>		
-	  <?php endif; ?>  
-	  
+		  </div>
+	  <?php endif; ?>
+
 	  <?php if ($page['sidebar']): ?>
 		  <div id="main-sidebar">
 			  <div id="expand-sidebar-spot">
@@ -127,31 +127,31 @@ global $user;
         window.onresize=sidebarHide
         window.onload=sidebarHide
         </script>
-		
+
 			  <div id="sidebar-content" class="sidebar-content" style="display:block;">
 				  <?php print render($page['sidebar']); ?>
 			  </div>
-			
+
 		  </div>
 	  <?php endif; ?>
 	  <!-- end sidebars -->
 
 	<!-- main content -->
-	
+
 	<!-- determine main content width -->
-	<?php if ((!$page['sidebar']) && (!$page['rsidebar'])): $primwid='363'; ?>		
+	<?php if ((!$page['sidebar']) && (!$page['rsidebar'])): $primwid='363'; ?>
 	<?php endif; ?>
-	<?php if (($page['sidebar']) && (!$page['rsidebar'])): $primwid='063'; ?>		
+	<?php if (($page['sidebar']) && (!$page['rsidebar'])): $primwid='063'; ?>
 	<?php endif; ?>
 	<?php if ((!$page['sidebar']) && ($page['rsidebar'])): $primwid='360'; ?>
 	<?php endif; ?>
-	<?php if (($page['sidebar']) && ($page['rsidebar'])): $primwid='060'; ?>		
+	<?php if (($page['sidebar']) && ($page['rsidebar'])): $primwid='060'; ?>
 	<?php endif; ?>
-	
+
 	<div class="primary-content-<?php echo $primwid ?>">
 		<section class="all-purpose-detail pane">
 
-      <?php if ($page['content_above_title']): ?>	
+      <?php if ($page['content_above_title']): ?>
 			  <div id="content-above-title">
 			    <?php print render($page['content_above_title']); ?>
 			  </div>
@@ -160,7 +160,7 @@ global $user;
 		  <!-- page title -->
 	    <?php if(!drupal_is_front_page()): ?>
 	      <?php print render($title_prefix); ?>
-                     		<?php if ( (in_array("administrator", $user->roles)) || (in_array("libraryhours", $user->roles)) ) { 
+                     		<?php if ( (in_array("administrator", $user->roles)) || (in_array("libraryhours", $user->roles)) ) {
 			if (strpos($_SERVER['REQUEST_URI'],'library-hours')){ get_library_hours_tabs($nid); }
 			} ?>
                           <?php if ($title): ?>
@@ -170,9 +170,9 @@ global $user;
 	    <?php endif; ?>
 
 	    <?php print render($page['content_top']); ?>
-		
+
       <?php print render($page['content']); ?>
-      
+
       <?php if(drupal_is_front_page()): ?>
 
         <?php // Front page regions ?>
@@ -180,10 +180,10 @@ global $user;
         <div id="frontPageBanner">
          	<?php print render($page['page_banner']); ?>
     	</div>
-        
+
 	    <?php elseif ($_SERVER["REQUEST_URI"] == '/news-events'): ?>
-  
-        <?php // News and Events page content goes here ?>      
+
+        <?php // News and Events page content goes here ?>
  		    <div id="newsBottomBoxes">
 	        <div id="frontBottomRegion">
 	          <?php print render($page['content_front_bottom']); ?>
@@ -192,13 +192,13 @@ global $user;
 	          <?php print render($page['content_front_bottom_right']); ?>
 	        </div>
         </div>
- 
+
         <?php // This is just a clear all div ?>
         <div class="clear"></div>
 
 		  <?php elseif ($_SERVER["REQUEST_URI"] == '/scrc'): ?>
 
-        <?php // SCRC main page content goes here ?>      
+        <?php // SCRC main page content goes here ?>
  		    <div id="scrcBottomBoxes">
 	        <div id="frontBottomRegion">
 	          <?php print render($page['content_front_bottom']); ?>
@@ -213,15 +213,15 @@ global $user;
 			  <?php print render($page['content_bottom']); ?>
 			</div>
 		</section>
-  
+
   	<div class="clear"></div>
-  	
+
 	</div> <!-- close primary content -->
   </div> <!-- close content container -->
 </main> <!-- close main container (opened in lai-header.php) -->
 
 <div class="clear"></div>
-	
+
 <!-- GW Footer -->
 <?php include 'lai-footer.php'; include 'jsbottom.html';?>
 

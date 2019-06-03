@@ -106,17 +106,18 @@
       $eventDate2 = $node->field_event_date['und'][0]['value2'];
       // Display warning if event is in the past.
       if ( strtotime($eventDate2) < strtotime('now') ) {
-        print '<div class="old-event">This event has already taken place, please don\'t try to go to it!</div>'; 
+        print '<div class="old-event">This event has already taken place, please don\'t try to go to it!</div>';
       }
     ?>
 
     <?php
       // Setting Summary content.
-      $summaryVal = render(field_view_field('node', $node, 'body', array(
+      $summary_render_array = field_view_field('node', $node, 'body', array(
         'label'=>'hidden',
         'type' => 'text_summary_or_trimmed',
         'settings'=>array('trim_length' => 150),
-      )));
+      ));
+      $summaryVal = render($summary_render_array);
 
       // Setting Body content.
       $test2 =  $content['body']['#object']->body['und'][0]['value'];
