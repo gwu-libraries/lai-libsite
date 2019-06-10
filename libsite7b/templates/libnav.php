@@ -258,30 +258,18 @@
 						</div>				
 					</li>
 					
-					<li class='expanded nav-item' id=\"nav-virginia-news\">
-					  <a href='" . $front_page . "news-events' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/virginia/news-events-hover',{'nonInteraction': 1});\">News<span class=\"mobile-hide\"> & Events</span></a>
-					  <div class='sub-nav'>
-						<ul class='sub-menu-group'>
-							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "news-events'>NEWS & EVENTS</a></li>
-							<li class='first leaf'><a href='" . $front_page . "news-events'>News</a></li>
-							<li class='leaf'><a href='" . $front_page . "news-events/blogs-and-social-media'>Blogs and Social Media</a></li>
-							<li class='leaf'><a href='" . $front_page . "news-events/update' onClick=\"ga('send','event','primary-nav','/primary-nav/virginia/news-events/newsletter');\">Library Update</a></li>
-							<li class='leaf'><a href='" . $front_page . "news-events/vision' onClick=\"ga('send','event','primary-nav','/primary-nav/virginia/news-events/vision');\">Vision Magazine</a></li>
-						</ul>
-						</div>
-					</li>
-					
 					<li class='expanded nav-item' id=\"nav-virginia-about\">
 					  <a href='" . $front_page . "virginia/about' onMouseOver=\"ga('send','event','primary-nav','/primary-nav/virginia/about-hover',{'nonInteraction': 1});\">About</a>
 					  <div class='sub-nav'>
 						<ul class='sub-menu-group'>
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "virginia/about'>ABOUT THE VSTC LIBRARY</a></li>
 							<li class='first leaf'><a href='" . $front_page . "virginia/hours'>Hours</a></li>
+							<li class='leaf'><a href='" . $front_page . "events'>Events</a></li>
 							<li class='leaf'><a href='" . $front_page . "virginia/map'>Map & Directions</a></li>
 							<li class='leaf'><a href='" . $front_page . "virginia/access'>Access</a></li>
 							<li class='leaf'><a href='" . $front_page . "virginia/staff'>Staff</a></li>
-							<li class='leaf'><a href='" . $front_page . "virginia/jobs'>Positions Available</a></li>
                                                         <li class='leaf'><a target='_blank' href='https://lai.gwu.edu' onClick=\"ga('send','event','primary-nav','/primary-nav/virginia/about/lai');\">Libraries & Academic Innovation</a></li>
+                                                        <li class='leaf'><a target='_blank' href='https://lai.gwu.edu/magazine' onClick=\"ga('send','event','primary-nav','/primary-nav/virginia/about/vision-magazine');\">Vision Magazine</a></li>
 							<li class='leaf'><a href='" . $front_page . "virginia/contact-us'>Contact Us</a></li>
 						</ul>
 						</div>
