@@ -21,7 +21,7 @@
 
 							<li class='first leaf leaf-section-title leaf-section-title-linked'><a href='http://libguides.gwu.edu/'>Research Guides</a></li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject');\">Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject/art');\">Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject/psych');\">Psychology</a> | <a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/subject/more');\">More...</a></span></li>
-							<li class='leaf'><a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic');\">Topics: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12069' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic/industry');\">Industry</a> | <a href='http://libguides.gwu.edu/content.php?pid=112501' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic/grants');\">Grants</a> | <a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic/more');\">More...</a></span></li>	
+							<li class='leaf'><a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic');\">Topics: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12069' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic/industry');\">Industry</a> | <a href='https://libguides.gwu.edu/sb.php?subject_id=53283' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic/international-relations');\">International Relations</a> | <a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/topic/more');\">More...</a></span></li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/tools');\">Tools: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=23115' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/tools/refworks');\">RefWorks</a> | <a href='http://libguides.gwu.edu/content.php?pid=8881' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/tools/citations');\">Citation Styles</a> | <a href='http://libguides.gwu.edu/' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/tools/more');\">More...</a></span></li>
 							<li class='leaf'><a href='" . $front_page . "howdoi' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/research/guides/howdoi');\">How Do I? (Tutorials)</a></li>						
 							
@@ -46,6 +46,7 @@
 							<li class='leaf'><a href='" . $front_page . "scrc/university-archives' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/scrc/university-archives');\">University Archives</a></li>
 							<li class='leaf'><a href='" . $front_page . "collections/kiev' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/kiev');\">Kiev Judaica Collection</a></li>
 							<li class='leaf'><a href='" . $front_page . "churchillcenter' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/churchill');\">National Churchill Library & Center</a></li>
+							<li class='leaf'><a href='" . $front_page . "showcases' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/digital-showcases');\">Digital Showcases</a></li>
 							<li class='leaf'><a href='" . $front_page . "collections/media-resources-center' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/media');\" >Media</a></li>
 							<li class='leaf'><a href='" . $front_page . "collections-assessment' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections-assessment');\" >Collections Assessment &amp; Development</a></li>
 							<li class='last leaf'><a href='" . $front_page . "collections' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/collections/more');\">(more...)</a></li>
@@ -77,39 +78,32 @@
 						</div>					
 					</li>
 						
-					<li class=\"expanded nav-item\" id=\"nav-news\">
-					  <a href=\"" . $front_page . "news-events\" onMouseOver=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/news-events-hover', {'nonInteraction': 1});\" onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/main');\">News & Events</a>
-					  <div class='sub-nav'>
-						<ul class='sub-menu-group'>
-							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "news-events'>NEWS & EVENTS</a></li>
-							<li class='first leaf'><a href='" . $front_page . "news-events' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/news');\">News</a></li>
-                                                        <li class='leaf'><a href='" . $front_page . "news-events/upcoming-events' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/events');\">Upcoming Events</a></li>
-							<li class='leaf'><a href='" . $front_page . "news-events/blogs-and-social-media' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/blogs-social');\">Blogs and Social Media</a></li>
-							<li class='leaf'><a href='https://lai.gwu.edu/magazine' onClick=\"ga('send','event','primary-nav','https://lai.gwu.edu/magazine');\" target='_blank'>Vision Magazine</a></li>
-                                                        <li class='leaf'><a href='http://acadtech.gwu.edu/press-room' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/acadtech-pressroom');\">Academic Technologies Press Room</a></li>
-                                                        <li class='leaf'><a href='" . $front_page . "showcases' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/news-events/digital-showcases');\">Digital Showcases</a></li>
-						</ul>
-						</div>
-					</li>
-						
 					<li class=\"expanded nav-item\" id=\"nav-about\">
 					  <a href=\"" . $front_page . "about\" onMouseOver=\"ga('send', 'event', 'primary-nav', '/primary-nav/gelman/about-hover', {'nonInteraction': 1});\" onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/main');\">About</a>
 					  <div class='sub-nav'>
 						<ul class='sub-menu-group'>
 						  <li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "about'>ABOUT GW LIBRARIES</a></li>
 							<li class='first leaf'><a href='" . $front_page . "hours' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/hours');\">Hours</a></li>
+							<li class='leaf'><a href='" . $front_page . "events' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/events');\">Events</a></li>
 							<li class='leaf'><a href='" . $front_page . "about/facilities/maps' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/maps-directions');\">Maps & Directions</a></li>
+							<li class='leaf'><a href='" . $front_page . "about/entrance-policies' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/entrance-policies');\">Entrance Policies</a></li>
 							<li class='leaf'><a href='" . $front_page . "about/organization/jobs' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/jobs');\">Working at GW Libraries</a></li>
 							<li class='leaf'><a href='" . $front_page . "about/staff-directory' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/directory');\">Staff Directory</a></li>
 							<li class='leaf'><a href='" . $front_page . "about/library-departments' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/departments');\">Library Departments</a></li>
                                                         <li class='leaf'><a target='_blank' href='https://lai.gwu.edu' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/lai');\">Libraries & Academic Innovation</a></li>
-							<li class='leaf'><a href='" . $front_page . "about/entrance-policies' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/entrance-policies');\">Entrance Policies</a></li>
-							<li class='leaf'><a target='_blank' href='https://lai.gwu.edu/vision' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/strategic-plan');\">Vision</a></li>
+                                                        <li class='leaf'><a target='_blank' href='https://lai.gwu.edu/about' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/about-lai');\">About GWLAI</a></li>
 							<li class='leaf'><a href='" . $front_page . "about/giving' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/donor-info');\">Donor Information</a></li>
+							<li class='leaf'><a target='_blank' href='https://lai.gwu.edu/magazine' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/vision-magazine');\">Vision Magazine</a></li>
 							<li class='leaf'><a href='" . $front_page . "contact' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/contact-us');\">Contact Us</a></li>
 							<li class='last leaf'><a href='" . $front_page . "about' onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/about/more');\">(more...)</a></li>
 						</ul>
 						</div>
+					</li>
+						
+					<li class=\"expanded nav-item mobile-show\" id=\"nav-events\">
+					  <a href=\"" . $front_page . "events\" onClick=\"ga('send','event','primary-nav','/primary-nav/gelman/events/main');\">Events</a>
+					  <div class='sub-nav'><!-- empty div for accessibleMegaMenu -->
+					  </div>
 					</li>
 						
 					<li class='expanded nav-item mobile-show' id=\"nav-hours\">
@@ -139,7 +133,7 @@
 
 							<li class='first leaf leaf-section-title'>Research Guides</li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/'>Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823'>Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054'>Psychology</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>
-							<li class='leaf'><a href='http://libguides.gwu.edu/'>Topics: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12069'>Industry</a> | <a href='http://libguides.gwu.edu/content.php?pid=112501'>Grants</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>	
+							<li class='leaf'><a href='http://libguides.gwu.edu/'>Topics: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12069'>Industry</a> | <a href='https://libguides.gwu.edu/sb.php?subject_id=53283'>International Relations</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/'>Tools: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=23115'>RefWorks</a> | <a href='http://libguides.gwu.edu/content.php?pid=8881'>Citation Styles</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>							
 							<li class='leaf'><a href='" . $front_page . "howdoi'>How Do I? (Tutorials)</a></li>
 
@@ -223,7 +217,7 @@
 
 							<li class='first leaf leaf-section-title'>Research Guides</li>
 							<li class='leaf'><a href='http://libguides.gwu.edu/'>Subjects: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12823'>Art</a> | <a href='http://libguides.gwu.edu/content.php?pid=17054'>Psychology</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>
-							<li class='leaf'><a href='http://libguides.gwu.edu/'>Topics: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12069'>Industry</a> | <a href='http://libguides.gwu.edu/content.php?pid=112501'>Grants</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>	
+							<li class='leaf'><a href='http://libguides.gwu.edu/'>Topics: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=12069'>Industry</a> | <a href='https://libguides.gwu.edu/sb.php?subject_id=53283'>International Relations</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>	
 							<li class='leaf'><a href='http://libguides.gwu.edu/'>Tools: </a><span class='leaf-extended'><a href='http://libguides.gwu.edu/content.php?pid=23115'>RefWorks</a> | <a href='http://libguides.gwu.edu/content.php?pid=8881'>Citation Styles</a> | <a href='http://libguides.gwu.edu/'>More...</a></span></li>							
 							<li class='leaf'><a href='" . $front_page . "howdoi'>How Do I? (Tutorials)</a></li>			
 			
