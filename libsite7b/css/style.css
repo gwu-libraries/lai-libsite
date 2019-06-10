@@ -2064,6 +2064,7 @@ section.pane .workshop-orientation-link {margin-top: .6em;}
 }
 .field-name-field-event-date .date-display-single, .field-name-field-event-date .date-display-start, .field-name-field-event-date .date-display-end {
   margin: 0;
+  line-height: normal;
 }
 
 
