@@ -2057,6 +2057,16 @@ section.pane .workshop-orientation-link {margin-top: .6em;}
 @media screen and (max-width:640px) {
   #block-views-libraries_events-block_1 { margin-top: -80px; }
 }
+
+/* prevent ugly float issues where subsequent labels aren't wrapping nicely due to unnecessary margins */
+.field-name-field-rsvp-url p {
+  margin: 0;
+}
+.field-name-field-event-date .date-display-single, .field-name-field-event-date .date-display-start, .field-name-field-event-date .date-display-end {
+  margin: 0;
+}
+
+
 /* end upcoming events */
 
 /* blog 'submitted by + date' formatting */
