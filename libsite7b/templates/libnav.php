@@ -264,7 +264,6 @@
 						<ul class='sub-menu-group'>
 							<li class='touch-show-nav touch-nav-main-link'><a href='" . $front_page . "virginia/about'>ABOUT THE VSTC LIBRARY</a></li>
 							<li class='first leaf'><a href='" . $front_page . "virginia/hours'>Hours</a></li>
-							<li class='leaf'><a href='" . $front_page . "events'>Events</a></li>
 							<li class='leaf'><a href='" . $front_page . "virginia/map'>Map & Directions</a></li>
 							<li class='leaf'><a href='" . $front_page . "virginia/access'>Access</a></li>
 							<li class='leaf'><a href='" . $front_page . "virginia/staff'>Staff</a></li>
