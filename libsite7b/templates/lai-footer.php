@@ -74,8 +74,6 @@
                         <?php if ($campus == "gelman" || $campus == "none"): ?>
                           <p><a href="https://twitter.com/gelmanlibrary" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/twitter-logo.png" style="width: 33px; height: 26px;"></a></p>
                           <p><a href="https://twitter.com/gelmanlibrary" target="_blank">Follow us on Twitter</a></p>
-                          <p><a href="https://www.facebook.com/gelmanlibrary" alt="logo: Facebook" arget="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/facebook-logo.png" style="width: 33px;"></a></p>
-                          <p><a href="https://www.facebook.com/gelmanlibrary">Like us on Facebook</a></p>
                         <?php elseif ($campus == "eckles"): ?>
                           <p><a href="https://twitter.com/eckleslibrary" alt="logo: Twitter" target="_blank"><img alt="" src="<?php print $front_page . drupal_get_path('theme', $themename); ?>/images/icons/twitter-logo.png" style="width: 33px; height: 26px;"></a></p>
                           <p><a href="https://twitter.com/eckleslibrary" target="_blank">Follow us on Twitter</a></p>
